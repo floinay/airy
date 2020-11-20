@@ -1,0 +1,14 @@
+@mixin can-size($size, $element) {
+  .size-#{$size} {
+    @include size-value($size, $element, 'width');
+    @include size-value($size, $element, 'height');
+    @include size-value($size, $element, 'font-size');
+    @include size-value($size, $element, 'padding');
+    @include size-value($size, $element, 'margin');
+  }
+}
+
+
+@mixin size-value($size, $element, $styleName) {
+  --#{$styleName}: var(--#{$size}-#{$element}-#{$styleName}, var(--#{$element}-#{$styleName}))
+}

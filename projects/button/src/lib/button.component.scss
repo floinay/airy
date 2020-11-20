@@ -1,0 +1,65 @@
+:host {
+  appearance: var(--button-appearance);
+  border: var(--button-border);
+  height: var(--button-height);
+  display: var(--button-display);
+  border-radius: var(--button-border-radius);
+  cursor: var(--button-cursor);
+  align-items: var(--button-align-items);
+  padding: var(--button-padding);
+  margin: var(--button-margin);
+  text-decoration: var(--button-text-decoration);
+  text-align: var(--button-text-align);
+  justify-content: var(--button-justiry-content);
+  min-width: var(--button-min-width);
+  background: var(--current-color);
+  color: var(--current-color-contrast);
+  font-weight: var(--button-font-weight);
+  transition: var(--button-transition);
+  animation: var(--button-animation);
+
+  &.round {
+    border-radius: var(--rounded-button-border-radius);
+  }
+
+  &:hover {
+    background: var(--current-color-shade);
+  }
+
+  &.outline, &.clear {
+    background: transparent;
+  }
+
+  &.outline {
+    color: var(--current-color);
+    border: var(--button-outline-border-width) var(--button-outline-border-style) var(--current-color);
+
+    &:hover {
+      color: var(--current-color-contrast);
+      background: var(--current-color-shade);
+    }
+  }
+
+  &.clear {
+    color: var(--current-color);
+
+    &:hover {
+      color: var(--current-color-shade);
+    }
+  }
+
+  &.block {
+    width: 100%;
+  }
+
+  &.full {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  &.full, &.block {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+}

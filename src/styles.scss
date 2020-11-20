@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import "projects/cdk/src/lib/cdk";
+@import "../projects/cdk/src/lib/styles/button";
+
+@include air-default-theme-palette;
+@include air-default-colors;
+@include air-vars;
+@include air-button-vars;
+

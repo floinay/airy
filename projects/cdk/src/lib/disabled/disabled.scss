@@ -1,0 +1,5 @@
+[disabled=true] {
+  opacity: var(--disabpled-opacity, .5);
+  cursor: var(--disabled-cursor, default);
+  pointer-events: var(--disabled-pointer-events, none);
+}

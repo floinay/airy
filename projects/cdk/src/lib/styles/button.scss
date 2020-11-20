@@ -1,0 +1,23 @@
+@mixin air-button-vars {
+  :root {
+    --button-height: 28px;
+    --button-border: none;
+    --button-border-radius: var(--border-radius);
+    --button-padding: 0 8px;
+    --button-margin: 5px;
+    --button-text-decoration: none;
+    --button-min-width: 28px;
+    --button-cursor: pointer;
+    --button-display: inline-flex;
+    --button-align-items: center;
+    --button-text-align: center;
+    --button-justiry-content: center;
+    --button-appearance: none;
+    --button-font-weight: 600;
+    --button-transition: all 200ms linear;
+    --button-animation: none;
+    --button-outline-border-width: 1px;
+    --button-outline-border-style: solid;
+  }
+
+}

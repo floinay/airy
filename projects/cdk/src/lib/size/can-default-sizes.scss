@@ -1,0 +1,7 @@
+@import "can-size";
+
+@mixin can-default-sizes($element) {
+  @include can-size('sm', $element);
+  @include can-size('md', $element);
+  @include can-size('lg', $element);
+}

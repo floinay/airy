@@ -1,0 +1,8 @@
+@mixin can-color($color) {
+  .color-#{$color} {
+    --current-color: var(--color-#{$color});
+    --current-color-contrast: var(--color-#{$color}-contrast);
+    --current-color-shade: var(--color-#{$color}-shade);
+    --current-color-tint: var(--color-#{$color}-tint);
+  }
+}

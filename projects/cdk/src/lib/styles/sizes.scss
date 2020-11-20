@@ -1,0 +1,4 @@
+@import "../size/can-size";
+@import "../size/can-default-sizes";
+
+@include can-default-sizes('button')

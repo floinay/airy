@@ -1,0 +1,49 @@
+import { Constructor } from '../types/constructor';
+import { HasElementRef } from '../types/has-element-ref';
+
+export interface CanColor {
+  color: ThemePalette;
+
+  defaultColor: ThemePalette | undefined;
+}
+
+
+export type CanColorCtor = Constructor<CanColor>;
+
+export type ThemePalette = 'default' | 'primary' | 'accent' | 'warning' | 'danger' | undefined;
+
+
+export function mixinColor<T extends Constructor<HasElementRef>>(
+  base: T, defaultColor?: ThemePalette): CanColorCtor & T {
+  return class extends base {
+    // tslint:disable-next-line:variable-name
+    private _color: ThemePalette;
+    defaultColor = defaultColor;
+
+    get color(): ThemePalette {
+      return this._color;
+    }
+
+    set color(value: ThemePalette) {
+      const colorPalette = value || this.defaultColor;
+
+      if (colorPalette !== this._color) {
+        if (this._color) {
+          this._elementRef.nativeElement.classList.remove(`color-${this._color}`);
+        }
+        if (colorPalette) {
+          this._elementRef.nativeElement.classList.add(`color-${colorPalette}`);
+        }
+
+        this._color = colorPalette;
+      }
+    }
+
+    constructor(...args: any[]) {
+      super(...args);
+
+      // Set the default color that can be specified from the mixin.
+      this.color = defaultColor;
+    }
+  };
+}
