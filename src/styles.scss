@@ -1,8 +1,6 @@
 @import "projects/cdk/src/lib/cdk";
-@import "../projects/cdk/src/lib/styles/button";
 
-@include air-default-theme-palette;
-@include air-default-colors;
-@include air-vars;
-@include air-button-vars;
+$air-theme-options: (buttons: true);
+@include air-theme($air-theme-options);
+
 

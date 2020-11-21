@@ -1,6 +1,8 @@
 @mixin air-button-vars {
   :root {
     --button-height: 28px;
+    --button-font-size: 14px;
+    --button-min-height: 0;
     --button-border: none;
     --button-border-radius: var(--border-radius);
     --button-padding: 0 8px;
@@ -18,6 +20,20 @@
     --button-animation: none;
     --button-outline-border-width: 1px;
     --button-outline-border-style: solid;
-  }
+    --button-focused-outline: -webkit-focus-ring-color auto 1px;
 
+    --sm-button-min-width: 24px;
+    --sm-button-height: 24px;
+    --sm-button-font-size: 12px;
+
+    --md-button-min-width: 32px;
+    --md-button-height: 32px;
+    --md-button-font-size: 16px;
+    --md-button-padding: 0 10px;
+
+    --lg-button-min-width: 36px;
+    --lg-button-height: 36px;
+    --lg-button-font-size: 18px;
+    --lg-button-padding: 0 12px;
+  }
 }

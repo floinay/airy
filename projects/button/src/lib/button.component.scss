@@ -2,6 +2,7 @@
   appearance: var(--button-appearance);
   border: var(--button-border);
   height: var(--button-height);
+  min-height: var(--button-min-height);
   display: var(--button-display);
   border-radius: var(--button-border-radius);
   cursor: var(--button-cursor);
@@ -15,8 +16,13 @@
   background: var(--current-color);
   color: var(--current-color-contrast);
   font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
   transition: var(--button-transition);
   animation: var(--button-animation);
+
+  &:focus {
+    outline: var(--button-focused-outline);
+  }
 
   &.round {
     border-radius: var(--rounded-button-border-radius);

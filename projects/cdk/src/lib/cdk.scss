@@ -1,6 +1,28 @@
+@use "sass:map";
 @import "styles/sizes";
 @import "color/default-theme-palette";
 @import "color/default-colors";
 @import "styles/variables";
 @import "styles/button";
 @import "disabled/disabled";
+
+@mixin air-theme($options: (colors: true, default-vars: true, buttons:true) ) {
+  @include air-default-theme-palette;
+
+  @if with($options, colors) {
+    @include air-default-colors;
+  }
+
+  @if with($options, default-vars) {
+    @include air-default-vars;
+  }
+
+  @if (with($options, buttons)) {
+    @include air-button-vars;
+  }
+
+}
+
+@function with($options, $key) {
+  @return (map.has-key($options, $key) == false) or (map.get($options, $key));
+}
