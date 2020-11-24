@@ -1,11 +1,11 @@
 import { Constructor } from '../types/constructor';
 import { HasElementRef } from '../types/has-element-ref';
 
-interface CanDisabled {
+interface Disabled {
   disabled: boolean;
 }
 
-export type CanDisabledCtor = Constructor<CanDisabled>;
+export type CanDisabledCtor = Constructor<Disabled>;
 
 export function mixinDisabled<T extends Constructor<HasElementRef>>(base: T): CanDisabledCtor & T {
   return class extends base {

@@ -1,0 +1,18 @@
+@mixin air-icons {
+  :root {
+    --icon-width: 20px;
+    --icon-height: 20px;
+    --icon-background-size: cover;
+    --icon-display: inline-block;
+    --icon-repeat: no-repeat;
+
+    --sm-icon-width: 10px;
+    --sm-icon-height: 10px;
+
+    --md-icon-height: 30px;
+    --md-icon-width: 30px;
+
+    --lg-icon-width: 40px;
+    --lg-icon-height: 40px;
+  }
+}

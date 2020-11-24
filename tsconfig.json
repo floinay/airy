@@ -27,6 +27,10 @@
       "button": [
         "dist/button/button",
         "dist/button"
+      ],
+      "icon": [
+        "dist/icon/icon",
+        "dist/icon"
       ]
     }
   },

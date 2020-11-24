@@ -1,4 +1,4 @@
-@import "projects/cdk/src/lib/cdk";
+@import "~@airy-ui/cdk";
 
 $air-theme-options: (buttons: true);
 @include air-theme($air-theme-options);

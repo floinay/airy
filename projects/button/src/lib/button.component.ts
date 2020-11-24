@@ -1,10 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, Input } from '@angular/core';
-import { CanColorCtor, mixinColor } from '../../../cdk/src/lib/color/color';
-import { CanSizeCtor, mixinSize } from '../../../cdk/src/lib/size/size';
-import { HasElementRef } from '../../../cdk/src/lib/types/has-element-ref';
-import { CanDisabledCtor, mixinDisabled } from '../../../cdk/src/lib/disabled/can-disabled';
 import { AirFill } from './types/air-fill';
 import { AirExpand } from './types/air-expand';
+import { CanColorCtor, CanDisabledCtor, CanSizeCtor, HasElementRef, mixinColor, mixinDisabled, mixinSize } from '@airy-ui/cdk';
 
 const ButtonBase: CanColorCtor & CanSizeCtor & CanDisabledCtor = mixinDisabled(mixinColor(mixinSize(HasElementRef), 'default'));
 

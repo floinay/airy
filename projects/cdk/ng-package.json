@@ -3,5 +3,10 @@
   "dest": "../../dist/cdk",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": [
+    "src/cdk.scss",
+    "src/**/*.scss",
+    "index.scss"
+  ]
 }
