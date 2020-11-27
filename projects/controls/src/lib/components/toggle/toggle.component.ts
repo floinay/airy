@@ -24,7 +24,6 @@ export class ToggleComponent extends MixinBase implements ControlValueAccessor {
   @HostListener('keyup.space')
   @HostListener('keyup.enter')
   toggle(): void {
-    console.log('toggle');
     this.status = !this.status;
   }
 

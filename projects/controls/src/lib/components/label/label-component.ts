@@ -1,12 +1,13 @@
-import { Component, HostBinding, HostListener, Inject, Input } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { ChangeDetectionStrategy, Component, HostBinding, HostListener, Input } from '@angular/core';
+
 
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'label[air-label]',
   exportAs: 'label',
   templateUrl: './label-component.html',
-  styleUrls: ['./label-component.scss']
+  styleUrls: ['./label-component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LabelComponent {
   @HostBinding('class.required')
@@ -16,7 +17,7 @@ export class LabelComponent {
 
   get forElement(): HTMLElement | null {
     if (this.for) {
-      return this.document.getElementById(this.for);
+      return document.getElementById(this.for);
     }
 
     return null;
@@ -30,6 +31,4 @@ export class LabelComponent {
     }
   }
 
-  constructor(@Inject(DOCUMENT) readonly document: Document) {
-  }
 }
