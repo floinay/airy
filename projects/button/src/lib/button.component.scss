@@ -19,6 +19,7 @@
   font-size: var(--button-font-size);
   transition: var(--button-transition);
   animation: var(--button-animation);
+  position: var(--button-position, relative);
 
   &:focus {
     outline: var(--button-focused-outline);
@@ -32,12 +33,10 @@
     background: var(--current-color-shade);
   }
 
-  &.outline, &.clear {
-    background: transparent;
-  }
 
   &.outline {
     color: var(--current-color);
+    background: var(--button-outline-background);
     border: var(--button-outline-border-width) var(--button-outline-border-style) var(--current-color);
 
     &:hover {
@@ -48,9 +47,11 @@
 
   &.clear {
     color: var(--current-color);
+    background: none;
 
     &:hover {
       color: var(--current-color-shade);
+      background: var(--button-clear-hover-background, none);
     }
   }
 

@@ -1,0 +1,64 @@
+:host {
+  display: var(--form-field-display, flex);
+  align-items: var(--form-field-align-items, flex-start);
+  width: var(--form-field-width);
+  height: var(--form-field-height);
+
+  &:not(.content-inline) {
+    flex-direction: var(--form-field-flex-direction, column);
+  }
+
+  .control {
+    position: relative;
+
+    .prefix, .suffix {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .suffix {
+      right: 0;
+
+      ::ng-deep {
+        button {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+
+    .prefix {
+      left: 0;
+
+      ::ng-deep {
+        button {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+
+    ::ng-deep {
+      button {
+        margin: 0;
+      }
+    }
+  }
+
+  &.content-inline {
+    ::ng-deep {
+      label {
+        margin-bottom: var(--label-content-inline-margin, 0);
+        margin-inline-end: var(--label-margin-inline-end, 12px);
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: var(--form-field-margin-bottom, 12px);
+  }
+}

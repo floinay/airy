@@ -1,5 +1,9 @@
+@import "../lib/size/can-size";
+@import "../lib/size/can-default-sizes";
+
 @mixin air-icons {
   :root {
+    @include can-default-sizes(icon);
     --icon-width: 20px;
     --icon-height: 20px;
     --icon-background-size: cover;

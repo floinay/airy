@@ -31,6 +31,10 @@
       "icon": [
         "dist/icon/icon",
         "dist/icon"
+      ],
+      "controls": [
+        "dist/controls/controls",
+        "dist/controls"
       ]
     }
   },

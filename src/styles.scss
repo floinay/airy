@@ -1,6 +1,5 @@
-@import "~@airy-ui/cdk";
+@import "../projects/cdk";
 
-$air-theme-options: (buttons: true);
-@include air-theme($air-theme-options);
+@include air-theme();
 
 

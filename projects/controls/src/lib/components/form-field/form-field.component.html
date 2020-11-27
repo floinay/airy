@@ -1,0 +1,14 @@
+<ng-content select="label, [air-label]"></ng-content>
+<div class="control">
+  <div class="prefix" airHideIfEmpty>
+    <ng-content
+      select="div[airPrefix], button[airPrefix], air-icon[airPrefix], air-dynamic-icon[airSuffix]">
+    </ng-content>
+  </div>
+  <ng-content select="input, textarea, air-toggle"></ng-content>
+  <div class="suffix" airHideIfEmpty>
+    <ng-content
+      select="div[airSuffix], button[airSuffix], air-icon[airSuffix], air-dynamic-icon[airSuffix]">
+    </ng-content>
+  </div>
+</div>

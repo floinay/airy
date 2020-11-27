@@ -1,4 +1,8 @@
+@import "../lib/size/can-size";
+@import "../lib/size/can-default-sizes";
+
 @mixin air-button-vars {
+  @include can-default-sizes(button);
   :root {
     --button-height: 28px;
     --button-font-size: 14px;

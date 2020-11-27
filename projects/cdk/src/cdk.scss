@@ -1,14 +1,19 @@
 @use "sass:map";
-@import "styles/sizes";
 @import "lib/color/default-theme-palette";
 @import "lib/color/default-colors";
 @import "styles/variables";
 @import "styles/button";
 @import "lib/disabled/disabled";
 @import "styles/icon";
+@import "styles/input";
+@import "styles/initial";
 
-@mixin air-theme($options: (colors: true, default-vars: true, buttons:true, icons: true) ) {
+@mixin air-theme($options: (colors: true, default-vars: true, buttons:true, icons: true, controls: true, initial:true) ) {
   @include air-default-theme-palette;
+
+  @if (with($options, initial)) {
+    @include air-initial-styles;
+  }
 
   @if with($options, colors) {
     @include air-default-colors;
@@ -24,6 +29,10 @@
 
   @if (with($options, icons)) {
     @include air-icons;
+  }
+
+  @if (with($options, controls)) {
+    @include air-controls;
   }
 
 }

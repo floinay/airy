@@ -1,0 +1,46 @@
+:host {
+  display: inline-flex;
+  width: 36px;
+  height: 20px;
+  align-items: center;
+  transform: translate3d(0, 0, 0);
+  cursor: pointer;
+  outline: none;
+  overflow: visible;
+  --container-color: #ececf3;
+  --slider-color: #c8c7cc;
+
+  &:focus {
+    .slider {
+      box-shadow: 0 0 10px var(--container-color);
+    }
+  }
+
+  &.active {
+    --container-color: var(--current-color-tint);
+    --slider-color: var(--current-color);
+
+    .slider {
+      transform: translate3d(16px, 0, 0);
+    }
+  }
+}
+
+.slide-container, .slider {
+  transition: all 80ms linear;
+}
+
+.slide-container {
+  height: 14px;
+  width: 100%;
+  border-radius: 8px;
+  background: var(--container-color);
+}
+
+.slider {
+  border-radius: 100%;
+  background: var(--slider-color);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
