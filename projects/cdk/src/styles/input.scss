@@ -7,15 +7,18 @@
   :root {
     --sm-input-min-width: 24px;
     --sm-input-height: 24px;
+    --sm-input-width: 80px;
     --sm-input-font-size: 12px;
 
     --md-input-min-width: 32px;
     --md-input-height: 32px;
+    --md-input-width: 160px;
     --md-input-font-size: 16px;
     --md-input-padding: 0 10px;
 
     --lg-input-min-width: 36px;
     --lg-input-height: 36px;
+    --lg-input-width: 200px;
     --lg-input-font-size: 18px;
     --lg-input-padding: 0 12px;
   }
@@ -25,7 +28,9 @@
     border-radius: var(--border-radius, 4px);
     color: var(--current-color, #333);
     height: var(--input-height, 28px);
-    font-size: var(--input-font-size, 14px)
+    width: var(--input-width, 120px);
+    font-size: var(--input-font-size, 14px);
+    padding: var(--input-padding, 8px 0);
   }
 }
 

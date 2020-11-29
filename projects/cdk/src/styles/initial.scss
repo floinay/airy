@@ -1,4 +1,7 @@
 @mixin air-initial-styles {
+  :root {
+    --direction: ltr;
+  }
   * {
     box-sizing: border-box;
   }

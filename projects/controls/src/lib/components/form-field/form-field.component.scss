@@ -3,6 +3,7 @@
   align-items: var(--form-field-align-items, flex-start);
   width: var(--form-field-width);
   height: var(--form-field-height);
+  direction: var(--form-field-direction, var(--direction));
 
   &:not(.content-inline) {
     flex-direction: var(--form-field-flex-direction, column);
@@ -10,6 +11,8 @@
 
   .control {
     position: relative;
+    display: flex;
+    align-items: center;
 
     .prefix, .suffix {
       position: absolute;
@@ -50,6 +53,9 @@
   }
 
   &.content-inline {
+    direction: var(--form-field-inline-direction, var(--form-field-direction));
+    justify-content: var(--form-field-inline-justify-content, var(--form-field-justify-content));
+
     ::ng-deep {
       label {
         margin-bottom: var(--label-content-inline-margin, 0);

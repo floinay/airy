@@ -1,6 +1,6 @@
 {
   "name": "@airy-ui/controls",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "publishConfig": {
     "access": "public"
   },
