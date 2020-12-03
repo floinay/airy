@@ -7,9 +7,27 @@
 @import "styles/icon";
 @import "styles/input";
 @import "styles/initial";
+@import "styles/padding";
+@import "styles/marin";
 
-@mixin air-theme($options: (colors: true, default-vars: true, buttons:true, icons: true, controls: true, initial:true) ) {
+@mixin air-theme($options: (
+  colors: true,
+  default-vars: true,
+  padding:true,
+  margin: true,
+  buttons:true,
+  icons: true,
+  controls: true,
+  initial:true) ) {
   @include air-default-theme-palette;
+
+  @if (with($options, padding)) {
+    @include air-padding;
+  }
+
+  @if (with($options, margin)) {
+    @include air-margin;
+  }
 
   @if (with($options, initial)) {
     @include air-initial-styles;

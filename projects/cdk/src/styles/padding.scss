@@ -1,0 +1,21 @@
+@mixin air-padding() {
+  .air-padding {
+    padding: var(--air-padding, 20px);
+  }
+
+  .air-padding-top {
+    padding-top: var(--air-padding, 20px);
+  }
+
+  .air-padding-bottom {
+    padding-bottom: var(--air-padding, 20px);
+  }
+
+  .air-padding-start {
+    padding-inline-start: var(--air-padding, 20px)
+  }
+
+  .air-padding-end {
+    padding-inline-end: var(--air-padding, 20px);
+  }
+}
