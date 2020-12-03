@@ -20,11 +20,16 @@ export class ToggleComponent extends MixinBase implements ControlValueAccessor {
 
   @HostBinding('attr.tabindex') @Input() tabindex = 0;
 
+  @Input() enabledValue: unknown = true;
+
+  @Input() disabledValue: unknown = false;
+
   @HostListener('click')
   @HostListener('keyup.space')
   @HostListener('keyup.enter')
   toggle(): void {
     this.status = !this.status;
+    this.onChange(this.status ? this.enabledValue : this.disabledValue);
   }
 
   constructor(elementRef: ElementRef) {
@@ -32,8 +37,8 @@ export class ToggleComponent extends MixinBase implements ControlValueAccessor {
   }
 
 
-  writeValue(status: boolean): void {
-    this.status = status;
+  writeValue(value: boolean): void {
+    this.status = value === this.enabledValue;
   }
 
   registerOnChange(fn: () => void): void {
@@ -44,7 +49,7 @@ export class ToggleComponent extends MixinBase implements ControlValueAccessor {
     this.onTouched = fn;
   }
 
-  onChange(): void {
+  onChange(value: unknown): void {
   }
 
   onTouched(): void {
