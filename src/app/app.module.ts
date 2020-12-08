@@ -6,6 +6,7 @@ import { AirButtonModule } from '../../projects/button/src/lib/air-button.module
 import { AirIconModule } from '../../projects/icon/src/lib/air-icon.module';
 import { AirControlsModule } from '../../projects/controls/src/lib/air-controls.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AirCdkModule } from '../../projects/cdk/src/public-api';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    AirCdkModule.forRoot(),
     AirButtonModule,
     AirControlsModule,
     AirIconModule.forRoot({

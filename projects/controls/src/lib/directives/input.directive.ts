@@ -4,7 +4,7 @@ import { CanDisabledCtor, CanSizeCtor, HasElementRef, mixinDisabled, mixinSize }
 const ControlBase: CanDisabledCtor & CanSizeCtor = mixinSize(mixinDisabled(HasElementRef));
 
 @Directive({
-  selector: 'input[airInput]',
+  selector: 'input[airInput], textarea[airTextarea]',
   exportAs: 'control',
   // tslint:disable-next-line:no-inputs-metadata-property
   inputs: ['disabled', 'size']
