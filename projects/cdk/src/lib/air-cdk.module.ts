@@ -5,12 +5,13 @@ import { IndentsDirective } from './directives/indents/indents.directive';
 import { CdkModuleOptions } from './options/cdk-module.options';
 import { defaultOptions } from './options/default-options';
 import { CDK_MODULE_OPTIONS } from './options/cdk-module-options.provider';
+import { AutofocusDirective } from './directives/autofocus.directive';
 
 
 @NgModule({
-  declarations: [HideIfEmptyDirective, ClearInputBeforeUploadDirective, IndentsDirective],
+  declarations: [HideIfEmptyDirective, ClearInputBeforeUploadDirective, IndentsDirective, AutofocusDirective],
   imports: [],
-  exports: [HideIfEmptyDirective, ClearInputBeforeUploadDirective, IndentsDirective]
+  exports: [HideIfEmptyDirective, ClearInputBeforeUploadDirective, IndentsDirective, AutofocusDirective]
 })
 export class AirCdkModule {
   static forRoot(options?: CdkModuleOptions): ModuleWithProviders<AirCdkModule> {

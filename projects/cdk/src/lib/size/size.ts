@@ -7,7 +7,7 @@ export interface CanSize {
 
 export type CanSizeCtor = Constructor<CanSize>;
 
-export type ThemeSizes = 'sm' | 'md' | 'lg' | undefined | "";
+export type ThemeSizes = 'sm' | 'md' | 'lg' | undefined | '';
 
 
 export function mixinSize<T extends Constructor<HasElementRef>>(base: T): CanSizeCtor & T {

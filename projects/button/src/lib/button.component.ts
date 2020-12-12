@@ -32,7 +32,7 @@ export class ButtonComponent extends ButtonBase {
     const fill = this.fill || '';
     const expand = this.expand || '';
 
-    return `${fill} ${expand}`;
+    return `${fill} ${expand} air-button`;
   }
 
   constructor(private elementRef: ElementRef<HTMLElement>) {
