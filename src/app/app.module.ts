@@ -14,7 +14,10 @@ import { AirCdkModule } from '../../projects/cdk/src/public-api';
   ],
   imports: [
     BrowserModule,
-    AirCdkModule.forRoot(),
+    AirCdkModule.forRoot({
+      margins: {sm: 8, default: 16, md: 25, lg: 28},
+      paddings: {sm: 8, default: 16, md: 25, lg: 28}
+    }),
     AirButtonModule,
     AirControlsModule,
     AirIconModule.forRoot({

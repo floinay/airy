@@ -40,4 +40,35 @@
     --lg-button-font-size: 18px;
     --lg-button-padding: 0 12px;
   }
+  [dir="ltr"] {
+    air-buttons {
+      .air-button {
+        &:first-child {
+          border-top-left-radius: var(--button-border-radius);
+          border-bottom-left-radius: var(--button-border-radius);
+        }
+
+        &:last-child {
+          border-top-right-radius: var(--button-border-radius);
+          border-bottom-right-radius: var(--button-border-radius);
+        }
+      }
+    }
+  }
+
+  [dir="rtl"] {
+    air-buttons {
+      .air-button {
+        &:last-child {
+          border-top-left-radius: var(--button-border-radius);
+          border-bottom-left-radius: var(--button-border-radius);
+        }
+
+        &:first-child {
+          border-top-right-radius: var(--button-border-radius);
+          border-bottom-right-radius: var(--button-border-radius);
+        }
+      }
+    }
+  }
 }

@@ -41,7 +41,7 @@
     --lg-textarea-padding: var(--lg-input-padding, 10px);
   }
 
-  input {
+  input:not([type="checkbox"]), input:not([type="radio"]) {
     border: var(--input-border, 1px solid currentColor);
     border-radius: var(--border-radius, 4px);
     color: var(--current-color, #333);
