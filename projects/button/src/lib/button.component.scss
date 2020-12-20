@@ -42,6 +42,11 @@
     &:hover {
       color: var(--current-color-contrast);
       background: var(--current-color-shade);
+      ::ng-deep {
+        & > air-dynamic-icon {
+          --current-color: var(--current-color-contrast);
+        }
+      }
     }
   }
 
@@ -68,5 +73,4 @@
     margin-left: 0;
     margin-right: 0;
   }
-
 }
