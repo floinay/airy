@@ -8,7 +8,7 @@ const IconBase: CanColorCtor & CanSizeCtor = mixinSize(mixinColor(HasElementRef)
 @Component({
   selector: 'air-dynamic-icon',
   template: `
-    <svg>
+    <svg [style.stroke]="stroke" [style.fill]="fill">
       <use [attr.xlink:href]="src"></use>
     </svg>
   `,
@@ -20,6 +20,10 @@ const IconBase: CanColorCtor & CanSizeCtor = mixinSize(mixinColor(HasElementRef)
 export class DynamicIconComponent extends IconBase {
   @Input() name = '';
   @Input() sprite = this.options.pathToDynamicIconsSprite;
+
+  @Input() stroke: 'var(--current-color)' | 'none' | string = 'var(--current-color)';
+
+  @Input() fill: 'var(--current-color)' | 'none' | string = 'var(--current-color)';
 
   get src(): string {
     return `${this.sprite}#${this.name}`;
