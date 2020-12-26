@@ -35,6 +35,10 @@
       "controls": [
         "dist/controls/controls",
         "dist/controls"
+      ],
+      "tooltip": [
+        "dist/tooltip/tooltip",
+        "dist/tooltip"
       ]
     }
   },
