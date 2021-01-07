@@ -1,46 +1,39 @@
-import { ElementRef, Inject, Injectable } from '@angular/core';
-import { CdkModuleOptions, CdkSizeOption } from '../../options/cdk-module.options';
-import { CDK_MODULE_OPTIONS } from '../../options/cdk-module-options.provider';
-import { IndentsDirective } from './indents.directive';
+import {ElementRef, Inject, Injectable} from '@angular/core';
+import {CdkModuleOptions, CdkSizeOption} from '../../options/cdk-module.options';
+import {CDK_MODULE_OPTIONS} from '../../options/cdk-module-options.provider';
+import {IndentsDirective} from './indents.directive';
+import {PROPERTIES_MAP, PROPERTIES_MAP_KEYS, PROPERTIES_MAP_VALUES} from './static/properties.map';
+
 
 @Injectable()
 export class IndentsService {
-  private stylesMapping = {
-    airPadding: 'padding',
-    airPaddingTop: 'padding-top',
-    airPaddingBottom: 'padding-bottom',
-    airPaddingStart: 'padding-inline-start',
-    airPaddingEnd: 'padding-inline-end',
-    airMargin: 'margin',
-    airMarginTop: 'margin-top',
-    airMarginBottom: 'margin-bottom',
-    airMarginStat: 'margin-inline-start',
-    airMarginEnd: 'margin-inline-end'
-  };
+
 
   private directive!: IndentsDirective;
 
-  constructor(private elementRef: ElementRef, @Inject(CDK_MODULE_OPTIONS) readonly options: CdkModuleOptions) {
+  constructor(private elementRef: ElementRef<HTMLDivElement>,
+              @Inject(CDK_MODULE_OPTIONS) readonly options: CdkModuleOptions) {
   }
 
-  styles(directive: IndentsDirective): string {
+  styles(directive: IndentsDirective): void {
     this.directive = directive;
-    return Object.keys(this.stylesMapping).filter(key => {
+
+    PROPERTIES_MAP_KEYS.filter(key => {
       return this.elementRef.nativeElement.hasAttribute(key);
-    }).map((key) => {
-      return this.getStyle(key);
-    }).join(';');
+    }).forEach((key) => {
+      // @ts-ignore
+      const property = PROPERTIES_MAP[key];
+      this.elementRef.nativeElement.style.setProperty(property, this.value(key) + 'px');
+    });
   }
 
-  private getStyle(key: string): string {
-    // @ts-ignore
-    const style = this.stylesMapping[key];
-    const styleValue = this.getStyleValue(key);
-
-    return `${style}:${styleValue}px`;
+  private clearStyles(): void {
+    PROPERTIES_MAP_VALUES.forEach(style => {
+      this.elementRef.nativeElement.style.removeProperty(style);
+    });
   }
 
-  private getStyleValue(key: string): number {
+  private value(key: string): string {
     // @ts-ignore
     const size = this.directive[key];
     if (!size) {

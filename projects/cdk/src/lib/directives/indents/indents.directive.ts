@@ -1,34 +1,25 @@
-import { Directive, HostBinding, Input, OnInit } from '@angular/core';
-import { ThemeSizes } from '../../size/size';
-import { IndentsService } from './indents.service';
+import {Directive, Inject, OnChanges, SimpleChanges} from '@angular/core';
+import {IndentsService} from './indents.service';
+import {AbstractIndentsDirective} from './abstract-indents-directive';
+import {BreakpointsStylesManager} from '../../breakpoints/styles/breakpoints-styles.manager';
+import {PROPERTIES_MAP} from './static/properties.map';
+import {CDK_MODULE_OPTIONS} from '../../options/cdk-module-options.provider';
+import {CdkModuleOptions} from '../../options/cdk-module.options';
 
 @Directive({
   selector: '[airPadding], [airPaddingTop], [airPaddingBottom],  [airPaddingStart], [airPaddingEnd], [airMargin], [airMarginStart], [airMarginEnd], [airMarginTop], [airMarginBottom]',
-  providers: [IndentsService]
+  providers: [IndentsService, BreakpointsStylesManager],
 })
-export class IndentsDirective implements OnInit {
-  @Input() airPadding: ThemeSizes;
-  @Input() airPaddingTop: ThemeSizes;
-  @Input() airPaddingBottom: ThemeSizes;
-  @Input() airPaddingStart: ThemeSizes;
-  @Input() airPaddingEnd: ThemeSizes;
+export class IndentsDirective extends AbstractIndentsDirective implements OnChanges {
 
-  @Input() airMargin: ThemeSizes;
-  @Input() airMarginTop: ThemeSizes;
-  @Input() airMarginBottom: ThemeSizes;
-  @Input() airMarginStart: ThemeSizes;
-  @Input() airMarginEnd: ThemeSizes;
-
-  @HostBinding('style')
-  styles = '';
-
-  constructor(private indentsService: IndentsService) {
-
+  constructor(private bpStylesManager: BreakpointsStylesManager, @Inject(CDK_MODULE_OPTIONS) options: CdkModuleOptions) {
+    super();
+    bpStylesManager.setStylesMap(Object.assign(options.paddings, {undefined: options.paddings.default}));
+    bpStylesManager.setPropertiesMap(PROPERTIES_MAP);
   }
 
-  ngOnInit(): void {
-    this.styles = this.indentsService.styles(this);
+  ngOnChanges(changes: SimpleChanges): void {
+    this.bpStylesManager.onChanges(changes);
   }
-
 
 }

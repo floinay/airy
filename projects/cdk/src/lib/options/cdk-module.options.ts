@@ -4,8 +4,8 @@ export interface CdkModuleOptions {
 }
 
 export interface CdkSizeOption {
-  sm: number;
-  default: number;
-  md: number;
-  lg: number;
+  sm: string;
+  default: string;
+  md: string;
+  lg: string;
 }

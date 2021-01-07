@@ -1,4 +1,9 @@
 @import "../projects/cdk";
 @import '~@angular/cdk/overlay-prebuilt.css';
 
+html, body {
+  margin: 0;;
+  padding: 0;
+}
+
 @include air-theme();

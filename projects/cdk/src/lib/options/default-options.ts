@@ -2,9 +2,9 @@ import { CdkModuleOptions } from './cdk-module.options';
 
 export const defaultOptions: CdkModuleOptions = {
   paddings: {
-    sm: 16, default: 20, md: 24, lg: 28
+    sm: '8px', default: '16px', md: '25px', lg: '28px'
   },
   margins: {
-    sm: 16, default: 20, md: 24, lg: 28
+    sm: '8px', default: '16px', md: '25px', lg: '28px'
   }
 };
