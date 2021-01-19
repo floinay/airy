@@ -17,6 +17,7 @@ export class BreakpointsStylesManager implements OnDestroy {
   private breakpointsSub?: Subscription;
   private propertiesMap: InputsList = {};
   private stylesMap: InputsList = {};
+  private currentProperties: string[] = [];
 
   constructor(private elementRef: ElementRef<HTMLDivElement>,
               private observer: BreakpointObserver,
@@ -60,7 +61,9 @@ export class BreakpointsStylesManager implements OnDestroy {
   }
 
   private propertyName(key: string): string {
-    return this.propertiesMap[key.toLowerCase()] as string;
+    const name = this.propertiesMap[key.toLowerCase()] as string;
+    this.currentProperties.push(name);
+    return name;
   }
 
   private propertyValue(value: string): string {
@@ -72,6 +75,13 @@ export class BreakpointsStylesManager implements OnDestroy {
       Object.keys(this.changes.previous.currentProperties(this.currentBreakpoints))
         .forEach(key => this.elementRef.nativeElement.style.removeProperty(key));
     }
+
+    this.currentProperties.forEach(name => {
+      this.elementRef.nativeElement.style.removeProperty(name);
+      console.log(name);
+    });
+
+    this.currentProperties = [];
   }
 
   ngOnDestroy(): void {

@@ -1,4 +1,4 @@
-export const PROPERTIES_MAP = {
+export const PROP_NAMES_MAP = {
   airPadding: 'padding',
   airPaddingTop: 'padding-top',
   airPaddingBottom: 'padding-bottom',
@@ -11,5 +11,5 @@ export const PROPERTIES_MAP = {
   airMarginEnd: 'margin-inline-end'
 };
 
-export const PROPERTIES_MAP_VALUES = Object.values(PROPERTIES_MAP);
-export const PROPERTIES_MAP_KEYS = Object.keys(PROPERTIES_MAP);
+export const PROPERTIES_MAP_VALUES = Object.values(PROP_NAMES_MAP);
+export const PROPERTIES_MAP_KEYS = Object.keys(PROP_NAMES_MAP);

@@ -2,7 +2,7 @@ import {ElementRef, Inject, Injectable} from '@angular/core';
 import {CdkModuleOptions, CdkSizeOption} from '../../options/cdk-module.options';
 import {CDK_MODULE_OPTIONS} from '../../options/cdk-module-options.provider';
 import {IndentsDirective} from './indents.directive';
-import {PROPERTIES_MAP, PROPERTIES_MAP_KEYS, PROPERTIES_MAP_VALUES} from './static/properties.map';
+import {PROP_NAMES_MAP, PROPERTIES_MAP_KEYS, PROPERTIES_MAP_VALUES} from './static/properties.map';
 
 
 @Injectable()
@@ -22,7 +22,7 @@ export class IndentsService {
       return this.elementRef.nativeElement.hasAttribute(key);
     }).forEach((key) => {
       // @ts-ignore
-      const property = PROPERTIES_MAP[key];
+      const property = PROP_NAMES_MAP[key];
       this.elementRef.nativeElement.style.setProperty(property, this.value(key) + 'px');
     });
   }
