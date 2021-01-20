@@ -42,17 +42,26 @@ export class BreakpointStyle {
   }
 
   propValue(): string | number {
-    return this.valuesMap[this.name] || this.value;
+    return this.defaultValue() || this.valuesMap[this.value] || this.value;
+  }
+
+  private defaultValue(): string | number | null {
+    return this.isDefaultValue() ? this.valuesMap.default : null;
+  }
+
+  private isDefaultValue(): boolean {
+    return !this.value || this.value === '' && 'default' in this.valuesMap;
   }
 
 
   private withoutBreakpoint(): string {
-    return this.name.split('.')[1];
+    return this.name.split(this.isBreakpointProp() ? 'Air' : 'air')[1] || this.name;
   }
 
-  breakpoint(): keyof Breakpoints | null {
+  breakpoint(): string | null {
     if (this.isBreakpointProp()) {
-      return this.name.split('.')[0] as keyof Breakpoints;
+      const bp = this.name.split('Air')[0] as keyof Breakpoints;
+      return Breakpoints[bp];
     }
 
     return null;

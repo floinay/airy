@@ -1,35 +1,50 @@
 import {Inject, Injectable, Optional} from '@angular/core';
 import {StylesManager} from './styles.manager';
 import {StringObject} from '../types/string-object';
-import {PROP_NAMES_MAP, PROP_VALUES_MAP} from './styles-manager.tokens';
-import {Breakpoint, BreakpointObserver} from '../breakpoints';
+import {PROPS_MAP, PROPS_VALUES_MAP} from './styles-manager.tokens';
+import {Breakpoint} from '../breakpoints';
 import {Observable} from 'rxjs';
 import {BreakpointsStylesParser, ParsedBreakpointsStyles} from './helpers/parser/breakpoint-styles-parser';
 import {StringOrNumberObject} from '../types/string-or-number-object';
 import {tap} from 'rxjs/operators';
+import {GroupedStylesByBreakpoints} from './types/grouped-styles-by-breakpoints';
+import {BreakpointObserver, BreakpointState} from '@angular/cdk/layout';
 
 @Injectable()
 export class BreakpointsStylesManager {
   private currentBreakpointsStyles: StringObject = {};
   private withoutBreakpointStyles: Partial<CSSStyleDeclaration> = {};
+  private styles: StringOrNumberObject = {};
+  private breakpointsStyles: GroupedStylesByBreakpoints = {};
 
   constructor(private stylesManager: StylesManager,
               private breakpointObserver: BreakpointObserver,
-              @Inject(PROP_VALUES_MAP) @Optional() readonly propValuesMap?: StringObject,
-              @Inject(PROP_NAMES_MAP) @Optional() readonly propNamesMap?: StringObject) {
+              @Inject(PROPS_VALUES_MAP) @Optional() readonly propValuesMap?: StringObject,
+              @Inject(PROPS_MAP) @Optional() readonly propNamesMap?: StringObject) {
   }
 
-  listen(styles: StringOrNumberObject): Observable<Breakpoint[]> {
-    this.clearAllPreviousStyles();
-
-    const {breakpointsStyles, withoutBreakpointsStyles} = this.parseBreakpoints(styles);
+  style(styles: StringOrNumberObject): void {
+    this.clearCurrentStyles();
+    this.styles = styles;
+    const {breakpointsStyles, withoutBreakpointsStyles} = this.parseBreakpoints(this.styles);
     this.withoutBreakpointStyles = withoutBreakpointsStyles;
+    this.breakpointsStyles = breakpointsStyles;
     this.stylesManager.style(withoutBreakpointsStyles);
+  }
 
-    return this.breakpointObserver.matches$(Object.keys(breakpointsStyles) as Breakpoint[]).pipe(tap((breakpoints => {
+  hasBreakpoints(): boolean {
+    return Boolean(Object.keys(this.breakpointsStyles).length);
+  }
+
+  listen(): Observable<BreakpointState> {
+    return this.breakpointObserver.observe(Object.keys(this.breakpointsStyles) as Breakpoint[]).pipe(tap((breakpoints => {
       this.clearCurrentStyles();
-      for (const [breakpoint, breakpointStyles] of Object.entries(breakpointsStyles)) {
-        if (breakpoints.includes(breakpoint as Breakpoint)) {
+      this.stylesManager.style(this.withoutBreakpointStyles);
+
+      console.log(breakpoints, this.breakpointsStyles);
+
+      for (const [breakpoint, breakpointStyles] of Object.entries(this.breakpointsStyles)) {
+        if (breakpoints.breakpoints[breakpoint]) {
           this.currentBreakpointsStyles = Object.assign(this.currentBreakpointsStyles, breakpointStyles);
         }
       }
@@ -39,13 +54,11 @@ export class BreakpointsStylesManager {
   }
 
   private clearCurrentStyles(): void {
+    this.stylesManager.remove(Object.keys(this.withoutBreakpointStyles) as Array<keyof CSSStyleDeclaration>);
     this.stylesManager.remove(Object.keys(this.currentBreakpointsStyles) as Array<keyof CSSStyleDeclaration>);
+    this.currentBreakpointsStyles = {};
   }
 
-  private clearAllPreviousStyles(): void {
-    this.clearCurrentStyles();
-    this.stylesManager.remove(Object.keys(this.withoutBreakpointStyles) as Array<keyof CSSStyleDeclaration>);
-  }
 
   private parseBreakpoints(styles: StringOrNumberObject): ParsedBreakpointsStyles {
     return new BreakpointsStylesParser({

@@ -1,155 +1,33 @@
-import {Directive, Input} from '@angular/core';
-import {ThemeSizes} from 'cdk';
+import {Directive, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
+import {Subscription} from 'rxjs';
+import {BreakpointsStylesManager} from '../../styles/breakpoints-styles.manager';
+import {getValuesFromSimpleChanges} from '../../helpers/get-values-from-simple-changes';
 
 @Directive()
-export abstract class AbstractIndentsDirective {
-  @Input() airPadding: ThemeSizes;
-  @Input('xs.airPadding') xsAirPadding: ThemeSizes;
-  @Input('sm.airPadding') smAirPadding: ThemeSizes;
-  @Input('md.airPadding') mdAirPadding: ThemeSizes;
-  @Input('lg.airPadding') lgAirPadding: ThemeSizes;
-  @Input('xl.airPadding') xlAirPadding: ThemeSizes;
-  @Input('ltSm.airPadding') ltSmAirPadding: ThemeSizes;
-  @Input('ltMd.airPadding') ltMdAirPadding: ThemeSizes;
-  @Input('ltLg.airPadding') ltLgAirPadding: ThemeSizes;
-  @Input('ltXl.airPadding') ltXlAirPadding: ThemeSizes;
-  @Input('gtSm.airPadding') gtSmAirPadding: ThemeSizes;
-  @Input('gtMd.airPadding') gtMdAirPadding: ThemeSizes;
-  @Input('gtLg.airPadding') gtLgAirPadding: ThemeSizes;
-  @Input('gtXs.airPadding') gtXsAirPadding: ThemeSizes;
+export abstract class AbstractIndentsDirective implements OnChanges, OnDestroy {
+  private sub?: Subscription;
 
-  @Input() airPaddingTop: ThemeSizes;
-  @Input('xs.airPaddingTop') xsAirPaddingTop: ThemeSizes;
-  @Input('sm.airPaddingTop') smAirPaddingTop: ThemeSizes;
-  @Input('md.airPaddingTop') mdAirPaddingTop: ThemeSizes;
-  @Input('lg.airPaddingTop') lgAirPaddingTop: ThemeSizes;
-  @Input('xl.airPaddingTop') xlAirPaddingTop: ThemeSizes;
-  @Input('ltSm.airPaddingTop') ltSmAirPaddingTop: ThemeSizes;
-  @Input('ltMd.airPaddingTop') ltMdAirPaddingTop: ThemeSizes;
-  @Input('ltLg.airPaddingTop') ltLgAirPaddingTop: ThemeSizes;
-  @Input('ltXl.airPaddingTop') ltXlAirPaddingTop: ThemeSizes;
-  @Input('gtSm.airPaddingTop') gtSmAirPaddingTop: ThemeSizes;
-  @Input('gtMd.airPaddingTop') gtMdAirPaddingTop: ThemeSizes;
-  @Input('gtLg.airPaddingTop') gtLgAirPaddingTop: ThemeSizes;
-  @Input('gtXs.airPaddingTop') gtXsAirPaddingTop: ThemeSizes;
+  constructor(protected bpStylesManager: BreakpointsStylesManager) {
+  }
 
-  @Input() airPaddingBottom: ThemeSizes;
-  @Input('xs.airPaddingBottom') xsAirPaddingBottom: ThemeSizes;
-  @Input('sm.airPaddingBottom') smAirPaddingBottom: ThemeSizes;
-  @Input('md.airPaddingBottom') mdAirPaddingBottom: ThemeSizes;
-  @Input('lg.airPaddingBottom') lgAirPaddingBottom: ThemeSizes;
-  @Input('xl.airPaddingBottom') xlAirPaddingBottom: ThemeSizes;
-  @Input('ltSm.airPaddingBottom') ltSmAirPaddingBottom: ThemeSizes;
-  @Input('ltMd.airPaddingBottom') ltMdAirPaddingBottom: ThemeSizes;
-  @Input('ltLg.airPaddingBottom') ltLgAirPaddingBottom: ThemeSizes;
-  @Input('ltXl.airPaddingBottom') ltXlAirPaddingBottom: ThemeSizes;
-  @Input('gtSm.airPaddingBottom') gtSmAirPaddingBottom: ThemeSizes;
-  @Input('gtMd.airPaddingBottom') gtMdAirPaddingBottom: ThemeSizes;
-  @Input('gtLg.airPaddingBottom') gtLgAirPaddingBottom: ThemeSizes;
-  @Input('gtXs.airPaddingBottom') gtXsAirPaddingBottom: ThemeSizes;
 
-  @Input() airPaddingStart: ThemeSizes;
-  @Input('xs.airPaddingStart') xsAirPaddingStart: ThemeSizes;
-  @Input('sm.airPaddingStart') smAirPaddingStart: ThemeSizes;
-  @Input('md.airPaddingStart') mdAirPaddingStart: ThemeSizes;
-  @Input('lg.airPaddingStart') lgAirPaddingStart: ThemeSizes;
-  @Input('xl.airPaddingStart') xlAirPaddingStart: ThemeSizes;
-  @Input('ltSm.airPaddingStart') ltSmAirPaddingStart: ThemeSizes;
-  @Input('ltMd.airPaddingStart') ltMdAirPaddingStart: ThemeSizes;
-  @Input('ltLg.airPaddingStart') ltLgAirPaddingStart: ThemeSizes;
-  @Input('ltXl.airPaddingStart') ltXlAirPaddingStart: ThemeSizes;
-  @Input('gtSm.airPaddingStart') gtSmAirPaddingStart: ThemeSizes;
-  @Input('gtMd.airPaddingStart') gtMdAirPaddingStart: ThemeSizes;
-  @Input('gtLg.airPaddingStart') gtLgAirPaddingStart: ThemeSizes;
-  @Input('gtXs.airPaddingStart') gtXsAirPaddingStart: ThemeSizes;
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.sub) {
+      this.sub.unsubscribe();
+    }
 
-  @Input() airPaddingEnd: ThemeSizes;
-  @Input('xs.airPaddingEnd') xsAirPaddingEnd: ThemeSizes;
-  @Input('sm.airPaddingEnd') smAirPaddingEnd: ThemeSizes;
-  @Input('md.airPaddingEnd') mdAirPaddingEnd: ThemeSizes;
-  @Input('lg.airPaddingEnd') lgAirPaddingEnd: ThemeSizes;
-  @Input('xl.airPaddingEnd') xlAirPaddingEnd: ThemeSizes;
-  @Input('ltSm.airPaddingEnd') ltSmAirPaddingEnd: ThemeSizes;
-  @Input('ltMd.airPaddingEnd') ltMdAirPaddingEnd: ThemeSizes;
-  @Input('ltLg.airPaddingEnd') ltLgAirPaddingEnd: ThemeSizes;
-  @Input('ltXl.airPaddingEnd') ltXlAirPaddingEnd: ThemeSizes;
-  @Input('gtSm.airPaddingEnd') gtSmAirPaddingEnd: ThemeSizes;
-  @Input('gtMd.airPaddingEnd') gtMdAirPaddingEnd: ThemeSizes;
-  @Input('gtLg.airPaddingEnd') gtLgAirPaddingEnd: ThemeSizes;
-  @Input('gtXs.airPaddingEnd') gtXsAirPaddingEnd: ThemeSizes;
+    this.bpStylesManager.style(getValuesFromSimpleChanges(changes));
 
-  @Input() airMargin: ThemeSizes;
-  @Input('xs.airMargin') xsAirMargin: ThemeSizes;
-  @Input('sm.airMargin') smAirMargin: ThemeSizes;
-  @Input('md.airMargin') mdAirMargin: ThemeSizes;
-  @Input('lg.airMargin') lgAirMargin: ThemeSizes;
-  @Input('xl.airMargin') xlAirMargin: ThemeSizes;
-  @Input('ltSm.airMargin') ltSmAirMargin: ThemeSizes;
-  @Input('ltMd.airMargin') ltMdAirMargin: ThemeSizes;
-  @Input('ltLg.airMargin') ltLgAirMargin: ThemeSizes;
-  @Input('ltXl.airMargin') ltXlAirMargin: ThemeSizes;
-  @Input('gtSm.airMargin') gtSmAirMargin: ThemeSizes;
-  @Input('gtMd.airMargin') gtMdAirMargin: ThemeSizes;
-  @Input('gtLg.airMargin') gtLgAirMargin: ThemeSizes;
-  @Input('gtXs.airMargin') gtXsAirMargin: ThemeSizes;
+    if (this.bpStylesManager.hasBreakpoints()) {
+      this.sub = this.bpStylesManager.listen().subscribe();
+    }
+  }
 
-  @Input() airMarginTop: ThemeSizes;
-  @Input('xs.airMarginTop') xsAirMarginTop: ThemeSizes;
-  @Input('sm.airMarginTop') smAirMarginTop: ThemeSizes;
-  @Input('md.airMarginTop') mdAirMarginTop: ThemeSizes;
-  @Input('lg.airMarginTop') lgAirMarginTop: ThemeSizes;
-  @Input('xl.airMarginTop') xlAirMarginTop: ThemeSizes;
-  @Input('ltSm.airMarginTop') ltSmAirMarginTop: ThemeSizes;
-  @Input('ltMd.airMarginTop') ltMdAirMarginTop: ThemeSizes;
-  @Input('ltLg.airMarginTop') ltLgAirMarginTop: ThemeSizes;
-  @Input('ltXl.airMarginTop') ltXlAirMarginTop: ThemeSizes;
-  @Input('gtSm.airMarginTop') gtSmAirMarginTop: ThemeSizes;
-  @Input('gtMd.airMarginTop') gtMdAirMarginTop: ThemeSizes;
-  @Input('gtLg.airMarginTop') gtLgAirMarginTop: ThemeSizes;
-  @Input('gtXs.airMarginTop') gtXsAirMarginTop: ThemeSizes;
+  ngOnDestroy(): void {
+    if (this.sub) {
+      this.sub.unsubscribe();
+    }
+  }
 
-  @Input() airMarginBottom: ThemeSizes;
-  @Input('xs.airMarginBottom') xsAirMarginBottom: ThemeSizes;
-  @Input('sm.airMarginBottom') smAirMarginBottom: ThemeSizes;
-  @Input('md.airMarginBottom') mdAirMarginBottom: ThemeSizes;
-  @Input('lg.airMarginBottom') lgAirMarginBottom: ThemeSizes;
-  @Input('xl.airMarginBottom') xlAirMarginBottom: ThemeSizes;
-  @Input('ltSm.airMarginBottom') ltSmAirMarginBottom: ThemeSizes;
-  @Input('ltMd.airMarginBottom') ltMdAirMarginBottom: ThemeSizes;
-  @Input('ltLg.airMarginBottom') ltLgAirMarginBottom: ThemeSizes;
-  @Input('ltXl.airMarginBottom') ltXlAirMarginBottom: ThemeSizes;
-  @Input('gtSm.airMarginBottom') gtSmAirMarginBottom: ThemeSizes;
-  @Input('gtMd.airMarginBottom') gtMdAirMarginBottom: ThemeSizes;
-  @Input('gtLg.airMarginBottom') gtLgAirMarginBottom: ThemeSizes;
-  @Input('gtXs.airMarginBottom') gtXsAirMarginBottom: ThemeSizes;
-
-  @Input() airMarginStart: ThemeSizes;
-  @Input('xs.airMarginStart') xsAirMarginStart: ThemeSizes;
-  @Input('sm.airMarginStart') smAirMarginStart: ThemeSizes;
-  @Input('md.airMarginStart') mdAirMarginStart: ThemeSizes;
-  @Input('lg.airMarginStart') lgAirMarginStart: ThemeSizes;
-  @Input('xl.airMarginStart') xlAirMarginStart: ThemeSizes;
-  @Input('ltSm.airMarginStart') ltSmAirMarginStart: ThemeSizes;
-  @Input('ltMd.airMarginStart') ltMdAirMarginStart: ThemeSizes;
-  @Input('ltLg.airMarginStart') ltLgAirMarginStart: ThemeSizes;
-  @Input('ltXl.airMarginStart') ltXlAirMarginStart: ThemeSizes;
-  @Input('gtSm.airMarginStart') gtSmAirMarginStart: ThemeSizes;
-  @Input('gtMd.airMarginStart') gtMdAirMarginStart: ThemeSizes;
-  @Input('gtLg.airMarginStart') gtLgAirMarginStart: ThemeSizes;
-  @Input('gtXs.airMarginStart') gtXsAirMarginStart: ThemeSizes;
-
-  @Input() airMarginEnd: ThemeSizes;
-  @Input('xs.airMarginEnd') xsAirMarginEnd: ThemeSizes;
-  @Input('sm.airMarginEnd') smAirMarginEnd: ThemeSizes;
-  @Input('md.airMarginEnd') mdAirMarginEnd: ThemeSizes;
-  @Input('lg.airMarginEnd') lgAirMarginEnd: ThemeSizes;
-  @Input('xl.airMarginEnd') xlAirMarginEnd: ThemeSizes;
-  @Input('ltSm.airMarginEnd') ltSmAirMarginEnd: ThemeSizes;
-  @Input('ltMd.airMarginEnd') ltMdAirMarginEnd: ThemeSizes;
-  @Input('ltLg.airMarginEnd') ltLgAirMarginEnd: ThemeSizes;
-  @Input('ltXl.airMarginEnd') ltXlAirMarginEnd: ThemeSizes;
-  @Input('gtSm.airMarginEnd') gtSmAirMarginEnd: ThemeSizes;
-  @Input('gtMd.airMarginEnd') gtMdAirMarginEnd: ThemeSizes;
-  @Input('gtLg.airMarginEnd') gtLgAirMarginEnd: ThemeSizes;
-  @Input('gtXs.airMarginEnd') gtXsAirMarginEnd: ThemeSizes;
 }
+
