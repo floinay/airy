@@ -1,9 +1,38 @@
 :host {
-  background-size: var(--icon-background-size);
-  width: var(--icon-width);
-  height: var(--icon-height);
-  margin: var(--icon-margin);
-  padding: var(--icon-padding);
-  display: var(--icon-display);
-  background-repeat: var(--icon-repeat);
+  background-size: var(--icon__background-size, cover);
+  width: var(--icon__width, 16px);
+  height: var(--icon__height, 16px);
+  margin: var(--icon__margin, 0);
+  padding: var(--icon__padding, 0);
+  display: var(--icon__display, inline-block);
+  background-repeat: var(--icon__repeat, no-repeat);
+
+  &.size-xxs {
+
+  }
+
+  &.size-xs {
+  }
+
+  &.size-s {
+
+  }
+
+  &.size-m {
+    --icon__width: 20px;
+    --icon__height: 20px;
+  }
+
+  &.size-l {
+    --icon__width: 24px;
+    --icon__height: 24px;
+  }
+
+  &.size-xl {
+
+  }
+
+  &.size-xxl {
+
+  }
 }
