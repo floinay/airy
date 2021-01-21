@@ -1,10 +1,12 @@
 import {Directive, Injector, Input} from '@angular/core';
-import {ThemeSizes} from '@airy-ui/cdk';
-import {PROPS_MAP, PROPS_VALUES_MAP} from '../../styles/styles-manager.tokens';
+import {ThemeSize} from '../../core/size/size';
+import {PROPS_MAP, PROPS_VALUES_MAP} from '../../services/styles/styles-service.tokens';
 import {CDK_MODULE_OPTIONS} from '../../options/cdk-module-options.provider';
-import {BreakpointsStylesManager} from '../../styles/breakpoints-styles.manager';
-import {StylesManager} from '../../styles/styles.manager';
+import {BreakpointsStylesService} from '../../services/styles/breakpoints-styles.service';
+import {StylesService} from '../../services/styles/styles.service';
 import {AbstractIndentsDirective} from './abstract-indents-directive';
+import {IndentsSizeOptions} from '../../options/cdk-module.options';
+import {PADDINGS_PROVIDERS} from './indents.providers';
 
 @Directive({
   selector: `
@@ -81,98 +83,81 @@ import {AbstractIndentsDirective} from './abstract-indents-directive';
   [gtLg.airPaddingEnd],
   [gtXs.airPaddingEnd],
   `,
-  providers: [
-    {
-      provide: PROPS_MAP,
-      useValue: {
-        airMarginStat: 'margin-inline-start',
-        airMarginEnd: 'margin-inline-end'
-      }
-    },
-    {
-      provide: PROPS_VALUES_MAP,
-      useFactory: (injector: Injector) => {
-        return injector.get(CDK_MODULE_OPTIONS).paddings;
-      },
-      deps: [Injector]
-    },
-    BreakpointsStylesManager,
-    StylesManager
-  ]
+  providers: PADDINGS_PROVIDERS
 })
 export class PaddingsDirective extends AbstractIndentsDirective {
-  @Input() airPadding: ThemeSizes;
-  @Input('xs.airPadding') xsAirPadding: ThemeSizes;
-  @Input('sm.airPadding') smAirPadding: ThemeSizes;
-  @Input('md.airPadding') mdAirPadding: ThemeSizes;
-  @Input('lg.airPadding') lgAirPadding: ThemeSizes;
-  @Input('xl.airPadding') xlAirPadding: ThemeSizes;
-  @Input('ltSm.airPadding') ltSmAirPadding: ThemeSizes;
-  @Input('ltMd.airPadding') ltMdAirPadding: ThemeSizes;
-  @Input('ltLg.airPadding') ltLgAirPadding: ThemeSizes;
-  @Input('ltXl.airPadding') ltXlAirPadding: ThemeSizes;
-  @Input('gtSm.airPadding') gtSmAirPadding: ThemeSizes;
-  @Input('gtMd.airPadding') gtMdAirPadding: ThemeSizes;
-  @Input('gtLg.airPadding') gtLgAirPadding: ThemeSizes;
-  @Input('gtXs.airPadding') gtXsAirPadding: ThemeSizes;
+  @Input() airPadding: ThemeSize;
+  @Input('xs.airPadding') xsAirPadding: ThemeSize;
+  @Input('sm.airPadding') smAirPadding: ThemeSize;
+  @Input('md.airPadding') mdAirPadding: ThemeSize;
+  @Input('lg.airPadding') lgAirPadding: ThemeSize;
+  @Input('xl.airPadding') xlAirPadding: ThemeSize;
+  @Input('ltSm.airPadding') ltSmAirPadding: ThemeSize;
+  @Input('ltMd.airPadding') ltMdAirPadding: ThemeSize;
+  @Input('ltLg.airPadding') ltLgAirPadding: ThemeSize;
+  @Input('ltXl.airPadding') ltXlAirPadding: ThemeSize;
+  @Input('gtSm.airPadding') gtSmAirPadding: ThemeSize;
+  @Input('gtMd.airPadding') gtMdAirPadding: ThemeSize;
+  @Input('gtLg.airPadding') gtLgAirPadding: ThemeSize;
+  @Input('gtXs.airPadding') gtXsAirPadding: ThemeSize;
 
-  @Input() airPaddingTop: ThemeSizes;
-  @Input('xs.airPaddingTop') xsAirPaddingTop: ThemeSizes;
-  @Input('sm.airPaddingTop') smAirPaddingTop: ThemeSizes;
-  @Input('md.airPaddingTop') mdAirPaddingTop: ThemeSizes;
-  @Input('lg.airPaddingTop') lgAirPaddingTop: ThemeSizes;
-  @Input('xl.airPaddingTop') xlAirPaddingTop: ThemeSizes;
-  @Input('ltSm.airPaddingTop') ltSmAirPaddingTop: ThemeSizes;
-  @Input('ltMd.airPaddingTop') ltMdAirPaddingTop: ThemeSizes;
-  @Input('ltLg.airPaddingTop') ltLgAirPaddingTop: ThemeSizes;
-  @Input('ltXl.airPaddingTop') ltXlAirPaddingTop: ThemeSizes;
-  @Input('gtSm.airPaddingTop') gtSmAirPaddingTop: ThemeSizes;
-  @Input('gtMd.airPaddingTop') gtMdAirPaddingTop: ThemeSizes;
-  @Input('gtLg.airPaddingTop') gtLgAirPaddingTop: ThemeSizes;
-  @Input('gtXs.airPaddingTop') gtXsAirPaddingTop: ThemeSizes;
+  @Input() airPaddingTop: ThemeSize;
+  @Input('xs.airPaddingTop') xsAirPaddingTop: ThemeSize;
+  @Input('sm.airPaddingTop') smAirPaddingTop: ThemeSize;
+  @Input('md.airPaddingTop') mdAirPaddingTop: ThemeSize;
+  @Input('lg.airPaddingTop') lgAirPaddingTop: ThemeSize;
+  @Input('xl.airPaddingTop') xlAirPaddingTop: ThemeSize;
+  @Input('ltSm.airPaddingTop') ltSmAirPaddingTop: ThemeSize;
+  @Input('ltMd.airPaddingTop') ltMdAirPaddingTop: ThemeSize;
+  @Input('ltLg.airPaddingTop') ltLgAirPaddingTop: ThemeSize;
+  @Input('ltXl.airPaddingTop') ltXlAirPaddingTop: ThemeSize;
+  @Input('gtSm.airPaddingTop') gtSmAirPaddingTop: ThemeSize;
+  @Input('gtMd.airPaddingTop') gtMdAirPaddingTop: ThemeSize;
+  @Input('gtLg.airPaddingTop') gtLgAirPaddingTop: ThemeSize;
+  @Input('gtXs.airPaddingTop') gtXsAirPaddingTop: ThemeSize;
 
-  @Input() airPaddingBottom: ThemeSizes;
-  @Input('xs.airPaddingBottom') xsAirPaddingBottom: ThemeSizes;
-  @Input('sm.airPaddingBottom') smAirPaddingBottom: ThemeSizes;
-  @Input('md.airPaddingBottom') mdAirPaddingBottom: ThemeSizes;
-  @Input('lg.airPaddingBottom') lgAirPaddingBottom: ThemeSizes;
-  @Input('xl.airPaddingBottom') xlAirPaddingBottom: ThemeSizes;
-  @Input('ltSm.airPaddingBottom') ltSmAirPaddingBottom: ThemeSizes;
-  @Input('ltMd.airPaddingBottom') ltMdAirPaddingBottom: ThemeSizes;
-  @Input('ltLg.airPaddingBottom') ltLgAirPaddingBottom: ThemeSizes;
-  @Input('ltXl.airPaddingBottom') ltXlAirPaddingBottom: ThemeSizes;
-  @Input('gtSm.airPaddingBottom') gtSmAirPaddingBottom: ThemeSizes;
-  @Input('gtMd.airPaddingBottom') gtMdAirPaddingBottom: ThemeSizes;
-  @Input('gtLg.airPaddingBottom') gtLgAirPaddingBottom: ThemeSizes;
-  @Input('gtXs.airPaddingBottom') gtXsAirPaddingBottom: ThemeSizes;
+  @Input() airPaddingBottom: ThemeSize;
+  @Input('xs.airPaddingBottom') xsAirPaddingBottom: ThemeSize;
+  @Input('sm.airPaddingBottom') smAirPaddingBottom: ThemeSize;
+  @Input('md.airPaddingBottom') mdAirPaddingBottom: ThemeSize;
+  @Input('lg.airPaddingBottom') lgAirPaddingBottom: ThemeSize;
+  @Input('xl.airPaddingBottom') xlAirPaddingBottom: ThemeSize;
+  @Input('ltSm.airPaddingBottom') ltSmAirPaddingBottom: ThemeSize;
+  @Input('ltMd.airPaddingBottom') ltMdAirPaddingBottom: ThemeSize;
+  @Input('ltLg.airPaddingBottom') ltLgAirPaddingBottom: ThemeSize;
+  @Input('ltXl.airPaddingBottom') ltXlAirPaddingBottom: ThemeSize;
+  @Input('gtSm.airPaddingBottom') gtSmAirPaddingBottom: ThemeSize;
+  @Input('gtMd.airPaddingBottom') gtMdAirPaddingBottom: ThemeSize;
+  @Input('gtLg.airPaddingBottom') gtLgAirPaddingBottom: ThemeSize;
+  @Input('gtXs.airPaddingBottom') gtXsAirPaddingBottom: ThemeSize;
 
-  @Input() airPaddingStart: ThemeSizes;
-  @Input('xs.airPaddingStart') xsAirPaddingStart: ThemeSizes;
-  @Input('sm.airPaddingStart') smAirPaddingStart: ThemeSizes;
-  @Input('md.airPaddingStart') mdAirPaddingStart: ThemeSizes;
-  @Input('lg.airPaddingStart') lgAirPaddingStart: ThemeSizes;
-  @Input('xl.airPaddingStart') xlAirPaddingStart: ThemeSizes;
-  @Input('ltSm.airPaddingStart') ltSmAirPaddingStart: ThemeSizes;
-  @Input('ltMd.airPaddingStart') ltMdAirPaddingStart: ThemeSizes;
-  @Input('ltLg.airPaddingStart') ltLgAirPaddingStart: ThemeSizes;
-  @Input('ltXl.airPaddingStart') ltXlAirPaddingStart: ThemeSizes;
-  @Input('gtSm.airPaddingStart') gtSmAirPaddingStart: ThemeSizes;
-  @Input('gtMd.airPaddingStart') gtMdAirPaddingStart: ThemeSizes;
-  @Input('gtLg.airPaddingStart') gtLgAirPaddingStart: ThemeSizes;
-  @Input('gtXs.airPaddingStart') gtXsAirPaddingStart: ThemeSizes;
+  @Input() airPaddingStart: ThemeSize;
+  @Input('xs.airPaddingStart') xsAirPaddingStart: ThemeSize;
+  @Input('sm.airPaddingStart') smAirPaddingStart: ThemeSize;
+  @Input('md.airPaddingStart') mdAirPaddingStart: ThemeSize;
+  @Input('lg.airPaddingStart') lgAirPaddingStart: ThemeSize;
+  @Input('xl.airPaddingStart') xlAirPaddingStart: ThemeSize;
+  @Input('ltSm.airPaddingStart') ltSmAirPaddingStart: ThemeSize;
+  @Input('ltMd.airPaddingStart') ltMdAirPaddingStart: ThemeSize;
+  @Input('ltLg.airPaddingStart') ltLgAirPaddingStart: ThemeSize;
+  @Input('ltXl.airPaddingStart') ltXlAirPaddingStart: ThemeSize;
+  @Input('gtSm.airPaddingStart') gtSmAirPaddingStart: ThemeSize;
+  @Input('gtMd.airPaddingStart') gtMdAirPaddingStart: ThemeSize;
+  @Input('gtLg.airPaddingStart') gtLgAirPaddingStart: ThemeSize;
+  @Input('gtXs.airPaddingStart') gtXsAirPaddingStart: ThemeSize;
 
-  @Input() airPaddingEnd: ThemeSizes;
-  @Input('xs.airPaddingEnd') xsAirPaddingEnd: ThemeSizes;
-  @Input('sm.airPaddingEnd') smAirPaddingEnd: ThemeSizes;
-  @Input('md.airPaddingEnd') mdAirPaddingEnd: ThemeSizes;
-  @Input('lg.airPaddingEnd') lgAirPaddingEnd: ThemeSizes;
-  @Input('xl.airPaddingEnd') xlAirPaddingEnd: ThemeSizes;
-  @Input('ltSm.airPaddingEnd') ltSmAirPaddingEnd: ThemeSizes;
-  @Input('ltMd.airPaddingEnd') ltMdAirPaddingEnd: ThemeSizes;
-  @Input('ltLg.airPaddingEnd') ltLgAirPaddingEnd: ThemeSizes;
-  @Input('ltXl.airPaddingEnd') ltXlAirPaddingEnd: ThemeSizes;
-  @Input('gtSm.airPaddingEnd') gtSmAirPaddingEnd: ThemeSizes;
-  @Input('gtMd.airPaddingEnd') gtMdAirPaddingEnd: ThemeSizes;
-  @Input('gtLg.airPaddingEnd') gtLgAirPaddingEnd: ThemeSizes;
-  @Input('gtXs.airPaddingEnd') gtXsAirPaddingEnd: ThemeSizes;
+  @Input() airPaddingEnd: ThemeSize;
+  @Input('xs.airPaddingEnd') xsAirPaddingEnd: ThemeSize;
+  @Input('sm.airPaddingEnd') smAirPaddingEnd: ThemeSize;
+  @Input('md.airPaddingEnd') mdAirPaddingEnd: ThemeSize;
+  @Input('lg.airPaddingEnd') lgAirPaddingEnd: ThemeSize;
+  @Input('xl.airPaddingEnd') xlAirPaddingEnd: ThemeSize;
+  @Input('ltSm.airPaddingEnd') ltSmAirPaddingEnd: ThemeSize;
+  @Input('ltMd.airPaddingEnd') ltMdAirPaddingEnd: ThemeSize;
+  @Input('ltLg.airPaddingEnd') ltLgAirPaddingEnd: ThemeSize;
+  @Input('ltXl.airPaddingEnd') ltXlAirPaddingEnd: ThemeSize;
+  @Input('gtSm.airPaddingEnd') gtSmAirPaddingEnd: ThemeSize;
+  @Input('gtMd.airPaddingEnd') gtMdAirPaddingEnd: ThemeSize;
+  @Input('gtLg.airPaddingEnd') gtLgAirPaddingEnd: ThemeSize;
+  @Input('gtXs.airPaddingEnd') gtXsAirPaddingEnd: ThemeSize;
 }

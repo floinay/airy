@@ -1,9 +1,9 @@
 @use "sass:map";
-@import "lib/color/default-theme-palette";
-@import "lib/color/default-colors";
+@import "lib/core/color/default-theme-palette";
+@import "lib/core/color/default-colors";
 @import "styles/variables";
 @import "styles/button";
-@import "lib/disabled/disabled";
+@import "lib/core/disabled/disabled";
 @import "styles/icon";
 @import "styles/input";
 @import "styles/initial";

@@ -1,7 +1,7 @@
-import {Breakpoints} from '../../../breakpoints';
-import {camelToKebab} from '../../../helpers/sring/camel-to-kebab';
-import {firstLetterToLower} from '../../../helpers/sring/first-letter-to-lower';
-import {StringObject} from '../../../types/string-object';
+import {BreakpointsHelper} from '../../../../core/breakpoints';
+import {camelToKebab} from '../../../../helpers/string/camel-to-kebab';
+import {firstLetterToLower} from '../../../../helpers/string/first-letter-to-lower';
+import {StringObject} from '../../../../types/string-object';
 
 interface BreakpointStyleOptionsInterface {
   propName: string;
@@ -32,7 +32,7 @@ export class BreakpointStyle {
   }
 
   isBreakpointProp(): boolean {
-    return Boolean(Breakpoints.keys().find(key => this.name.startsWith(key)));
+    return Boolean(BreakpointsHelper.keys().find(key => this.name.startsWith(key)));
   }
 
   propName(): string {
@@ -60,8 +60,8 @@ export class BreakpointStyle {
 
   breakpoint(): string | null {
     if (this.isBreakpointProp()) {
-      const bp = this.name.split('Air')[0] as keyof Breakpoints;
-      return Breakpoints[bp];
+      const bp = this.name.split('Air')[0] as keyof BreakpointsHelper;
+      return BreakpointsHelper[bp];
     }
 
     return null;

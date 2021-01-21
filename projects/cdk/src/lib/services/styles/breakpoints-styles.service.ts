@@ -1,23 +1,23 @@
 import {Inject, Injectable, Optional} from '@angular/core';
-import {StylesManager} from './styles.manager';
-import {StringObject} from '../types/string-object';
-import {PROPS_MAP, PROPS_VALUES_MAP} from './styles-manager.tokens';
-import {Breakpoint} from '../breakpoints';
+import {StylesService} from './styles.service';
+import {StringObject} from '../../types/string-object';
+import {PROPS_MAP, PROPS_VALUES_MAP} from './styles-service.tokens';
+import {Breakpoint} from '../../core/breakpoints';
 import {Observable} from 'rxjs';
 import {BreakpointsStylesParser, ParsedBreakpointsStyles} from './helpers/parser/breakpoint-styles-parser';
-import {StringOrNumberObject} from '../types/string-or-number-object';
+import {StringOrNumberObject} from '../../types/string-or-number-object';
 import {tap} from 'rxjs/operators';
 import {GroupedStylesByBreakpoints} from './types/grouped-styles-by-breakpoints';
 import {BreakpointObserver, BreakpointState} from '@angular/cdk/layout';
 
 @Injectable()
-export class BreakpointsStylesManager {
+export class BreakpointsStylesService {
   private currentBreakpointsStyles: StringObject = {};
   private withoutBreakpointStyles: Partial<CSSStyleDeclaration> = {};
   private styles: StringOrNumberObject = {};
   private breakpointsStyles: GroupedStylesByBreakpoints = {};
 
-  constructor(private stylesManager: StylesManager,
+  constructor(private stylesManager: StylesService,
               private breakpointObserver: BreakpointObserver,
               @Inject(PROPS_VALUES_MAP) @Optional() readonly propValuesMap?: StringObject,
               @Inject(PROPS_MAP) @Optional() readonly propNamesMap?: StringObject) {
@@ -41,7 +41,6 @@ export class BreakpointsStylesManager {
       this.clearCurrentStyles();
       this.stylesManager.style(this.withoutBreakpointStyles);
 
-      console.log(breakpoints, this.breakpointsStyles);
 
       for (const [breakpoint, breakpointStyles] of Object.entries(this.breakpointsStyles)) {
         if (breakpoints.breakpoints[breakpoint]) {

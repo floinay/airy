@@ -12,34 +12,22 @@ export class Breakpoints {
   static gtSm = 'screen and (min-width: 960px)';
   static gtMd = 'screen and (min-width: 1280px)';
   static gtLg = 'screen and (min-width: 1920px)';
+}
+
+export type Breakpoint = keyof Breakpoints;
+export type BreakpointValue = Breakpoints[Breakpoint];
 
 
-  static revertKeyValue(): { [key: string]: Breakpoint } {
-    const reverted = {};
-    this.keys().forEach(key => reverted[this[key]] = key);
-
-    return reverted;
-  }
-
-  static breakpointByMedia(media: string): Breakpoint {
-    return this.revertKeyValue()[media];
-  }
-
+export class BreakpointsHelper {
   static keys(): Breakpoint[] {
-    return Object.keys(this) as Breakpoint[];
+    return Object.keys(Breakpoints) as Breakpoint[];
   }
 
   static values(keys?: Breakpoint[]): BreakpointValue[] {
     if (keys) {
-      return keys.map(key => this[key]);
+      return keys.map(key => Breakpoints[key]);
     }
-    return Object.values(this) as BreakpointValue[];
+    return Object.values(Breakpoints) as BreakpointValue[];
   }
-
 }
-
-
-export type Breakpoint = string & keyof Breakpoints;
-
-export type BreakpointValue = string & Breakpoints[Breakpoint];
 

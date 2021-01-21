@@ -1,11 +1,8 @@
+import {ThemeSizes} from '../core/size/size';
+
+export type IndentsSizeOptions = { [K in keyof ThemeSizes]: string | number };
+
 export interface CdkModuleOptions {
-  paddings: CdkSizeOption;
-  margins: CdkSizeOption;
+  nothing: number;
 }
 
-export interface CdkSizeOption {
-  sm: string;
-  default: string;
-  md: string;
-  lg: string;
-}

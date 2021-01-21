@@ -19,10 +19,7 @@ import {AirLayoutModule} from '../../projects/layout/src/lib/air-layout.module';
     BrowserAnimationsModule,
     AirTooltipModule,
     AirLayoutModule.forRoot(),
-    AirCdkModule.forRoot({
-      margins: {sm: '8px', default: '16px', md: '25px', lg: '28px'},
-      paddings: {sm: '8px', default: '16px', md: '25px', lg: '28px'}
-    }),
+    AirCdkModule.forRoot(),
     AirButtonModule,
     AirIconModule.forRoot({
       pathToStaticIcons: '/assets/icons',

@@ -3,11 +3,7 @@ import {
   Component,
   ContentChild,
   ElementRef,
-  HostBinding,
-  OnInit,
-  ViewChild
 } from '@angular/core';
-import {OptionsService} from '../../services/options.service';
 import {HeaderDirective} from '../../directives/header/header.directive';
 import {FooterDirective} from '../../directives/footer/footer.directive';
 import {StickyDirective} from '../../interfaces/sticky-directive';

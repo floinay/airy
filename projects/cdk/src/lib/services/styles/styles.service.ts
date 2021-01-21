@@ -1,7 +1,7 @@
 import {ElementRef, Injectable} from '@angular/core';
 
 @Injectable({providedIn: 'root'})
-export class StylesManager {
+export class StylesService {
   constructor(private elementRef: ElementRef<HTMLDivElement>) {
   }
 
