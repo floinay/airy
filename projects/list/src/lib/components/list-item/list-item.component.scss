@@ -1,0 +1,9 @@
+:host {
+  display: var(--list-item__display, block);
+
+  &:last-child {
+    air-deliver {
+      display: none !important;
+    }
+  }
+}

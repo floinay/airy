@@ -9,6 +9,7 @@ import {EndDirective} from './directives/end/end.directive';
 import {StartDirective} from './directives/start/start.directive';
 import {LayoutDirective} from './directives/layout/layout.directive';
 import {FlexDirective} from './directives/flex/flex.directive';
+import { ContainerComponent } from './components/container/container.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {FlexDirective} from './directives/flex/flex.directive';
     EndDirective,
     StartDirective,
     LayoutDirective,
-    FlexDirective
+    FlexDirective,
+    ContainerComponent
   ],
   imports: [],
   providers: [OptionsService],

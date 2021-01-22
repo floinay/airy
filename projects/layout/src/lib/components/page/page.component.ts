@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   ChangeDetectionStrategy,
   Component,
   ContentChild,
@@ -9,6 +10,9 @@ import {FooterDirective} from '../../directives/footer/footer.directive';
 import {StickyDirective} from '../../interfaces/sticky-directive';
 import {StartDirective} from '../../directives/start/start.directive';
 import {EndDirective} from '../../directives/end/end.directive';
+import {BreakpointObserver} from '@angular/cdk/layout';
+import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
+import {BreakpointsHelper} from '@airy-ui/cdk';
 
 type OffsetName = 'header' | 'footer' | 'end' | 'start';
 
@@ -18,27 +22,31 @@ type OffsetName = 'header' | 'footer' | 'end' | 'start';
   styleUrls: ['./page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PageComponent {
-  @ContentChild(StartDirective) set start(start: StartDirective | undefined) {
-    this.offset('start', start);
+@UntilDestroy()
+export class PageComponent implements AfterViewInit {
+  @ContentChild(StartDirective) start?: StartDirective;
+  @ContentChild(EndDirective) end?: EndDirective;
+  @ContentChild(HeaderDirective) header?: HeaderDirective;
+  @ContentChild(FooterDirective) footer?: FooterDirective;
+
+  constructor(private elementRef: ElementRef, private breakpointObserver: BreakpointObserver) {
   }
 
-  @ContentChild(EndDirective) set end(end: EndDirective | undefined) {
-    this.offset('end', end);
+  ngAfterViewInit(): void {
+    this.breakpointObserver.observe(BreakpointsHelper.values())
+      .pipe(untilDestroyed(this)).subscribe(() => this.offsets());
   }
 
-  @ContentChild(HeaderDirective) set header(header: HeaderDirective | undefined) {
-    this.offset('header', header);
-  }
-
-  @ContentChild(FooterDirective) set footer(footer: FooterDirective | undefined) {
-    this.offset('footer', footer);
-  }
-
-  constructor(private elementRef: ElementRef) {
+  private offsets(): void {
+    this.offset('start', this.start);
+    this.offset('end', this.end);
+    this.offset('header', this.header);
+    this.offset('footer', this.footer);
   }
 
   private offset(name: OffsetName, directive: StickyDirective | undefined): void {
-    this.elementRef.nativeElement.style.setProperty(`--${name}-offset`, directive?.sticky ? directive.offset + 'px' : 0);
+    if (directive?.sticky) {
+      this.elementRef.nativeElement.style.setProperty(`--${name}__offset`, directive.offset + 'px');
+    }
   }
 }

@@ -4,6 +4,7 @@
     "codelyzer"
   ],
   "rules": {
+    "prefer-on-push-component-change-detection": true,
     "align": {
       "options": [
         "parameters",

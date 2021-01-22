@@ -43,6 +43,14 @@
       "layout": [
         "dist/layout/layout",
         "dist/layout"
+      ],
+      "expansion": [
+        "dist/expansion/expansion",
+        "dist/expansion"
+      ],
+      "list": [
+        "dist/list/list",
+        "dist/list"
       ]
     }
   },

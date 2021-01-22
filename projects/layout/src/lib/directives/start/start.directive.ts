@@ -6,7 +6,7 @@ import {StickyDirective} from '../../interfaces/sticky-directive';
 })
 export class StartDirective implements StickyDirective {
 
-  constructor(public elementRef: ElementRef) {
+  constructor(public elementRef: ElementRef<HTMLDivElement>) {
   }
 
   @HostBinding('class.sticky-start')

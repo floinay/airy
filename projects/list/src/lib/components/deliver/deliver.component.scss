@@ -1,0 +1,6 @@
+:host {
+  display: var(--delivier__display, block);
+  width: var(--deliver__width, 100%);
+  height: var(--deliver__height, 1px);
+  background-color: var(--delivier__background-color, #333);
+}

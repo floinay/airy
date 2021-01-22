@@ -1,1 +1,6 @@
+@import "../../projects/cdk/src/styles/app-root";
+
+:host {
+  @include app-root();
+}
 

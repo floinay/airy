@@ -1,0 +1,11 @@
+:host {
+  display: var(--container__display, flex);
+  justify-content: var(--container__justify-content, flex-start);
+  align-items: var(--container__align-items, flex-start);
+  flex-direction: var(--container__flex-direction, column);
+  max-width: var(--container__max-width, 1200px);
+  width: var(--container__width, 100%);
+  min-width: var(--container__min-width, 320px);
+  padding: var(--container__padding, 0 20px);
+  margin: var(--container__margin, 0);
+}

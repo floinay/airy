@@ -3,35 +3,44 @@
   flex-direction: column;
   position: relative;
   width: 100%;
-  margin: var(--page-margin, 0);
-  min-height: 100%;
-  padding-top: var(--header-offset, 0);
-  padding-inline-start: var(--start-offset, 0);
-  padding-inline-end: var(--end-offset, 0);
-  padding-bottom: var(--footer-offset, 0);
+  margin: var(--page__margin, 0);
+  min-height: var(--page__min-height, 100vh);
+  padding-top: var(--header__offset, 0);
+  padding-bottom: var(--footer__offset, 0);
+
+  .body {
+    min-height: 100%;
+    flex: 1;
+  }
+
+  air-container {
+    min-height: 100%;
+    padding-inline-start: var(--start__offset, 0);
+    padding-inline-end: var(--end__offset, 0);
+  }
 
   ::ng-deep {
     .sticky-header, .sticky-footer, .sticky-start, .sticky-end {
-      position: var(--sticky-position, fixed);
+      position: var(--sticky__position, fixed);
     }
 
 
     .sticky-end {
-      right: var(--sticky-end-right, 0);
+      right: var(--sticky-end__right, 0);
     }
 
 
     .sticky-header {
-      top: var(--sticky-header-top, 0);
-      left: var(--sticky-header-left, 0);
+      top: var(--sticky-header__top, 0);
+      left: var(--sticky-header__left, 0);
     }
 
     .sticky-footer {
-      bottom: var(--sticky-footer-bottom, 0);
+      bottom: var(--sticky-footer__bottom, 0);
+    }
+
+    .sticky-start, .sticky-end {
+      height: 100%;
     }
   }
-}
-
-.body {
-  display: flex;
 }

@@ -1,9 +1,9 @@
 <ng-content select="[airStickyHeader],[airHeader]"></ng-content>
 <div class="body">
   <ng-content select="[airStickyStart],[airStart]"></ng-content>
-  <div class="content">
+  <air-container>
     <ng-content></ng-content>
-  </div>
+  </air-container>
   <ng-content select="[airStickyEnd],[airEnd]"></ng-content>
 </div>
 <ng-content select="[airStickyFooter],[airFooter]"></ng-content>
