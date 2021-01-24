@@ -1,8 +1,8 @@
 import {Provider} from '@angular/core';
-import {PROPS_MAP, PROPS_VALUES_MAP} from '../../services/styles/styles-service.tokens';
-import {BreakpointsStylesService} from '../../services/styles/breakpoints-styles.service';
-import {StylesService} from '../../services/styles/styles.service';
-import {ThemeSizes} from '../../core/size/size';
+import {PROPS_MAP, PROPS_VALUES_MAP} from '../../services';
+import {StylesService} from '../../services';
+import {ThemeSizes} from '../../core';
+import {BreakpointsStylesManagerFactory} from '../../services';
 
 function indentVar(indentType: 'margin' | 'padding', size: keyof ThemeSizes, defaultValue: string): string {
   return `var(--air-${indentType}-${size}, ${defaultValue})`;
@@ -33,7 +33,7 @@ export const PADDINGS_PROVIDERS: Provider[] = [
     provide: PROPS_VALUES_MAP,
     useValue: indents('padding'),
   },
-  BreakpointsStylesService,
+  BreakpointsStylesManagerFactory,
   StylesService
 ];
 
@@ -49,7 +49,7 @@ export const MARGINS_PROVIDERS: Provider[] = [
       provide: PROPS_VALUES_MAP,
       useValue: indents('margin')
     },
-    BreakpointsStylesService,
+    BreakpointsStylesManagerFactory,
     StylesService
   ]
 ;

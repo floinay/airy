@@ -7,16 +7,12 @@
   min-height: var(--page__min-height, 100vh);
   padding-top: var(--header__offset, 0);
   padding-bottom: var(--footer__offset, 0);
+  padding-inline-start: var(--start__offset, 0);
+  padding-inline-end: var(--end__offset, 0);
 
   .body {
     min-height: 100%;
     flex: 1;
-  }
-
-  air-container {
-    min-height: 100%;
-    padding-inline-start: var(--start__offset, 0);
-    padding-inline-end: var(--end__offset, 0);
   }
 
   ::ng-deep {
@@ -29,10 +25,13 @@
       right: var(--sticky-end__right, 0);
     }
 
-
     .sticky-header {
       top: var(--sticky-header__top, 0);
       left: var(--sticky-header__left, 0);
+    }
+
+    .sticky-start {
+      left: var(--sticky-start__left, 0);
     }
 
     .sticky-footer {

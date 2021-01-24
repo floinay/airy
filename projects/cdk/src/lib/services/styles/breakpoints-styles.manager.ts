@@ -1,17 +1,16 @@
-import {Inject, Injectable, Optional} from '@angular/core';
+import {Inject, Optional} from '@angular/core';
 import {StylesService} from './styles.service';
-import {StringObject} from '../../types/string-object';
+import {StringObject} from '../../types';
 import {PROPS_MAP, PROPS_VALUES_MAP} from './styles-service.tokens';
-import {Breakpoint} from '../../core/breakpoints';
+import {Breakpoint} from '../../core';
 import {Observable} from 'rxjs';
 import {BreakpointsStylesParser, ParsedBreakpointsStyles} from './helpers/parser/breakpoint-styles-parser';
-import {StringOrNumberObject} from '../../types/string-or-number-object';
+import {StringOrNumberObject} from '../../types';
 import {tap} from 'rxjs/operators';
 import {GroupedStylesByBreakpoints} from './types/grouped-styles-by-breakpoints';
 import {BreakpointObserver, BreakpointState} from '@angular/cdk/layout';
 
-@Injectable()
-export class BreakpointsStylesService {
+export class BreakpointsStylesManager {
   private currentBreakpointsStyles: StringObject = {};
   private withoutBreakpointStyles: Partial<CSSStyleDeclaration> = {};
   private styles: StringOrNumberObject = {};

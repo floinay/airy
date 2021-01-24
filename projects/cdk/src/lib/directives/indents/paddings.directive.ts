@@ -1,11 +1,6 @@
-import {Directive, Injector, Input} from '@angular/core';
-import {ThemeSize} from '../../core/size/size';
-import {PROPS_MAP, PROPS_VALUES_MAP} from '../../services/styles/styles-service.tokens';
-import {CDK_MODULE_OPTIONS} from '../../options/cdk-module-options.provider';
-import {BreakpointsStylesService} from '../../services/styles/breakpoints-styles.service';
-import {StylesService} from '../../services/styles/styles.service';
+import {Directive, Input} from '@angular/core';
+import {ThemeSize} from '../../core';
 import {AbstractIndentsDirective} from './abstract-indents-directive';
-import {IndentsSizeOptions} from '../../options/cdk-module.options';
 import {PADDINGS_PROVIDERS} from './indents.providers';
 
 @Directive({

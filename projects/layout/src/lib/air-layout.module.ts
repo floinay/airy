@@ -32,7 +32,8 @@ import { ContainerComponent } from './components/container/container.component';
     EndDirective,
     StartDirective,
     LayoutDirective,
-    FlexDirective
+    FlexDirective,
+    ContainerComponent
   ]
 })
 export class AirLayoutModule {
