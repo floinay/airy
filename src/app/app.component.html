@@ -1,18 +1,26 @@
 <air-page>
   <header airHeader>Air header</header>
-  <div airStickyStart airPaddingTop="xl">
-    <air-list>
-      <a air-list-item airPaddingBottom="xs" airMarginBottom="xs">
-        Dashboard
-      </a>
-      <air-list-item>
-        <air-expansion>
-          <air-expansion-header>Requests</air-expansion-header>
-          Dashboard content
-        </air-expansion>
-      </air-list-item>
-    </air-list>
-  </div>
+  <air-nav airStickyStart>
+    <a air-list-item href="">
+      Dashboard
+    </a>
+    <air-list-item>
+      <air-expansion>
+        <air-expansion-header>Requests</air-expansion-header>
+        Dashboard content
+      </air-expansion>
+    </air-list-item>
+
+    <air-list-item>
+      <air-expansion>
+        <air-expansion-header>Users</air-expansion-header>
+        Dashboard content
+      </air-expansion>
+    </air-list-item>
+    <a air-list-item href="">
+      Courses
+    </a>
+  </air-nav>
   <air-container>
     my content
   </air-container>

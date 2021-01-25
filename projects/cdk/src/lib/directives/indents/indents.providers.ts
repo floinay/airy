@@ -1,11 +1,11 @@
 import {Provider} from '@angular/core';
-import {PROPS_MAP, PROPS_VALUES_MAP} from '../../services';
+import {PROPS_VALUES_MAP} from '../../services';
 import {StylesService} from '../../services';
 import {ThemeSizes} from '../../core';
 import {BreakpointsStylesManagerFactory} from '../../services';
 
 function indentVar(indentType: 'margin' | 'padding', size: keyof ThemeSizes, defaultValue: string): string {
-  return `var(--air-${indentType}-${size}, ${defaultValue})`;
+  return `var(--${indentType}-${size}, ${defaultValue})`;
 }
 
 function indents(indent: 'margin' | 'padding'): { [K in keyof ThemeSizes | 'default']: string } {
@@ -21,30 +21,25 @@ function indents(indent: 'margin' | 'padding'): { [K in keyof ThemeSizes | 'defa
   };
 }
 
+export const PADDINGS_PROPS_MAP = {
+  paddingStart: 'padding-inline-start',
+  paddingEnd: 'padding-inline-end'
+};
+
+export const MARGINS_PROPS_MAP = {
+  marginStart: 'margin-inline-start',
+  marginEnd: 'margin-inline-end'
+};
+
+export const MARGINS_VALUES_MAP = indents('margin');
+export const PADDINGS_VALUES_MAP = indents('padding');
+
 export const PADDINGS_PROVIDERS: Provider[] = [
-  {
-    provide: PROPS_MAP,
-    useValue: {
-      airMarginStat: 'margin-inline-start',
-      airMarginEnd: 'margin-inline-end'
-    }
-  },
-  {
-    provide: PROPS_VALUES_MAP,
-    useValue: indents('padding'),
-  },
   BreakpointsStylesManagerFactory,
   StylesService
 ];
 
 export const MARGINS_PROVIDERS: Provider[] = [
-    {
-      provide: PROPS_MAP,
-      useValue: {
-        airMarginStat: 'margin-inline-start',
-        airMarginEnd: 'margin-inline-end'
-      }
-    },
     {
       provide: PROPS_VALUES_MAP,
       useValue: indents('margin')

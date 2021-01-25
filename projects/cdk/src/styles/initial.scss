@@ -2,6 +2,7 @@
   html, body {
     width: 100%;
     min-height: 100vh;
+    background: var(--app-background, #F6F9FF);
   }
   :root {
     --direction: ltr;

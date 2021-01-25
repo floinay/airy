@@ -1,12 +1,12 @@
 import {Directive, OnChanges, OnDestroy, SimpleChanges} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {getValuesFromSimpleChanges} from '../../helpers';
-import {BreakpointsStylesManagerFactory} from '../../services';
+import {BreakpointsStylesManager, BreakpointsStylesManagerFactory} from '../../services';
 
 @Directive()
 export abstract class AbstractIndentsDirective implements OnChanges, OnDestroy {
   private sub?: Subscription;
-  protected bpStylesManager = this.bpStylesFactory.make();
+  protected abstract bpStylesManager: BreakpointsStylesManager;
 
   constructor(protected bpStylesFactory: BreakpointsStylesManagerFactory) {
   }

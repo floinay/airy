@@ -1,7 +1,7 @@
-import {BreakpointsHelper} from '../../../../core/breakpoints';
-import {camelToKebab} from '../../../../helpers/string/camel-to-kebab';
-import {firstLetterToLower} from '../../../../helpers/string/first-letter-to-lower';
-import {StringObject} from '../../../../types/string-object';
+import {BreakpointsHelper} from '../../../../core';
+import {camelToKebab} from '../../../../helpers';
+import {firstLetterToLower} from '../../../../helpers';
+import {StringObject} from '../../../../types';
 
 interface BreakpointStyleOptionsInterface {
   propName: string;
@@ -36,9 +36,9 @@ export class BreakpointStyle {
   }
 
   propName(): string {
-    const withoutBreakpoint = this.withoutBreakpoint();
+    const withoutBreakpoint = firstLetterToLower(this.withoutBreakpoint());
 
-    return this.propertiesMap[withoutBreakpoint] || camelToKebab(firstLetterToLower(withoutBreakpoint));
+    return this.propertiesMap[withoutBreakpoint] || camelToKebab(withoutBreakpoint);
   }
 
   propValue(): string | number {

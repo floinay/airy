@@ -1,0 +1,31 @@
+:host {
+  background: var(--app-background__secondary, #fff);
+
+  ::ng-deep {
+    a, button {
+      &.air-list-item {
+        padding-inline-start: var(--nav-item__start-indent, var(--padding-xl, 40px));
+        padding-inline-end: var(--nav-item__end-indent, var(--padding-xl, 40px));
+        padding-bottom: var(--nav-item__vertical-indent, var(--padding-m, 20px));
+        padding-top: var(--nav-item__vertical-indent, var(--padding-m, 20px));
+        line-height: var(--nav-item__line-height, 1);
+        font-size: var(--nav-item__font-size, var(--caption-2__font-size, 16px));
+        text-decoration: var(--nav-item__text-decoration, none);
+        color: var(--nav-item__color, var(--text-color, #1B1B1E))
+      }
+    }
+
+    .air-list-item  {
+      air-expansion-header, .expansion-content {
+        padding-inline-start: var(--nav-item__start-indent, var(--padding-xl, 40px));
+        padding-inline-end: var(--nav-item__end-indent, var(--padding-xl, 40px));
+      }
+      padding-bottom: var(--nav-item__vertical-indent, var(--padding-m, 20px));
+      padding-top: var(--nav-item__vertical-indent, var(--padding-m, 20px));
+      line-height: var(--nav-item__line-height, 1);
+      font-size: var(--nav-item__font-size, var(--caption-2__font-size, 16px));
+      text-decoration: var(--nav-item__text-decoration, none);
+      color: var(--nav-item__color, var(--text-color, #1B1B1E))
+    }
+  }
+}

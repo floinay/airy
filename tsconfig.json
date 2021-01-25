@@ -51,6 +51,14 @@
       "list": [
         "dist/list/list",
         "dist/list"
+      ],
+      "common": [
+        "dist/common/common",
+        "dist/common"
+      ],
+      "kit": [
+        "dist/kit/kit",
+        "dist/kit"
       ]
     }
   },

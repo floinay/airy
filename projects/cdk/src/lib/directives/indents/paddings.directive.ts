@@ -1,7 +1,7 @@
 import {Directive, Input} from '@angular/core';
 import {ThemeSize} from '../../core';
 import {AbstractIndentsDirective} from './abstract-indents-directive';
-import {PADDINGS_PROVIDERS} from './indents.providers';
+import {MARGINS_VALUES_MAP, PADDINGS_PROPS_MAP, PADDINGS_PROVIDERS} from './indents.providers';
 
 @Directive({
   selector: `
@@ -155,4 +155,5 @@ export class PaddingsDirective extends AbstractIndentsDirective {
   @Input('gtMd.airPaddingEnd') gtMdAirPaddingEnd: ThemeSize;
   @Input('gtLg.airPaddingEnd') gtLgAirPaddingEnd: ThemeSize;
   @Input('gtXs.airPaddingEnd') gtXsAirPaddingEnd: ThemeSize;
+  protected bpStylesManager = this.bpStylesFactory.make(PADDINGS_PROPS_MAP, MARGINS_VALUES_MAP);
 }
