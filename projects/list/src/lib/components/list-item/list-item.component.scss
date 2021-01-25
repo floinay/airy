@@ -1,7 +1,0 @@
-:host {
-  display: var(--list-item__display, block);
-
-  &:not(:last-child) {
-    border-bottom: 1px solid var(--list-item__deliver-color, #bebebe);
-  }
-}

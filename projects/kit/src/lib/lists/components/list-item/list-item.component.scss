@@ -1,0 +1,17 @@
+:host {
+  display: var(--list-item__display, block);
+  position: relative;
+  overflow: hidden;
+
+  &:not(:last-child) {
+    &::after {
+      height: 1px;
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      content: '';
+      background: var(--list-item__deliver-color, #E8EAF5);
+    }
+  }
+}
