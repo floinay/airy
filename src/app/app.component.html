@@ -1,23 +1,31 @@
 <air-page>
-  <header airHeader>Air header</header>
-  <air-nav airStickyStart>
+  <header airHeader><air-icon name="logo" size="114px 60px"></air-icon></header>
+  <air-nav airStickyStart airPaddingTop="xl">
     <a air-list-item href="">
+      <air-icon size="l" name="nav/dashboard"></air-icon>
       Dashboard
     </a>
     <air-list-item>
       <air-expansion>
-        <air-expansion-header>Requests</air-expansion-header>
+        <air-expansion-header>
+          <air-icon size="l" name="nav/requests"></air-icon>
+          Dashboard Requests
+        </air-expansion-header>
         Dashboard content
       </air-expansion>
     </air-list-item>
 
     <air-list-item>
       <air-expansion>
-        <air-expansion-header>Users</air-expansion-header>
+        <air-expansion-header>
+          <air-icon size="l" name="nav/users"></air-icon>
+          Users
+        </air-expansion-header>
         Dashboard content
       </air-expansion>
     </air-list-item>
     <a air-list-item href="">
+      <air-icon name="nav/courses" size="l"></air-icon>
       Courses
     </a>
   </air-nav>

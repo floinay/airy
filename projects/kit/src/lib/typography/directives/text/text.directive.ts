@@ -10,9 +10,9 @@ export class TextDirective {
   @HostBinding('class.air-text-1')
   private defaultText = true;
 
-  @Input() set airText(value: TextDirective) {
-    this.airText.elementRef.nativeElement.classList.remove(POSSIBLE_CLASSES);
-    this.airText.elementRef.nativeElement.classList.add(`air-text-${value}`);
+  @Input() set airText(value: Text) {
+    this.elementRef.nativeElement.classList.remove(POSSIBLE_CLASSES);
+    this.elementRef.nativeElement.classList.add(`air-text-${value}`);
     this.defaultText = false;
   }
 

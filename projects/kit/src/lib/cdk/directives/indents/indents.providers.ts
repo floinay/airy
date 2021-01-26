@@ -1,14 +1,13 @@
 import {Provider} from '@angular/core';
 import {PROPS_VALUES_MAP} from '../../services';
 import {StylesService} from '../../services';
-import {ThemeSizes} from '../../core';
 import {BreakpointsStylesManagerFactory} from '../../services';
 
-function indentVar(indentType: 'margin' | 'padding', size: keyof ThemeSizes, defaultValue: string): string {
+function indentVar(indentType: 'margin' | 'padding', size: string, defaultValue: string): string {
   return `var(--${indentType}-${size}, ${defaultValue})`;
 }
 
-function indents(indent: 'margin' | 'padding'): { [K in keyof ThemeSizes | 'default']: string } {
+function indents(indent: 'margin' | 'padding'): { [key: string]: string } {
   return {
     xxs: indentVar(indent, 'xxs', '8px'),
     xs: indentVar(indent, 'xs', '12px'),

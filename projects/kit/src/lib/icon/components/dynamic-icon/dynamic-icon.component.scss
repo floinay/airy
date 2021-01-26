@@ -1,15 +1,16 @@
 :host {
   position: relative;
-  width: var(--icon-width);
-  height: var(--icon-height);
-  margin: var(--icon-margin);
-  padding: var(--icon-padding);
-  display: var(--icon-display);
+  width: var(--icon__width, 16px);
+  height: var(--icon__height, 16px);
+  margin: var(--icon__margin, 0);
+  padding: var(--icon__padding, 0);
+  display: var(--icon__display, inline-flex);
+  align-items: var(--icon__align-items, center);
 }
 
 svg {
   width: 100%;
   height: 100%;
-  fill: var(--current-color);
-  stroke: var(--current-color);
+  fill: var(--icon_fill, var(--current-color));
+  stroke: var(--icon__stroke, var(--current-color));
 }

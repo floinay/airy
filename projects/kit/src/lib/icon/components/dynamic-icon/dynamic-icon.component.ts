@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, Inject, Input } from '@angular/core';
 import { ICON_MODULE_OPTIONS } from '../../options';
 import { IconModuleOptions } from '../../options';
-import { CanColorCtor, CanSizeCtor, HasElementRef, mixinColor, mixinSize } from '@airy-ui/cdk';
+import { CanColorCtor, CanSizeCtor, HasElementRef, mixinColor, mixinSize } from '../../../cdk';
 
 const IconBase: CanColorCtor & CanSizeCtor = mixinSize(mixinColor(HasElementRef));
 
@@ -21,9 +21,9 @@ export class DynamicIconComponent extends IconBase {
   @Input() name = '';
   @Input() sprite = this.options.pathToDynamicIconsSprite;
 
-  @Input() stroke: 'var(--current-color)' | 'none' | string = 'var(--current-color)';
+  @Input() stroke?: 'var(--current-color)' | 'none' | string;
 
-  @Input() fill: 'var(--current-color)' | 'none' | string = 'var(--current-color)';
+  @Input() fill?: 'var(--current-color)' | 'none' | string;
 
   get src(): string {
     return `${this.sprite}#${this.name}`;

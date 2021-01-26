@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core';
 import {ListComponent, ListItemComponent} from './components';
-import {DeliverComponent} from './components/deliver/deliver.component';
+import {DelimiterComponent} from './components/delimiter/delimiter.component';
 
 
 @NgModule({
-  declarations: [ListItemComponent, ListComponent, DeliverComponent],
+  declarations: [ListItemComponent, ListComponent, DelimiterComponent],
   imports: [],
-  exports: [ListComponent, ListItemComponent, DeliverComponent]
+  exports: [ListComponent, ListItemComponent, DelimiterComponent]
 })
 export class AirListModule {
 }

@@ -1,6 +1,11 @@
-@import "../../projects/cdk/src/styles/app-root";
+@import "../../projects/kit/src/lib/cdk/styles/app-root";
+@import "../../projects/kit/src/lib/typography/typography";
 
 :host {
   @include app-root();
+}
+
+air-nav {
+  min-width: 315px;
 }
 

@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, Inject, In
 import { IconFormat } from '../../types';
 import { ICON_MODULE_OPTIONS } from '../../options';
 import { IconModuleOptions } from '../../options';
-import { CanSizeCtor, HasElementRef, mixinSize } from '@airy-ui/cdk';
+import { CanSizeCtor, HasElementRef, mixinSize } from '../../../cdk';
 
 const IconBase: CanSizeCtor = mixinSize(HasElementRef);
 

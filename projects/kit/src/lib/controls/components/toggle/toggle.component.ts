@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, ElementRef, forwardRef, HostBinding, HostListener, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { CanColorCtor, CanDisabledCtor, HasElementRef, mixinColor, mixinDisabled } from '@airy-ui/cdk';
+import { CanColorCtor, CanDisabledCtor, HasElementRef, mixinColor, mixinDisabled } from '../../../cdk';
 
 
 const MixinBase: CanDisabledCtor & CanColorCtor = mixinColor(mixinDisabled(HasElementRef));

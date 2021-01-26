@@ -1,4 +1,5 @@
-import {ThemeSizes} from '../core/size/size';
+import {ThemeSizes} from '../core';
+
 
 export type IndentsSizeOptions = { [K in keyof ThemeSizes]: string | number };
 

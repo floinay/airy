@@ -8,7 +8,7 @@ import {
   Input, TemplateRef
 } from '@angular/core';
 import {EXPANSION_MODULE_OPTIONS, ExpansionModuleOptions} from '../../options';
-import {ThemeSize} from '@airy-ui/cdk';
+import {ThemeSize} from '../../../cdk';
 import {indicatorRotate} from '../../expansion-animtaions';
 
 @Component({

@@ -3,7 +3,7 @@ import { FormFieldComponent } from './components';
 import { LabelComponent } from './components';
 import { ToggleComponent } from './components';
 import { InputDirective } from './directives';
-import { AirCdkModule } from '@airy-ui/cdk';
+import { AirCdkModule } from '../cdk';
 
 
 

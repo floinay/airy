@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, Input } from '@angular/core';
-import { AirFill } from './types';
-import { AirExpand } from './types';
-import { CanColorCtor, CanSizeCtor, HasElementRef, mixinColor, mixinSize } from '@airy-ui/cdk';
+import {ChangeDetectionStrategy, Component, ElementRef, HostBinding, Input} from '@angular/core';
+import {AirFill} from './types';
+import {AirExpand} from './types';
+import {CanColorCtor, CanSizeCtor, HasElementRef, mixinColor, mixinSize} from '../cdk';
 
 const ButtonBase: CanColorCtor & CanSizeCtor = mixinColor(mixinSize(HasElementRef), 'default');
 

@@ -1,5 +1,6 @@
 :host {
-  background-size: var(--icon__background-size, cover);
+  background-size: var(--icon__background-size, contain);
+  background-position: var(--icon__background-position, center);
   width: var(--icon__width, 16px);
   height: var(--icon__height, 16px);
   margin: var(--icon__margin, 0);

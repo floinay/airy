@@ -9,9 +9,10 @@ import {
   AirNavModule,
   AirLayoutModule,
   AirButtonModule,
-  AirTooltipModule
+  AirTooltipModule,
+  AirCdkModule
 } from '../../projects/kit/src/lib';
-import {AirCdkModule} from '@airy-ui/cdk';
+
 import {ReactiveFormsModule} from '@angular/forms';
 import {AirTypographyModule} from '../../projects/kit/src/lib/typography/air-typography.module';
 

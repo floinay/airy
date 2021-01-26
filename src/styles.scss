@@ -1,9 +1,12 @@
-@import "../projects/cdk";
+@import "../projects/kit/src/lib/cdk/styles";
 @import '~@angular/cdk/overlay-prebuilt.css';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
 
 html, body {
   margin: 0;;
   padding: 0;
 }
 
-@include air-theme();
+* {
+  font-family: 'Rubik', sans-serif;
+}

@@ -1,6 +1,8 @@
 :host {
   background: var(--app-background__secondary, #fff);
 
+  --list-item__delimiter-left: var(--nav-item__start-indent, var(--padding-xl, 40px));
+
   ::ng-deep {
     a, button {
       &.air-list-item {
@@ -15,11 +17,22 @@
       }
     }
 
-    .air-list-item  {
+    .air-list-item {
+      air-expansion {
+        width: 100%;
+      }
+
+      air-icon, air-dynamic-icon {
+        &:not(.expansion-header-icon) {
+          margin-inline-end: var(--nav-item__icon-indent, var(--padding-m, 20px));
+        }
+      }
+
       air-expansion-header, .expansion-content {
         padding-inline-start: var(--nav-item__start-indent, var(--padding-xl, 40px));
         padding-inline-end: var(--nav-item__end-indent, var(--padding-xl, 40px));
       }
+
       padding-bottom: var(--nav-item__vertical-indent, var(--padding-m, 20px));
       padding-top: var(--nav-item__vertical-indent, var(--padding-m, 20px));
       line-height: var(--nav-item__line-height, 1);

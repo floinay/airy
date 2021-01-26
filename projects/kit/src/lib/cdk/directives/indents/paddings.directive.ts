@@ -1,7 +1,7 @@
 import {Directive, Input} from '@angular/core';
-import {ThemeSize} from '../../core';
 import {AbstractIndentsDirective} from './abstract-indents-directive';
 import {MARGINS_VALUES_MAP, PADDINGS_PROPS_MAP, PADDINGS_PROVIDERS} from './indents.providers';
+import {ThemeSize} from '../../core';
 
 @Directive({
   selector: `

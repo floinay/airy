@@ -1,4 +1,4 @@
-import {ThemeSize} from '@airy-ui/cdk';
+import {ThemeSize} from '../../cdk';
 
 export interface ExpansionModuleOptions {
   defaultIconSize: ThemeSize;

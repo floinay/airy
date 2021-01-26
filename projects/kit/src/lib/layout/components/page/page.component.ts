@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import {BreakpointObserver} from '@angular/cdk/layout';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {BreakpointsHelper} from '@airy-ui/cdk';
+import {BreakpointsHelper} from '../../../cdk';
 import {EndDirective, FooterDirective, HeaderDirective, StartDirective} from '../../directives';
 import {StickyDirective} from '../../interfaces';
 

@@ -1,5 +1,6 @@
 :host {
-  display: var(--list-item__display, block);
+  display: var(--list-item__display, flex);
+  align-items: var(--list-item__align-items, center);
   position: relative;
   overflow: hidden;
 
@@ -10,8 +11,9 @@
       width: 100%;
       position: absolute;
       bottom: 0;
+      left: var(--list-item__delimiter-left, auto);
       content: '';
-      background: var(--list-item__deliver-color, #E8EAF5);
+      background: var(--list-item__delimiter-color, #E8EAF5);
     }
   }
 }

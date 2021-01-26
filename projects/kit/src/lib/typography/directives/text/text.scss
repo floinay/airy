@@ -1,0 +1,27 @@
+.air-text-1, .air-text-2, .air-text-3, .air-text-4 {
+  --text__font-weight: 400;
+}
+
+.air-text-1 {
+  font-size: var(--text1__font-size, 24px);
+  line-height: var(--text1__line-height, 40px);
+  font-weight: var(--text1__font-weight, var(--text__font-weight));
+}
+
+.air-text-2 {
+  font-size: var(--text2__font-size, 20px);
+  line-height: var(--text2__line-height, 36px);
+  font-weight: var(--text2__font-weight, var(--text__font-weight));
+}
+
+.air-text-3 {
+  font-size: var(--text3__font-size, 16px);
+  line-height: var(--text3__line-height, 28px);
+  font-weight: var(--text3__font-weight, var(--text__font-weight));
+}
+
+.air-text-4 {
+  font-size: var(--text4__font-size, 14px);
+  line-height: var(--text4__line-height, 24px);
+  font-weight: var(--text4__font-weight, var(--text__font-weight));
+}

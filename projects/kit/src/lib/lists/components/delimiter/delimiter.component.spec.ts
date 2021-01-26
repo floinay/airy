@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeliverComponent } from './deliver.component';
+import { DelimiterComponent } from './deliver.component';
 
 describe('DeliverComponent', () => {
-  let component: DeliverComponent;
-  let fixture: ComponentFixture<DeliverComponent>;
+  let component: DelimiterComponent;
+  let fixture: ComponentFixture<DelimiterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DeliverComponent ]
+      declarations: [ DelimiterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DeliverComponent);
+    fixture = TestBed.createComponent(DelimiterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
