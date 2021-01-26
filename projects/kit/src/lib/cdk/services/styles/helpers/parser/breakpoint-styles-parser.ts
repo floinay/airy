@@ -1,5 +1,5 @@
 import {GroupedStylesByBreakpoints} from '../../types/grouped-styles-by-breakpoints';
-import {StringObject} from '../../../../types/string-object';
+import {StringObject} from '../../../../types';
 import {BreakpointStyle} from './breakpoint-style';
 
 interface BreakpointStylesOptions {

@@ -1,11 +1,11 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
-import {HideIfEmptyDirective} from './directives/hide-if-empty.directive';
-import {ClearInputBeforeUploadDirective} from './directives/clear-input-before-upload.directive';
-import {CdkModuleOptions} from './options/cdk-module.options';
-import {CDK_MODULE_OPTIONS} from './options/cdk-module-options.provider';
-import {AutofocusDirective} from './directives/autofocus.directive';
-import {PaddingsDirective} from './directives/indents/paddings.directive';
-import {MarginsDirective} from './directives/indents/margins.directive';
+import {
+  AutofocusDirective,
+  ClearInputBeforeUploadDirective,
+  HideIfEmptyDirective, MarginsDirective,
+  PaddingsDirective
+} from './directives';
+import {CDK_MODULE_OPTIONS, CdkModuleOptions} from './options';
 
 
 @NgModule({

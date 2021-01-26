@@ -1,5 +1,5 @@
-import { Constructor } from '../../types/constructor';
-import { HasElementRef } from '../../types/has-element-ref';
+import { Constructor } from '../../types';
+import { HasElementRef } from '../../types';
 
 interface Disabled {
   disabled: boolean;
