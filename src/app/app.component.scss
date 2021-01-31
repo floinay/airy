@@ -1,8 +1,13 @@
-@import "../../projects/kit/src/lib/cdk/styles/app-root";
+@import "../../projects/kit/src/lib/cdk/styles";
 @import "../../projects/kit/src/lib/typography/typography";
 
 :host {
   @include app-root();
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #E8EAF5;
 }
 
 air-nav {
