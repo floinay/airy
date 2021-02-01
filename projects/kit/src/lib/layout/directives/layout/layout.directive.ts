@@ -1,4 +1,4 @@
-import {Directive, HostBinding, Input} from '@angular/core';
+import {Directive, HostBinding, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {Layout} from './types/layout';
 import {AlignItems, JustifyContent, LayoutAlign} from './types/layout-align';
 import {parseLayoutAlign} from './helpers/parse-layout-align';
@@ -6,7 +6,7 @@ import {parseLayoutAlign} from './helpers/parse-layout-align';
 @Directive({
   selector: '[airLayout]'
 })
-export class LayoutDirective {
+export class LayoutDirective implements OnChanges {
   @HostBinding('style.display') flex = 'flex';
 
   @HostBinding('style.flex-direction')
@@ -27,6 +27,10 @@ export class LayoutDirective {
   }
 
   constructor() {
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+
   }
 
 }

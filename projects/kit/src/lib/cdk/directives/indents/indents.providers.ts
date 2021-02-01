@@ -1,7 +1,6 @@
 import {Provider} from '@angular/core';
-import {PROPS_VALUES_MAP} from '../../services';
-import {StylesService} from '../../services';
-import {BreakpointsStylesManagerFactory} from '../../services';
+import {CSS_PROPS_KEYS_MAP, CSS_PROPS_VALUES_MAP} from '../../services';
+import {BREAKPOINTS_STYLES_PROVIDERS} from '../../services/styles/providers/providers';
 
 function indentVar(indentType: 'margin' | 'padding', size: string, defaultValue: string): string {
   return `var(--${indentType}-${size}, ${defaultValue})`;
@@ -20,31 +19,39 @@ function indents(indent: 'margin' | 'padding'): { [key: string]: string } {
   };
 }
 
-export const PADDINGS_PROPS_MAP = {
-  paddingStart: 'padding-inline-start',
-  paddingEnd: 'padding-inline-end'
-};
-
-export const MARGINS_PROPS_MAP = {
-  marginStart: 'margin-inline-start',
-  marginEnd: 'margin-inline-end'
-};
-
-export const MARGINS_VALUES_MAP = indents('margin');
-export const PADDINGS_VALUES_MAP = indents('padding');
 
 export const PADDINGS_PROVIDERS: Provider[] = [
-  BreakpointsStylesManagerFactory,
-  StylesService
+  {
+    provide: CSS_PROPS_KEYS_MAP,
+    useValue: {
+      paddingStart: 'padding-inline-start',
+      paddingEnd: 'padding-inline-end'
+    },
+    multi: true
+  },
+  {
+    provide: CSS_PROPS_VALUES_MAP,
+    multi: true,
+    useValue: indents('padding')
+  },
+  BREAKPOINTS_STYLES_PROVIDERS
 ];
 
 export const MARGINS_PROVIDERS: Provider[] = [
     {
-      provide: PROPS_VALUES_MAP,
-      useValue: indents('margin')
+      provide: CSS_PROPS_KEYS_MAP,
+      useValue: {
+        marginStart: 'margin-inline-start',
+        marginEnd: 'margin-inline-end'
+      },
+      multi: true
     },
-    BreakpointsStylesManagerFactory,
-    StylesService
+    {
+      provide: CSS_PROPS_VALUES_MAP,
+      useValue: indents('margin'),
+      multi: true
+    },
+    BREAKPOINTS_STYLES_PROVIDERS
   ]
 ;
 

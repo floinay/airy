@@ -1,34 +1,65 @@
-import {Injectable, SimpleChanges} from '@angular/core';
-import {UnknownObject} from '../types';
+import {Injectable, SimpleChange, SimpleChanges} from '@angular/core';
+import {Observable, Subject} from 'rxjs';
+
+export interface ChangesStateSnapshot<K, V> {
+  changes: Map<K, V>;
+  recent: Map<K, V>;
+  deleted: K[];
+}
 
 @Injectable()
-export class ChangesState {
-  private props: UnknownObject = {};
-  private lastProps: UnknownObject = {};
-  private removedProps: string[] = [];
+export class ChangesState<K extends unknown, V extends unknown> {
+  state: ChangesStateSnapshot<K, V> = {
+    changes: new Map<K, V>(),
+    recent: new Map<K, V>(),
+    deleted: []
+  };
+  private subject$ = new Subject<ChangesStateSnapshot<K, V>>();
+
+  watch(): Observable<ChangesStateSnapshot<K, V>> {
+    return this.subject$.asObservable();
+  }
 
   patch(changes: SimpleChanges): void {
-    this.lastProps = {};
-    for (const [key, change] of Object.entries(changes)) {
-      if (!change.currentValue && change.previousValue) {
-        this.removedProps.push(key);
-        delete this.props[key];
-      } else {
-        this.props[key] = change.currentValue;
-        this.lastProps[key] = change.currentValue;
+    this.recent.clear();
+    this.state.deleted = [];
+
+    for (const [key, value] of Object.entries(changes)) {
+      if (this.isDeletedChange(value)) {
+        this.delete(key as K);
+        continue;
       }
+
+      this.append(key as K, value.currentValue as V);
     }
+
+    this.subject$.next(this.state);
   }
 
-  all(): UnknownObject {
-    return this.props;
+  get changes(): Map<K, V> {
+    return this.state.changes;
   }
 
-  last(): UnknownObject {
-    return {};
+  get recent(): Map<K, V> {
+    return this.state.recent;
   }
 
-  removed(): string[] {
-    return this.removedProps;
+  get deleted(): K[] {
+    return this.state.deleted;
   }
+
+  private delete(key: K): void {
+    this.changes.delete(key as K);
+    this.deleted.push(key as K);
+  }
+
+  private append(key: K, value: V): void {
+    this.changes.set(key as K, value);
+    this.recent.set(key as K, value);
+  }
+
+  private isDeletedChange(value: SimpleChange): boolean {
+    return value.previousValue && value.currentValue === undefined;
+  }
+
 }

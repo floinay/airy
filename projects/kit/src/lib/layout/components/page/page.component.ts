@@ -43,7 +43,6 @@ export class PageComponent implements AfterViewInit {
 
   private offset(name: OffsetName, directive: StickyDirective | undefined): void {
     if (directive) {
-      console.log(directive.offset, directive);
       if (directive.sticky) {
         this.elementRef.nativeElement.style.setProperty(`--${name}__offset-sticky`, directive.offset + 'px');
       } else {
