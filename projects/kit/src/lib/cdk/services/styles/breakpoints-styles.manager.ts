@@ -6,7 +6,7 @@ import {BreakpointObserver} from '@angular/cdk/layout';
 import {StylesService} from './styles.service';
 import {mapToObject} from '../../helpers/map-to-object';
 import {BreakpointState} from '@angular/cdk/layout/breakpoints-observer';
-import {CssPropName} from './types/css-prop.name';
+import {CssPropName} from './types';
 
 @Injectable()
 export class BreakpointsStylesManager {

@@ -1,7 +1,9 @@
 export type JustifyContent = 'start' | 'center' | 'end' | 'space-around' | 'space-between' | 'space-evenly';
 export type AlignItems = 'start' | 'center' | 'end' | 'stretch' | 'space-between' | 'space-around' | 'baseline';
 
-export type  LayoutAlign = JustifyContent & 'start start'
+export type  LayoutAlign = JustifyContent
+  | undefined
+  | 'start start'
   | 'center  start'
   | 'end start'
   | 'space-around start'

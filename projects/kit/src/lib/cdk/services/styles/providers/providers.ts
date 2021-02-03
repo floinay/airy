@@ -1,4 +1,4 @@
-import {ChangesState} from '../../changes.state';
+import {ChangesState} from '../../changes-state';
 import {BreakpointsStylesState} from '../breakpoints-styles.state';
 import {BreakpointsStylesParser} from '../breakpoints-styles.parser';
 import {BreakpointsStylesManager} from '../breakpoints-styles.manager';

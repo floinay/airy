@@ -1,10 +1,8 @@
-import {CssPropName} from '../types/css-prop.name';
-import {CssPropValue} from '../types/css-prop.value';
-import {ParsedBreakpointsStyles, StylesMap} from '../types/parsed-breakpoints-styles';
+import {CssPropValue, ParsedBreakpointsStyles, StylesMap} from '../types';
 
 export function parsedBreakpointsStylesFactory(): ParsedBreakpointsStyles {
   return {
-    styles: new Map<CssPropName, CssPropValue>(),
+    styles: new Map<string, CssPropValue>(),
     stylesByBreakpoints: new Map<string, StylesMap>()
   };
 }

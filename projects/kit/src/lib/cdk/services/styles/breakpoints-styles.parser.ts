@@ -1,46 +1,67 @@
 import {Inject, Injectable, Optional} from '@angular/core';
-import {CSS_PROPS_KEYS_MAP, CSS_PROPS_VALUES_MAP} from './providers/tokens';
+import {CSS_PROPS_GENERATORS, CSS_PROPS_KEYS_MAP, CSS_PROPS_VALUES_MAP} from './providers/tokens';
 import {StringObject} from '../../types';
 import {Breakpoints, BreakpointsHelper} from '../../core';
 import {camelToKebab, firstLetterToLower} from '../../helpers';
-import {ParsedBreakpointsStyles} from './types/parsed-breakpoints-styles';
-import {CssPropName} from './types/css-prop.name';
-import {CssPropValue} from './types/css-prop.value';
 import {parsedBreakpointsStylesFactory} from './factories/parsed-breakpoints-styles.factory';
-import {ParsedDeletedBreakpointsProps} from './types/parsed-deleted-breakpoints-props';
 import {parsedDeletedBreakpointsPropsFactory} from './factories/parsed-deleted-breakpoints-props.factory';
+import {
+  CssPropName,
+  CssProps,
+  CssPropsGenerators,
+  CssPropValue,
+  ParsedBreakpointsStyles,
+  ParsedDeletedBreakpointsProps,
+  StylesMap
+} from './types';
 
 
 @Injectable()
 export class BreakpointsStylesParser {
   private propsNamesMap = arrayOfObjectsToObject(this.propsNamesMapArray);
   private propsValuesMap = arrayOfObjectsToObject(this.propsValuesMapArray);
+  private propsGenerators = arrayOfObjectsToObject(this.propsGeneratorsArray);
+  private parsed: ParsedBreakpointsStyles = parsedBreakpointsStylesFactory();
 
   constructor(@Inject(CSS_PROPS_KEYS_MAP) @Optional() readonly propsNamesMapArray?: StringObject[],
+              @Inject(CSS_PROPS_GENERATORS) @Optional() readonly propsGeneratorsArray?: CssPropsGenerators[],
               @Inject(CSS_PROPS_VALUES_MAP) @Optional() readonly propsValuesMapArray?: StringObject[]) {
   }
 
   parse(map: Map<string, string>): ParsedBreakpointsStyles {
-    const parsed: ParsedBreakpointsStyles = parsedBreakpointsStylesFactory();
+    this.parsed = parsedBreakpointsStylesFactory();
 
-    for (const [key, value] of map.entries()) {
-      const breakpoint = this.breakpoint(key);
-      const cssPropName = this.propName(key);
-      const cssPropValue = this.propValue(value);
-
-      if (breakpoint) {
-        if (!parsed.stylesByBreakpoints.has(breakpoint)) {
-          parsed.stylesByBreakpoints.set(breakpoint, new Map<CssPropName, CssPropValue>());
-        }
-
-        parsed.stylesByBreakpoints.get(breakpoint)?.set(cssPropName, cssPropValue);
-      } else {
-        parsed.styles.set(cssPropName, cssPropValue);
-      }
+    for (const [name, value] of map.entries()) {
+      this.parseOne(name, value);
     }
 
-    return parsed;
+    return this.parsed;
   }
+
+  private parseOne(name: string, value: string): void {
+    const breakpoint = this.breakpoint(name);
+    const cssProps = this.props(name, value);
+
+    if (breakpoint) {
+      this.generateMapForBreakpoint(breakpoint);
+      this.setStyles(this.parsed.stylesByBreakpoints.get(breakpoint) as StylesMap, cssProps);
+    } else {
+      this.setStyles(this.parsed.styles, cssProps);
+    }
+  }
+
+  private setStyles(map: Map<string, CssPropValue>, props: CssProps): void {
+    for (const [key, value] of Object.entries(props)) {
+      map.set(key, value);
+    }
+  }
+
+  private generateMapForBreakpoint(breakpoint: string): void {
+    if (!this.parsed.stylesByBreakpoints.has(breakpoint)) {
+      this.parsed.stylesByBreakpoints.set(breakpoint, new Map<string, CssPropValue>());
+    }
+  }
+
 
   parseDeleted(keys: string[]): ParsedDeletedBreakpointsProps {
     const parsed = parsedDeletedBreakpointsPropsFactory();
@@ -63,6 +84,14 @@ export class BreakpointsStylesParser {
     return parsed;
   }
 
+  hasGenerator(name: string): boolean {
+    return this.withoutBreakpoint(name) in this.propsGenerators;
+  }
+
+  generateProps(name: string, value: string): CssProps {
+    return this.propsGenerators[name](name, value);
+  }
+
 
   isBreakpointProp(name: string): boolean {
     return Boolean(BreakpointsHelper.keys().find(key => name.startsWith(key)));
@@ -74,8 +103,14 @@ export class BreakpointsStylesParser {
     return (this.propsNamesMap[withoutBreakpoint] || camelToKebab(withoutBreakpoint)) as CssPropName;
   }
 
-  propValue(value: string): string | number {
-    return this.defaultValue(value) || this.propsValuesMap[value] || value;
+  props(name: string, value: string): CssProps {
+    if (this.hasGenerator(name)) {
+      return this.generateProps(name, value);
+    }
+    const style: CssProps = {};
+    const parsedName = this.propName(name);
+    style[parsedName] = this.defaultValue(value) || this.propsValuesMap[value] || value;
+    return style;
   }
 
   breakpoint(name: string): string | null {
@@ -101,7 +136,7 @@ export class BreakpointsStylesParser {
 }
 
 
-function arrayOfObjectsToObject(map?: StringObject[]): StringObject {
+function arrayOfObjectsToObject<T>(map?: { [key: string]: T }[]): { [key: string]: T } {
   let object = {};
   if (map) {
     for (const o of map) {

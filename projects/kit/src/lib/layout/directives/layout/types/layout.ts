@@ -1,1 +1,1 @@
-export type Layout = 'row' | 'column' | 'row-reverse' | 'column-reverse';
+export type Layout = 'row' | 'column' | 'row-reverse' | 'column-reverse' | undefined;

@@ -1,7 +1,6 @@
-import {CssPropName} from './css-prop.name';
 import {CssPropValue} from './css-prop.value';
 
-export type StylesMap = Map<CssPropName, CssPropValue>;
+export type StylesMap = Map<string, CssPropValue>;
 
 export interface ParsedBreakpointsStyles {
   styles: StylesMap;
