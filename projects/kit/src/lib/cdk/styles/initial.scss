@@ -3,9 +3,28 @@ html, body {
   min-height: 100vh;
   background: var(--app-background, #F6F9FF);
 }
+
 :root {
   --direction: ltr;
 }
+
 * {
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary-light, #A1A5C0);
+}
+
+::-webkit-scrollbar-thumb {
+  opacity: 1;
+  background: var(--color-primary, #1F59EB);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark, #052C76);
 }

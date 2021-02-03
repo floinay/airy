@@ -1,29 +1,29 @@
 import {NgModule} from '@angular/core';
 import {ContainerComponent, PageComponent} from './components';
-import {EndDirective, FooterDirective, HeaderDirective, LayoutDirective, StartDirective} from './directives';
+import {
+  ContentDirective,
+  EndDirective,
+  FooterDirective,
+  HeaderDirective,
+  LayoutDirective,
+  StartDirective
+} from './directives';
 
+
+const declarations = [PageComponent,
+  HeaderDirective,
+  FooterDirective,
+  EndDirective,
+  StartDirective,
+  LayoutDirective,
+  ContentDirective,
+  ContainerComponent];
 
 @NgModule({
-  declarations: [
-    PageComponent,
-    HeaderDirective,
-    FooterDirective,
-    EndDirective,
-    StartDirective,
-    LayoutDirective,
-    ContainerComponent
-  ],
+  declarations,
   imports: [],
   providers: [],
-  exports: [
-    PageComponent,
-    HeaderDirective,
-    FooterDirective,
-    EndDirective,
-    StartDirective,
-    LayoutDirective,
-    ContainerComponent
-  ]
+  exports: declarations
 })
 export class AirLayoutModule {
 }

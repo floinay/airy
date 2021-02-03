@@ -3,15 +3,23 @@ import {
   AutofocusDirective,
   ClearInputBeforeUploadDirective,
   HideIfEmptyDirective, MarginsDirective,
-  PaddingsDirective
+  PaddingsDirective, ScrollToMeDirective
 } from './directives';
 import {CDK_MODULE_OPTIONS, CdkModuleOptions} from './options';
 
+const declarations = [
+  HideIfEmptyDirective,
+  ClearInputBeforeUploadDirective,
+  AutofocusDirective,
+  PaddingsDirective,
+  MarginsDirective,
+  ScrollToMeDirective
+];
 
 @NgModule({
-  declarations: [HideIfEmptyDirective, ClearInputBeforeUploadDirective, AutofocusDirective, PaddingsDirective, MarginsDirective],
+  declarations,
   imports: [],
-  exports: [HideIfEmptyDirective, ClearInputBeforeUploadDirective, AutofocusDirective, PaddingsDirective, MarginsDirective]
+  exports: declarations
 })
 export class AirCdkModule {
   static forRoot(options?: CdkModuleOptions): ModuleWithProviders<AirCdkModule> {

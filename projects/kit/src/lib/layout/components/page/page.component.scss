@@ -8,13 +8,16 @@
   padding-bottom: var(--footer__offset, 0);
   padding-inline-end: var(--end__offset, 0);
 
-  .body {
-    padding-inline-start: var(--start__offset-sticky, 0);
-    min-height: 100%;
-    flex: 1;
-  }
-
   ::ng-deep {
+    .air-container, .air-content {
+      padding-top: var(--page-content__padding-top, var(--padding-xxl, 60px));
+      padding-inline-start: var(--page-content__padding-start, var(--padding-xxl, 60px));
+      margin-inline-start: var(--start__offset-sticky, 0);
+      margin-top: var(--header__offset-sticky, 0);
+      min-height: calc(100% - var(--header__offset-sticky, 0) - var(--footer__offset-sticky, 0));
+      flex: 1;
+    }
+
     .sticky-header, .sticky-footer, .sticky-start, .sticky-end {
       position: var(--sticky__position, fixed);
     }
@@ -38,7 +41,7 @@
     }
 
     .sticky-start, .sticky-end {
-      top: var(--header__offset, 0);
+      top: var(--header__offset-sticky, var(--header__offset, 0));
       height: 100%;
     }
   }
