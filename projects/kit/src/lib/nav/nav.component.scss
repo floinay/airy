@@ -4,6 +4,12 @@
   --list-item__delimiter-left: var(--nav-item__start-indent, var(--padding-xl, 40px));
 
   ::ng-deep {
+    .active {
+      &::before {
+        position: absolute;
+      }
+    }
+
     a, button {
       &.air-list-item {
         padding-inline-start: var(--nav-item__start-indent, var(--padding-xl, 40px));

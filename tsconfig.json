@@ -59,6 +59,10 @@
       "kit": [
         "dist/kit/kit",
         "dist/kit"
+      ],
+      "direction": [
+        "dist/direction/direction",
+        "dist/direction"
       ]
     }
   },

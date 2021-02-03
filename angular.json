@@ -526,6 +526,46 @@
           }
         }
       }
+    },
+    "direction": {
+      "projectType": "library",
+      "root": "projects/direction",
+      "sourceRoot": "projects/direction/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/direction/tsconfig.lib.json",
+            "project": "projects/direction/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/direction/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/direction/src/test.ts",
+            "tsConfig": "projects/direction/tsconfig.spec.json",
+            "karmaConfig": "projects/direction/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/direction/tsconfig.lib.json",
+              "projects/direction/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "airy",
