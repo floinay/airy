@@ -10,10 +10,11 @@ import {
   AirLayoutModule,
   AirButtonModule,
   AirTooltipModule,
-  AirCdkModule
+  AirControlsModule,
+  AirCdkModule, AirDirectionModule
 } from '../../projects/kit/src/lib';
 
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AirTypographyModule} from '../../projects/kit/src/lib/typography/air-typography.module';
 
 
@@ -22,8 +23,10 @@ import {AirTypographyModule} from '../../projects/kit/src/lib/typography/air-typ
     AppComponent,
   ],
   imports: [
+    AirDirectionModule,
     BrowserModule,
     BrowserAnimationsModule,
+    AirControlsModule,
     AirTooltipModule,
     AirNavModule,
     AirLayoutModule,
@@ -37,7 +40,8 @@ import {AirTypographyModule} from '../../projects/kit/src/lib/typography/air-typ
       pathToDynamicIconsSprite: '/assets/sprites/sprite.svg'
     }),
     AirExpansionModule.forRoot({defaultIconName: 'expand', defaultIconSize: 's'}),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

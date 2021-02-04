@@ -1,0 +1,12 @@
+@use "sass:color";
+@import "strip-untils";
+
+@function contrast-color($color) {
+  $l: strip-units(color.lightness($color));
+
+  @if ($l > 60) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

@@ -1,0 +1,69 @@
+import {Inject, Injectable, Optional} from '@angular/core';
+import {DEFAULT_DIRECTION} from '../direction.providers';
+import {Direction, Directionality} from '@angular/cdk/bidi';
+import {LOCAL_STORAGE} from '@ng-web-apis/common';
+import {BehaviorSubject, Observable} from 'rxjs';
+import {DOCUMENT} from '@angular/common';
+import {filter} from 'rxjs/operators';
+
+const LAST_DIRECTION_KEY = 'air_direction';
+
+@Injectable()
+export class DirectionService {
+  private readonly state$ = new BehaviorSubject<Direction | undefined>(undefined);
+
+  constructor(@Inject(LOCAL_STORAGE) readonly localStorage: Storage,
+              private directionality: Directionality,
+              @Inject(DOCUMENT) readonly document: Document,
+              @Inject(DEFAULT_DIRECTION) @Optional() readonly defaultDirection?: Direction) {
+    this.set(this.lastOrDefault());
+  }
+
+  watch(): Observable<Direction> {
+    return this.state$.pipe(filter(dir => Boolean(dir))) as Observable<Direction>;
+  }
+
+  switch(): void {
+    this.set(this.isRtl() ? 'ltr' : 'rtl');
+  }
+
+  isLtr(): boolean {
+    return this.direction() === 'ltr';
+  }
+
+  isRtl(): boolean {
+    return this.direction() === 'rtl';
+  }
+
+  set(direction: Direction): void {
+    this.localStorage.setItem(LAST_DIRECTION_KEY, direction);
+    this.directionality.change.emit(direction);
+    this.state$.next(direction);
+    this.document.body.classList.remove('rtl', 'ltr');
+    this.document.body.classList.add(direction);
+    this.document.body.style.setProperty('direction', direction);
+  }
+
+  direction(): Direction {
+    return this.state$.getValue() as Direction;
+  }
+
+  private lastOrDefault(): Direction {
+    const lastDirection = this.lastDirection();
+    if (this.isDirection(lastDirection)) {
+      return lastDirection as Direction;
+    } else if (this.defaultDirection) {
+      return this.defaultDirection;
+    } else {
+      return this.directionality.value;
+    }
+  }
+
+  private isDirection(direction: Direction | null): boolean {
+    return Boolean(direction && (direction === 'ltr' || direction === 'rtl'));
+  }
+
+  private lastDirection(): Direction | null {
+    return this.localStorage.getItem(LAST_DIRECTION_KEY) as Direction;
+  }
+}

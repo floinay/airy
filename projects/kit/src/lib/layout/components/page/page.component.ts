@@ -10,6 +10,7 @@ import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 import {BreakpointsHelper} from '../../../cdk';
 import {EndDirective, FooterDirective, HeaderDirective, StartDirective} from '../../directives';
 import {StickyDirective} from '../../interfaces';
+import {DirectionService} from '../../../direction';
 
 type OffsetName = 'header' | 'footer' | 'end' | 'start';
 
@@ -26,7 +27,9 @@ export class PageComponent implements AfterViewInit {
   @ContentChild(HeaderDirective) header?: HeaderDirective;
   @ContentChild(FooterDirective) footer?: FooterDirective;
 
-  constructor(private elementRef: ElementRef, private breakpointObserver: BreakpointObserver) {
+  constructor(private elementRef: ElementRef,
+              private directionService: DirectionService,
+              private breakpointObserver: BreakpointObserver) {
   }
 
   ngAfterViewInit(): void {

@@ -22,18 +22,9 @@
       position: var(--sticky__position, fixed);
     }
 
-
-    .sticky-end {
-      right: var(--sticky-end__right, 0);
-    }
-
     .sticky-header {
       top: var(--sticky-header__top, 0);
       left: var(--sticky-header__left, 0);
-    }
-
-    .sticky-start {
-      left: var(--sticky-start__left, 0);
     }
 
     .sticky-footer {
@@ -43,6 +34,28 @@
     .sticky-start, .sticky-end {
       top: var(--header__offset-sticky, var(--header__offset, 0));
       height: 100%;
+    }
+  }
+}
+
+::ng-deep {
+  .ltr {
+    .sticky-end {
+      right: var(--sticky-end__end, 0);
+    }
+
+    .sticky-start {
+      left: var(--sticky-start__start, 0);
+    }
+  }
+
+  .rtl {
+    .sticky-end {
+      left: var(--sticky-end__end, 0);
+    }
+
+    .sticky-start {
+      right: var(--sticky-start__start, 0);
     }
   }
 }

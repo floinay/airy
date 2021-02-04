@@ -17,7 +17,8 @@ const declarations = [PageComponent,
   StartDirective,
   LayoutDirective,
   ContentDirective,
-  ContainerComponent];
+  ContainerComponent
+];
 
 @NgModule({
   declarations,

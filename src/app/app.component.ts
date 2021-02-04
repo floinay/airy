@@ -1,4 +1,7 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {DirectionService} from '../../projects/kit/src/lib';
+import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +9,11 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+@UntilDestroy()
 export class AppComponent {
-  direction = 'ltr';
+  direction = new FormControl(this.directionService.direction());
+
+  constructor(private directionService: DirectionService) {
+    this.direction.valueChanges.pipe(untilDestroyed(this)).subscribe(v => this.directionService.set(v));
+  }
 }

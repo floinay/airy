@@ -1,6 +1,10 @@
 <air-page>
-  <header  airPaddingTop="m" airPaddingBottom="m" airPaddingStart="xl" airPaddingEnd="xl" airStickyHeader>
+  <header airPaddingTop="m" airPaddingBottom="m" airPaddingStart="xl" airPaddingEnd="xl" airStickyHeader>
     <air-icon name="logo" size="110px 54px"></air-icon>
+    <air-form-field>
+      <label air-label>Is Rtl</label>
+      <air-toggle color="primary" [formControl]="direction" enabledValue="rtl" disabledValue="ltr"></air-toggle>
+    </air-form-field>
   </header>
   <air-nav airStickyStart airPaddingTop="xl">
     <a air-list-item href="" class="active">

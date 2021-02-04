@@ -1,30 +1,30 @@
-import {ModuleWithProviders, NgModule, Provider, Type} from '@angular/core';
-import {Direction, Directionality} from '@angular/cdk/bidi';
+import {ModuleWithProviders, NgModule, Type} from '@angular/core';
+import {BidiModule, Direction} from '@angular/cdk/bidi';
 import {DEFAULT_DIRECTION} from './direction.providers';
 import {DirectionDirective} from './directives';
+import {DirectionService} from './services';
 
 const declarations: Array<Type<any> | any[]> = [DirectionDirective];
 
 @NgModule({
-  declarations, exports: declarations
+  declarations, exports: declarations,
+  imports: [BidiModule],
+  providers: [DirectionService]
 })
 export class AirDirectionModule {
 
   static forRoot(defaultDirection?: Direction): ModuleWithProviders<AirDirectionModule> {
+    const providers = [];
+
+    if (defaultDirection) {
+      providers.push({provide: DEFAULT_DIRECTION, useValue: defaultDirection});
+    }
+
     return {
       ngModule: AirDirectionModule,
-      providers: [
-        this.defaultDirectionProvider(defaultDirection)
-      ]
+      providers
     };
   }
 
-  private static defaultDirectionProvider(defaultDirection?: Direction): Provider {
-    if (defaultDirection) {
-      return {provide: DEFAULT_DIRECTION, useValue: defaultDirection};
-    }
-
-    return {provide: DEFAULT_DIRECTION, useExisting: Directionality};
-  }
 
 }
