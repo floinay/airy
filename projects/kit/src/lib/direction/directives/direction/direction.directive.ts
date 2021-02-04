@@ -7,7 +7,6 @@ import {Direction} from '@angular/cdk/bidi';
   exportAs: 'direction'
 })
 export class DirectionDirective {
-  readonly state$ = this.directionService.state$;
 
   constructor(private directionService: DirectionService) {
   }

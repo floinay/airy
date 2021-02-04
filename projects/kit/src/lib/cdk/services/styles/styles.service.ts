@@ -1,17 +1,19 @@
 import {ElementRef, Injectable} from '@angular/core';
+import {camelToKebab} from '../../helpers';
+import {StringObject} from '../../types';
 
 @Injectable({providedIn: 'root'})
 export class StylesService {
   constructor(private elementRef: ElementRef<HTMLDivElement>) {
   }
 
-  style(properties: Partial<CSSStyleDeclaration>): void {
+  style(properties: StringObject): void {
     Object.entries(properties).forEach(
-      ([key, value]) => this.elementRef.nativeElement.style.setProperty(key, value as string)
+      ([key, value]) => this.elementRef.nativeElement.style.setProperty(camelToKebab(key), value)
     );
   }
 
-  remove(properties: Array<keyof CSSStyleDeclaration>): void {
-    properties.forEach(property => this.elementRef.nativeElement.style.removeProperty(property as string));
+  remove(properties: string[]): void {
+    properties.forEach(property => this.elementRef.nativeElement.style.removeProperty(camelToKebab(property)));
   }
 }

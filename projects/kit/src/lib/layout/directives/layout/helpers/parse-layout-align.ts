@@ -1,4 +1,4 @@
-import {AlignItems, JustifyContent, LayoutAlign} from '../types/layout-align';
+import {AlignItems, JustifyContent, LayoutAlign} from '../types';
 
 interface ParsedLayoutAlign {
   alignItems: AlignItems | JustifyContent | undefined;
@@ -6,6 +6,7 @@ interface ParsedLayoutAlign {
 }
 
 export function parseLayoutAlign(layoutAlign: LayoutAlign): ParsedLayoutAlign {
+  // @ts-ignore
   const res = layoutAlign.split(' ');
   if (res.length === 1) {
     return {

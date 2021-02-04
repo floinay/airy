@@ -1,8 +1,8 @@
 import {Inject, Injectable, Optional} from '@angular/core';
 import {CSS_PROPS_GENERATORS, CSS_PROPS_KEYS_MAP, CSS_PROPS_VALUES_MAP} from './providers/tokens';
 import {StringObject} from '../../types';
-import {Breakpoints, BreakpointsHelper} from '../../core';
-import {camelToKebab, firstLetterToLower} from '../../helpers';
+import {Breakpoint, Breakpoints, BreakpointsHelper} from '../../core';
+import {firstLetterToLower} from '../../helpers';
 import {parsedBreakpointsStylesFactory} from './factories/parsed-breakpoints-styles.factory';
 import {parsedDeletedBreakpointsPropsFactory} from './factories/parsed-deleted-breakpoints-props.factory';
 import {
@@ -93,19 +93,21 @@ export class BreakpointsStylesParser {
   }
 
 
-  isBreakpointProp(name: string): boolean {
-    return Boolean(BreakpointsHelper.keys().find(key => name.startsWith(key)));
+  isBreakpointProp(name: string): Breakpoint | undefined {
+    return BreakpointsHelper.keys().find(key => name.startsWith(key));
   }
 
   propName(name: string): CssPropName {
-    const withoutBreakpoint = firstLetterToLower(this.withoutBreakpoint(name));
+    const withoutBreakpoint = this.withoutBreakpoint(name);
 
-    return (this.propsNamesMap[withoutBreakpoint] || camelToKebab(withoutBreakpoint)) as CssPropName;
+    return (this.propsNamesMap[withoutBreakpoint] || withoutBreakpoint) as CssPropName;
   }
 
   props(name: string, value: string): CssProps {
-    if (this.hasGenerator(name)) {
-      return this.generateProps(name, value);
+    const withoutBreakpoint = this.withoutBreakpoint(name);
+
+    if (this.hasGenerator(withoutBreakpoint)) {
+      return this.generateProps(withoutBreakpoint, value);
     }
     const style: CssProps = {};
     const parsedName = this.propName(name);
@@ -114,8 +116,8 @@ export class BreakpointsStylesParser {
   }
 
   breakpoint(name: string): string | null {
-    if (this.isBreakpointProp(name)) {
-      const bp = name.split('Air')[0] as keyof BreakpointsHelper;
+    const bp = this.isBreakpointProp(name);
+    if (bp) {
       return Breakpoints[bp];
     }
 
@@ -131,7 +133,8 @@ export class BreakpointsStylesParser {
   }
 
   private withoutBreakpoint(name: string): string {
-    return name.split(this.isBreakpointProp(name) ? 'Air' : 'air')[1] || name;
+    const bp = this.isBreakpointProp(name);
+    return firstLetterToLower(bp ? name.replace(new RegExp(bp, 'g'), '').replace('Air', '') : name.replace('air', ''));
   }
 }
 

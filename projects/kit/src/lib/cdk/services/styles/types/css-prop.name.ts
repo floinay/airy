@@ -1,1 +1,1 @@
-export type CssPropName = keyof CSSStyleDeclaration;
+export type CssPropName = string;

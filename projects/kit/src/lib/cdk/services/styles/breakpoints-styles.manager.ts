@@ -1,12 +1,13 @@
 import {Injectable} from '@angular/core';
 import {BreakpointsStylesState, BreakpointsStylesStateInterface} from './breakpoints-styles.state';
 import {Observable, of} from 'rxjs';
-import {switchMap, tap} from 'rxjs/operators';
+import {debounceTime, switchMap, tap} from 'rxjs/operators';
 import {BreakpointObserver} from '@angular/cdk/layout';
 import {StylesService} from './styles.service';
 import {mapToObject} from '../../helpers/map-to-object';
 import {BreakpointState} from '@angular/cdk/layout/breakpoints-observer';
 import {CssPropName} from './types';
+import {StringObject} from '../../types';
 
 @Injectable()
 export class BreakpointsStylesManager {
@@ -25,9 +26,10 @@ export class BreakpointsStylesManager {
         this.stateSnapshot = state;
       })),
       switchMap(this.observeBreakpoints.bind(this)),
+      tap(() => this.clearPreviousBreakpointsProps()),
+      tap(() => this.setGlobalProps()),
+      debounceTime(0),
       tap((breakpointsOrState) => {
-        this.clearPreviousBreakpointsProps();
-        this.setGlobalProps();
         if (this.hasBreakpointsStyles()) {
           this.setBreakpointsProps(breakpointsOrState as BreakpointState);
         }
@@ -52,7 +54,7 @@ export class BreakpointsStylesManager {
 
   private setGlobalProps(): void {
     if (this.stateSnapshot) {
-      this.stylesService.style(mapToObject<Partial<CSSStyleDeclaration>>(this.stateSnapshot.styles.styles));
+      this.stylesService.style(mapToObject<StringObject>(this.stateSnapshot.styles.styles));
     }
   }
 
@@ -71,7 +73,7 @@ export class BreakpointsStylesManager {
 
   private setBreakpointsProps(breakpoints: BreakpointState): void {
     if (this.stateSnapshot) {
-      let styles: Partial<CSSStyleDeclaration> = {};
+      let styles: StringObject = {};
       for (const [breakpoint, breakpointStyles] of this.stateSnapshot.styles.stylesByBreakpoints?.entries()) {
         if (breakpoints.breakpoints[breakpoint]) {
           styles = Object.assign(styles, mapToObject(breakpointStyles));

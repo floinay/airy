@@ -1,19 +1,9 @@
 import {Directive, HostBinding, Input, OnChanges, SimpleChanges} from '@angular/core';
-import {Layout} from './types/layout';
-import {AlignItems, JustifyContent, LayoutAlign} from './types/layout-align';
-import {ChangesState} from '../../../cdk';
+import {Layout, LayoutAlign} from './types';
+import {BreakpointsStylesManager, ChangesState} from '../../../cdk';
 import {LAYOUT_PROVIDERS} from './layout.providers';
+import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 
-// const layoutAlignFnc = (value) => {
-//   // if (value) {
-//   //   const {alignItems, justifyContent} = parseLayoutAlign(value);
-//   //   this.justifyContent = justifyContent;
-//   //   this.alignItems = alignItems;
-//   // } else {
-//   //   this.justifyContent = undefined;
-//   //   this.alignItems = undefined;
-//   // }
-// };
 
 @Directive({
   selector: `
@@ -34,6 +24,7 @@ import {LAYOUT_PROVIDERS} from './layout.providers';
   `,
   providers: LAYOUT_PROVIDERS
 })
+@UntilDestroy()
 export class LayoutDirective implements OnChanges {
   @HostBinding('style.display') flex = 'flex';
 
@@ -53,25 +44,23 @@ export class LayoutDirective implements OnChanges {
   @Input('gtLg.airLayout') gtLgAirLayout: Layout;
   @Input('gtXs.airLayout') gtXsAirLayout: Layout;
 
-  @HostBinding('style.justify-content') private justifyContent: JustifyContent | AlignItems | undefined;
-  @HostBinding('style.align-items') private alignItems: AlignItems | JustifyContent | undefined;
-
   @Input() layoutAlign: LayoutAlign;
-  @Input('xs.layoutAlign') xsLayoutAlign: Layout;
-  @Input('sm.layoutAlign') smLayoutAlign: Layout;
-  @Input('md.layoutAlign') mdLayoutAlign: Layout;
-  @Input('lg.layoutAlign') lgLayoutAlign: Layout;
-  @Input('xl.layoutAlign') xlLayoutAlign: Layout;
-  @Input('ltSm.layoutAlign') ltSmLayoutAlign: Layout;
-  @Input('ltMd.layoutAlign') ltMdLayoutAlign: Layout;
-  @Input('ltLg.layoutAlign') ltLgLayoutAlign: Layout;
-  @Input('ltXl.layoutAlign') ltXlLayoutAlign: Layout;
-  @Input('gtSm.layoutAlign') gtSmLayoutAlign: Layout;
-  @Input('gtMd.layoutAlign') gtMdLayoutAlign: Layout;
-  @Input('gtLg.layoutAlign') gtLgLayoutAlign: Layout;
-  @Input('gtXs.layoutAlign') gtXsLayoutAlign: Layout;
+  @Input('xs.layoutAlign') xsLayoutAlign: LayoutAlign;
+  @Input('sm.layoutAlign') smLayoutAlign: LayoutAlign;
+  @Input('md.layoutAlign') mdLayoutAlign: LayoutAlign;
+  @Input('lg.layoutAlign') lgLayoutAlign: LayoutAlign;
+  @Input('xl.layoutAlign') xlLayoutAlign: LayoutAlign;
+  @Input('ltSm.layoutAlign') ltSmLayoutAlign: LayoutAlign;
+  @Input('ltMd.layoutAlign') ltMdLayoutAlign: LayoutAlign;
+  @Input('ltLg.layoutAlign') ltLgLayoutAlign: LayoutAlign;
+  @Input('ltXl.layoutAlign') ltXlLayoutAlign: LayoutAlign;
+  @Input('gtSm.layoutAlign') gtSmLayoutAlign: LayoutAlign;
+  @Input('gtMd.layoutAlign') gtMdLayoutAlign: LayoutAlign;
+  @Input('gtLg.layoutAlign') gtLgLayoutAlign: LayoutAlign;
+  @Input('gtXs.layoutAlign') gtXsLayoutAlign: LayoutAlign;
 
-  constructor(private changesState: ChangesState<string, string>) {
+  constructor(private changesState: ChangesState<string, string>, breakpointsStylesManager: BreakpointsStylesManager) {
+    breakpointsStylesManager.watch().pipe(untilDestroyed(this)).subscribe();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
