@@ -7,7 +7,7 @@ import {DOCUMENT} from '@angular/common';
 import {filter} from 'rxjs/operators';
 
 const LAST_DIRECTION_KEY = 'air_direction';
-
+// @dynamic
 @Injectable()
 export class DirectionService {
   private readonly state$ = new BehaviorSubject<Direction | undefined>(undefined);

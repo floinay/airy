@@ -9,3 +9,4 @@ export * from './button';
 export * from './typography';
 export * from './cdk';
 export * from './direction';
+export * from './tabs';

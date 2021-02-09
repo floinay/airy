@@ -1,12 +1,13 @@
 <air-page>
-  <header airPaddingTop="m" airPaddingBottom="m" airPaddingStart="xl" airPaddingEnd="xl" airStickyHeader airLayout="row" xs.airLayout="column" xs.layoutAlign="center">
+  <header airPaddingTop="m" airPaddingBottom="m" airPaddingStart="xl" airPaddingEnd="xl" airStickyHeader airLayout="row"
+          xs.airLayout="column" xs.layoutAlign="center">
     <air-icon name="logo" size="110px 54px"></air-icon>
     <air-form-field airFlex="1">
       <label air-label>Is Rtl</label>
       <air-toggle color="primary" [formControl]="direction" enabledValue="rtl" disabledValue="ltr"></air-toggle>
     </air-form-field>
   </header>
-  <air-nav airStickyStart airPaddingTop="xl">
+  <air-nav airStickyStart airPaddingTop="xxl">
     <a air-list-item href="" class="active">
       <air-icon size="l" name="nav/dashboard"></air-icon>
       Dashboard
@@ -17,6 +18,25 @@
     </a>
   </air-nav>
   <air-container>
-    <button air-button color="primary">asdasdasd</button>
+    <h1 airH4>Website settings</h1>
+    <air-tabs>
+      <air-tab>
+        <button air-button [routerLink]="['/']" color="primary" *airTabHeader>First tab header</button>
+        <air-tab-content>first tab content</air-tab-content>
+      </air-tab>
+      <air-tab>
+        <button air-button color="primary" [routerLink]="['/buttons']" *airTabHeader>second tab header</button>
+        <air-tab-content>second tab content</air-tab-content>
+      </air-tab>
+      <air-tab>
+        <button air-button color="primary" *airTabHeader>3 tab header</button>
+        <air-tab-content>3 tab content</air-tab-content>
+      </air-tab>
+      <air-tab>
+        <button air-button color="primary" *airTabHeader>4 tab header</button>
+        <air-tab-content>4 tab content</air-tab-content>
+      </air-tab>
+    </air-tabs>
+    <router-outlet></router-outlet>
   </air-container>
 </air-page>

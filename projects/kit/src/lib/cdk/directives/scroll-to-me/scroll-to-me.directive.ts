@@ -1,6 +1,6 @@
 import {Directive, ElementRef, Inject, Input} from '@angular/core';
 import {WINDOW} from '@ng-web-apis/common';
-
+// @dynamic
 @Directive({
   selector: '[airScrollToMe]',
   exportAs: 'scrollToMe'

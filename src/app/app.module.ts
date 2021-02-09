@@ -11,18 +11,31 @@ import {
   AirButtonModule,
   AirTooltipModule,
   AirControlsModule,
-  AirCdkModule, AirDirectionModule
+  AirCdkModule, AirDirectionModule, AirTabsModule
 } from '../../projects/kit/src/lib';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AirTypographyModule} from '../../projects/kit/src/lib/typography/air-typography.module';
+import {RouterModule} from '@angular/router';
+import {HomeComponent} from './pages/home/home.component';
+import {ButtonsComponent} from './pages/buttons/buttons.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    ButtonsComponent,
   ],
   imports: [
+    RouterModule.forRoot([{
+      path: '',
+      component: HomeComponent
+    }, {
+      path: 'buttons',
+      component: ButtonsComponent
+    }]),
+    AirTabsModule,
     AirDirectionModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -41,7 +54,8 @@ import {AirTypographyModule} from '../../projects/kit/src/lib/typography/air-typ
     }),
     AirExpansionModule.forRoot({defaultIconName: 'expand', defaultIconSize: 's'}),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

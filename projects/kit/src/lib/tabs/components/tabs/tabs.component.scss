@@ -1,0 +1,17 @@
+@import "../../../cdk/styles";
+
+:host {
+  display: block;
+
+  .header {
+    display: flex;
+    justify-content: flex-start;
+
+    ::ng-deep {
+      .air-button {
+        background: transparent;
+        color: current-color()
+      }
+    }
+  }
+}
