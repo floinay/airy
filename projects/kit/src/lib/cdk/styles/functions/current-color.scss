@@ -1,0 +1,13 @@
+@function current-color($shade:null, $element:null) {
+  @if ($element) {
+    @if ($shade) {
+      @return var(--#{$element}__color-current-#{$shade}, var(--color-current-#{$shade}));
+    } @else {
+      @return var(--#{$element}__color-current, var(--color-current));
+    }
+  } @else {
+    @if ($shade) {
+      @return var(--#{$element}__color-current-#{$shade}, var(--color-current-#{$shade}));
+    }
+  }
+}

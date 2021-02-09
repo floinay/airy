@@ -1,9 +1,0 @@
-@import "can-color";
-
-@mixin air-default-theme-palette() {
-  @include can-color(primary);
-  @include can-color(accent);
-  @include can-color(danger);
-  @include can-color(default);
-  @include can-color(warning);
-}

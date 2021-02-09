@@ -13,8 +13,8 @@
   text-align: var(--button__text-align, center);
   justify-content: var(--button__justiry-content, center);
   min-width: var(--button__min-width, 28px);
-  background: var(--button__background, var(--current-color));
-  color: var(--button__color, var(--current-color-contrast));
+  background: var(--button__background, var(--color-current));
+  color: var(--button__color, var(--color-current-contrast));
   font-weight: var(--button__font-weight, 400);
   font-size: var(--button__font-size, 14px);
   transition: var(--button__transition, none);
@@ -30,33 +30,33 @@
   }
 
   &:hover {
-    background: var(--button__background_hover, var(--current-color-shade));
+    background: var(--button__background_hover, var(--color-current-dark));
   }
 
 
   &.outline {
-    color: var(--button__color_outline, var(--current-color));
+    color: var(--button__color_outline, var(--color-current));
     background: var(--button__background_outline, none);
-    border: var(--button__border-width_outline) var(--button__border-style_outline) var(--button__border-color__outline, var(--current-color));
+    border: var(--button__border-width_outline) var(--button__border-style_outline) var(--button__border-color__outline, var(--color-current));
 
     &:hover {
-      color: var(--button__color_outline_hover, var(--current-color-contrast));
-      background: var(--button__background_outline_hover, var(--current-color-shade));
+      color: var(--button__color_outline_hover, var(--color-current-contrast));
+      background: var(--button__background_outline_hover, var(--color-current-dark));
 
       ::ng-deep {
         & > air-dynamic-icon {
-          --current-color: var(--button__color_outline_hover, var(--current-color-contrast));
+          --color-current: var(--button__color_outline_hover, var(--color-current-contrast));
         }
       }
     }
   }
 
   &.clear {
-    color: var(--button__color_clear, var(--current-color));
+    color: var(--button__color_clear, var(--color-current));
     background: var(--button__background_clear, none);
 
     &:hover {
-      color: var(--button__color_clear_hover, var(--current-color-shade));
+      color: var(--button__color_clear_hover, var(--color-current-dark));
       background: var(--button__background_clear_hover, none);
     }
   }

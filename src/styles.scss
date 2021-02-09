@@ -1,6 +1,21 @@
 @import "../projects/kit/src/lib/cdk/styles";
-@import '~@angular/cdk/overlay-prebuilt.css';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
+
+
+html {
+  @include air-theme(
+    $background: #fff,
+    $background-secondary: #F6F9FF,
+    $text: #1B1B1E,
+    $text-secondary: #A1A5C0,
+    $borders: #A3A3A3,
+    $primary: (main: #0A59EB, dark: #052C76, light: #C4D8FD, shades: (50: #EBF2FE)),
+    $warn: (main:#F5C800, dark: #7A6400, light: #FFF4C2),
+    $danger: (main: #DC1833, dark: #6E0C19, light: #F9C8CE),
+    $disabled: (main: #1B1B1E, dark: #1B1B1E, light: #1B1B1E)
+  );
+  --border-radius: 4px;
+}
 
 html, body {
   margin: 0;;

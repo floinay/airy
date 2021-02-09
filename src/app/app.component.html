@@ -1,7 +1,7 @@
 <air-page>
   <header airPaddingTop="m" airPaddingBottom="m" airPaddingStart="xl" airPaddingEnd="xl" airStickyHeader airLayout="row" xs.airLayout="column" xs.layoutAlign="center">
     <air-icon name="logo" size="110px 54px"></air-icon>
-    <air-form-field>
+    <air-form-field airFlex="1">
       <label air-label>Is Rtl</label>
       <air-toggle color="primary" [formControl]="direction" enabledValue="rtl" disabledValue="ltr"></air-toggle>
     </air-form-field>
@@ -16,5 +16,7 @@
       Courses
     </a>
   </air-nav>
-  <air-container></air-container>
+  <air-container>
+    <button air-button color="primary">asdasdasd</button>
+  </air-container>
 </air-page>

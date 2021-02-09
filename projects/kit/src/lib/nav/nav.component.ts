@@ -1,4 +1,7 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef} from '@angular/core';
+import {CanColorCtor, HasElementRef, mixinColor} from '../cdk';
+
+const NavBase: CanColorCtor = mixinColor(HasElementRef, 'primary');
 
 @Component({
   selector: 'air-nav',
@@ -6,5 +9,8 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   styleUrls: ['./nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavComponent {
+export class NavComponent extends NavBase {
+  constructor(private elementRef: ElementRef<HTMLElement>) {
+    super(elementRef, 'default');
+  }
 }

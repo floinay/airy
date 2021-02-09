@@ -1,5 +1,5 @@
 :host {
-  background: var(--app-background__secondary, #fff);
+  background: var(--background__secondary, #fff);
 
   --list-item__delimiter-left: var(--nav-item__start-indent, var(--padding-xl, 40px));
 
@@ -8,6 +8,8 @@
       &::before {
         position: absolute;
       }
+
+      background-color: var(--current-color-50);
     }
 
     a, button {

@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {ContainerComponent, PageComponent} from './components';
 import {
   ContentDirective,
-  EndDirective,
+  EndDirective, FlexDirective,
   FooterDirective,
   HeaderDirective,
   LayoutDirective,
@@ -17,7 +17,8 @@ const declarations = [PageComponent,
   StartDirective,
   LayoutDirective,
   ContentDirective,
-  ContainerComponent
+  ContainerComponent,
+  FlexDirective
 ];
 
 @NgModule({
