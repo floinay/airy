@@ -10,8 +10,8 @@
 
   ::ng-deep {
     .air-container, .air-content {
-      padding-top: var(--page-content__padding-top, var(--padding-xxl, 60px));
-      padding-inline-start: var(--page-content__padding-start, var(--padding-xxl, 60px));
+      padding-top: var(--page-content__padding-top, var(--indent-xxl, 60px));
+      padding-inline-start: var(--page-content__padding-start, var(--indent-xxl, 60px));
       margin-inline-start: var(--start__offset-sticky, 0);
       margin-top: var(--header__offset-sticky, 0);
       min-height: calc(100% - var(--header__offset-sticky, 0) - var(--footer__offset-sticky, 0));

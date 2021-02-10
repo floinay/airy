@@ -19,6 +19,7 @@ import {AirTypographyModule} from '../../projects/kit/src/lib/typography/air-typ
 import {RouterModule} from '@angular/router';
 import {HomeComponent} from './pages/home/home.component';
 import {ButtonsComponent} from './pages/buttons/buttons.component';
+import {TabsComponent} from './pages/tabs/tabs.component';
 
 
 @NgModule({
@@ -26,15 +27,21 @@ import {ButtonsComponent} from './pages/buttons/buttons.component';
     AppComponent,
     HomeComponent,
     ButtonsComponent,
+    TabsComponent,
   ],
   imports: [
     RouterModule.forRoot([{
       path: '',
       component: HomeComponent
-    }, {
-      path: 'buttons',
-      component: ButtonsComponent
-    }]),
+    },
+      {
+        path: 'tabs',
+        component: TabsComponent
+      },
+      {
+        path: 'buttons',
+        component: ButtonsComponent
+      }]),
     AirTabsModule,
     AirDirectionModule,
     BrowserModule,

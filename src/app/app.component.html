@@ -1,7 +1,7 @@
 <air-page>
   <header airPaddingTop="m" airPaddingBottom="m" airPaddingStart="xl" airPaddingEnd="xl" airStickyHeader airLayout="row"
           xs.airLayout="column" xs.layoutAlign="center">
-    <air-icon name="logo" size="110px 54px"></air-icon>
+    <a routerLink="/"><air-icon name="logo" size="110px 54px"></air-icon></a>
     <air-form-field airFlex="1">
       <label air-label>Is Rtl</label>
       <air-toggle color="primary" [formControl]="direction" enabledValue="rtl" disabledValue="ltr"></air-toggle>
@@ -19,24 +19,15 @@
   </air-nav>
   <air-container>
     <h1 airH4>Website settings</h1>
-    <air-tabs>
-      <air-tab>
-        <button air-button [routerLink]="['/']" color="primary" *airTabHeader>First tab header</button>
-        <air-tab-content>first tab content</air-tab-content>
-      </air-tab>
-      <air-tab>
-        <button air-button color="primary" [routerLink]="['/buttons']" *airTabHeader>second tab header</button>
-        <air-tab-content>second tab content</air-tab-content>
-      </air-tab>
-      <air-tab>
-        <button air-button color="primary" *airTabHeader>3 tab header</button>
-        <air-tab-content>3 tab content</air-tab-content>
-      </air-tab>
-      <air-tab>
-        <button air-button color="primary" *airTabHeader>4 tab header</button>
-        <air-tab-content>4 tab content</air-tab-content>
-      </air-tab>
-    </air-tabs>
+    <air-tabs-links mode="buttons" airMarginBottom="xl">
+      <button routerLinkActive="active" air-button routerLink="/tabs" color="primary">Tabs</button>
+      <button routerLinkActive="active" air-button color="primary" routerLink="/buttons">Buttons</button>
+    </air-tabs-links>
+    <air-tabs-links mode="tabs">
+      <button routerLinkActive="active" air-button routerLink="/tabs" color="primary">Basic settings</button>
+      <button routerLinkActive="active" air-button color="primary" routerLink="/buttons">SEO</button>
+      <button routerLinkActive="active" air-button color="primary" routerLink="/buttons">Notifications</button>
+    </air-tabs-links>
     <router-outlet></router-outlet>
   </air-container>
 </air-page>

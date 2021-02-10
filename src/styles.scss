@@ -1,5 +1,5 @@
 @import "../projects/kit/src/lib/cdk/styles";
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 
 
 html {
@@ -8,7 +8,7 @@ html {
     $background-secondary: #F6F9FF,
     $text: #1B1B1E,
     $text-secondary: #A1A5C0,
-    $borders: #A3A3A3,
+    $borders: #E6E8EB,
     $primary: (main: #0A59EB, dark: #052C76, light: #C4D8FD, shades: (50: #EBF2FE)),
     $warn: (main:#F5C800, dark: #7A6400, light: #FFF4C2),
     $danger: (main: #DC1833, dark: #6E0C19, light: #F9C8CE),

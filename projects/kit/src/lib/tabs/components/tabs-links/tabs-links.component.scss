@@ -1,0 +1,65 @@
+@import "../../../cdk/styles";
+
+:host {
+  display: block;
+  position: relative;
+  width: 100%;
+
+  ::ng-deep {
+    .air-button {
+      margin-bottom: 0;
+      margin-top: 0;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+  }
+
+  &.mode-buttons {
+    ::ng-deep {
+
+      .air-button {
+        &:not(.active) {
+          background: current-color($contrast: true);
+          border: 1px solid current-color();
+          color: var(--text-primary);
+        }
+
+        &:not(:last-child) {
+          margin-inline-end: var(--indent-xxs, 8px);
+        }
+      }
+    }
+  }
+
+  &.mode-tabs {
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      height: 1px;
+      bottom: 1px;
+      width: 100%;
+      background-color: var(--border-color);
+    }
+
+    ::ng-deep {
+      .air-button {
+        border-bottom: 3px solid transparent;
+        color: var(--text-primary);
+        background: transparent;
+        border-radius: 0;
+        padding-right: 3px;
+        padding-left: 3px;
+
+        &:not(:last-child) {
+          margin-inline-end: var(--indent-xl, 40px);
+        }
+
+        &.active {
+          font-weight: 500;
+          border-bottom-color: current-color();
+        }
+      }
+    }
+  }
+}

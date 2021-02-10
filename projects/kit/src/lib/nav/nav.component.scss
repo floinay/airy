@@ -3,17 +3,17 @@
 :host {
   background: var(--background__secondary, #fff);
 
-  --list-item__delimiter-left: var(--nav-item__start-indent, var(--padding-xl, 40px));
+  --list-item__delimiter-left: var(--nav-item__start-indent, var(--indent-xl, 40px));
 
   ::ng-deep {
     a, button {
       &.air-list-item {
         border-inline-start: 10px solid transparent;
         border-inline-end: 10px solid transparent;
-        padding-inline-start: var(--nav-item__start-indent, var(--padding-l, 40px));
-        padding-inline-end: var(--nav-item__end-indent, var(--padding-l, 40px));
-        padding-bottom: var(--nav-item__vertical-indent, var(--padding-m, 20px));
-        padding-top: var(--nav-item__vertical-indent, var(--padding-m, 20px));
+        padding-inline-start: var(--nav-item__start-indent, var(--indent-l, 40px));
+        padding-inline-end: var(--nav-item__end-indent, var(--indent-l, 40px));
+        padding-bottom: var(--nav-item__vertical-indent, var(--indent-m, 20px));
+        padding-top: var(--nav-item__vertical-indent, var(--indent-m, 20px));
         line-height: var(--nav-item__line-height, 1);
         font-size: var(--nav-item__font-size, var(--caption-2__font-size, 16px));
         text-decoration: var(--nav-item__text-decoration, none);
@@ -38,17 +38,17 @@
 
       air-icon, air-dynamic-icon {
         &:not(.expansion-header-icon) {
-          margin-inline-end: var(--nav-item__icon-indent, var(--padding-m, 20px));
+          margin-inline-end: var(--nav-item__icon-indent, var(--indent-m, 20px));
         }
       }
 
       air-expansion-header, .expansion-content {
-        padding-inline-start: var(--nav-item__start-indent, var(--padding-xl, 40px));
-        padding-inline-end: var(--nav-item__end-indent, var(--padding-xl, 40px));
+        padding-inline-start: var(--nav-item__start-indent, var(--indent-xl, 40px));
+        padding-inline-end: var(--nav-item__end-indent, var(--indent-xl, 40px));
       }
 
-      padding-bottom: var(--nav-item__vertical-indent, var(--padding-m, 20px));
-      padding-top: var(--nav-item__vertical-indent, var(--padding-m, 20px));
+      padding-bottom: var(--nav-item__vertical-indent, var(--indent-m, 20px));
+      padding-top: var(--nav-item__vertical-indent, var(--indent-m, 20px));
       line-height: var(--nav-item__line-height, 1);
       font-size: var(--nav-item__font-size, var(--caption-2__font-size, 16px));
       text-decoration: var(--nav-item__text-decoration, none);
