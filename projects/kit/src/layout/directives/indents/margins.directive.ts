@@ -1,6 +1,6 @@
 import {Directive, Input} from '@angular/core';
 import {AbstractIndentsDirective} from './abstract-indents-directive';
-import {ThemeSize} from '../../core';
+import {ThemeSize} from '../../../cdk';
 import {MARGINS_PROVIDERS} from './indents.providers';
 
 @Directive({

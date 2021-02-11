@@ -1,6 +1,6 @@
 import {Directive, OnChanges, SimpleChanges} from '@angular/core';
-import {BreakpointsStylesManager} from '../../services';
-import {ChangesState} from '../../services';
+import {BreakpointsStylesManager} from '../../../cdk';
+import {ChangesState} from '../../../cdk';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 
 @Directive()

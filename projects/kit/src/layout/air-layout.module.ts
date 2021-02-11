@@ -2,10 +2,14 @@ import {NgModule} from '@angular/core';
 import {ContainerComponent, PageComponent} from './components';
 import {
   ContentDirective,
-  EndDirective, FlexDirective,
-  FooterDirective, GridItemDirective,
+  EndDirective,
+  FlexDirective,
+  FooterDirective,
+  GridItemDirective,
   HeaderDirective,
   LayoutDirective,
+  MarginsDirective,
+  PaddingsDirective,
   StartDirective
 } from './directives';
 
@@ -19,7 +23,9 @@ const declarations = [PageComponent,
   LayoutDirective,
   ContentDirective,
   ContainerComponent,
-  FlexDirective
+  FlexDirective,
+  PaddingsDirective,
+  MarginsDirective
 ];
 
 @NgModule({

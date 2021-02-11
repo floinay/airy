@@ -2,8 +2,8 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import {
   AutofocusDirective,
   ClearInputBeforeUploadDirective,
-  HideIfEmptyDirective, MarginsDirective,
-  PaddingsDirective, ScrollToMeDirective
+  HideIfEmptyDirective,
+  ScrollToMeDirective
 } from './directives';
 import {CDK_MODULE_OPTIONS, CdkModuleOptions} from './options';
 
@@ -11,8 +11,6 @@ const declarations = [
   HideIfEmptyDirective,
   ClearInputBeforeUploadDirective,
   AutofocusDirective,
-  PaddingsDirective,
-  MarginsDirective,
   ScrollToMeDirective
 ];
 

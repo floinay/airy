@@ -6,3 +6,4 @@ export * from './header/header.directive';
 export * from './content/content.directive';
 export * from './flex/flex.directive';
 export * from './grid-item/grid-item.directive';
+export * from './indents';

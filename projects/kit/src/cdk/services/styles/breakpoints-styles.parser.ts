@@ -1,10 +1,9 @@
 import {Inject, Injectable, Optional} from '@angular/core';
-import {CSS_PROPS_GENERATORS, CSS_PROPS_KEYS_MAP, CSS_PROPS_VALUES_MAP} from './providers';
+import {CSS_PROPS_GENERATORS, CSS_PROPS_KEYS_MAP, CSS_PROPS_VALUES_MAP} from './providers/tokens';
 import {StringObject} from '../../types';
 import {Breakpoint, Breakpoints, BreakpointsHelper} from '../../core';
 import {firstLetterToLower} from '../../helpers';
-import {parsedBreakpointsStylesFactory} from './factories';
-import {parsedDeletedBreakpointsPropsFactory} from './factories';
+import {parsedBreakpointsStylesFactory, parsedDeletedBreakpointsPropsFactory} from './factories';
 import {
   CssPropName,
   CssProps,
