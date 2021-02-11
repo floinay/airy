@@ -1,7 +1,10 @@
 import {Provider} from '@angular/core';
-import {CSS_PROPS_GENERATORS, CSS_PROPS_KEYS_MAP} from '../../../cdk';
+import {
+  BREAKPOINTS_STYLES_PROVIDERS,
+  CSS_PROPS_GENERATORS,
+  CSS_PROPS_KEYS_MAP
+} from '../../../cdk';
 import {CHANGES_STATE_IGNORED_KEYS} from '../../../cdk/services/changes-state/changes-tokens';
-import {BREAKPOINTS_STYLES_PROVIDERS} from '../../../cdk';
 import {parseLayoutAlign} from './helpers/parse-layout-align';
 import {LayoutAlign} from './types';
 

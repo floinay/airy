@@ -1,6 +1,5 @@
 import {Provider} from '@angular/core';
-import {CSS_PROPS_KEYS_MAP, CSS_PROPS_VALUES_MAP} from '../../services';
-import {BREAKPOINTS_STYLES_PROVIDERS} from '../../services';
+import {BREAKPOINTS_STYLES_PROVIDERS, CSS_PROPS_KEYS_MAP, CSS_PROPS_VALUES_MAP} from '../../services';
 
 function indentVar(size: string, defaultValue: string): string {
   return `var(--indent-${size}, ${defaultValue})`;

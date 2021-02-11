@@ -2,10 +2,9 @@ import {Injectable} from '@angular/core';
 import {ChangesState, ChangesStateSnapshot} from '../changes-state';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
-import {parsedBreakpointsStylesFactory} from './factories/parsed-breakpoints-styles.factory';
+import {parsedBreakpointsStylesFactory, parsedDeletedBreakpointsPropsFactory} from './factories';
 import {BreakpointsStylesParser} from './breakpoints-styles.parser';
 import {ParsedBreakpointsStyles, ParsedDeletedBreakpointsProps} from './types';
-import {parsedDeletedBreakpointsPropsFactory} from './factories/parsed-deleted-breakpoints-props.factory';
 
 
 export interface BreakpointsStylesStateInterface {
