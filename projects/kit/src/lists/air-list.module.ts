@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {ListComponent, ListItemComponent} from './components';
-import {DelimiterComponent} from './components/delimiter/delimiter.component';
+import {DelimiterComponent} from './components';
 
 
 @NgModule({

@@ -1,6 +1,6 @@
 @use "sass:color";
-@import "../../projects/kit/src/lib/cdk/styles";
-@import "../../projects/kit/src/lib/typography/typography";
+@import "../../projects/kit/src/cdk/styles";
+@import "../../projects/kit/src/typography/typography";
 
 :host {
   @include app-root();

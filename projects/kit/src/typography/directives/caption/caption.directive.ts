@@ -1,4 +1,4 @@
-import {Directive, ElementRef, HostBinding, Input} from '@angular/core';
+import {Directive, ElementRef, Input} from '@angular/core';
 
 const POSSIBLE_CLASSES = ['air-caption-1', 'air-caption-2', 'air-caption-3', 'air-caption-4'];
 

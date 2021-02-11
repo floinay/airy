@@ -14,10 +14,10 @@ import {
   AirCdkModule,
   AirDirectionModule,
   AirTabsModule
-} from '../../projects/kit/src/lib';
+} from '../../projects/kit/src';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AirTypographyModule} from '../../projects/kit/src/lib/typography/air-typography.module';
+import {AirTypographyModule} from '../../projects/kit/src/typography/air-typography.module';
 import {RouterModule} from '@angular/router';
 import {HomeComponent} from './pages/home/home.component';
 import {ButtonsComponent} from './pages/buttons/buttons.component';
