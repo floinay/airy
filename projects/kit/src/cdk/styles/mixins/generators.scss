@@ -1,0 +1,43 @@
+$current-element: null;
+$current-modifier: null;
+
+@mixin set-current-element($element) {
+  $current-element: $element !global;
+}
+
+@mixin validate-current-element() {
+  @if ($current-element == null) {
+    @error 'you must set current element for use $current-element';
+  }
+}
+
+@mixin reset-current-element() {
+  $current-element: null !global;
+  @include reset-current-modifier;
+}
+
+@mixin set-current-modifier($modifier) {
+  $current-modifier: $modifier !global;
+}
+
+@mixin reset-current-modifier() {
+  $current-modifier: null !global;
+}
+
+
+@mixin element-prop($name, $value, $modifier:null) {
+  @include validate-current-element;
+  @if ($modifier == null) {
+    $modifier: $current-modifier;
+  }
+
+  @if ($modifier) {
+    #{$name}: var(--#{$current-element}__#{$name}_#{$modifier}, $value);
+  } @else {
+    #{$name}: var(--#{$current-element}__#{$name}, $value);
+  }
+}
+
+button {
+  background: var(--button__background, #fff);
+}

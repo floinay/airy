@@ -1,77 +1,86 @@
+@import "../cdk/styles";
+
+@include set-current-element(button);
 :host {
-  appearance: var(--button__appearance, none);
-  border: var(--button__border, none);
-  height: var(--button__height, 28px);
-  min-height: var(--button__min-height, 0);
-  display: var(--button__display, inline-flex);
-  border-radius: var(--button__border-radius, var(--border-radius));
-  cursor: var(--button__cursor, pointer);
-  align-items: var(--button__align-items, center);
-  padding: var(--button__padding, 0 8px);
-  margin: var(--button__margin, 5px);
-  text-decoration: var(--button__text-decoration, none);
-  text-align: var(--button__text-align, center);
-  justify-content: var(--button__justiry-content, center);
-  min-width: var(--button__min-width, 28px);
-  background: var(--button__background, var(--color-current));
-  color: var(--button__color, var(--color-current-contrast));
-  font-weight: var(--button__font-weight, 400);
-  font-size: var(--button__font-size, 14px);
-  transition: var(--button__transition, none);
-  animation: var(--button__animation, none);
-  position: var(--button__position, relative);
+  @include element-prop(appearance, none);
+  @include element-prop(border, none);
+  @include element-prop(height, 48px);
+  @include element-prop(min-height, 0);
+  @include element-prop(display, inline-flex);
+  @include element-prop(border-radius, 4px);
+  @include element-prop(cursor, pointer);
+  @include element-prop(align-items, center);
+  @include element-prop(padding, 0 20px);
+  @include element-prop(margin, 0);
+  @include element-prop(text-decoration, none);
+  @include element-prop(text-align, center);
+  @include element-prop(justify-content, center);
+  @include element-prop(min-width, 48px);
+  @include element-prop(background, current-color());
+  @include element-prop(color, current-color($contrast: true));
+  @include element-prop(font-weight, 400);
+  @include element-prop(font-size, 14px);
+  @include element-prop(transition, none);
+  @include element-prop(position, relative);
+
 
   &:focus {
-    outline: var(--button__outline_focus, transparent);
+    @include element-prop(outline, transparent, focus);
   }
 
   &.round {
-    border-radius: var(--button__border-radius_focus, 100%);
+    @include element-prop(border-radius, 100%, round);
   }
 
   &:hover {
-    background: var(--button__background_hover, var(--color-current-dark));
+    @include element-prop(background, current-color(dark), hover);
+    @include element-prop(color, current-color(dark, $contrast: true))
   }
 
 
   &.outline {
-    color: var(--button__color_outline, var(--color-current));
-    background: var(--button__background_outline, none);
-    border: var(--button__border-width_outline) var(--button__border-style_outline) var(--button__border-color__outline, var(--color-current));
+    @include set-current-modifier(outline);
+    @include element-prop(color, current-color(light, $contrast: true));
+    @include element-prop(background, current-color($contrast: true));
+    @include element-prop(border, 1px solid current-color());
 
     &:hover {
-      color: var(--button__color_outline_hover, var(--color-current-contrast));
-      background: var(--button__background_outline_hover, var(--color-current-dark));
-
-      ::ng-deep {
-        & > air-dynamic-icon {
-          --color-current: var(--button__color_outline_hover, var(--color-current-contrast));
-        }
-      }
+      @include set-current-modifier(outline-hover);
+      @include element-prop(color, current-color($contrast: true));
+      @include element-prop(background, current-color());
     }
+
+    @include reset-current-modifier;
   }
 
   &.clear {
-    color: var(--button__color_clear, var(--color-current));
-    background: var(--button__background_clear, none);
+    @include set-current-modifier(clear);
+    @include element-prop(color, current-color());
+    @include element-prop(background, none);
 
     &:hover {
-      color: var(--button__color_clear_hover, var(--color-current-dark));
-      background: var(--button__background_clear_hover, none);
+      @include set-current-modifier(clear-hover);
+      @include element-prop(color, current-color(dark));
     }
+
+    @include reset-current-modifier;
   }
 
   &.block {
-    width: var(--button__width_block, 100%);
-    margin-right: var(--button__margin-right_block, 0);
-    margin-left: var(--button__margin-left_block, 0);
+    @include set-current-modifier(block);
+    @include element-prop(width, 100%);
+    @include element-prop(margin-left, 0);
+    @include element-prop(margin-left, 0);
+    @include reset-current-modifier;
   }
 
   &.full {
-    width: var(--button__width_full, 100%);
-    border-radius: var(--button__border-radius_full, 0);
-    margin-left: var(--button__margin-left__full, 0);
-    margin-right: var(--button__margin-right__full, 0);
+    @include set-current-modifier(full);
+    @include element-prop(width, 100%);
+    @include element-prop(border-radius, 0);
+    @include element-prop(margin-left, 0);
+    @include element-prop(margin-right, 0);
+    @include reset-current-modifier;
   }
 
   &.size-xxs {
@@ -101,3 +110,6 @@
 
   }
 }
+
+
+@include set-current-element(null);

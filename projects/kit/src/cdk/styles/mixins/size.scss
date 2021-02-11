@@ -1,3 +1,11 @@
-@mixin can-size() {
+$default-props: width, height, font-size;
 
+@mixin can-size($element, $props:null) {
+  @if ($props == null) {
+    $props: $default-props;
+  }
+
+  @each $prop in $props {
+
+  }
 }
