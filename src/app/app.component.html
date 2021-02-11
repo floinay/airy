@@ -20,13 +20,9 @@
   <air-container>
     <h1 airH4>Website settings</h1>
     <air-tabs-links mode="buttons" airMarginBottom="xl">
+      <button routerLinkActive="active" air-button routerLink="/grid" color="primary">Grid</button>
       <button routerLinkActive="active" air-button routerLink="/tabs" color="primary">Tabs</button>
       <button routerLinkActive="active" air-button color="primary" routerLink="/buttons">Buttons</button>
-    </air-tabs-links>
-    <air-tabs-links mode="tabs">
-      <button routerLinkActive="active" air-button routerLink="/tabs" color="primary">Basic settings</button>
-      <button routerLinkActive="active" air-button color="primary" routerLink="/buttons">SEO</button>
-      <button routerLinkActive="active" air-button color="primary" routerLink="/buttons">Notifications</button>
     </air-tabs-links>
     <router-outlet></router-outlet>
   </air-container>

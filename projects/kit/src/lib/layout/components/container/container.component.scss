@@ -8,4 +8,5 @@
   min-width: var(--container__min-width, 320px);
   padding: var(--container__padding, 0 20px);
   margin: var(--container__margin, 0);
+  box-sizing: content-box;
 }

@@ -1,6 +1,9 @@
 {
-  "name": "kit",
-  "version": "0.0.1",
+  "name": "@airy-ui/kit",
+  "version": "0.1.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "@angular/common": "^11.0.1",
     "@angular/core": "^11.0.1",

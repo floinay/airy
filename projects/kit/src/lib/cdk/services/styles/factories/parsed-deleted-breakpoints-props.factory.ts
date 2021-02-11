@@ -1,5 +1,5 @@
-import {ParsedDeletedBreakpointsProps} from '../types/parsed-deleted-breakpoints-props';
-import {CssPropName} from '../types/css-prop.name';
+import {ParsedDeletedBreakpointsProps} from '../types';
+import {CssPropName} from '../types';
 
 export function parsedDeletedBreakpointsPropsFactory(): ParsedDeletedBreakpointsProps {
   return {propsByBreakpoints: new Map<string, CssPropName[]>(), props: []};

@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {FormControl} from '@angular/forms';
-import {DirectionService} from '../../projects/kit/src/lib';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
+import {DirectionService} from '../../projects/kit/src/lib';
 
 @Component({
   selector: 'app-root',

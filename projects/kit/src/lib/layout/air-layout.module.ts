@@ -3,7 +3,7 @@ import {ContainerComponent, PageComponent} from './components';
 import {
   ContentDirective,
   EndDirective, FlexDirective,
-  FooterDirective,
+  FooterDirective, GridItemDirective,
   HeaderDirective,
   LayoutDirective,
   StartDirective
@@ -15,6 +15,7 @@ const declarations = [PageComponent,
   FooterDirective,
   EndDirective,
   StartDirective,
+  GridItemDirective,
   LayoutDirective,
   ContentDirective,
   ContainerComponent,

@@ -11,7 +11,9 @@ import {
   AirButtonModule,
   AirTooltipModule,
   AirControlsModule,
-  AirCdkModule, AirDirectionModule, AirTabsModule
+  AirCdkModule,
+  AirDirectionModule,
+  AirTabsModule
 } from '../../projects/kit/src/lib';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -20,6 +22,9 @@ import {RouterModule} from '@angular/router';
 import {HomeComponent} from './pages/home/home.component';
 import {ButtonsComponent} from './pages/buttons/buttons.component';
 import {TabsComponent} from './pages/tabs/tabs.component';
+import {GridComponent} from './pages/grid/grid.component';
+import {MarkdownModule} from 'ngx-markdown';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -28,8 +33,10 @@ import {TabsComponent} from './pages/tabs/tabs.component';
     HomeComponent,
     ButtonsComponent,
     TabsComponent,
+    GridComponent,
   ],
   imports: [
+    AirDirectionModule,
     RouterModule.forRoot([{
       path: '',
       component: HomeComponent
@@ -41,9 +48,12 @@ import {TabsComponent} from './pages/tabs/tabs.component';
       {
         path: 'buttons',
         component: ButtonsComponent
+      },
+      {
+        path: 'grid',
+        component: GridComponent
       }]),
     AirTabsModule,
-    AirDirectionModule,
     BrowserModule,
     BrowserAnimationsModule,
     AirControlsModule,
@@ -62,7 +72,9 @@ import {TabsComponent} from './pages/tabs/tabs.component';
     AirExpansionModule.forRoot({defaultIconName: 'expand', defaultIconSize: 's'}),
     ReactiveFormsModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+    MarkdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

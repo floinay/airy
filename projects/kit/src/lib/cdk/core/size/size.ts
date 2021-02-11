@@ -9,7 +9,6 @@ export interface CanSize {
 
 export type CanSizeCtor = Constructor<CanSize>;
 
-
 export function mixinSize<T extends Constructor<HasElementRef>>(base: T): CanSizeCtor & T {
   return class extends base {
     // tslint:disable-next-line:variable-name

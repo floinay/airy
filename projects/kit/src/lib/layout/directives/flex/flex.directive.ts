@@ -1,5 +1,5 @@
 import {Directive, Input, OnChanges, SimpleChanges} from '@angular/core';
-import {BREAKPOINTS_STYLES_PROVIDERS} from '../../../cdk/services/styles/providers/providers';
+import {BREAKPOINTS_STYLES_PROVIDERS} from '../../../cdk';
 import {BreakpointsStylesManager, ChangesState} from '../../../cdk';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 

@@ -45,6 +45,17 @@
 @mixin air-background-colors($primary, $secondary) {
   --background-primary: #{$primary};
   --background-secondary: #{$secondary};
+  body {
+    background: var(--background-primary);
+  }
+
+  .background-secondary {
+    background: var(--background-secondary);
+  }
+
+  .background-primary {
+    background: var(--background-primary);
+  }
 }
 
 

@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@airy-ui/kit": "0.1.0",
     "@angular/animations": "~11.0.1",
     "@angular/cdk": "^11.0.3",
     "@angular/common": "~11.0.1",
@@ -24,6 +25,7 @@
     "@ng-web-apis/common": "^1.9.0",
     "@ngneat/until-destroy": "^8.0.3",
     "@tinkoff/ng-polymorpheus": "^3.0.0",
+    "ngx-markdown": "^11.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

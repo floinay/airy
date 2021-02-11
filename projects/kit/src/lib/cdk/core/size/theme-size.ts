@@ -9,4 +9,4 @@ export enum ThemeSizes {
 }
 
 
-export type ThemeSize = undefined | keyof ThemeSizes | '' | string;
+export type ThemeSize = undefined | ThemeSizes | '' | string | 'none';
