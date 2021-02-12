@@ -19,7 +19,7 @@
   @include element-prop(background, current-color());
   @include element-prop(color, current-color($contrast: true));
   @include element-prop(font-weight, 400);
-  @include element-prop(font-size, 14px);
+  @include element-prop(font-size, 16px);
   @include element-prop(transition, none);
   @include element-prop(position, relative);
 

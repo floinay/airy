@@ -31,10 +31,10 @@ $current-modifier: null;
   #{$name}: #{prop-value($name, $value, $modifier)}
 }
 
-@mixin modifier-element-var($name, $name-modifier) {
+@mixin modifier-element-prop($name, $name-modifier) {
   @include validate-current-element;
 
-  --#{prop-name($name)}: var(--#{$current-element}-#{$name-modifier}__#{$name}, #{prop-value($name)})
+  #{$name}: var(--#{$current-element}-#{$name-modifier}__#{$name}, #{prop-value($name)})
 }
 
 @function prop-value($name, $value:null, $modifier:null) {

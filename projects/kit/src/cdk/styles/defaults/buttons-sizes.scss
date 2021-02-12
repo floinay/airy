@@ -1,0 +1,17 @@
+@mixin air-default-button-sizes() {
+  --button__height: 48px;
+  --button__font-size: 16px;
+  --button__padding: 0 20px;
+
+  --button-xxs__height: 26px;
+  --button-xxs__font-size: 14px;
+
+  --button-xs__height: 32px;
+
+  --button-s__height: 36px;
+  --button-m__height: 48px;
+  --button-l__height: 52px;
+  --button-xl__height: 58px;
+  --button-xxl__height: 62px;
+  --button-xxl__font-size: 18px;
+}

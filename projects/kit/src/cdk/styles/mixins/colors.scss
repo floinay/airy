@@ -30,6 +30,7 @@
   @include _air-color-map-options(accent, $accent, $contrast);
   @include _air-color-map-options(warn, $warn, $contrast);
   @include _air-color-map-options(danger, $danger, $contrast);
+  @include _air-color-map-options(disabled, $disabled, $contrast);
 }
 
 
@@ -75,6 +76,18 @@
     --color-current-light: var(--color-#{$color}-light);
     --color-current-light-contrast: var(--color-#{$color}-light-contrast);
     @include _air-shades(current, $shades);
+  }
+
+  @if ($color == disabled) {
+    [disabled] {
+      --color-current: var(--color-#{$color});
+      --color-current-contrast: var(--color-#{$color}-contrast);
+      --color-current-dark: var(--color-#{$color}-dark);
+      --color-current-dark-contrast: var(--color-#{$color}-dark-contrast);
+      --color-current-light: var(--color-#{$color}-light);
+      --color-current-light-contrast: var(--color-#{$color}-light-contrast);
+      @include _air-shades(current, $shades);
+    }
   }
 }
 
