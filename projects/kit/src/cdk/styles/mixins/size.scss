@@ -1,11 +1,23 @@
-$default-props: width, height, font-size;
+@import "generators";
 
-@mixin can-size($element, $props:null) {
+$default-props: width, height, font-size;
+$sizes: xxs, xs, s, m, l, xl, xxl;
+
+@mixin can-sizes($props) {
   @if ($props == null) {
     $props: $default-props;
   }
 
-  @each $prop in $props {
+  @each $size in $sizes {
+    @debug size-#{$size};
+    &.size-#{$size} {
+      @include can-size($props, $size);
+    }
+  }
+}
 
+@mixin can-size($props, $size) {
+  @each $prop in $props {
+    @include modifier-element-var($prop, $size)
   }
 }

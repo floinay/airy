@@ -3,7 +3,7 @@ import {AirFill} from './types';
 import {AirExpand} from './types';
 import {CanColorCtor, CanSizeCtor, HasElementRef, mixinColor, mixinSize} from '../cdk';
 
-const ButtonBase: CanColorCtor & CanSizeCtor = mixinColor(mixinSize(HasElementRef), 'default');
+const ButtonBase: CanColorCtor & CanSizeCtor = mixinColor(mixinSize(HasElementRef), 'primary');
 
 @Component({
   // tslint:disable-next-line:component-selector

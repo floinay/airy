@@ -27,14 +27,42 @@ $current-modifier: null;
 
 @mixin element-prop($name, $value, $modifier:null) {
   @include validate-current-element;
+
+  #{$name}: #{prop-value($name, $value, $modifier)}
+}
+
+@mixin modifier-element-var($name, $name-modifier) {
+  @include validate-current-element;
+
+  --#{prop-name($name)}: var(--#{$current-element}-#{$name-modifier}__#{$name}, #{prop-value($name)})
+}
+
+@function prop-value($name, $value:null, $modifier:null) {
+  @if ($modifier == null) {
+    $modifier: $current-modifier;
+  }
+
+  $varName: --#{$current-element}__#{$name};
+  @if ($modifier) {
+    $varName: --#{$current-element}__#{$name}_#{$modifier};
+  }
+
+  @if ($value) {
+    @return var(#{$varName}, #{$value});
+  }
+
+  @return var(#{$varName});
+}
+
+@function prop-name($name, $modifier:null) {
   @if ($modifier == null) {
     $modifier: $current-modifier;
   }
 
   @if ($modifier) {
-    #{$name}: var(--#{$current-element}__#{$name}_#{$modifier}, $value);
+    @return --#{$current-element}__#{$name}_#{$modifier};
   } @else {
-    #{$name}: var(--#{$current-element}__#{$name}, $value);
+    @return #{$current-element}__#{$name};
   }
 }
 

@@ -83,32 +83,8 @@
     @include reset-current-modifier;
   }
 
-  &.size-xxs {
-
-  }
-
-  &.size-xs {
-  }
-
-  &.size-s {
-
-  }
-
-  &.size-m {
-
-  }
-
-  &.size-l {
-
-  }
-
-  &.size-xl {
-
-  }
-
-  &.size-xxl {
-
-  }
+  $can-sizes-props: height, font-size, padding, min-height, min-width;
+  @include can-sizes($can-sizes-props);
 }
 
 

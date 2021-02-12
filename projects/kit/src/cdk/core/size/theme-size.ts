@@ -9,4 +9,4 @@ export enum ThemeSizes {
 }
 
 
-export type ThemeSize = undefined | ThemeSizes | '' | string | 'none';
+export type ThemeSize = undefined | ThemeSizes | 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | '' | string | 'none';
