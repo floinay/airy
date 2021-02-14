@@ -11,6 +11,7 @@ export class FirstTabComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('test travis');
   }
 
 }
