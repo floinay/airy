@@ -1,65 +1,77 @@
-@import "../../../cdk/styles/index";
+@import "../../../cdk/styles";
 
+@include set-current-element(tab-links-container);
 :host {
-  display: block;
-  position: relative;
-  width: 100%;
-
-  ::ng-deep {
-    .air-button {
-      margin-bottom: 0;
-      margin-top: 0;
-      margin-inline-start: 0;
-      margin-inline-end: 0;
-    }
-  }
-
-  &.mode-buttons {
-    ::ng-deep {
-
-      .air-button {
-        &:not(.active) {
-          background: current-color($contrast: true);
-          border: 1px solid current-color();
-          color: var(--text-primary);
-        }
-
-        &:not(:last-child) {
-          margin-inline-end: var(--indent-xxs, 8px);
-        }
-      }
-    }
-  }
+  @include element-prop(display, block);
+  @include element-prop(position, relative);
+  @include element-prop(width, 100%);
 
   &.mode-tabs {
     &::before {
       position: absolute;
       content: '';
       display: block;
-      height: 1px;
-      bottom: 1px;
       width: 100%;
-      background-color: var(--border-color);
+      @include element-prop(border-width, 1px, $prop-name: height);
+      @include element-prop(border-position, 1px, $prop-name: bottom);
+      @include element-prop(border-color, var(--border-color), $prop-name: background-color);
     }
+  }
+
+  @include set-current-element(tab-link);
+
+  ::ng-deep {
+    .air-button {
+      @include element-prop(margin, 0);
+    }
+  }
+
+  &.mode-buttons {
+    @include set-current-element(tab-button);
 
     ::ng-deep {
       .air-button {
-        border-bottom: 3px solid transparent;
-        color: var(--text-primary);
-        background: transparent;
-        border-radius: 0;
-        padding-right: 3px;
-        padding-left: 3px;
+        &:not(.active) {
+          @include element-prop(background, current-color($contrast: true));
+          @include element-prop(border, 1px solid current-color());
+          @include element-prop(color, var(--text-primary));
+        }
 
         &:not(:last-child) {
-          margin-inline-end: var(--indent-xl, 40px);
+          @include element-prop(margin-end, var(--indent-xxs, 8px), $prop-name: margin-inline-end);
+        }
+      }
+    }
+
+    @include reset-current-modifier;
+  }
+
+  &.mode-tabs {
+    @include set-current-element(tab-link);
+
+    ::ng-deep {
+      .air-button {
+        @include element-prop(border, none);
+        @include element-prop(border-bottom, 3px solid transparent);
+        @include element-prop(color, var(--text-primary));
+        @include element-prop(background, transparent);
+        @include element-prop(border-radius, 0);
+        @include element-prop(padding-right, 3px);
+        @include element-prop(padding-left, 3px);
+
+        &:not(:last-child) {
+          @include element-prop(margin-end, var(--indent-xl, 40px), $prop-name: margin-inline-end);
         }
 
         &.active {
-          font-weight: 500;
-          border-bottom-color: current-color();
+          @include set-current-modifier(active);
+          @include element-prop(font-weight, 500);
+          @include element-prop(border-bottom-color, current-color());
+          @include reset-current-modifier;
         }
       }
     }
   }
+
+  @include reset-current-element;
 }

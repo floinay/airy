@@ -25,10 +25,14 @@ $current-modifier: null;
 }
 
 
-@mixin element-prop($name, $value, $modifier:null) {
+@mixin element-prop($name, $value, $modifier:null, $prop-name:null) {
   @include validate-current-element;
 
-  #{$name}: #{prop-value($name, $value, $modifier)}
+  @if ($prop-name == null) {
+    $prop-name: $name;
+  }
+
+  #{$prop-name}: #{prop-value($name, $value, $modifier)}
 }
 
 @mixin modifier-element-prop($name, $name-modifier) {

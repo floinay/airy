@@ -1,6 +1,0 @@
-<air-tabs-links>
-  <div *ngFor="let tab of tabs" (click)="setActiveTab(tab)" class="header__button-wrapper">
-    <ng-template [ngTemplateOutlet]="tab.header.templateRef"></ng-template>
-  </div>
-</air-tabs-links>
-<ng-content></ng-content>

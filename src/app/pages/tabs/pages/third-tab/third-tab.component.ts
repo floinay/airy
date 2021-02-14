@@ -1,12 +1,12 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'air-tab-content',
-  templateUrl: './tab-content.component.html',
-  styleUrls: ['./tab-content.component.css'],
+  selector: 'app-third-tab',
+  templateUrl: './third-tab.component.html',
+  styleUrls: ['./third-tab.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TabContentComponent implements OnInit {
+export class ThirdTabComponent implements OnInit {
 
   constructor() {
   }

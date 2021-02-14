@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {TabComponent, TabContentComponent, TabsComponent, TabsLinksComponent} from './components';
-import {TabHeaderDirective} from './directives';
+import {TabLinkDirective} from './directives';
+import {TabsLinksComponent} from './components';
 
-const declarations = [TabsComponent, TabsLinksComponent, TabComponent, TabContentComponent, TabHeaderDirective];
+const declarations = [TabsLinksComponent, TabLinkDirective];
 
 @NgModule({
   declarations,

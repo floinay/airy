@@ -25,6 +25,9 @@ import {TabsComponent} from './pages/tabs/tabs.component';
 import {GridComponent} from './pages/grid/grid.component';
 import {MarkdownModule} from 'ngx-markdown';
 import {HttpClientModule} from '@angular/common/http';
+import {FirstTabComponent} from './pages/tabs/pages/first-tab/first-tab.component';
+import {SecondTabComponent} from './pages/tabs/pages/second-tab/second-tab.component';
+import {ThirdTabComponent} from './pages/tabs/pages/third-tab/third-tab.component';
 
 
 @NgModule({
@@ -34,6 +37,9 @@ import {HttpClientModule} from '@angular/common/http';
     ButtonsComponent,
     TabsComponent,
     GridComponent,
+    FirstTabComponent,
+    SecondTabComponent,
+    ThirdTabComponent,
   ],
   imports: [
     AirDirectionModule,
@@ -43,7 +49,19 @@ import {HttpClientModule} from '@angular/common/http';
     },
       {
         path: 'tabs',
-        component: TabsComponent
+        component: TabsComponent,
+        children: [
+          {
+            path: 'first',
+            component: FirstTabComponent
+          }, {
+            path: 'second',
+            component: SecondTabComponent
+          }, {
+            path: 'third',
+            component: ThirdTabComponent
+          }
+        ]
       },
       {
         path: 'buttons',

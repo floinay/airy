@@ -1,8 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component, HostBinding,
-  Input
-} from '@angular/core';
+import {ChangeDetectionStrategy, Component, HostBinding, Input} from '@angular/core';
 
 type TabsMode = 'buttons' | 'tabs';
 
