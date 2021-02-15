@@ -28,7 +28,12 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "*.md",
+                "input": ".",
+                "output": "/"
+              }
             ],
             "styles": [
               "node_modules/prismjs/themes/prism-okaidia.css",
