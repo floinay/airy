@@ -1,39 +1,71 @@
+@import "../../../cdk/styles";
+
+@function sticky-offset($element, $default: 0) {
+  @return var(--#{$element}__offset-sticky, #{$default});
+}
+
 :host {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  margin: var(--page__margin, 0);
-  min-height: var(--page__min-height, 100vh);
-  padding-bottom: var(--footer__offset, 0);
-  padding-inline-end: var(--end__offset, 0);
+  @include set-current-element(page-header);
+  @include element-var(height, 98px);
+
+  @include set-current-element(page);
+  @include element-prop(display, flex);
+  @include element-prop(flex-direction, column);
+  @include element-prop(position, relative);
+  @include element-prop(width, 100%);
+  @include element-prop(margin, 0);
+  @include element-prop(min-height, 100vh);
+  @include element-prop(padding-bottom, sticky-offset(footer));
+  @include element-prop(padding-inline-end, sticky-offset(end));
 
   ::ng-deep {
     .air-container, .air-content {
-      padding-top: var(--page-content__padding-top, var(--indent-xxl, 60px));
-      padding-inline-start: var(--page-content__padding-start, var(--indent-xxl, 60px));
-      margin-inline-start: var(--start__offset-sticky, 0);
-      margin-top: var(--header__offset-sticky, 0);
-      min-height: calc(100% - var(--header__offset-sticky, 0) - var(--footer__offset-sticky, 0));
-      flex: 1;
+      @include set-current-element(page-content);
+      @include element-prop(padding-top, var(--indent-xxl, 60px));
+      @include element-prop(padding-inline-start, var(--inden-xxl, 60px));
+      @include element-prop(margin-inline-start, sticky-offset(start));
+      @include element-prop(margin-top, sticky-offset(header));
+      @include element-prop(min-height, calc(100% - #{sticky-offset(header)} - #{sticky-offset(footer)}));
+      @include element-prop(flex, 1);
+      @include reset-current-element;
     }
 
-    .sticky-header, .sticky-footer, .sticky-start, .sticky-end {
-      position: var(--sticky__position, fixed);
+    .header, .sticky-header {
+      @include set-current-element(page-header);
+      @include element-prop(height, prop-name(height));
+      @include reset-current-element;
     }
+
 
     .sticky-header {
-      top: var(--sticky-header__top, 0);
-      left: var(--sticky-header__left, 0);
+      @include set-current-element(page-sticky-header);
+      @include element-prop(position, fixed);
+      @include element-prop(top, 0);
+      @include element-prop(left, sticky-offset(start));
+      @include reset-current-element;
     }
 
     .sticky-footer {
-      bottom: var(--sticky-footer__bottom, 0);
+      @include set-current-element(page-sticky-footer);
+      @include element-prop(position, fixed);
+      @include element-prop(bottom, 0);
+      @include reset-current-element;
     }
 
-    .sticky-start, .sticky-end {
-      top: var(--header__offset-sticky, var(--header__offset, 0));
-      height: 100%;
+    .sticky-start {
+      @include set-current-element(page-sticky-start);
+      @include element-prop(top, 0);
+      @include element-prop(position, fixed);
+      @include element-prop(height, 100%);
+      @include reset-current-element;
+    }
+
+    .sticky-end {
+      @include set-current-element(page-sticky-end);
+      @include element-prop(top, 0);
+      @include element-prop(position, fixed);
+      @include element-prop(height, 100%);
+      @include reset-current-element;
     }
   }
 }
@@ -41,21 +73,31 @@
 ::ng-deep {
   .ltr {
     .sticky-end {
-      right: var(--sticky-end__end, 0);
+      @include set-current-element(page-sticky-end);
+      @include element-prop(end, 0, right);
+      @include reset-current-element;
     }
 
     .sticky-start {
-      left: var(--sticky-start__start, 0);
+      @include set-current-element(page-sticky-start);
+      @include element-prop(start, 0, left);
+      @include reset-current-element;
     }
   }
 
   .rtl {
     .sticky-end {
-      left: var(--sticky-end__end, 0);
+      @include set-current-element(page-sticky-end);
+      @include element-prop(end, 0, left);
+      @include reset-current-element;
     }
 
     .sticky-start {
-      right: var(--sticky-start__start, 0);
+      @include set-current-element(page-sticky-start);
+      @include element-prop(start, 0, right);
+      @include reset-current-element;
     }
   }
 }
+
+@include reset-current-element;

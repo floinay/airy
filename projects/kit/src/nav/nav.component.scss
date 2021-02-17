@@ -1,58 +1,58 @@
-@import "../cdk/styles/index";
+@import "../cdk/styles";
+
+$list-item-border: 10px solid transparent;
 
 :host {
-  background: var(--background__secondary, #fff);
-
-  --list-item__delimiter-left: var(--nav-item__start-indent, var(--indent-xl, 40px));
+  @include set-current-element(list-item-delimiter);
+  @include element-var(left, var(--indent-l));
+  @include set-current-element(nav);
+  @include element-prop(background, var(--background__secondary, #fff));
+  @include element-prop(border-inline-end, 1px solid var(--border-color));
 
   ::ng-deep {
-    a, button {
-      &.air-list-item {
-        border-inline-start: 10px solid transparent;
-        border-inline-end: 10px solid transparent;
-        padding-inline-start: var(--nav-item__start-indent, var(--indent-l, 40px));
-        padding-inline-end: var(--nav-item__end-indent, var(--indent-l, 40px));
-        padding-bottom: var(--nav-item__vertical-indent, var(--indent-m, 20px));
-        padding-top: var(--nav-item__vertical-indent, var(--indent-m, 20px));
-        line-height: var(--nav-item__line-height, 1);
-        font-size: var(--nav-item__font-size, var(--caption-2__font-size, 16px));
-        text-decoration: var(--nav-item__text-decoration, none);
-        color: var(--nav-item__color, var(--text-color, #1B1B1E))
-      }
+    .air-list-item {
+      @include set-current-element(nav-item);
+      @include element-prop(border-inline-start, 10px solid transparent);
+      @include element-prop(padding-inline-start, var(--indent-l));
+      @include element-prop(padding-inline-end, var(--indent-l));
+      @include element-prop(padding-bottom, var(--indent-m));
+      @include element-prop(padding-top, var(--indent-m));
+      @include element-prop(line-height, 1);
+      @include element-prop(font-size, var(--caption-2__font-size, 16px));
+      @include element-prop(text-decoration, none);
+      @include element-prop(color, var(--text-color));
 
       &.active {
-        background-color: current-color($shade: 50);
-        border-inline-start-color: current-color();
-        color: current-color($shade: 50, $contrast: true);
+        @include set-current-modifier(active);
+        @include element-prop(background, current-color($shade: 50));
+        @include element-prop(border-inline-start-color, current-color());
+        @include element-prop(color, current-color($shade: 50, $contrast: true));
 
         &::after {
-          background: none;
+          @include set-current-element(nav-item-delimiter);
+          @include element-prop(display, none);
+          @include reset-current-element;
         }
       }
-    }
 
-    .air-list-item {
-      air-expansion {
-        width: 100%;
-      }
+      @include reset-current-element;
+
 
       air-icon, air-dynamic-icon {
-        &:not(.expansion-header-icon) {
-          margin-inline-end: var(--nav-item__icon-indent, var(--indent-m, 20px));
-        }
+        @include set-current-element(nav-item-icon);
+        @include element-prop(margin-inline-end, var(--indent-m));
+        @include reset-current-element;
       }
-
-      air-expansion-header, .expansion-content {
-        padding-inline-start: var(--nav-item__start-indent, var(--indent-xl, 40px));
-        padding-inline-end: var(--nav-item__end-indent, var(--indent-xl, 40px));
-      }
-
-      padding-bottom: var(--nav-item__vertical-indent, var(--indent-m, 20px));
-      padding-top: var(--nav-item__vertical-indent, var(--indent-m, 20px));
-      line-height: var(--nav-item__line-height, 1);
-      font-size: var(--nav-item__font-size, var(--caption-2__font-size, 16px));
-      text-decoration: var(--nav-item__text-decoration, none);
-      color: var(--nav-item__color, var(--text-color, #1B1B1E))
     }
   }
 }
+
+.header {
+  @include set-current-element(nav-header);
+  @include element-prop(height, prop-value(height, $element: page-header));
+  @include element-prop(display, flex);
+  @include element-prop(align-items, center);
+  @include element-prop(padding-inline-start, var(--indent-l));
+}
+
+@include reset-current-element;

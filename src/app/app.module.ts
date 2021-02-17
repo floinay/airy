@@ -28,6 +28,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FirstTabComponent} from './pages/tabs/pages/first-tab/first-tab.component';
 import {SecondTabComponent} from './pages/tabs/pages/second-tab/second-tab.component';
 import {ThirdTabComponent} from './pages/tabs/pages/third-tab/third-tab.component';
+import {ControlsComponent} from './pages/controls/controls.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import {ThirdTabComponent} from './pages/tabs/pages/third-tab/third-tab.componen
     FirstTabComponent,
     SecondTabComponent,
     ThirdTabComponent,
+    ControlsComponent,
   ],
   imports: [
     AirDirectionModule,
@@ -70,7 +72,12 @@ import {ThirdTabComponent} from './pages/tabs/pages/third-tab/third-tab.componen
       {
         path: 'grid',
         component: GridComponent
-      }]),
+      },
+      {
+        path: 'controls',
+        component: ControlsComponent
+      }
+    ]),
     AirTabsModule,
     BrowserModule,
     BrowserAnimationsModule,
