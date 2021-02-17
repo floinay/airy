@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostBinding, HostListener, Input } from '@angular/core';
+import {ChangeDetectionStrategy, Component, HostBinding, HostListener, Input} from '@angular/core';
 
 
 @Component({
@@ -10,6 +10,8 @@ import { ChangeDetectionStrategy, Component, HostBinding, HostListener, Input } 
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LabelComponent {
+  @HostBinding('class.air-label') class = true;
+
   @HostBinding('class.required')
   @Input() required = false;
   @Input() for: string | undefined;

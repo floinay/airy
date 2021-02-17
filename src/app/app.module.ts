@@ -29,6 +29,7 @@ import {FirstTabComponent} from './pages/tabs/pages/first-tab/first-tab.componen
 import {SecondTabComponent} from './pages/tabs/pages/second-tab/second-tab.component';
 import {ThirdTabComponent} from './pages/tabs/pages/third-tab/third-tab.component';
 import {ControlsComponent} from './pages/controls/controls.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import {ControlsComponent} from './pages/controls/controls.component';
     SecondTabComponent,
     ThirdTabComponent,
     ControlsComponent,
+    HeaderComponent,
   ],
   imports: [
     AirDirectionModule,

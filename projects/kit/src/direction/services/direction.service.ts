@@ -42,6 +42,7 @@ export class DirectionService {
     this.document.body.classList.remove('rtl', 'ltr');
     this.document.body.classList.add(direction);
     this.document.body.style.setProperty('direction', direction);
+    this.document.body.style.setProperty('--direction', direction);
   }
 
   direction(): Direction {

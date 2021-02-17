@@ -1,11 +1,5 @@
 <air-page>
-  <header airPaddingTop="m" airPaddingBottom="m" airPaddingStart="xl" airPaddingEnd="xl" airStickyHeader airLayout="row"
-          xs.airLayout="column" xs.layoutAlign="center">
-    <air-form-field airFlex="1">
-      <label air-label>Is Rtl</label>
-      <air-toggle color="primary" [formControl]="direction" enabledValue="rtl" disabledValue="ltr"></air-toggle>
-    </air-form-field>
-  </header>
+  <app-header airStickyHeader></app-header>
   <air-nav airStickyStart>
     <a routerLink="/" header>
       <air-icon name="logo" size="110px 54px"></air-icon>

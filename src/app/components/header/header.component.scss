@@ -1,0 +1,8 @@
+:host {
+  display: flex;
+  padding: var(--indent-m) var(--indent-xl);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--background-primary);
+  width: 100%;
+  align-items: center;
+}

@@ -41,7 +41,6 @@
       @include set-current-element(page-sticky-header);
       @include element-prop(position, fixed);
       @include element-prop(top, 0);
-      @include element-prop(left, sticky-offset(start));
       @include reset-current-element;
     }
 
@@ -78,6 +77,12 @@
       @include reset-current-element;
     }
 
+    .sticky-header {
+      @include set-current-element(page-sticky-header);
+      @include element-prop(left, sticky-offset(start));
+      @include reset-current-element;
+    }
+
     .sticky-start {
       @include set-current-element(page-sticky-start);
       @include element-prop(start, 0, left);
@@ -86,6 +91,11 @@
   }
 
   .rtl {
+    .sticky-header {
+      @include set-current-element(page-sticky-header);
+      @include element-prop(right, sticky-offset(start));
+      @include reset-current-element;
+    }
     .sticky-end {
       @include set-current-element(page-sticky-end);
       @include element-prop(end, 0, left);

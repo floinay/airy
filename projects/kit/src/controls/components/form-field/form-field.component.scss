@@ -1,18 +1,35 @@
+@import "../../../cdk/styles";
+
 :host {
-  display: var(--form-field-display, flex);
-  align-items: var(--form-field-align-items, flex-start);
-  width: var(--form-field-width);
-  height: var(--form-field-height);
-  direction: var(--form-field-direction, var(--direction));
+  @include set-current-element(form-field);
+  @include element-prop(display, inline-flex);
+  @include element-prop(align-items, flex-start);
+  @include element-prop(width, auto);
+  @include element-prop(height, auto);
 
   &:not(.content-inline) {
-    flex-direction: var(--form-field-flex-direction, column);
+    @include element-prop(flex-direction, column);
+  }
+
+  &.content-inline {
+    @include set-current-modifier(inline);
+    @include element-prop(flex-direction, row);
+    @include element-prop(align-items, center);
+
+    ::ng-deep {
+      .air-label {
+        @include set-current-element(form-field-label);
+        margin-bottom: var(--label-content-inline-margin, 0);
+        margin-inline-end: var(--label-margin-inline-end, 12px);
+      }
+    }
   }
 
   .control {
-    position: relative;
-    display: flex;
-    align-items: center;
+    @include set-current-element(form-field-control);
+    @include element-prop(position, relative);
+    @include element-prop(display, flex);
+    @include element-prop(align-items, center);
 
     .prefix, .suffix {
       position: absolute;
@@ -52,19 +69,10 @@
     }
   }
 
-  &.content-inline {
-    direction: var(--form-field-inline-direction, var(--form-field-direction));
-    justify-content: var(--form-field-inline-justify-content, var(--form-field-justify-content));
-
-    ::ng-deep {
-      label {
-        margin-bottom: var(--label-content-inline-margin, 0);
-        margin-inline-end: var(--label-margin-inline-end, 12px);
-      }
-    }
-  }
 
   &:not(:last-child) {
     margin-bottom: var(--form-field-margin-bottom, 12px);
   }
 }
+
+@include reset-current-element;

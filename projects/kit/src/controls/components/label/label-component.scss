@@ -1,16 +1,19 @@
+@import "../../../cdk/styles";
+
 :host {
-  display: var(--label-display, flex);
-  align-items: var(--label-align-items, flex-start);
-  font-weight: var(--label-font-weight, 400);
-  cursor: var(--label-cursor, pointer);
-  user-select: var(--label-user-select, none);
-  margin: var(--label-margin, 0 0 10px 0);
-  font-size: var(--label-font-size, 14px);
+  @include set-current-element(label);
+  @include element-prop(display, inline-flex);
+  @include element-prop(align-items, flex-start);
+  @include element-prop(font-weight, 400);
+  @include element-prop(cursor, pointer);
+  @include element-prop(user-select, auto);
+  @include element-prop(margin, 0 0 12px);
+  @include element-prop(font-size, 14px);
 
   &.required {
     &::after {
       content: '*';
-      color: red;
+      color: var(--color-danger);
       display: block;
       font-size: 1.2em;
     }
