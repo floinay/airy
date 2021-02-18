@@ -1,17 +1,19 @@
-import { NgModule } from '@angular/core';
-import { FormFieldComponent } from './components';
-import { LabelComponent } from './components';
-import { ToggleComponent } from './components';
-import { InputDirective } from './directives';
-import { AirCdkModule } from '../cdk';
+import {NgModule} from '@angular/core';
+import {InputDirective} from './directives';
+import {AirCdkModule} from '../cdk';
+import {CheckboxComponent, FormFieldComponent, LabelComponent, ToggleComponent} from './components';
+import {FormsModule} from '@angular/forms';
 
 
+const declarations = [FormFieldComponent, LabelComponent, ToggleComponent, InputDirective, CheckboxComponent];
 
 @NgModule({
-  declarations: [FormFieldComponent, LabelComponent, ToggleComponent, InputDirective],
+  declarations,
   imports: [
-    AirCdkModule
+    AirCdkModule,
+    FormsModule
   ],
-  exports: [FormFieldComponent, LabelComponent, ToggleComponent, InputDirective]
+  exports: declarations
 })
-export class AirControlsModule { }
+export class AirControlsModule {
+}

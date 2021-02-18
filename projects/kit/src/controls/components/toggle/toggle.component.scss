@@ -1,25 +1,44 @@
 @import "../../../cdk/styles";
 
-@include set-current-element(toggle);
 
 :host {
-  @include element-prop(display, inline-flex);
-  @include element-prop(width, 40px);
-  @include element-prop(height, 20px);
+  @include set-current-element(toggle-wrapper);
+  @include element-prop(display, flex);
   @include element-prop(align-items, center);
-  @include element-prop(transform, translate3d(0, 0, 0));
-  @include element-prop(cursor, pointer);
   @include element-prop(outline, none);
-  @include element-prop(overflow, visible);
-  @include element-prop(border, 1px solid var(--border-color));
-  @include element-prop(background, #A1A5C0);
-  @include element-prop(border-radius, 12px);
-  @include element-prop(transition, background 200ms ease-in-out);
+  @include reset-current-element;
+
+  .air-label {
+    @include set-current-element(toggle-label);
+    @include element-prop(margin, 0);
+    @include element-prop(margin-inline-start, var(--indent-s));
+    @include reset-current-element;
+  }
+
+  .container {
+    @include set-current-element(toggle);
+    @include element-prop(display, inline-flex);
+    @include element-prop(width, 40px);
+    @include element-prop(direction, ltr);
+    @include element-prop(height, 20px);
+    @include element-prop(align-items, center);
+    @include element-prop(transform, translate3d(0, 0, 0));
+    @include element-prop(cursor, pointer);
+    @include element-prop(outline, none);
+    @include element-prop(overflow, visible);
+    @include element-prop(border, 1px solid var(--border-color));
+    @include element-prop(background, #A1A5C0);
+    @include element-prop(border-radius, 12px);
+    @include element-prop(transition, background 200ms ease-in-out);
+    @include element-prop(margin, 0);
+  }
 
   &.active {
-    @include set-current-modifier(active);
-    @include element-prop(background, current-color());
-    @include reset-current-modifier;
+    .container {
+      @include set-current-modifier(active);
+      @include element-prop(background, current-color());
+      @include reset-current-modifier;
+    }
   }
 
   .slider {
@@ -33,19 +52,17 @@
     @include element-prop(position, absolute);
     @include element-prop(box-shadow, 0 0 2px rgba(#000, 0.5));
 
-    &.active & {
-      @include set-current-modifier(active);
-      @include element-prop(transform, translate3d(16px, 0, 0));
-      @include reset-current-modifier;
-    }
-
     @include reset-current-element;
   }
 
-
   &.active {
-    --container-color: var(--current-color-tint);
-    --slider-color: var(--current-color);
+    .slider {
+      @include set-current-element(toggle-slider);
+      @include set-current-modifier(active);
+      @include element-prop(border-color, current-color(light));
+      @include element-prop(transform, translate3d(18px, 0, 0));
+      @include reset-current-modifier;
+    }
   }
 }
 

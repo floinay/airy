@@ -3,7 +3,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CanColorCtor, CanDisabledCtor, HasElementRef, mixinColor, mixinDisabled } from '../../../cdk';
 
 
-const MixinBase: CanDisabledCtor & CanColorCtor = mixinColor(mixinDisabled(HasElementRef));
+const MixinBase: CanDisabledCtor & CanColorCtor = mixinColor(mixinDisabled(HasElementRef), 'primary');
 
 @Component({
   selector: 'air-toggle',

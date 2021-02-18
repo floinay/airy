@@ -9,6 +9,7 @@
   @include element-prop(user-select, auto);
   @include element-prop(margin, 0 0 12px);
   @include element-prop(font-size, 14px);
+  @include element-prop(color, var(--text-primary));
 
   &.required {
     &::after {
@@ -19,3 +20,5 @@
     }
   }
 }
+
+@include reset-current-element;

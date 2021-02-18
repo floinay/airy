@@ -20,7 +20,7 @@
       .air-label {
         @include set-current-element(form-field-label);
         margin-bottom: var(--label-content-inline-margin, 0);
-        margin-inline-end: var(--label-margin-inline-end, 12px);
+        margin-inline-end: var(--label-margin-inline-end, var(--indent-s));
       }
     }
   }
