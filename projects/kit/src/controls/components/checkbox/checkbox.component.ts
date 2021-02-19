@@ -3,10 +3,10 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  ElementRef,
+  ElementRef, forwardRef,
   HostBinding, Input
 } from '@angular/core';
-import {ControlValueAccessor} from '@angular/forms';
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {CanColorCtor, CanDisabledCtor, HasElementRef, mixinColor, mixinDisabled} from '../../../cdk';
 import {FocusMonitor} from '@angular/cdk/a11y';
 
@@ -18,7 +18,8 @@ const CheckboxBase: CanColorCtor & CanDisabledCtor = mixinDisabled(mixinColor(Ha
   styleUrls: ['checkbox.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   // tslint:disable-next-line:no-inputs-metadata-property
-  inputs: ['color', 'disabled']
+  inputs: ['color', 'disabled'],
+  providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => CheckboxComponent), multi: true}],
 })
 export class CheckboxComponent extends CheckboxBase implements ControlValueAccessor, AfterViewInit {
   @HostBinding('class.active')
