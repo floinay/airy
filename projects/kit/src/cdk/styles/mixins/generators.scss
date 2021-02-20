@@ -24,8 +24,12 @@ $current-modifier: null;
   $current-modifier: null !global;
 }
 
-@mixin element-var($name, $value, $modifier:null) {
-  @include validate-current-element;
+@mixin element-var($name, $value, $modifier:null, $element:null) {
+  @if ($element == null) {
+    @include validate-current-element;
+    $element: $current-element !global;
+  }
+
   --#{prop-name($name, $modifier)}: #{$value};
 }
 

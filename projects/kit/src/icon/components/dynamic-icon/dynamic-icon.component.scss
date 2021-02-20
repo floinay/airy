@@ -1,16 +1,28 @@
+@import "../../../cdk/styles";
+
 :host {
-  position: relative;
-  width: var(--icon__width, 16px);
-  height: var(--icon__height, 16px);
-  margin: var(--icon__margin, 0);
-  padding: var(--icon__padding, 0);
-  display: var(--icon__display, inline-flex);
-  align-items: var(--icon__align-items, center);
+  @include set-current-element(icon);
+  @include element-prop(position, relative);
+  @include element-prop(width, 20px);
+  @include element-prop(height, 20px);
+  @include element-prop(margin, 0);
+  @include element-prop(padding, 0);
+  @include element-prop(display, inline-flex);
+  @include element-prop(align-items, center);
 }
 
 svg {
   width: 100%;
-  height: 100%;
-  fill: var(--icon_fill, var(--current-color));
-  stroke: var(--icon__stroke, var(--current-color));
+  height: auto;
+  max-height: 100%;
+
+  &.mode-stroke {
+    @include element-prop(stroke, current-color());
+  }
+
+  &.mode-fill {
+    @include element-prop(fill, current-color())
+  }
 }
+
+@include reset-current-element;

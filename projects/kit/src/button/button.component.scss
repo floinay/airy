@@ -23,6 +23,15 @@
   @include element-prop(transition, none);
   @include element-prop(position, relative);
 
+  &:not(.clear):not(.outline), &.outline:hover {
+    ::ng-deep {
+      air-dynamic-icon {
+        --icon__fill: #{current-color($contrast:true)};
+        --icon__stroke: #{current-color($contrast:true)};
+      }
+    }
+  }
+
 
   &:focus {
     @include element-prop(outline, transparent, focus);
