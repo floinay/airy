@@ -6,30 +6,14 @@
   @include element-prop(align-items, flex-start);
   @include element-prop(width, auto);
   @include element-prop(height, auto);
-
-  &:not(.content-inline) {
-    @include element-prop(flex-direction, column);
-  }
-
-  &.content-inline {
-    @include set-current-modifier(inline);
-    @include element-prop(flex-direction, row);
-    @include element-prop(align-items, center);
-
-    ::ng-deep {
-      .air-label {
-        @include set-current-element(form-field-label);
-        margin-bottom: var(--label-content-inline-margin, 0);
-        margin-inline-end: var(--label-margin-inline-end, var(--indent-s));
-      }
-    }
-  }
+  @include element-prop(flex-direction, column);
 
   .control {
     @include set-current-element(form-field-control);
     @include element-prop(position, relative);
     @include element-prop(display, flex);
     @include element-prop(align-items, center);
+    @include element-prop(width, 100%);
 
     .prefix, .suffix {
       position: absolute;

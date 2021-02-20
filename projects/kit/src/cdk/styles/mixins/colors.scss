@@ -12,6 +12,7 @@
   $accent: (main:null, dark:null, light:null, shades: ()),
   $warn: (main:null, dark:null, light:null, shades:()),
   $danger: (main:null, dark:null, light:null, shades:()),
+  $success: (main:null, dark:null, light:null, shades:()),
   $disabled: (main:null, dark:null, light:null, shades:())
 ) {
   @if ($background & $background-secondary) {
@@ -31,6 +32,7 @@
   @include _air-color-map-options(warn, $warn, $contrast);
   @include _air-color-map-options(danger, $danger, $contrast);
   @include _air-color-map-options(disabled, $disabled, $contrast);
+  @include _air-color-map-options(success, $success, $contrast);
 }
 
 
@@ -47,7 +49,7 @@
   --background-primary: #{$primary};
   --background-secondary: #{$secondary};
   body {
-    background: var(--background-primary);
+    background: var(--background-secondary);
   }
 
   .background-secondary {

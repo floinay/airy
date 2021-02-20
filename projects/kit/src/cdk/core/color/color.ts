@@ -10,7 +10,7 @@ export interface CanColor {
 
 export type CanColorCtor = Constructor<CanColor>;
 
-export type ThemePalette = 'default' | 'primary' | 'accent' | 'warn' | 'danger' | 'disabled' | undefined;
+export type ThemePalette = 'default' | 'primary' | 'accent' | 'warn' | 'danger' | 'disabled' | 'success' | undefined;
 
 
 export function mixinColor<T extends Constructor<HasElementRef>>(

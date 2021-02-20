@@ -1,0 +1,95 @@
+$breakpoints-map: (
+  xs: (max-width: 599px),
+  sm: (min-width: 600px) and (max-width: 959px),
+  md: (min-width: 960px) and (max-width: 1279px),
+  lg: (min-width: 1280px) and (max-width: 1919px),
+  xl: (min-width: 1920px) and (max-width: 5000px),
+  ltSm: (max-width: 599px),
+  ltMd: (max-width: 959px),
+  ltLg: (max-width: 1279px),
+  ltXl: (max-width: 1919px),
+  gtXs: (min-width: 600px),
+  gtSm: (min-width: 960px),
+  gtMd: (min-width: 1280px),
+  gtLg: (min-width: 1920px)
+);
+
+@mixin breakpoint($bp) {
+  @if ($bp == xs) {
+    @media screen and (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @if ($bp == sm) {
+    @media screen and (min-width: 600px) and (max-width: 959px) {
+      @content;
+    }
+  }
+
+  @if ($bp == md) {
+    @media screen and (min-width: 960px) and (max-width: 1279px) {
+      @content;
+    }
+  }
+
+  @if ($bp == lg) {
+    @media screen and (min-width: 1280px) and (max-width: 1919px) {
+      @content;
+    }
+  }
+
+  @if ($bp == xl) {
+    @media screen and (min-width: 1920px) and (max-width: 5000px) {
+      @content;
+    }
+  }
+
+  @if ($bp == ltSm) {
+    @media screen and (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @if ($bp == ltMd) {
+    @media screen and (max-width: 959px) {
+      @content;
+    }
+  }
+
+  @if ($bp == ltLg) {
+    @media screen and (max-width: 1279px) {
+      @content;
+    }
+  }
+
+  @if ($bp == ltXl) {
+    @media screen and (max-width: 1919px) {
+      @content;
+    }
+  }
+
+  @if ($bp == gtXs) {
+    @media screen and (min-width: 600px) {
+      @content;
+    }
+  }
+
+  @if ($bp == gtSm) {
+    @media screen and (min-width: 960px) {
+      @content;
+    }
+  }
+
+  @if ($bp == gtMd) {
+    @media screen and (min-width: 1280px) {
+      @content;
+    }
+  }
+
+  @if ($bp == gtLg) {
+    @media screen and (min-width: 1920px) {
+      @content;
+    }
+  }
+}

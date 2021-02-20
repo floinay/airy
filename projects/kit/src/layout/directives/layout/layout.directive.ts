@@ -1,4 +1,4 @@
-import {Directive, HostBinding, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {Directive, ElementRef, HostBinding, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {Layout, LayoutAlign} from './types';
 import {BreakpointsStylesManager, ChangesState} from '../../../cdk';
 import {LAYOUT_PROVIDERS} from './layout.providers';
@@ -7,6 +7,7 @@ import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 
 @Directive({
   selector: `
+  [airGrid],
   [airLayout],
   [xs.airLayout],
   [sm.airLayout],
@@ -27,6 +28,11 @@ import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 @UntilDestroy()
 export class LayoutDirective implements OnChanges {
   @HostBinding('style.display') flex = 'flex';
+
+  @HostBinding('class.air-grid')
+  get isGrid(): boolean {
+    return this.elementRef.nativeElement.hasAttribute('airGrid');
+  }
 
   @HostBinding('style.flex-direction')
   @Input() airLayout: Layout = 'row';
@@ -59,7 +65,9 @@ export class LayoutDirective implements OnChanges {
   @Input('gtLg.layoutAlign') gtLgLayoutAlign: LayoutAlign;
   @Input('gtXs.layoutAlign') gtXsLayoutAlign: LayoutAlign;
 
-  constructor(private changesState: ChangesState<string, string>, breakpointsStylesManager: BreakpointsStylesManager) {
+  constructor(private changesState: ChangesState<string, string>,
+              private elementRef: ElementRef,
+              breakpointsStylesManager: BreakpointsStylesManager) {
     breakpointsStylesManager.watch().pipe(untilDestroyed(this)).subscribe();
   }
 

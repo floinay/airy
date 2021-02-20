@@ -28,6 +28,10 @@
       @include element-prop(min-height, calc(100% - #{sticky-offset(header)} - #{sticky-offset(footer)}));
       @include element-prop(flex, 1);
       @include reset-current-element;
+
+      & > * {
+        width: 100%;
+      }
     }
 
     .header, .sticky-header {
@@ -96,6 +100,7 @@
       @include element-prop(right, sticky-offset(start));
       @include reset-current-element;
     }
+
     .sticky-end {
       @include set-current-element(page-sticky-end);
       @include element-prop(end, 0, left);

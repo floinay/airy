@@ -1,11 +1,13 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {CaptionDirective, TitleDirective, TextDirective} from './directives';
+import {TitleDirective, TextDirective, ColorDirective} from './directives';
+
+const declarations = [TitleDirective, TextDirective, ColorDirective];
 
 
 @NgModule({
-  declarations: [CaptionDirective, TitleDirective, TextDirective],
-  exports: [TitleDirective, CaptionDirective, TextDirective],
+  declarations,
+  exports: declarations,
   imports: [
     CommonModule
   ]

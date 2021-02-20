@@ -11,5 +11,8 @@ export const APP_PAGES: { name: string, url: string }[] = [
   }, {
     name: 'Controls',
     url: '/controls'
+  }, {
+    name: 'Typography',
+    url: '/tp'
   }
 ];

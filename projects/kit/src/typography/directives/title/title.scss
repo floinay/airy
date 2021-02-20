@@ -1,35 +1,16 @@
-.air-h1, h1 {
-  font-size: var(--h1__font-size, 90px);
-  line-height: var(--h1__line-height, 94px);
-  font-weight: var(--h1__font-weight, 500);
+@import "../../../cdk/styles";
+@import "../../styles/mixins";
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
 }
 
-.air-h2, h2 {
-  font-size: var(--h2__font-size, 64px);
-  line-height: var(--h2__line-height, 68px);
-  font-weight: var(--h2__font-weight, 500);
-}
+@include air-tp(h1, 32px, 24px, 500);
+@include air-tp(h2, 24px, 18px, 500);
+@include air-tp(h3, 18px, 16px, 500);
+@include air-tp(h4, 16px, 14px, 500);
 
-.air-h3, h3 {
-  font-size: var(--h3__font-size, 48px);
-  line-height: var(--h3__line-height, 52px);
-  font-weight: var(--h3__font-weight, 500);
-}
-
-.air-h4, h4 {
-  font-size: var(--h4__font-size, 32px);
-  line-height: var(--h4__line-height, 38px);
-  font-weight: var(--h4__font-weight, 500);
-}
-
-.air-h5, h5 {
-  font-size: var(--h5__font-size, 24px);
-  line-height: var(--h5__line-height, 30px);
-  font-weight: var(--h5__font-weight, 700);
-}
-
-.air-h6, h6 {
-  font-size: var(--h6__font-size, 18px);
-  line-height: var(--h6__line-height, 24px);
-  font-weight: var(--h6__font-weight, 700);
+.air-caption {
+  line-height: 1;
 }

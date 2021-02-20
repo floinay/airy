@@ -1,13 +1,11 @@
 @mixin air-grid($colWidth, $indent) {
+  .air-grid {
+    gap: $indent;
+  }
   .air-grid-item {
     width: 100%;
-
-    &:not(:last-child) {
-      margin-inline-end: #{$indent};
-    }
   }
-  --grid-item-1: #{$colWidth}  ;
-  //--grid-item-12: #{($colWidth * 12) + ($indent * 12)};
+  --grid-item-1: #{$colWidth};
 
   @for $i from 2 through 12 {
     --grid-item-#{$i}: #{($colWidth * $i) + ($indent * ($i - 1))}

@@ -1,0 +1,22 @@
+@import "../../cdk/styles";
+
+@include set-current-element(input);
+
+.air-input {
+  @include element-prop(width, 100%);
+  @include element-prop(height, 48px);
+  @include element-prop(border, 1px solid var(--border-color));
+  @include element-prop(outline, none);
+  @include element-prop(padding, 0 var(--indent-s));
+  @include element-prop(font-size, get-element-var(text-1, font-size));
+  @include element-prop(border-radius, 1px);
+  @include element-prop(color, var(--text-primary));
+
+
+  ::placeholder {
+    @include set-current-element(input-placeholder);
+    @include element-prop(color, var(--text-secondary));
+  }
+}
+
+@include reset-current-element;

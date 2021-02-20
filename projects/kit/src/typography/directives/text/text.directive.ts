@@ -1,23 +1,17 @@
-import {Directive, ElementRef, HostBinding, Input} from '@angular/core';
+import {Directive, ElementRef} from '@angular/core';
+import {camelToKebab} from '../../../cdk';
 
-type Text = 1 | 2 | 3 | 4;
-const POSSIBLE_CLASSES = ['air-text-1', 'air-text-2', 'air-text-3', 'air-text-4'];
+const POSSIBLE_ATTRIBUTES = ['airText1', 'airText2'];
 
 @Directive({
-  selector: '[airText]'
+  selector: '[airText1], [airText2]'
 })
 export class TextDirective {
-  @HostBinding('class.air-text-1')
-  private defaultText = true;
-
-  @Input() set airText(value: Text) {
-    this.elementRef.nativeElement.classList.remove(POSSIBLE_CLASSES);
-    this.elementRef.nativeElement.classList.add(`air-text-${value}`);
-    this.defaultText = false;
-  }
-
-  constructor(private elementRef: ElementRef) {
-
+  constructor(private elementRef: ElementRef<HTMLDivElement>) {
+    const attribute = POSSIBLE_ATTRIBUTES.find(att => this.elementRef.nativeElement.hasAttribute(att));
+    if (attribute) {
+      this.elementRef.nativeElement.classList.add(camelToKebab(attribute));
+    }
   }
 
 }

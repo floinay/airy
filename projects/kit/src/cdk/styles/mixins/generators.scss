@@ -66,6 +66,10 @@ $current-modifier: null;
   @return var(#{$varName});
 }
 
+@function get-element-var($element, $prop) {
+  @return var(--#{$element}__#{$prop})
+}
+
 @function prop-name($name, $modifier:null, $element:null) {
   @if ($modifier == null) {
     $modifier: $current-modifier;

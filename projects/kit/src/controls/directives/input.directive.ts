@@ -1,5 +1,5 @@
-import { Directive, ElementRef, HostBinding } from '@angular/core';
-import { CanDisabledCtor, CanSizeCtor, HasElementRef, mixinDisabled, mixinSize } from '../../cdk';
+import {Directive, ElementRef, HostBinding} from '@angular/core';
+import {CanDisabledCtor, CanSizeCtor, HasElementRef, mixinDisabled, mixinSize} from '../../cdk';
 
 const ControlBase: CanDisabledCtor & CanSizeCtor = mixinSize(mixinDisabled(HasElementRef));
 
