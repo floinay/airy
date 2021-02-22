@@ -41,7 +41,7 @@ const CONNECTED_POSITIONS: ConnectedPosition[] = [
 export class SelectComponent implements AfterContentInit, ControlValueAccessor {
 
   get clientWidth(): number {
-    return this.elementRef.nativeElement.clientWidth;
+    return this.elementRef.nativeElement.offsetWidth;
   }
 
   constructor(private selectionDispatcher: SelectionDispatcherService,
