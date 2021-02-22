@@ -31,6 +31,8 @@
 
     ::ng-deep {
       .air-button {
+        @include element-prop(height, 36px);
+        @include element-var(padding, 0 var(--indent-m));
         &:not(.active) {
           @include element-prop(background, current-color($contrast: true));
           @include element-prop(border, 1px solid current-color());

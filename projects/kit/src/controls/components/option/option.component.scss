@@ -1,0 +1,22 @@
+@import "../../../cdk/styles";
+
+:host {
+  @include set-current-element(option);
+  @include element-prop(display, flex);
+  @include element-prop(align-items, center);
+  @include element-prop(height, 48px);
+  @include element-prop(padding, 0 var(--indent-m) 0 var(--indent-s));
+  @include element-prop(cursor, pointer);
+  @include element-prop(font-size, 14px);
+  @include element-prop(color, var(--text-primary));
+
+  &:hover, &.active {
+    background: var(--color-primary-50);
+  }
+
+  &:not(:last-child) {
+    @include element-prop(border-bottom, 1px solid var(--border-color));
+  }
+}
+
+@include reset-current-element;

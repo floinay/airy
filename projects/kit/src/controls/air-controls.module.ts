@@ -4,28 +4,35 @@ import {AirCdkModule} from '../cdk';
 import {
   CheckboxComponent,
   FormFieldComponent,
-  LabelComponent, RadioButtonComponent,
-  RadioGroupComponent,
+  LabelComponent, OptionComponent, RadioButtonComponent,
+  RadioGroupComponent, SelectComponent,
   ToggleComponent
 } from './components';
 import {FormsModule} from '@angular/forms';
+import {CommonModule} from '@angular/common';
+import {OverlayModule} from '@angular/cdk/overlay';
 
 
 const declarations = [
   FormFieldComponent,
-  LabelComponent, ToggleComponent,
+  LabelComponent,
+  ToggleComponent,
   InputDirective,
   CheckboxComponent,
   RadioGroupComponent,
-  RadioButtonComponent
+  RadioButtonComponent,
+  SelectComponent,
+  OptionComponent
 ];
 
 @NgModule({
   declarations,
-  imports: [
-    AirCdkModule,
-    FormsModule
-  ],
+    imports: [
+        AirCdkModule,
+        FormsModule,
+        CommonModule,
+        OverlayModule
+    ],
   exports: declarations
 })
 export class AirControlsModule {

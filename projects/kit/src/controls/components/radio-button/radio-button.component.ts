@@ -39,7 +39,6 @@ export class RadioButtonComponent {
     if (active !== this.active) {
       this.active = active;
       this.cdr.markForCheck();
-      console.log(this.active);
     }
   }
 }
