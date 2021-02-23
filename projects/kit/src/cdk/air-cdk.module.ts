@@ -6,18 +6,20 @@ import {
   ScrollToMeDirective
 } from './directives';
 import {CDK_MODULE_OPTIONS, CdkModuleOptions} from './options';
+import {ReplaceVarsPipe} from './pipes';
 
 const declarations = [
   HideIfEmptyDirective,
   ClearInputBeforeUploadDirective,
   AutofocusDirective,
-  ScrollToMeDirective
+  ScrollToMeDirective,
+  ReplaceVarsPipe
 ];
 
 @NgModule({
   declarations,
   imports: [],
-  exports: declarations
+  exports: declarations,
 })
 export class AirCdkModule {
   static forRoot(options?: CdkModuleOptions): ModuleWithProviders<AirCdkModule> {

@@ -22,6 +22,13 @@
   <air-select placeholder="Please select options">
     <air-option>Nothing</air-option>
     <air-option value="1">First option</air-option>
-    <air-option value="2">Second option <air-dynamic-icon airMarginStart name="umbrella"></air-dynamic-icon></air-option>
+    <air-option value="2">Second option
+      <air-dynamic-icon airMarginStart name="umbrella"></air-dynamic-icon>
+    </air-option>
   </air-select>
+  <air-file airMarginTop accept=".pdf" (onFileChanged)="loadedFile = $event">
+    <button *ngIf="loadedFile" air-file-button>
+      {{loadedFile.name}}
+    </button>
+  </air-file>
 </div>

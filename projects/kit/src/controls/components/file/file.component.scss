@@ -1,0 +1,17 @@
+@import "../../../cdk/styles";
+
+:host {
+
+}
+
+.air-icon {
+  fill: current-color();
+}
+
+.air-button {
+  &:hover {
+    .air-icon {
+      fill: current-color($contrast:true);
+    }
+  }
+}

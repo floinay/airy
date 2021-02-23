@@ -7,8 +7,10 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ControlsComponent implements OnInit {
+  loadedFile?: File;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

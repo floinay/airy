@@ -5,3 +5,4 @@ export * from './random-id';
 export * from './type-transformers';
 export * from './url';
 export * from './string';
+export * from './forms';

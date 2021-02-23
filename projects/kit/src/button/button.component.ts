@@ -7,7 +7,7 @@ const ButtonBase: CanColorCtor & CanSizeCtor = mixinColor(mixinSize(HasElementRe
 
 @Component({
   // tslint:disable-next-line:component-selector
-  selector: 'button[air-button], a[air-button]',
+  selector: 'button[air-button], a[air-button], label[air-button]',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <ng-content select="[start]"></ng-content>
