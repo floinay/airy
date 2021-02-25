@@ -3,14 +3,18 @@ import {LoadDirective} from './directives';
 import {LoadersStaticInjector} from './loaders-static-injector';
 import {LoaderComponent} from './components';
 import {AirIconModule} from '../icon';
+import {AIR_LOADER_DEFAULT_PROVIDERS} from './air-loaders.providers';
+import {AirCdkModule} from '../cdk';
 
 const declarations = [LoadDirective, LoaderComponent];
 
 @NgModule({
   declarations,
   exports: declarations,
+  providers: AIR_LOADER_DEFAULT_PROVIDERS,
   imports: [
-    AirIconModule
+    AirIconModule,
+    AirCdkModule
   ]
 })
 export class AirLoadersModule {

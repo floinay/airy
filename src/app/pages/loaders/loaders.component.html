@@ -1,1 +1,2 @@
-<button air-button [airLoad]="true">Loading button</button>
+<button air-button [airLoad]="loaderState === 1" (click)="loaderState = 1" airMarginEnd>Load me</button>
+<button air-button [airLoad]="loaderState === 2" (click)="loaderState = 2">or Load me</button>

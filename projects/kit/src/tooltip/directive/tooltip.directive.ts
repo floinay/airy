@@ -1,27 +1,26 @@
-import { ComponentRef, Directive, ElementRef, HostListener, Input } from '@angular/core';
-import { ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef } from '@angular/cdk/overlay';
-import { ComponentPortal } from '@angular/cdk/portal';
-import { TooltipComponent } from '../component';
-import { Positions } from './tooltip.types';
-import { mapPosition } from './positions.map';
+import {ComponentRef, Directive, ElementRef, HostListener, Input, OnDestroy} from '@angular/core';
+import {ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef} from '@angular/cdk/overlay';
+import {ComponentPortal} from '@angular/cdk/portal';
+import {TooltipComponent} from '../component';
+import {Positions} from './tooltip.types';
+import {mapPosition} from './positions.map';
 
+const DEFAULT_POSITION: ConnectedPosition = {
+  originX: 'center',
+  originY: 'top',
+  overlayX: 'center',
+  overlayY: 'bottom',
+  offsetY: -3,
+};
 
 @Directive({
   selector: '[airTooltip]'
 })
-export class TooltipDirective {
-  private defaultPosition: ConnectedPosition = {
-    originX: 'center',
-    originY: 'top',
-    overlayX: 'center',
-    overlayY: 'bottom',
-    offsetY: -3,
-  };
-
+export class TooltipDirective implements OnDestroy {
   private overlayRef: OverlayRef = this.overlay.create({
     positionStrategy: this.overlayPositionBuilder
       .flexibleConnectedTo(this.elementRef)
-      .withPositions([this.defaultPosition])
+      .withPositions([DEFAULT_POSITION])
   });
 
   @Input() set position(value: Positions) {
@@ -36,9 +35,9 @@ export class TooltipDirective {
 
   @HostListener('mouseenter')
   show(): void {
-    const tooltipPortal = new ComponentPortal(TooltipComponent);
-    const tooltipRef: ComponentRef<TooltipComponent> = this.overlayRef.attach(tooltipPortal);
-    tooltipRef.instance.text = this.text;
+    const portal = new ComponentPortal(TooltipComponent);
+    const ref: ComponentRef<TooltipComponent> = this.overlayRef.attach(portal);
+    ref.instance.text = this.text;
   }
 
   @HostListener('mouseout')
@@ -49,5 +48,9 @@ export class TooltipDirective {
   constructor(private overlay: Overlay,
               private overlayPositionBuilder: OverlayPositionBuilder,
               private elementRef: ElementRef) {
+  }
+
+  ngOnDestroy(): void {
+    this.overlayRef.dispose();
   }
 }

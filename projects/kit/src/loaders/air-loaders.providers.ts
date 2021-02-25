@@ -3,13 +3,15 @@ import {LoaderOptions} from './interfaces/loader.options';
 
 export const AIR_LOADER_OPTIONS = new InjectionToken<LoaderOptions>('Air loader options');
 
-export const AIR_LOADER_OPTIONS_DEFAULT_PROVIDER: Provider = {
+export const AIR_LOADER_DEFAULT_OPTIONS: Provider = {
   provide: AIR_LOADER_OPTIONS,
   useValue: {
-    defaultIcon: '',
-    defaultMessage: ''
+    defaultIcon: 'assets/icons/loader.gif',
+    defaultMessage: '',
   }
 };
 
-
+export const AIR_LOADER_DEFAULT_PROVIDERS: Provider[] = [
+  AIR_LOADER_DEFAULT_OPTIONS
+];
 
