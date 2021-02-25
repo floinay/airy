@@ -14,5 +14,8 @@ export const APP_PAGES: { name: string, url: string }[] = [
   }, {
     name: 'Typography',
     url: '/tp'
+  }, {
+    name: 'Loaders',
+    url: '/loaders'
   }
 ];

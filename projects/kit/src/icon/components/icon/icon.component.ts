@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, Inject, Input } from '@angular/core';
-import { IconFormat } from '../../types';
-import { ICON_MODULE_OPTIONS } from '../../options';
-import { IconModuleOptions } from '../../options';
-import { CanSizeCtor, HasElementRef, mixinSize } from '../../../cdk';
+import {ChangeDetectionStrategy, Component, ElementRef, HostBinding, Inject, Input} from '@angular/core';
+import {IconFormat} from '../../types';
+import {ICON_MODULE_OPTIONS} from '../../options';
+import {IconModuleOptions} from '../../options';
+import {CanSizeCtor, HasElementRef, mixinSize} from '../../../cdk';
 
 const IconBase: CanSizeCtor = mixinSize(HasElementRef);
 
@@ -11,7 +11,7 @@ const IconBase: CanSizeCtor = mixinSize(HasElementRef);
   template: `
     <ng-content></ng-content>
   `,
-  styleUrls: ['./icon.component.scss'],
+  styleUrls: ['./icon.component.scss', 'icon-sizes.scss'],
   // tslint:disable-next-line:no-inputs-metadata-property
   inputs: ['size'],
   changeDetection: ChangeDetectionStrategy.OnPush

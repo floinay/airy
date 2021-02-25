@@ -8,7 +8,9 @@
     "@angular/common": "^11.0.1",
     "@angular/core": "^11.0.1",
     "@ng-web-apis/common": "^1.9.0",
-    "@ngneat/until-destroy": "^8.0.3"
+    "@ngneat/until-destroy": "^8.0.3",
+    "lodash-es": "^4.17.21",
+    "@types/lodash-es": "^4.17.4"
   },
   "dependencies": {
     "tslib": "^2.0.0"

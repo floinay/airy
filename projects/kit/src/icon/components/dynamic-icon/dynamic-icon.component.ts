@@ -11,7 +11,7 @@ const IconBase: CanColorCtor & CanSizeCtor = mixinSize(mixinColor(HasElementRef)
       <use [attr.xlink:href]="src"></use>
     </svg>
   `,
-  styleUrls: ['./dynamic-icon.component.scss'],
+  styleUrls: ['./dynamic-icon.component.scss', '../icon/icon-sizes.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   // tslint:disable-next-line:no-inputs-metadata-property
   inputs: ['color', 'size']

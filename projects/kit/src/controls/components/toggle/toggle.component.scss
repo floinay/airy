@@ -6,6 +6,7 @@
   @include element-prop(display, flex);
   @include element-prop(align-items, center);
   @include element-prop(outline, none);
+  @include element-prop(user-select, none);
   @include reset-current-element;
 
   .air-label {

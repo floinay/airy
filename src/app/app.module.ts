@@ -31,6 +31,8 @@ import {ThirdTabComponent} from './pages/tabs/pages/third-tab/third-tab.componen
 import {ControlsComponent} from './pages/controls/controls.component';
 import {HeaderComponent} from './components/header/header.component';
 import {TypographyComponent} from './pages/typography/typography.component';
+import {LoadersComponent} from './pages/loaders/loaders.component';
+import {AirLoadersModule} from '../../projects/kit/src/loaders';
 
 
 @NgModule({
@@ -46,13 +48,19 @@ import {TypographyComponent} from './pages/typography/typography.component';
     ControlsComponent,
     HeaderComponent,
     TypographyComponent,
+    LoadersComponent,
   ],
   imports: [
     AirDirectionModule,
+    AirLoadersModule,
     RouterModule.forRoot([{
       path: '',
       component: HomeComponent
     },
+      {
+        path: 'loaders',
+        component: LoadersComponent
+      },
       {
         path: 'tabs',
         component: TabsComponent,

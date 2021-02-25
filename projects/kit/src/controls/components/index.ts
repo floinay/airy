@@ -7,4 +7,4 @@ export * from './radio-group/radio-group.component';
 export * from './select/select.component';
 export * from './option/option.component';
 export * from './file/file.component';
-export * from './file/file-button/file-button.component';
+export * from './file/file-button/file-item.component';

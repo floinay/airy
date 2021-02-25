@@ -3,7 +3,7 @@ import {InputDirective} from './directives';
 import {AirCdkModule} from '../cdk';
 import {
   CheckboxComponent,
-  FileButtonComponent,
+  FileItemComponent,
   FileComponent,
   FormFieldComponent,
   LabelComponent,
@@ -33,7 +33,7 @@ const declarations = [
   RadioButtonComponent,
   SelectComponent,
   OptionComponent,
-  FileButtonComponent
+  FileItemComponent
 ];
 
 @NgModule({

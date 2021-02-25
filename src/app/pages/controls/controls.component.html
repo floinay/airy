@@ -27,8 +27,11 @@
     </air-option>
   </air-select>
   <air-file airMarginTop accept=".pdf" (onFileChanged)="loadedFile = $event">
-    <button *ngIf="loadedFile" air-file-button>
+    <air-file-item *ngIf="loadedFile">
       {{loadedFile.name}}
-    </button>
+      <button (click)="loadedFile = undefined" air-button fill="clear" airPaddingStart="s" airPaddingEnd="none">
+        <air-dynamic-icon size="xs" name="remove"></air-dynamic-icon>
+      </button>
+    </air-file-item>
   </air-file>
 </div>

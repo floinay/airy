@@ -77,6 +77,34 @@ import {ThemeSize} from '../../../cdk';
   [gtMd.airPaddingEnd],
   [gtLg.airPaddingEnd],
   [gtXs.airPaddingEnd],
+  [airPaddingHorizontal],
+  [xs.airPaddingHorizontal],
+  [sm.airPaddingHorizontal],
+  [md.airPaddingHorizontal],
+  [lg.airPaddingHorizontal],
+  [xl.airPaddingHorizontal],
+  [ltSm.airPaddingHorizontal],
+  [ltMd.airPaddingHorizontal],
+  [ltLg.airPaddingHorizontal],
+  [ltXl.airPaddingHorizontal],
+  [gtSm.airPaddingHorizontal],
+  [gtMd.airPaddingHorizontal],
+  [gtLg.airPaddingHorizontal],
+  [gtXs.airPaddingHorizontal],
+  [airPaddingVertical],
+  [xs.airPaddingVertical],
+  [sm.airPaddingVertical],
+  [md.airPaddingVertical],
+  [lg.airPaddingVertical],
+  [xl.airPaddingVertical],
+  [ltSm.airPaddingVertical],
+  [ltMd.airPaddingVertical],
+  [ltLg.airPaddingVertical],
+  [ltXl.airPaddingVertical],
+  [gtSm.airPaddingVertical],
+  [gtMd.airPaddingVertical],
+  [gtLg.airPaddingVertical],
+  [gtXs.airPaddingVertical],
   `,
   providers: PADDINGS_PROVIDERS
 })
@@ -155,4 +183,34 @@ export class PaddingsDirective extends AbstractIndentsDirective {
   @Input('gtMd.airPaddingEnd') gtMdAirPaddingEnd: ThemeSize;
   @Input('gtLg.airPaddingEnd') gtLgAirPaddingEnd: ThemeSize;
   @Input('gtXs.airPaddingEnd') gtXsAirPaddingEnd: ThemeSize;
+
+  @Input() airPaddingVertical: ThemeSize;
+  @Input('xs.airPaddingVertical') xsAirPaddingVertical: ThemeSize;
+  @Input('sm.airPaddingVertical') smAirPaddingVertical: ThemeSize;
+  @Input('md.airPaddingVertical') mdAirPaddingVertical: ThemeSize;
+  @Input('lg.airPaddingVertical') lgAirPaddingVertical: ThemeSize;
+  @Input('xl.airPaddingVertical') xlAirPaddingVertical: ThemeSize;
+  @Input('ltSm.airPaddingVertical') ltSmAirPaddingVertical: ThemeSize;
+  @Input('ltMd.airPaddingVertical') ltMdAirPaddingVertical: ThemeSize;
+  @Input('ltLg.airPaddingVertical') ltLgAirPaddingVertical: ThemeSize;
+  @Input('ltXl.airPaddingVertical') ltXlAirPaddingVertical: ThemeSize;
+  @Input('gtSm.airPaddingVertical') gtSmAirPaddingVertical: ThemeSize;
+  @Input('gtMd.airPaddingVertical') gtMdAirPaddingVertical: ThemeSize;
+  @Input('gtLg.airPaddingVertical') gtLgAirPaddingVertical: ThemeSize;
+  @Input('gtXs.airPaddingVertical') gtXsAirPaddingVertical: ThemeSize;
+
+  @Input() airPaddingHorizontal: ThemeSize;
+  @Input('xs.airPaddingHorizontal') xsAirPaddingHorizontal: ThemeSize;
+  @Input('sm.airPaddingHorizontal') smAirPaddingHorizontal: ThemeSize;
+  @Input('md.airPaddingHorizontal') mdAirPaddingHorizontal: ThemeSize;
+  @Input('lg.airPaddingHorizontal') lgAirPaddingHorizontal: ThemeSize;
+  @Input('xl.airPaddingHorizontal') xlAirPaddingHorizontal: ThemeSize;
+  @Input('ltSm.airPaddingHorizontal') ltSmAirPaddingHorizontal: ThemeSize;
+  @Input('ltMd.airPaddingHorizontal') ltMdAirPaddingHorizontal: ThemeSize;
+  @Input('ltLg.airPaddingHorizontal') ltLgAirPaddingHorizontal: ThemeSize;
+  @Input('ltXl.airPaddingHorizontal') ltXlAirPaddingHorizontal: ThemeSize;
+  @Input('gtSm.airPaddingHorizontal') gtSmAirPaddingHorizontal: ThemeSize;
+  @Input('gtMd.airPaddingHorizontal') gtMdAirPaddingHorizontal: ThemeSize;
+  @Input('gtLg.airPaddingHorizontal') gtLgAirPaddingHorizontal: ThemeSize;
+  @Input('gtXs.airPaddingHorizontal') gtXsAirPaddingHorizontal: ThemeSize;
 }
