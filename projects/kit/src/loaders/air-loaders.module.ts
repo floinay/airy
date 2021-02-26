@@ -1,12 +1,12 @@
 import {Injector, NgModule} from '@angular/core';
 import {LoadDirective} from './directives';
 import {LoadersStaticInjector} from './loaders-static-injector';
-import {LoaderComponent} from './components';
+import {LoaderComponent, ProgressBarComponent} from './components';
 import {AirIconModule} from '../icon';
 import {AIR_LOADER_DEFAULT_PROVIDERS} from './air-loaders.providers';
 import {AirCdkModule} from '../cdk';
 
-const declarations = [LoadDirective, LoaderComponent];
+const declarations = [LoadDirective, LoaderComponent, ProgressBarComponent];
 
 @NgModule({
   declarations,

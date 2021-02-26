@@ -7,7 +7,7 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoadersComponent implements OnInit {
-  loaderState: 1 | 2 = 1;
+  loaderState: 1 | 2 | 3 | 4 | 5 = 1;
 
   constructor() {
   }
