@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { animate, style, transition, trigger } from '@angular/animations';
+import {ChangeDetectionStrategy, Component, ElementRef, Input} from '@angular/core';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'air-tooltip',
   template: `
-    {{text}}
+    <div [innerHTML]="text"></div>
   `,
   styles: [`:host {
     display: block;
@@ -28,4 +28,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 })
 export class TooltipComponent {
   @Input() text = '';
+
+  constructor(public elementRef: ElementRef) {
+  }
 }

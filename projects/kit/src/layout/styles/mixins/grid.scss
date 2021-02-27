@@ -1,6 +1,7 @@
 @mixin air-grid($colWidth, $indent) {
+  --gap: #{$indent};
   .air-grid {
-    gap: $indent;
+    gap: 0 #{$indent};
   }
   .air-grid-item {
     width: 100%;

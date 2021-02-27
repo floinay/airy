@@ -33,6 +33,9 @@ import {HeaderComponent} from './components/header/header.component';
 import {TypographyComponent} from './pages/typography/typography.component';
 import {LoadersComponent} from './pages/loaders/loaders.component';
 import {AirLoadersModule} from '../../projects/kit/src/loaders';
+import {EditorComponent} from './pages/editor/editor.component';
+import {AirEditorModule} from '../../projects/kit/src/editor/air-editor.module';
+import { TooltipComponent } from './pages/tooltip/tooltip.component';
 
 
 @NgModule({
@@ -49,17 +52,27 @@ import {AirLoadersModule} from '../../projects/kit/src/loaders';
     HeaderComponent,
     TypographyComponent,
     LoadersComponent,
+    EditorComponent,
+    TooltipComponent,
   ],
   imports: [
     AirDirectionModule,
     AirLoadersModule,
+    AirEditorModule,
     RouterModule.forRoot([{
       path: '',
       component: HomeComponent
     },
       {
+        path: 'tooltips',
+        component: TooltipComponent,
+      },
+      {
         path: 'loaders',
         component: LoadersComponent
+      }, {
+        path: 'editor',
+        component: EditorComponent
       },
       {
         path: 'tabs',

@@ -1,5 +1,5 @@
-import { Positions, X, Y } from './tooltip.types';
-import { ConnectedPosition } from '@angular/cdk/overlay';
+import {Positions, X, Y} from './tooltip.types';
+import {ConnectedPosition} from '@angular/cdk/overlay';
 
 export const positionsMap: { [key: string]: { x: string, y: string }; } = {
   'top center': {x: 'center', y: 'top'},
@@ -17,25 +17,37 @@ export function mapPosition(position: Positions): ConnectedPosition {
   // @ts-ignore
   const {x, y}: { x: X, y: Y } = positionsMap[position];
   return {
-    overlayX: x,
-    overlayY: y,
-    originY: invertY(y),
-    originX: invertX(x),
-    offsetX: offset(x),
-    offsetY: offset(y)
+    overlayX: invertX(x),
+    overlayY: invertY(y),
+    originY: y,
+    originX: x,
+    offsetX: offsetX(x),
+    offsetY: offsetY(y)
   };
 }
 
-function offset(xOrY: X | Y): number | undefined {
-  if (xOrY === 'top' || xOrY === 'start') {
+function offsetX(x: X): number {
+  if (x === 'start') {
     return -3;
   }
 
-  if (xOrY === 'bottom' || xOrY === 'end') {
+  if (x === 'end') {
     return 3;
   }
 
-  return undefined;
+  return 0;
+}
+
+function offsetY(y: Y): number {
+  if (y === 'top') {
+    return -3;
+  }
+
+  if (y === 'bottom') {
+    return 3;
+  }
+
+  return 0;
 }
 
 

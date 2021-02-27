@@ -4,22 +4,15 @@ import {
   CSS_PROPS_GENERATORS,
   CSS_PROPS_KEYS_MAP
 } from '../../../cdk';
-import {CHANGES_STATE_IGNORED_KEYS} from '../../../cdk/services/changes-state/changes-tokens';
 import {parseLayoutAlign} from './helpers/parse-layout-align';
 import {LayoutAlign} from './types';
+import {Gap} from './types/gap';
 
 export const LAYOUT_PROVIDERS: Provider[] = [
   {
-    provide: CHANGES_STATE_IGNORED_KEYS,
-    useValue: [
-      'airLayout'
-    ],
-    multi: true
-  },
-  {
     provide: CSS_PROPS_KEYS_MAP,
     useValue: {
-      layout: 'flex-direction'
+      layout: 'flex-flow'
     },
     multi: true
   },
@@ -37,6 +30,28 @@ export const LAYOUT_PROVIDERS: Provider[] = [
         }
 
         return {};
+      },
+      columnGap: (key: string, value: Gap) => {
+        if (value) {
+          return {
+            'column-gap': `var(--indent-${value})`
+          };
+        }
+
+        return {
+          'column-gap': `var(--gap)`
+        };
+      },
+      rowGap: (key: string, value: Gap) => {
+        if (value) {
+          return {
+            'row-gap': `var(--indent-${value})`
+          };
+        }
+
+        return {
+          'row-gap': `var(--gap)`
+        };
       }
     },
     multi: true
