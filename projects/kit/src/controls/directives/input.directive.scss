@@ -19,4 +19,39 @@
   }
 }
 
+.air-textarea {
+  @include set-current-element(textarea);
+  @include element-prop(width, 100%);
+  @include element-prop(min-height, 48px);
+  @include element-prop(border, 1px solid var(--border-color));
+  @include element-prop(outline, none);
+  @include element-prop(padding, var(--indent-s));
+  @include element-prop(font-size, get-element-var(text-1, font-size));
+  @include element-prop(border-radius, 1px);
+  @include element-prop(color, var(--text-primary));
+  @include element-prop(resize, none);
+
+  ::placeholder {
+    @include set-current-element(input-placeholder);
+    @include element-prop(color, var(--text-secondary));
+  }
+}
+
+.air-invisible-input, .air-invisible-textarea {
+  @include set-current-element(input-invisible);
+  @include element-prop(width, 100%);
+  @include element-prop(height, 20px);
+  @include element-prop(border, none);
+  @include element-prop(outline, none);
+  @include element-prop(border-radius, 1px);
+  @include element-prop(font-size, get-element-var(text-1, font-size));
+  @include element-prop(color, var(--text-primary));
+  @include element-prop(background, transparent);
+
+  ::placeholder {
+    @include set-current-element(input-invisible-placeholder);
+    @include element-prop(color, var(--text-secondary));
+  }
+}
+
 @include reset-current-element;

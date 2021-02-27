@@ -19,13 +19,23 @@
       <input airInput placeholder="Subdomain" id="subdomain">
     </air-form-field>
   </div>
-  <air-select placeholder="Please select options">
-    <air-option>Nothing</air-option>
-    <air-option value="1">First option</air-option>
-    <air-option value="2">Second option
-      <air-dynamic-icon airMarginStart name="umbrella"></air-dynamic-icon>
-    </air-option>
-  </air-select>
+  <air-form-field airGrid airMarginBottom>
+    <input type="text" airInvisibleInput placeholder="Invisible input">
+  </air-form-field>
+  <air-form-field>
+    <label air-label for="textarea">Textarea example</label>
+    <textarea  id="textarea" airTextarea placeholder="Textarea placeholder" cdkTextAreaAutosize></textarea>
+  </air-form-field>
+  <air-form-field airMarginTop airGridItem="4">
+    <label air-label for="select">Select example</label>
+    <air-select placeholder="Please select options" id="select">
+      <air-option>Nothing</air-option>
+      <air-option value="1">First option</air-option>
+      <air-option value="2">Second option
+        <air-dynamic-icon airMarginStart name="umbrella"></air-dynamic-icon>
+      </air-option>
+    </air-select>
+  </air-form-field>
   <air-file airMarginTop accept=".pdf" (onFileChanged)="loadedFile = $event">
     <air-file-item *ngIf="loadedFile">
       {{loadedFile.name}}

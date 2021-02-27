@@ -35,7 +35,7 @@ import {LoadersComponent} from './pages/loaders/loaders.component';
 import {AirLoadersModule} from '../../projects/kit/src/loaders';
 import {EditorComponent} from './pages/editor/editor.component';
 import {AirEditorModule} from '../../projects/kit/src/editor/air-editor.module';
-import { TooltipComponent } from './pages/tooltip/tooltip.component';
+import {TooltipComponent} from './pages/tooltip/tooltip.component';
 
 
 @NgModule({

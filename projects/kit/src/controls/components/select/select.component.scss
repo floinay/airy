@@ -8,6 +8,7 @@
   @include element-prop(height, 48px);
   @include element-prop(cursor, pointer);
   @include element-prop(border, 1px solid var(--border-color));
+  @include element-prop(width, 100%);
 
   .select-container {
     width: 100%;

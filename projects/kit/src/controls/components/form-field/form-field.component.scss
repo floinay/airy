@@ -4,7 +4,7 @@
   @include set-current-element(form-field);
   @include element-prop(display, inline-flex);
   @include element-prop(align-items, flex-start);
-  @include element-prop(width, auto);
+  @include element-prop(width, 100%);
   @include element-prop(height, auto);
   @include element-prop(flex-direction, column);
 
