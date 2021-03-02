@@ -40,6 +40,11 @@
       @include reset-current-element;
     }
 
+    .header, .sticky-header, .sticky-footer {
+      position: relative;
+      z-index: 2;
+    }
+
 
     .sticky-header {
       @include set-current-element(page-sticky-header);

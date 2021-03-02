@@ -30,6 +30,7 @@
     "konva": "^7.2.4",
     "lodash-es": "^4.17.21",
     "ngx-markdown": "^11.0.1",
+    "resize-observer-polyfill": "^1.5.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

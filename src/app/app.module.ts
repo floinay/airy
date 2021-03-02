@@ -36,6 +36,8 @@ import {AirLoadersModule} from '../../projects/kit/src/loaders';
 import {EditorComponent} from './pages/editor/editor.component';
 import {AirEditorModule} from '../../projects/kit/src/editor/air-editor.module';
 import {TooltipComponent} from './pages/tooltip/tooltip.component';
+import {PopoverComponent} from './pages/popover/popover.component';
+import {AirPopoverModule} from '../../projects/kit/src/popover';
 
 
 @NgModule({
@@ -54,11 +56,13 @@ import {TooltipComponent} from './pages/tooltip/tooltip.component';
     LoadersComponent,
     EditorComponent,
     TooltipComponent,
+    PopoverComponent,
   ],
   imports: [
     AirDirectionModule,
     AirLoadersModule,
     AirEditorModule,
+    AirPopoverModule,
     RouterModule.forRoot([{
       path: '',
       component: HomeComponent
@@ -73,6 +77,9 @@ import {TooltipComponent} from './pages/tooltip/tooltip.component';
       }, {
         path: 'editor',
         component: EditorComponent
+      }, {
+        path: 'popover',
+        component: PopoverComponent
       },
       {
         path: 'tabs',

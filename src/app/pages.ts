@@ -21,5 +21,9 @@ export const APP_PAGES: { name: string, url: string }[] = [
   {
     name: 'Tooltips',
     url: '/tooltips'
+  },
+  {
+    name: 'Popover',
+    url: '/popover'
   }
 ];

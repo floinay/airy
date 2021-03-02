@@ -1,0 +1,31 @@
+<div airGrid airRowGap>
+  <button air-button airGridItem="3" [airPopover]="popover">Test popover</button>
+  <air-popover #popover="popover">
+    <div airLayout="column">
+      <button (click)="test()" air-button airMarginBottom="s" fill="outline">Create new lesson</button>
+      <button air-button fill="outline">Add existing lesson</button>
+    </div>
+  </air-popover>
+
+  <button air-button airGridItem="3" [airPopover]="popoverHover" airPopoverShowEvent="mouseenter"
+          airPopoverHideEvent="mouseout">Hover popover
+  </button>
+  <air-popover #popoverHover="popover" color="danger">
+    <div airLayout="column">
+      <button (click)="test()" air-button airMarginBottom="s" fill="outline">Create new lesson</button>
+      <button air-button fill="outline">Add existing lesson</button>
+    </div>
+  </air-popover>
+
+  <button air-button airGridItem="3" color="warn" [airPopover]="popoverOutside"
+          airPopoverHideEvent="click outside">Popover hide click outside
+  </button>
+  <air-popover #popoverOutside="popover" color="warn">
+    <div airLayout="column">
+      <button (click)="test()" air-button airMarginBottom="s" fill="outline">Create new lesson</button>
+      <button air-button fill="outline">Add existing lesson</button>
+    </div>
+  </air-popover>
+</div>
+
+<div style="height: 1800px;"></div>
