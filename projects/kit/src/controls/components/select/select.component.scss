@@ -7,8 +7,31 @@
   @include element-prop(background, var(--background-primary));
   @include element-prop(height, 48px);
   @include element-prop(cursor, pointer);
-  @include element-prop(border, 1px solid var(--border-color));
+  @include element-prop(border, 2px solid transparent);
   @include element-prop(width, 100%);
+  @include element-prop(position, relative);
+
+  &::after {
+    content: '';
+    z-index: 1;
+    left: -2px;
+    position: absolute;
+    top: -2px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border: 1px solid var(--border-color);
+  }
+
+  &.opened {
+    @include element-prop(padding, 0);
+    @include set-current-modifier(opened);
+    @include element-prop(border-color, var(--color-primary-light));
+    @include element-prop(border-bottom-color, transparent);
+    @include element-prop(outline, none);
+    &::after {
+      display: none;
+    }
+  }
 
   .select-container {
     width: 100%;
@@ -44,7 +67,8 @@
   .air-options {
     @include set-current-element(options);
     @include element-prop(background, var(--background-primary));
-    @include element-prop(border, 1px solid var(--border-color));
+    @include element-prop(border, 2px solid var(--color-primary-light));
+    @include element-prop(border-top, none);
     @include element-prop(width, 100%);
     @include element-prop(outline, none);
   }

@@ -5,7 +5,7 @@ import {
   Component,
   ContentChildren,
   ElementRef,
-  forwardRef,
+  forwardRef, HostBinding, HostListener,
   Input,
   QueryList
 } from '@angular/core';
@@ -59,6 +59,7 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
 
   @ContentChildren(OptionComponent) options!: QueryList<OptionComponent>;
 
+  @HostBinding('class.opened')
   @Input() opened = false;
 
   ngAfterContentInit(): void {
@@ -72,6 +73,7 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
     this.cdr.markForCheck();
   }
 
+  @HostListener('click')
   open(): void {
     this.opened = true;
     if (!this.selected) {
