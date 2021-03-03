@@ -7,14 +7,24 @@ import {TemplatePortal} from '@angular/cdk/portal';
 import {PopoverComponentInterface} from '../../interfaces';
 import {PopoverComponent} from '../../components';
 import {DOCUMENT} from '@angular/common';
-import {throwIf} from '../../../cdk';
+import {OptimalPositionService, throwIf} from '../../../cdk';
+import {isEqual} from 'lodash-es';
+import {DirectionService} from '../../../direction';
 
-const DEFAULT_POSITION: ConnectedPosition = {
+const START_POSITION_LTR: ConnectedPosition = {
   originX: 'start',
   originY: 'top',
   overlayX: 'start',
   overlayY: 'bottom'
 };
+
+const START_POSITION_RTL: ConnectedPosition = {
+  originX: 'end',
+  originY: 'top',
+  overlayX: 'end',
+  overlayY: 'bottom'
+};
+
 
 const OVER_POSITION: ConnectedPosition = {
   originX: 'center',
@@ -43,7 +53,7 @@ export class PopoverService implements OnDestroy {
   private overlayRef: OverlayRef = this.overlay.create({
     positionStrategy: this.overlayPositionBuilder
       .flexibleConnectedTo(this.elementRef)
-      .withPositions([DEFAULT_POSITION])
+      .withPositions([START_POSITION_LTR])
   });
 
   private position: PopoverPosition = 'start';
@@ -55,8 +65,10 @@ export class PopoverService implements OnDestroy {
   private viewRef?: EmbeddedViewRef<PopoverComponent>;
 
   constructor(private elementRef: ElementRef,
+              private directionService: DirectionService,
               private viewContainerRef: ViewContainerRef,
               private overlay: Overlay,
+              private optimalPositionService: OptimalPositionService,
               @Inject(DOCUMENT) readonly document: Document,
               private zone: NgZone,
               private overlayPositionBuilder: OverlayPositionBuilder) {
@@ -73,19 +85,23 @@ export class PopoverService implements OnDestroy {
       return;
     }
     this.position = position;
-    if (position === 'start') {
-      this.overlayRef.updatePositionStrategy(
-        this.overlayPositionBuilder
-          .flexibleConnectedTo(this.elementRef)
-          .withPositions([DEFAULT_POSITION])
-      );
-    } else if (position === 'over') {
-      this.overlayRef.updatePositionStrategy(
-        this.overlayPositionBuilder
-          .flexibleConnectedTo(this.elementRef)
-          .withPositions([OVER_POSITION])
-      );
+    this.updateOverlayPosition(this.connectedPosition);
+  }
+
+  private updateOverlayPosition(position: ConnectedPosition): void {
+    this.overlayRef.updatePositionStrategy(
+      this.overlayPositionBuilder
+        .flexibleConnectedTo(this.elementRef)
+        .withPositions([position])
+    );
+  }
+
+  private get connectedPosition(): ConnectedPosition {
+    if (this.position === 'over') {
+      return OVER_POSITION;
     }
+
+    return this.directionService.isLtr() ? START_POSITION_LTR : START_POSITION_RTL;
   }
 
   setHideDebounce(value: number): void {
@@ -104,18 +120,46 @@ export class PopoverService implements OnDestroy {
       throw new Error('Please set popover component');
     }
 
-    if (this.isOverPosition()) {
+    if (this.isOverPosition) {
       this.setOverlaySize();
     }
+
+
     this.ignoreHide = true;
     const portal = new TemplatePortal(this.popover.template, this.viewContainerRef);
     this.viewRef = this.overlayRef.attach(portal);
-
+    setTimeout(() => this.setOptimalPositionAndAddClassesToPopoverContent(), 20);
     setTimeout(() => this.ignoreHide = false, 100);
   }
 
-  private isOverPosition(): boolean {
+  private setOptimalPositionAndAddClassesToPopoverContent(): void {
+    if (this.isStartPosition) {
+      const optimalPosition = this.optimalPositionService.optimalPosition({
+        connectedElement: this.overlayRef.overlayElement,
+        connectedTo: this.elementRef.nativeElement,
+        position: this.connectedPosition
+      });
+
+      if (!isEqual(this.connectedPosition, optimalPosition)) {
+        this.updateOverlayPosition(optimalPosition);
+      } else {
+        this.updateOverlayPosition(this.connectedPosition);
+      }
+      this.setClassesToPopoverContent(optimalPosition);
+    }
+  }
+
+  private setClassesToPopoverContent(position: ConnectedPosition): void {
+    this.popoverContentHtmlElement?.classList.add('position-x-' + position.originX);
+    this.popoverContentHtmlElement?.classList.add('position-y-' + position.originY);
+  }
+
+  private get isOverPosition(): boolean {
     return this.position === 'over';
+  }
+
+  private get isStartPosition(): boolean {
+    return this.position === 'start';
   }
 
   setShowEvent(event: PopoverShowEvent): void {
@@ -193,9 +237,16 @@ export class PopoverService implements OnDestroy {
   }
 
   hide(): void {
-    this.viewRef?.detach();
-    this.overlayRef.detach();
-    this.viewRef = undefined;
+    const element = this.popoverContentHtmlElement;
+    if (element) {
+      element.classList.add('hide');
+      setTimeout(() => {
+        this.viewRef?.detach();
+        this.overlayRef.detach();
+        this.viewRef = undefined;
+      }, 100);
+    }
+
   }
 
 

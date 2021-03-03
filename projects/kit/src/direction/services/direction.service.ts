@@ -29,11 +29,11 @@ export class DirectionService {
   }
 
   isLtr(): boolean {
-    return this.direction() === 'ltr';
+    return this.direction === 'ltr';
   }
 
   isRtl(): boolean {
-    return this.direction() === 'rtl';
+    return this.direction === 'rtl';
   }
 
   set(direction: Direction): void {
@@ -46,7 +46,7 @@ export class DirectionService {
     this.document.body.style.setProperty('--direction', direction);
   }
 
-  direction(): Direction {
+  get direction(): Direction {
     return this.state$.getValue() as Direction;
   }
 

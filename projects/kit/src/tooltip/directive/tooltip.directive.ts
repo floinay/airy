@@ -19,6 +19,7 @@ const DEFAULT_POSITION: ConnectedPosition = {
   offsetY: -3,
 };
 
+// @dynamic
 @Directive({
   selector: '[airTooltip]',
   exportAs: 'tooltip'

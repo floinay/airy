@@ -11,7 +11,7 @@ import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 })
 @UntilDestroy()
 export class HeaderComponent {
-  direction = new FormControl(this.directionService.direction());
+  direction = new FormControl(this.directionService.direction);
 
   constructor(private directionService: DirectionService) {
     this.direction.valueChanges.pipe(untilDestroyed(this)).subscribe(v => this.directionService.set(v));
