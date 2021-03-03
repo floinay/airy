@@ -5,12 +5,11 @@ import {randomId} from '../../../cdk';
 @Component({
   selector: 'air-confirm',
   templateUrl: './confirm.component.html',
-  styleUrls: ['./confirm.component.css'],
+  exportAs: 'confirm',
+  styleUrls: ['./confirm.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ConfirmComponent implements PopoverComponentInterface {
   id = randomId();
   @ViewChild(TemplateRef, {static: true}) template!: TemplateRef<any>;
-  constructor() {
-  }
 }

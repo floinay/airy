@@ -2,7 +2,7 @@ import {Directive, ElementRef, Input, OnInit, ViewContainerRef} from '@angular/c
 import {UntilDestroy} from '@ngneat/until-destroy';
 import {Overlay} from '@angular/cdk/overlay';
 import {PopoverComponentInterface} from '../../interfaces';
-import {PopoverHideEvent, PopoverService, PopoverShowEvent} from './popover.service';
+import {PopoverHideEvent, PopoverPosition, PopoverService, PopoverShowEvent} from './popover.service';
 
 
 @Directive({
@@ -19,6 +19,10 @@ export class PopoverDirective implements OnInit {
 
   @Input() set airPopoverShowEvent(value: PopoverShowEvent) {
     this.popoverService.setShowEvent(value);
+  }
+
+  @Input() set airPopoverPosition(value: PopoverPosition) {
+    this.popoverService.setPosition(value);
   }
 
   @Input() set airPopoverHideEvent(value: PopoverHideEvent) {

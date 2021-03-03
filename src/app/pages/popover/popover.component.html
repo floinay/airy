@@ -1,4 +1,4 @@
-<div airGrid airRowGap>
+<div airLayout="column" airRowGap>
   <button air-button airGridItem="3" [airPopover]="popover">Test popover</button>
   <air-popover #popover="popover">
     <div airLayout="column">
@@ -26,6 +26,11 @@
       <button air-button fill="outline">Add existing lesson</button>
     </div>
   </air-popover>
+
+  <button air-button fill="outline" color="danger" airPopoverPosition="over" [airPopover]="confirm">Delete</button>
+  <air-confirm #confirm="confirm">
+    <button airStretch air-button color="danger">Sure?</button>
+  </air-confirm>
 </div>
 
 <div style="height: 1800px;"></div>

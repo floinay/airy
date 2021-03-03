@@ -78,6 +78,7 @@ export class LoadDirective implements OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.hide();
     this.overlayRef.dispose();
   }
 

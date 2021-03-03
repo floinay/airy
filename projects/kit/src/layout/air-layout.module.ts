@@ -10,11 +10,14 @@ import {
   LayoutDirective,
   MarginsDirective,
   PaddingsDirective,
-  StartDirective
+  StartDirective,
+  StretchDirective
 } from './directives';
 
 
-const declarations = [PageComponent,
+const declarations = [
+  PageComponent,
+  StretchDirective,
   HeaderDirective,
   FooterDirective,
   EndDirective,
@@ -32,7 +35,7 @@ const declarations = [PageComponent,
   declarations,
   imports: [],
   providers: [],
-  exports: declarations
+  exports: declarations,
 })
 export class AirLayoutModule {
 }

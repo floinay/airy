@@ -16,8 +16,17 @@ const DEFAULT_POSITION: ConnectedPosition = {
   overlayY: 'bottom'
 };
 
+const OVER_POSITION: ConnectedPosition = {
+  originX: 'center',
+  originY: 'center',
+  overlayX: 'center',
+  overlayY: 'center',
+  offsetY: 0,
+};
+
 export type PopoverShowEvent = 'click' | 'mouseenter';
 export type PopoverHideEvent = 'click outside' | 'mouseout' | 'click';
+export type PopoverPosition = 'start' | 'over';
 
 @Injectable()
 @UntilDestroy()
@@ -36,6 +45,8 @@ export class PopoverService implements OnDestroy {
       .flexibleConnectedTo(this.elementRef)
       .withPositions([DEFAULT_POSITION])
   });
+
+  private position: PopoverPosition = 'start';
 
   private ignoreHide = false;
 
@@ -57,6 +68,26 @@ export class PopoverService implements OnDestroy {
     this.popover = popover;
   }
 
+  setPosition(position: PopoverPosition): void {
+    if (this.position === position) {
+      return;
+    }
+    this.position = position;
+    if (position === 'start') {
+      this.overlayRef.updatePositionStrategy(
+        this.overlayPositionBuilder
+          .flexibleConnectedTo(this.elementRef)
+          .withPositions([DEFAULT_POSITION])
+      );
+    } else if (position === 'over') {
+      this.overlayRef.updatePositionStrategy(
+        this.overlayPositionBuilder
+          .flexibleConnectedTo(this.elementRef)
+          .withPositions([OVER_POSITION])
+      );
+    }
+  }
+
   setHideDebounce(value: number): void {
     this.hideDebounce = value;
     this.onHideEventChanged$.next();
@@ -72,11 +103,19 @@ export class PopoverService implements OnDestroy {
     if (!this.popover) {
       throw new Error('Please set popover component');
     }
+
+    if (this.isOverPosition()) {
+      this.setOverlaySize();
+    }
     this.ignoreHide = true;
     const portal = new TemplatePortal(this.popover.template, this.viewContainerRef);
     this.viewRef = this.overlayRef.attach(portal);
 
     setTimeout(() => this.ignoreHide = false, 100);
+  }
+
+  private isOverPosition(): boolean {
+    return this.position === 'over';
   }
 
   setShowEvent(event: PopoverShowEvent): void {
@@ -165,5 +204,12 @@ export class PopoverService implements OnDestroy {
     this.onHideEventChanged$.complete();
     this.hide();
     this.overlayRef.dispose();
+  }
+
+  private setOverlaySize(): void {
+    this.overlayRef.updateSize({
+      width: this.elementRef.nativeElement.offsetWidth,
+      height: this.elementRef.nativeElement.offsetHeight
+    });
   }
 }
