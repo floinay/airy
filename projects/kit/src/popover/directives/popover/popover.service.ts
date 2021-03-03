@@ -1,4 +1,4 @@
-import {ElementRef, EmbeddedViewRef, Inject, Injectable, OnDestroy, ViewContainerRef} from '@angular/core';
+import {ElementRef, EmbeddedViewRef, Inject, Injectable, NgZone, OnDestroy, ViewContainerRef} from '@angular/core';
 import {ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef} from '@angular/cdk/overlay';
 import {fromEvent, Observable, Subject} from 'rxjs';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
@@ -10,11 +10,10 @@ import {DOCUMENT} from '@angular/common';
 import {throwIf} from '../../../cdk';
 
 const DEFAULT_POSITION: ConnectedPosition = {
-  originX: 'center',
+  originX: 'start',
   originY: 'top',
-  overlayX: 'center',
-  overlayY: 'bottom',
-  offsetY: -3,
+  overlayX: 'start',
+  overlayY: 'bottom'
 };
 
 export type PopoverShowEvent = 'click' | 'mouseenter';
@@ -48,6 +47,7 @@ export class PopoverService implements OnDestroy {
               private viewContainerRef: ViewContainerRef,
               private overlay: Overlay,
               @Inject(DOCUMENT) readonly document: Document,
+              private zone: NgZone,
               private overlayPositionBuilder: OverlayPositionBuilder) {
     this.listenShowEvent();
     this.listenHideEvent();
