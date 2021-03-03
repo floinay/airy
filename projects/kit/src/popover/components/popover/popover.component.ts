@@ -1,5 +1,6 @@
-import {ChangeDetectionStrategy, Component, ElementRef, TemplateRef, ViewChild} from '@angular/core';
-import {CanColorCtor, HasElementRef, mixinColor} from '../../../cdk';
+import {ChangeDetectionStrategy, Component, ElementRef, Input, TemplateRef, ViewChild} from '@angular/core';
+import {CanColorCtor, HasElementRef, mixinColor, randomId} from '../../../cdk';
+import {PopoverComponentInterface} from '../../interfaces';
 
 const PopoverBase: CanColorCtor = mixinColor(HasElementRef, 'primary');
 
@@ -12,7 +13,8 @@ const PopoverBase: CanColorCtor = mixinColor(HasElementRef, 'primary');
   // tslint:disable-next-line:no-inputs-metadata-property
   inputs: ['color']
 })
-export class PopoverComponent extends PopoverBase {
+export class PopoverComponent extends PopoverBase implements PopoverComponentInterface {
+  @Input() id = randomId();
   @ViewChild(TemplateRef, {static: true}) template!: TemplateRef<any>;
 
   constructor(public elementRef: ElementRef) {

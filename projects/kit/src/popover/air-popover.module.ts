@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
-import {PopoverComponent} from './components';
+import {ConfirmComponent, PopoverComponent} from './components';
 import {PopoverDirective} from './directives';
 
 
-const declarations = [PopoverComponent, PopoverDirective];
+const declarations = [PopoverComponent, PopoverDirective, ConfirmComponent];
 
 @NgModule({
   declarations,
-  exports: declarations,
+  exports: declarations
 })
 export class AirPopoverModule {
 

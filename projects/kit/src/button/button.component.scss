@@ -23,7 +23,7 @@
   @include element-prop(position, relative);
   @include element-prop(max-height, 100%);
 
-  &:not(.clear):not(.outline), &.outline:hover {
+  &:not(.clear):not(.outline) {
     ::ng-deep {
       air-dynamic-icon, svg {
         --icon__fill: #{current-color($contrast:true)};
@@ -55,8 +55,8 @@
 
     &:hover {
       @include set-current-modifier(outline-hover);
-      @include element-prop(color, current-color($contrast: true));
-      @include element-prop(background, current-color());
+      @include element-prop(background, current-color($shade: 50));
+      @include element-prop(color, current-color());
     }
 
     @include reset-current-modifier;

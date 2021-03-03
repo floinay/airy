@@ -1,121 +1,40 @@
-import {
-  Directive,
-  ElementRef,
-  EmbeddedViewRef,
-  Inject,
-  Input, OnDestroy,
-  OnInit,
-  ViewContainerRef
-} from '@angular/core';
-import {PopoverComponent} from '../../components';
-import {fromEvent} from 'rxjs';
-import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {DOCUMENT} from '@angular/common';
-import {ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef} from '@angular/cdk/overlay';
-import {TemplatePortal} from '@angular/cdk/portal';
-import {debounceTime, filter} from 'rxjs/operators';
-import ResizeObserver from 'resize-observer-polyfill';
+import {Directive, ElementRef, Input, OnInit, ViewContainerRef} from '@angular/core';
+import {UntilDestroy} from '@ngneat/until-destroy';
+import {Overlay} from '@angular/cdk/overlay';
+import {PopoverComponentInterface} from '../../interfaces';
+import {PopoverHideEvent, PopoverService, PopoverShowEvent} from './popover.service';
 
-type PopoverShowEvent = 'click' | 'mouseenter';
-type PopoverHideEvent = 'click outside' | 'mouseout' | 'click';
-
-const DEFAULT_POSITION: ConnectedPosition = {
-  originX: 'center',
-  originY: 'top',
-  overlayX: 'center',
-  overlayY: 'bottom',
-  offsetY: -3,
-};
 
 @Directive({
   selector: '[airPopover]',
-  exportAs: 'popover'
+  exportAs: 'popover',
+  providers: [PopoverService]
 })
 @UntilDestroy()
-export class PopoverDirective implements OnInit, OnDestroy {
-  private overlayRef: OverlayRef = this.overlay.create({
-    positionStrategy: this.overlayPositionBuilder
-      .flexibleConnectedTo(this.elementRef)
-      .withPositions([DEFAULT_POSITION])
-  });
-  @Input() airPopover!: PopoverComponent;
+export class PopoverDirective implements OnInit {
 
-  @Input() airPopoverShowEvent: PopoverShowEvent = 'click';
+  @Input() set airPopover(component: PopoverComponentInterface) {
+    this.popoverService.setPopover(component);
+  }
 
-  @Input() airPopoverHideEvent: PopoverHideEvent = 'click';
+  @Input() set airPopoverShowEvent(value: PopoverShowEvent) {
+    this.popoverService.setShowEvent(value);
+  }
 
-  @Input() airPopoverDebounce = 50;
+  @Input() set airPopoverHideEvent(value: PopoverHideEvent) {
+    this.popoverService.setHideEvent(value);
+  }
 
-  private componentRef?: EmbeddedViewRef<PopoverComponent>;
-
-  private ignoreHide = false;
-
-  private resizeObserver?: ResizeObserver;
+  @Input() set airPopoverHideDebounce(value: number) {
+    this.popoverService.setHideDebounce(value);
+  }
 
   constructor(private elementRef: ElementRef,
               private overlay: Overlay,
               private viewContainerRef: ViewContainerRef,
-              private overlayPositionBuilder: OverlayPositionBuilder,
-              @Inject(DOCUMENT) readonly document: Document) {
+              private popoverService: PopoverService) {
   }
 
   ngOnInit(): void {
-    this.listenShowEvent();
-    this.listenHideEvent();
   }
-
-  show(): void {
-    if (this.componentRef) {
-      return;
-    }
-    this.ignoreHide = true;
-    const portal = new TemplatePortal(this.airPopover.template, this.viewContainerRef);
-
-    this.componentRef = this.overlayRef.attach(portal);
-
-    setTimeout(() => this.ignoreHide = false, 100);
-  }
-
-  hide(): void {
-    this.overlayRef.detach();
-    this.componentRef = undefined;
-    this.resizeObserver?.unobserve(this.overlayRef.overlayElement);
-  }
-
-
-  private listenShowEvent(): void {
-    fromEvent(this.elementRef.nativeElement, this.airPopoverShowEvent)
-      .pipe(untilDestroyed(this))
-      .subscribe(() => this.show());
-  }
-
-  private listenHideEvent(): void {
-    if (this.airPopoverHideEvent === 'mouseout') {
-      fromEvent(this.document, 'mousemove')
-        .pipe(untilDestroyed(this), debounceTime(this.airPopoverDebounce), filter(e => {
-          return (!this.elementRef.nativeElement.contains(e.target)
-            && !this.document.getElementById('air-popover-content')?.contains(e.target as Node)
-          );
-        }))
-        .subscribe(() => this.hide());
-    } else if (this.airPopoverHideEvent === 'click') {
-      fromEvent(this.document.body, 'click')
-        .pipe(untilDestroyed(this), debounceTime(this.airPopoverDebounce), filter(() => !this.ignoreHide))
-        .subscribe(() => this.hide());
-    } else if (this.airPopoverHideEvent === 'click outside') {
-      fromEvent(this.document.body, 'click')
-        .pipe(untilDestroyed(this), debounceTime(this.airPopoverDebounce), filter((e) => {
-          return !this.ignoreHide
-            && (!document.getElementById('air-popover-content')?.contains(e.target as Node)
-              && (!this.elementRef.nativeElement.contains(e.target)));
-        }))
-        .subscribe(() => this.hide());
-    }
-  }
-
-  ngOnDestroy(): void {
-    this.resizeObserver?.unobserve(this.overlayRef.overlayElement);
-    this.overlayRef.dispose();
-  }
-
 }
