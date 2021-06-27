@@ -1,0 +1,22 @@
+{
+  "name": "@airy-ui/layout",
+  "version": "2.0.0",
+  "private": false,
+  "peerDependencies": {
+    "@angular/common": "^12.1.0",
+    "@angular/core": "^12.1.0",
+    "@airy-ui/cdk": "^2.1.0",
+    "@ngneat/until-destroy": "^8.0.4",
+    "lodash-es": "^4.17.21",
+    "@airy-ui/direction": "^2.1.0",
+    "@ng-web-apis/common": "^1.9.0"
+  },
+  "dependencies": {
+    "tslib": "^2.2.0",
+    "@airy-ui/cdk": "^2.1.0",
+    "@ngneat/until-destroy": "^8.0.4",
+    "lodash-es": "^4.17.21",
+    "@airy-ui/direction": "^2.1.0",
+    "@ng-web-apis/common": "^1.9.0"
+  }
+}

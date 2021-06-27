@@ -1,8 +1,11 @@
 {
   "name": "air",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "scripts": {
-    "watch cdk": "ng build cdk --watch --configuration production"
+    "watch cdk": "ng build cdk --watch --configuration production",
+    "build cdk": "ng build cdk --configuration production",
+    "watch layout": "ng build layout --watch --configuration production",
+    "build layout": "ng build layout --configuration production"
   },
   "private": true,
   "dependencies": {

@@ -1,3 +1,5 @@
+import {StylesProvidersFactory} from './lib/services/styles/tokens';
+
 export * from './lib/core';
 export * from './lib/directives';
 export * from './lib/helpers';
@@ -14,16 +16,19 @@ export {WindowService} from './lib/services/window.service';
 export {BreakpointsStylesManager} from './lib/services/styles/breakpoints-styles.manager';
 export {StylesService} from './lib/services/styles/styles.service';
 export {
-  STYLES_NAMES_MAP,
-  STYLES_VALUES_MAP,
-  STYLES_FACTORIES,
-  CLASSES_FACTORIES,
-  CLASSES_MAP
-} from './lib/services/styles/tokens';
-export {
   BREAKPOINTS_STYLES_PROVIDERS,
   breakpointsStylesProviders
 } from './lib/services/styles/providers';
 
 export * from './lib/services/changes-state';
+export {
+  StylesProvidersFactory,
+  StylesFactory,
+  ClassesFactory,
+  STYLES_FACTORIES,
+  STYLES_NAMES_MAP,
+  STYLES_VALUES_MAP,
+  CLASSES_MAP,
+  CLASSES_FACTORIES
+} from './lib/services/styles/tokens'
 

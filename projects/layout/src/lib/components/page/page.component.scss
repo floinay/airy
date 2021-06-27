@@ -1,0 +1,131 @@
+@import "~@airy-ui/cdk/styles";
+
+@function sticky-offset($element, $default: 0) {
+  @return var(--#{$element}__offset-sticky, #{$default});
+}
+
+:host {
+  @include set-current-element(page-header);
+  @include element-var(height, 98px);
+
+  @include set-current-element(page);
+  @include element-prop(display, flex);
+  @include element-prop(flex-direction, column);
+  @include element-prop(position, relative);
+  @include element-prop(width, 100%);
+  @include element-prop(margin, 0);
+  @include element-prop(min-height, 100vh);
+  @include element-prop(padding-bottom, sticky-offset(footer));
+  @include element-prop(padding-inline-end, sticky-offset(end));
+
+  ::ng-deep {
+    & > .air-container, .air-content {
+      @include set-current-element(page-content);
+      @include element-prop(padding-top, var(--indent-xl));
+      @include element-prop(padding-inline-start, var(--indent-xxl, 60px));
+      @include element-prop(margin-inline-start, sticky-offset(start));
+      @include element-prop(margin-top, sticky-offset(header));
+      @include element-prop(box-sizing, content-box);
+      @include element-prop(min-height, calc(100% - #{sticky-offset(header)} - #{sticky-offset(footer)}));
+      @include element-prop(flex, 1);
+      @include element-prop(padding-bottom, var(--indent-xl));
+      @include reset-current-element;
+
+      & > * {
+        width: 100%;
+      }
+    }
+
+    .header, .sticky-header {
+      @include set-current-element(page-header);
+      @include element-prop(height, prop-name(height));
+      @include reset-current-element;
+    }
+
+    .sticky-header, .sticky-footer {
+      @include set-current-element(page-header);
+      @include element-prop(max-width, calc(100% - var(--page-start-end-sum, 0)));
+    }
+
+
+    .footer, .sticky-footer .start, .sticky-start, .end .sticky-end, .header, .sticky-header {
+      position: relative;
+      z-index: 50;
+    }
+
+
+    .sticky-header {
+      @include set-current-element(page-sticky-header);
+      @include element-prop(position, fixed);
+      @include element-prop(top, 0);
+      @include reset-current-element;
+    }
+
+    .sticky-footer {
+      @include set-current-element(page-sticky-footer);
+      @include element-prop(position, fixed);
+      @include element-prop(bottom, 0);
+      @include reset-current-element;
+    }
+
+    .sticky-start {
+      @include set-current-element(page-sticky-start);
+      @include element-prop(top, 0);
+      @include element-prop(position, fixed);
+      @include element-prop(height, 100%);
+      @include reset-current-element;
+    }
+
+    .sticky-end {
+      @include set-current-element(page-sticky-end);
+      @include element-prop(top, 0);
+      @include element-prop(position, fixed);
+      @include element-prop(height, 100%);
+      @include reset-current-element;
+    }
+  }
+}
+
+::ng-deep {
+  .ltr {
+    .sticky-end {
+      @include set-current-element(page-sticky-end);
+      @include element-prop(end, 0, right);
+      @include reset-current-element;
+    }
+
+    .sticky-header {
+      @include set-current-element(page-sticky-header);
+      @include element-prop(left, sticky-offset(start));
+      @include reset-current-element;
+    }
+
+    .sticky-start {
+      @include set-current-element(page-sticky-start);
+      @include element-prop(start, 0, left);
+      @include reset-current-element;
+    }
+  }
+
+  .rtl {
+    .sticky-header {
+      @include set-current-element(page-sticky-header);
+      @include element-prop(right, sticky-offset(start));
+      @include reset-current-element;
+    }
+
+    .sticky-end {
+      @include set-current-element(page-sticky-end);
+      @include element-prop(end, 0, left);
+      @include reset-current-element;
+    }
+
+    .sticky-start {
+      @include set-current-element(page-sticky-start);
+      @include element-prop(start, 0, right);
+      @include reset-current-element;
+    }
+  }
+}
+
+@include reset-current-element;

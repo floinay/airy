@@ -1,4 +1,4 @@
-export * from './layout';
+export * from '../../../layout/src/lib';
 export * from './lists';
 export * from './tooltip';
 export * from './icon';

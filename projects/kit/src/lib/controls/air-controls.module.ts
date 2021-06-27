@@ -22,7 +22,7 @@ import {CommonModule} from '@angular/common';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {AirButtonModule} from '../button';
 import {AIR_CONTROLS_DEFAULT_PROVIDERS} from './air-controls.providers';
-import {AirLayoutModule} from '../layout';
+import {AirLayoutModule} from '../../../../layout/src/lib';
 import {AirTypographyModule} from '../typography/air-typography.module';
 import {AirDirectionModule} from '../../../../direction/src/lib';
 import {AutocompleteDirective} from '@airy-ui/controls/directives/autocomplete/autocomplete.directive';

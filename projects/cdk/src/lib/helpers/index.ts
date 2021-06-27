@@ -13,3 +13,4 @@ export {fillObject} from './fill-object';
 export {patch} from './patch';
 export {portalContainerId} from './portal-container-id';
 export {concatUnique} from './concat-unique';
+export {observeResize} from './observe-resize';

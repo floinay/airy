@@ -24,6 +24,10 @@
       "kit": [
         "dist/kit/kit",
         "dist/kit"
+      ],
+      "layout": [
+        "dist/layout/layout",
+        "dist/layout"
       ]
     },
     "forceConsistentCasingInFileNames": true,
