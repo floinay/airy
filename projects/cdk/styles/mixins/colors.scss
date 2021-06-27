@@ -1,0 +1,146 @@
+@import "../functions/contrast-color";
+
+
+@mixin air-colors(
+  $background:null,
+  $background-secondary:null,
+  $text:null,
+  $text-secondary:null,
+  $borders: null,
+  $contrast: (dark: #1B1B1E, light: #fff ),
+  $primary: (main:null, dark:null, light:null, shades: ()),
+  $accent: (main:null, dark:null, light:null, shades: ()),
+  $warn: (main:null, dark:null, light:null, shades:()),
+  $danger: (main:null, dark:null, light:null, shades:()),
+  $success: (main:null, dark:null, light:null, shades:()),
+  $disabled: (main:null, dark:null, light:null, shades:())
+) {
+  @if ($background & $background-secondary) {
+    @include air-background-colors($background, $background-secondary);
+  }
+
+  @if ($borders) {
+    @include air-borders-color($borders);
+  }
+
+  @if ($text & $text-secondary) {
+    @include air-text-colors($text, $text-secondary);
+  }
+
+  --contrast-dark: #{map-get($contrast, dark)};
+  --contrast-light: #{map-get($contrast, light)};
+
+  @include _air-color-map-options(primary, $primary, $contrast);
+  @include _air-color-map-options(accent, $accent, $contrast);
+  @include _air-color-map-options(warn, $warn, $contrast);
+  @include _air-color-map-options(danger, $danger, $contrast);
+  @include _air-color-map-options(disabled, $disabled, $contrast);
+  @include _air-color-map-options(success, $success, $contrast);
+  @include can-tp-colors();
+}
+
+@mixin can-tp-colors() {
+  .color-text-primary {
+    --color-current: var(--text-primary);
+  }
+
+  .color-text-secondary {
+    --color-current: var(--text-secondary);
+  }
+}
+
+@mixin air-borders-color($primary) {
+  --border-color: #{$primary};
+}
+
+@mixin air-text-colors($primary, $secondary) {
+  --text-primary: #{$primary};
+  --text-secondary: #{$secondary};
+}
+
+@mixin air-background-colors($primary, $secondary) {
+  --background-primary: #{$primary};
+  --background-secondary: #{$secondary};
+  body {
+    background: var(--background-secondary);
+  }
+
+  .background-secondary {
+    background: var(--background-secondary);
+  }
+
+  .background-primary {
+    background: var(--background-primary);
+  }
+}
+
+
+@mixin _air-color-map-options($name, $map, $contrast: (dark: #1B1B1E, light: #fff)) {
+  @if (map-get($map, main)) {
+    @include air-color($name, map-get($map, main), map-get($map, dark), map-get($map, light), map-get($map, shades));
+  }
+}
+
+
+@mixin can-color($color, $shades) {
+  .color-#{$color} {
+    --color-current: var(--color-#{$color});
+    --color-current-contrast: var(--color-#{$color}-contrast);
+    --color-current-dark: var(--color-#{$color}-dark);
+    --color-current-dark-contrast: var(--color-#{$color}-dark-contrast);
+    --color-current-light: var(--color-#{$color}-light);
+    --color-current-light-contrast: var(--color-#{$color}-light-contrast);
+    --color-current-50: var(--color-#{$color}-50);
+    --color-current-100: var(--color-#{$color}-100);
+  }
+
+  @if ($color == disabled) {
+    [disabled="true"] {
+      --color-current: var(--color-#{$color});
+      --color-current-contrast: var(--color-#{$color}-contrast);
+      --color-current-dark: var(--color-#{$color}-dark);
+      --color-current-dark-contrast: var(--color-#{$color}-dark-contrast);
+      --color-current-light: var(--color-#{$color}-light);
+      --color-current-light-contrast: var(--color-#{$color}-light-contrast);
+      @include _air-shades(current, $shades);
+    }
+  }
+}
+
+
+@mixin air-color($name, $main, $dark, $light, $shades:(), $contrast: (dark: #1B1B1E, light: #fff)) {
+  --color-#{$name}: #{$main};
+  --color-#{$name}-contrast: #{contrast-color($main, $contrast)};
+
+  --color-#{$name}-dark: #{$dark};
+  --color-#{$name}-dark-contrast: #{contrast-color($dark, $contrast)};
+
+  --color-#{$name}-light: #{$light};
+  --color-#{$name}-light-contrast: #{contrast-color($light, $contrast)};
+
+  @include can-color($name, $shades);
+  @include _air-shades($name, $shades);
+}
+
+@mixin _air-shades($name, $shades) {
+  @if ($shades) {
+    @include air-color-shades($name, 50, $shades);
+    @include air-color-shades($name, 100, $shades);
+    @include air-color-shades($name, 200, $shades);
+    @include air-color-shades($name, 300, $shades);
+    @include air-color-shades($name, 400, $shades);
+    @include air-color-shades($name, 500, $shades);
+    @include air-color-shades($name, 600, $shades);
+    @include air-color-shades($name, 700, $shades);
+    @include air-color-shades($name, 800, $shades);
+    @include air-color-shades($name, 900, $shades);
+  }
+}
+
+
+@mixin air-color-shades($name, $shade-name, $shades) {
+  @if (map-get($shades, $shade-name)) {
+    --color-#{$name}-#{$shade-name}: #{map-get($shades, $shade-name)};
+    --color-#{$name}-#{$shade-name}-contrast: #{contrast-color(map-get($shades, $shade-name))};
+  }
+}

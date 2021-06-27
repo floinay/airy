@@ -1,0 +1,4 @@
+<label air-button [color]="color" [fill]="fill" [size]="size">
+  <input type="file" airClearBeforeUpload (change)="inputChanged($event)" [accept]="accept" [hidden]="true">
+  <ng-content></ng-content>
+</label>

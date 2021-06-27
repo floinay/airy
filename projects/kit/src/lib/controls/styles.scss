@@ -1,0 +1,21 @@
+@import "../cdk/styles";
+
+.air-options {
+  @include set-current-element(options);
+  @include element-prop(display, block);
+  @include element-prop(background, var(--background-primary));
+  @include element-prop(width, 100%);
+  @include element-prop(outline, none);
+  @include element-prop(max-height, 300px);
+  @include element-prop(overflow-y, auto);
+
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+}
+
+.air-select-panel {
+  @include element-prop(border, 2px solid var(--color-primary-light));
+  @include element-prop(border-top, none);
+}

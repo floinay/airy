@@ -1,0 +1,31 @@
+@function current-color($shade:null, $element:null, $contrast: null) {
+  @if ($element) {
+    @if ($shade) {
+      @if ($contrast) {
+        @return var(--#{$element}__color-current-#{$shade}-contrast, var(--color-current-#{$shade}-contrast));
+      } @else {
+        @return var(--#{$element}__color-current-#{$shade}, var(--color-current-#{$shade}));
+      }
+    } @else {
+      @if ($contrast) {
+        @return var(--#{$element}__color-current-contrast, var(--color-current-contrast));
+      } @else {
+        @return var(--#{$element}__color-current, var(--color-current));
+      }
+    }
+  } @else {
+    @if ($shade) {
+      @if ($contrast) {
+        @return var(--color-current-#{$shade}-contrast)
+      } @else {
+        @return var(--color-current-#{$shade});
+      }
+    } @else {
+      @if ($contrast) {
+        @return var(--color-current-contrast);
+      } @else {
+        @return var(--color-current);
+      }
+    }
+  }
+}

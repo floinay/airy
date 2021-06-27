@@ -1,0 +1,36 @@
+@import "../../../cdk/styles";
+
+:host {
+  @include set-current-element(list-item);
+  @include element-prop(display, flex);
+  @include element-prop(align-items, center);
+  @include element-prop(position, relative);
+  @include element-prop(overflow, hidden);
+  margin-bottom: -1px;
+
+  &::after {
+    @include set-current-element(list-item-delimiter);
+    @include element-prop(height, 1px);
+    @include element-prop(display, block);
+    @include element-prop(width, 100%);
+    @include element-prop(position, absolute);
+    @include element-prop(bottom, 0);
+    content: '';
+    background: var(--list-item__delimiter-color, #E8EAF5);
+    @include element-prop(color, var(--border-color), background-color);
+  }
+}
+
+::ng-deep {
+  .ltr {
+    :host::after {
+      @include element-prop(left, 0, $prop-name: start);
+    }
+  }
+
+  .rtl {
+    :host::after {
+      @include element-prop(right, 0, $prop-name: start);
+    }
+  }
+}

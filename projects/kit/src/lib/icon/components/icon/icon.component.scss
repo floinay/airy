@@ -1,0 +1,10 @@
+:host {
+  background-size: var(--icon__background-size, contain);
+  background-position: var(--icon__background-position, center);
+  width: var(--icon__width, 16px);
+  height: var(--icon__height, 16px);
+  margin: var(--icon__margin, 0);
+  padding: var(--icon__padding, 0);
+  display: var(--icon__display, inline-flex);
+  background-repeat: var(--icon__repeat, no-repeat);
+}

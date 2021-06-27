@@ -1,0 +1,9 @@
+<ng-content></ng-content>
+<ng-template #iconDefault>
+  <air-dynamic-icon class="expansion-header-icon" [name]="iconName" [size]="iconSize"></air-dynamic-icon>
+</ng-template>
+<ng-template></ng-template>
+<div class="icon-wrapper" [@indicatorRotate]="status ? 'expanded': 'collapsed'">
+  <ng-container *ngTemplateOutlet="icon ? icon : iconDefault">
+  </ng-container>
+</div>

@@ -1,0 +1,8 @@
+<ng-template>
+  <div class="air-options air-autocomplete-options" airAutofocus (keydown.enter)="setActive()"
+       (keydown.space)="setActive()"
+       (keydown.arrowUp)="up()"
+       (keydown.arrowDown)="down()">
+    <ng-content></ng-content>
+  </div>
+</ng-template>

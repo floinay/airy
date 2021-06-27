@@ -1,0 +1,9 @@
+@mixin air-default-indents {
+  --indent-xxs: 8px;
+  --indent-xs: 12px;
+  --indent-s: 16px;
+  --indent-m: 20px;
+  --indent-l: 28px;
+  --indent-xl: 40px;
+  --indent-xxl: 60px;
+}

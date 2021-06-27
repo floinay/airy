@@ -1,0 +1,10 @@
+<ng-template>
+  <div [class]="'popover' + ' color-' + color" [id]="id">
+    <div class="popover-content">
+      <ng-content></ng-content>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none" class="arrow">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.622314 0L4.10221 12.4953L16.3979 0H0.622314Z"/>
+    </svg>
+  </div>
+</ng-template>

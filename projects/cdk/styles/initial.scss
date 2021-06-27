@@ -1,0 +1,69 @@
+@import "reset";
+@import "defaults/index";
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.air-block {
+  display: block;
+}
+
+a {
+  color: var(--text-primary);
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+button {
+  outline: none !important;
+}
+
+.hidden-behind-screen {
+  position: fixed;
+  left: -100%;
+  top: -100%;
+  transform: translate(-100%, -100%);
+}
+
+.air-pointer {
+  cursor: pointer;
+}
+
+:root {
+  --direction: ltr;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary-50, #1F59EB);;
+}
+
+::-webkit-scrollbar-thumb {
+  opacity: 1;
+  background: var(--color-disabled, #EBF2FE);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-disabled-dark, #052C76);
+}
+
+img {
+  object-fit: cover;
+}

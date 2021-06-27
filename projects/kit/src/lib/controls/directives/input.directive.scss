@@ -1,0 +1,80 @@
+@import "../../cdk/styles";
+
+@include set-current-element(input);
+
+.air-input {
+  @include element-prop(appearance, none);
+  @include element-prop(width, 100%);
+  @include element-prop(height, 48px);
+  @include element-prop(border, 1px solid var(--border-color));
+  @include element-prop(outline, none);
+  @include element-prop(padding, 0 var(--indent-s));
+  @include element-prop(font-size, get-element-var(text1, font-size));
+  @include element-prop(border-radius, 2px);
+  @include element-prop(background, var(--background-primary));
+  @include element-prop(display, inline-flex);
+  @include element-prop(align-items, center);
+  @include element-prop(color, var(--text-primary));
+
+  &.ng-dirty.ng-invalid {
+    @include set-current-modifier(danger);
+    @include element-prop(border-color, var(--color-danger));
+    @include reset-current-modifier;
+  }
+
+
+  ::placeholder {
+    @include set-current-element(input-placeholder);
+    @include element-prop(color, var(--text-secondary));
+  }
+
+  &.size-s {
+    @include set-current-element(input);
+    @include set-current-modifier(size-s);
+    @include element-prop(height, 36px);
+    @include reset-current-element;
+    @include reset-current-modifier;
+  }
+}
+
+.air-textarea {
+  @include set-current-element(textarea);
+  @include element-prop(width, 100%);
+  @include element-prop(min-height, 48px);
+  @include element-prop(border, 1px solid var(--border-color));
+  @include element-prop(outline, none);
+  @include element-prop(padding, var(--indent-s));
+  @include element-prop(font-size, get-element-var(text1, font-size));
+  @include element-prop(border-radius, 1px);
+  @include element-prop(color, var(--text-primary));
+  @include element-prop(resize, none);
+
+  ::placeholder {
+    @include set-current-element(input-placeholder);
+    @include element-prop(color, var(--text-secondary));
+  }
+}
+
+.air-invisible-input, .air-invisible-textarea {
+  @include set-current-element(input-invisible);
+  @include element-prop(width, 100%);
+  @include element-prop(height, 20px);
+  @include element-prop(border, none);
+  @include element-prop(outline, none);
+  @include element-prop(border-radius, 1px);
+  @include element-prop(font-size, get-element-var(text1, font-size));
+  @include element-prop(color, var(--text-primary));
+  @include element-prop(background, transparent);
+  @include element-prop(font-size, inheirt);
+  @include element-prop(color, inheirt);
+  @include element-prop(resize, none);
+  @include element-prop(box-sizing, content-box);
+  @include element-prop(overflow, hidden);
+
+  ::placeholder {
+    @include set-current-element(input-invisible-placeholder);
+    @include element-prop(color, var(--text-secondary));
+  }
+}
+
+@include reset-current-element;

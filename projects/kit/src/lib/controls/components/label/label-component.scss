@@ -1,0 +1,28 @@
+@import "../../../cdk/styles";
+
+:host {
+  @include set-current-element(label);
+  @include element-prop(display, inline-flex);
+  @include element-prop(align-items, center);
+  @include element-prop(font-weight, 400);
+  @include element-prop(cursor, pointer);
+  @include element-prop(user-select, auto);
+  @include element-prop(margin, 0 0 12px);
+  @include element-prop(font-size, 14px);
+  @include element-prop(color, var(--text-primary));
+  @include element-prop(overflow, hidden);
+  @include element-prop(max-width, 100%);
+  @include element-prop(min-height, 20px);
+  @include element-prop(text-overflow, elipsis);
+
+  &.required {
+    &::after {
+      content: '*';
+      color: var(--color-danger);
+      display: block;
+      font-size: 1.2em;
+    }
+  }
+}
+
+@include reset-current-element;

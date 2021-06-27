@@ -1,0 +1,20 @@
+<label air-label>
+  <span class="checkbox">
+    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12" fill="none">
+      <path
+        d="M11.5845 0.863695L4.20698 8.24117L2.09913 6.13332C1.61893 5.65312 0.840359 5.65312 0.360154 6.13332C-0.120051 6.61353 -0.120051 7.39209 0.360154 7.8723L3.33925 10.8514C3.56984 11.082 3.88261 11.2116 4.20874 11.2116C4.53486 11.2116 4.84763 11.082 5.07823 10.8514C5.07823 10.8514 5.10633 10.8163 5.12038 10.8022L13.3234 2.59916C13.6341 2.28852 13.7554 1.83576 13.6417 1.41142C13.528 0.987076 13.1965 0.655629 12.7722 0.541927C12.3479 0.428226 11.8951 0.549544 11.5845 0.860182V0.863695Z"/>
+    </svg>
+  </span>
+  <input type="checkbox"
+         [required]="required"
+         [checked]="value"
+         hidden="true"
+         [attr.name]="name"
+         [disabled]="disabled"
+         [attr.tabindex]="tabindex"
+         [attr.aria-label]="ariaLabel"
+         [attr.aria-labelledby]="ariaLabelledby"
+         (change)="change()"
+         [attr.value]="value">
+  <ng-content></ng-content>
+</label>

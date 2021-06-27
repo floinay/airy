@@ -1,0 +1,14 @@
+@import "../../../../cdk/styles";
+
+:host {
+  @include set-current-element(file-button);
+  @include element-prop(display, inline-flex);
+  @include element-prop(height, 36px);
+  @include element-prop(align-items, center);
+  @include element-prop(padding, 0 var(--indent-xs) 0 var(--indent-s));
+  @include element-prop(color, current-color($shade: light, $contrast: true));
+  @include element-prop(background, current-color($shade: light));
+  @include element-prop(border-radius, 1px);
+}
+
+@include reset-current-element;

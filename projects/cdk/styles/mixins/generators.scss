@@ -1,0 +1,91 @@
+$current-element: null;
+$current-modifier: null;
+
+@mixin set-current-element($element) {
+  $current-element: $element !global;
+}
+
+@mixin validate-current-element() {
+  @if ($current-element == null) {
+    @error 'you must set current element for use $current-element';
+  }
+}
+
+@mixin reset-current-element() {
+  $current-element: null !global;
+  @include reset-current-modifier;
+}
+
+@mixin set-current-modifier($modifier) {
+  $current-modifier: $modifier !global;
+}
+
+@mixin reset-current-modifier() {
+  $current-modifier: null !global;
+}
+
+@mixin element-var($name, $value, $modifier:null, $element:null) {
+  @if ($element == null) {
+    @include validate-current-element;
+    $element: $current-element !global;
+  }
+
+  --#{prop-name($name, $modifier)}: #{$value};
+}
+
+@mixin element-prop($name, $value, $modifier:null, $prop-name:null) {
+  @include validate-current-element;
+
+  @if ($prop-name == null) {
+    $prop-name: $name;
+  }
+
+  #{$prop-name}: #{prop-value($name, $value, $modifier)}
+}
+
+@mixin modifier-element-prop($name, $name-modifier) {
+  @include validate-current-element;
+
+  #{$name}: var(--#{$current-element}-#{$name-modifier}__#{$name}, #{prop-value($name)})
+}
+
+@function prop-value($name, $value:null, $modifier:null, $element:null) {
+  @if ($modifier == null) {
+    $modifier: $current-modifier;
+  }
+
+  @if ($element == null) {
+    $element: $current-element;
+  }
+
+  $varName: --#{$element}__#{$name};
+  @if ($modifier) {
+    $varName: --#{$element}__#{$name}_#{$modifier};
+  }
+
+  @if ($value) {
+    @return var(#{$varName}, #{$value});
+  }
+
+  @return var(#{$varName});
+}
+
+@function get-element-var($element, $prop) {
+  @return var(--#{$element}__#{$prop})
+}
+
+@function prop-name($name, $modifier:null, $element:null) {
+  @if ($modifier == null) {
+    $modifier: $current-modifier;
+  }
+
+  @if ($element == null) {
+    $element: $current-element;
+  }
+
+  @if ($modifier) {
+    @return --#{$element}__#{$name}_#{$modifier};
+  } @else {
+    @return #{$element}__#{$name};
+  }
+}

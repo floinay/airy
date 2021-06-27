@@ -1,0 +1,12 @@
+@use "sass:color";
+@import "strip-untils";
+
+@function contrast-color($color, $contrast: (dark: #1B1B1E, light: #fff)) {
+  $l: strip-units(color.lightness($color));
+
+  @if ($l > 60) {
+    @return map-get($contrast, dark);
+  } @else {
+    @return map-get($contrast, light);
+  }
+}

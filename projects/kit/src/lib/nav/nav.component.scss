@@ -1,0 +1,59 @@
+@import "../cdk/styles";
+
+$list-item-border: 10px solid transparent;
+
+:host {
+  @include set-current-element(list-item-delimiter);
+  @include element-var(left, var(--indent-l));
+  @include set-current-element(nav);
+  @include element-prop(display, block);
+  @include element-prop(background, var(--background__primary, #fff));
+  @include element-prop(border-inline-end, 1px solid var(--border-color));
+
+  ::ng-deep {
+    .air-list-item {
+      @include set-current-element(nav-item);
+      @include element-prop(border-inline-start, 10px solid transparent);
+      @include element-prop(padding-inline-start, var(--indent-l));
+      @include element-prop(padding-inline-end, var(--indent-l));
+      @include element-prop(padding-bottom, var(--indent-m));
+      @include element-prop(padding-top, var(--indent-m));
+      @include element-prop(line-height, 1);
+      @include element-prop(font-size, var(--caption-2__font-size, 16px));
+      @include element-prop(text-decoration, none);
+      @include element-prop(color, var(--text-color));
+
+      &.active {
+        @include set-current-modifier(active);
+        @include element-prop(background, current-color($shade: 50));
+        @include element-prop(border-inline-start-color, current-color());
+        @include element-prop(color, current-color($shade: 50, $contrast: true));
+
+        &::after {
+          @include set-current-element(nav-item-delimiter);
+          @include element-prop(display, none);
+          @include reset-current-element;
+        }
+      }
+
+      @include reset-current-element;
+
+
+      air-icon, air-dynamic-icon {
+        @include set-current-element(nav-item-icon);
+        @include element-prop(margin-inline-end, var(--indent-m));
+        @include reset-current-element;
+      }
+    }
+  }
+}
+
+.header {
+  @include set-current-element(nav-header);
+  @include element-prop(height, prop-value(height, $element: page-header));
+  @include element-prop(display, flex);
+  @include element-prop(align-items, center);
+  @include element-prop(padding-inline-start, var(--indent-l));
+}
+
+@include reset-current-element;

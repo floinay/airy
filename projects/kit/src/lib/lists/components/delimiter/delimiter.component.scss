@@ -1,0 +1,11 @@
+@import "../../../cdk/styles";
+
+:host {
+  @include set-current-element(delimiter);
+  @include element-prop(display, block);
+  @include element-prop(width, 100%);
+  @include element-prop(height, 1px);
+  @include element-prop(background-color, var(--border-color));
+}
+
+@include reset-current-element;

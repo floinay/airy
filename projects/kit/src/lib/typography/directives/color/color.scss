@@ -1,0 +1,18 @@
+@mixin tp-can-color($color) {
+  .air-tp-color-#{$color} {
+    @if ($color != text-primary and $color != text-secondary) {
+      color: var(--color-#{$color});
+    } @else {
+      color: var(--#{$color});
+    }
+  }
+}
+
+@include tp-can-color(primary);
+@include tp-can-color(accent);
+@include tp-can-color(danger);
+@include tp-can-color(warn);
+@include tp-can-color(success);
+@include tp-can-color(disabled);
+@include tp-can-color(text-primary);
+@include tp-can-color(text-secondary);

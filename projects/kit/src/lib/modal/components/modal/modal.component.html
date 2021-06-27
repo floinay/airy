@@ -1,0 +1,14 @@
+<ng-template airOverlay (airOverlayBackdropClick)="close()" [airOverlayOpen]="status"
+             (airOverlayOnClose)="status = false; onModalClose.emit()">
+  <div airMargin="s">
+    <div class="air-modal">
+      <span airHideIfEmpty (click)="close()" class="modal-close-wrapper">
+        <ng-content select="[close],air-modal-close"></ng-content>
+      </span>
+      <header airHideIfEmpty class="air-modal-header">
+        <ng-content select="[header]"></ng-content>
+      </header>
+      <ng-content></ng-content>
+    </div>
+  </div>
+</ng-template>

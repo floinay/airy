@@ -1,0 +1,125 @@
+@import "../../../cdk/styles";
+
+:host {
+  display: none !important;
+}
+
+@keyframes show-popover {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes hide-popover {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.popover {
+  @include set-current-element(popover);
+  @include element-prop(display, inline-flex);
+  @include element-prop(position, relative);
+  @include element-prop(padding, var(--indent-m) var(--indent-l));
+  @include element-prop(background-color, current-color($shade: light));
+  @include element-prop(border-radius, 6px);
+
+  &:not(.hide) {
+    @include element-prop(animation, 200ms ease-in-out show-popover);
+  }
+
+  &.hide {
+    @include set-current-modifier(hide);
+    animation: 140ms ease-in-out hide-popover;
+    @include reset-current-modifier;
+  }
+
+  .popover-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .arrow {
+    @include set-current-element(popover-arrow);
+    @include element-prop(position, absolute);
+    @include element-prop(fill, current-color($shade: light));
+  }
+
+  &.position-y-top {
+    @include set-current-element(popover);
+    @include element-prop(transform, translateY(-13px));
+
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(bottom, 0);
+      @include element-prop(transform, translateY(100%));
+      @include reset-current-element;
+    }
+  }
+
+  &.position-y-bottom.position-x-start {
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(transform, translateY(-100%) scale(-1) rotateY(-190deg))
+    }
+  }
+
+  &.position-y-top.position-x-start {
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(transform, translateY(100%))
+    }
+  }
+
+  &.position-y-top.position-x-end {
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(transform, translateY(100%) scaleX(-1))
+    }
+  }
+
+  &.position-y-bottom.position-x-end {
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(transform, translateY(-100%) scale(-1))
+    }
+  }
+
+  &.position-x-start {
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(left, var(--indent-l));
+      @include reset-current-element;
+    }
+  }
+
+  &.position-x-end {
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(right, var(--indent-l));
+      @include reset-current-element;
+    }
+  }
+
+  &.position-y-bottom {
+    @include set-current-element(popover);
+    @include element-prop(transform, translateY(13px));
+
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(top, 0);
+      @include element-prop(transform, translateY(-100%));
+      @include reset-current-element;
+    }
+  }
+}

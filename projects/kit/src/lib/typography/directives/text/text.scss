@@ -1,0 +1,16 @@
+@import "../../../cdk/styles";
+@import "../../styles/mixins";
+
+.air-text1, .air-text2, .air-text3 {
+  p {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+}
+
+@mixin air-default-texts {
+  @include air-tp(text1, 20px, 16px, 400);
+  @include air-tp(text2, 16px, 14px, 400);
+  @include air-tp(text3, 14px, 12px, 400);
+}

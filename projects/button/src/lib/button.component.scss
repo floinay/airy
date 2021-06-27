@@ -1,0 +1,152 @@
+@import "~@airy-ui/cdk/styles";
+
+@include set-current-element(button);
+:host {
+  @include element-prop(appearance, none);
+  @include element-prop(border, none);
+  @include element-prop(height, 48px);
+  @include element-prop(min-height, 48px);
+  @include element-prop(display, inline-flex);
+  @include element-prop(border-radius, 6px);
+  @include element-prop(cursor, pointer);
+  @include element-prop(align-items, center);
+  @include element-prop(padding, 0 20px);
+  @include element-prop(margin, 0);
+  @include element-prop(text-decoration, none);
+  @include element-prop(text-align, center);
+  @include element-prop(justify-content, center);
+  @include element-prop(background, current-color());
+  @include element-prop(color, current-color($contrast: true));
+  @include element-prop(font-weight, 400);
+  @include element-prop(font-size, 16px);
+  @include element-prop(transition, none);
+  @include element-prop(position, relative);
+  @include element-prop(max-height, 100%);
+
+  &:not(.clear):not(.outline):not(.reverse) {
+    ::ng-deep {
+      air-dynamic-icon, svg {
+        --icon__color: #{current-color($contrast:true)};
+      }
+    }
+  }
+
+
+  &:focus {
+    @include element-prop(outline, transparent, focus);
+  }
+
+  &.round {
+    @include element-prop(border-radius, 100%, round);
+  }
+
+  &:hover {
+    @include element-prop(background, current-color(dark), hover);
+    @include element-prop(color, current-color(dark, $contrast: true))
+  }
+
+
+  &.outline {
+    @include set-current-modifier(outline);
+    @include element-prop(color, current-color(light, $contrast: true));
+    @include element-prop(background, var(--background-secondary));
+    @include element-prop(border, 1px solid current-color());
+
+    &:hover {
+      @include set-current-modifier(outline-hover);
+      @include element-prop(background, current-color($shade: 50));
+      @include element-prop(color, current-color());
+    }
+
+    @include reset-current-modifier;
+  }
+
+  &.reverse {
+    @include set-current-modifier(reverse);
+    @include element-prop(color, current-color(light, $contrast: true));
+    @include element-prop(background, current-color($contrast: true));
+
+    &:hover {
+      @include set-current-modifier(reverse-hover);
+      @include element-prop(background, current-color($shade: 50));
+      @include element-prop(color, current-color());
+    }
+
+    @include reset-current-modifier;
+  }
+
+  &.clear {
+    @include set-current-modifier(clear);
+    @include element-prop(color, current-color());
+    @include element-prop(background, none);
+
+    &:not([disabled]):hover {
+      @include set-current-modifier(clear-hover);
+      @include element-prop(color, current-color(dark));
+      --icon__color: #{current-color(dark)};
+    }
+
+    @include reset-current-modifier;
+  }
+
+  &.link {
+    @include set-current-modifier(link);
+    @include element-prop(color, var(--text-primary));
+    @include element-prop(background, none);
+    @include element-prop(border, none);
+
+    &:hover {
+      @include set-current-modifier(link-hover);
+      @include element-prop(color, current-color());
+    }
+
+    @include reset-current-modifier;
+  }
+
+  &.block {
+    @include set-current-modifier(block);
+    @include element-prop(width, 100%);
+    @include element-prop(margin-left, 0);
+    @include element-prop(margin-left, 0);
+    @include reset-current-modifier;
+  }
+
+  &.full {
+    @include set-current-modifier(full);
+    @include element-prop(width, 100%);
+    @include element-prop(border-radius, 0);
+    @include element-prop(margin-left, 0);
+    @include element-prop(margin-right, 0);
+    @include reset-current-modifier;
+  }
+
+  &.size-s {
+    @include set-current-modifier(size-s);
+    @include element-prop(height, 36px);
+    @include element-prop(min-height, 36px);
+    @include element-prop(border-radius, 4px);
+    @include element-prop(padding, 0 var(--indent-xxs));
+    @include reset-current-modifier;
+  }
+
+  &.size-xxs {
+    @include set-current-modifier(size-xxs);
+    @include element-prop(height, 26px);
+    @include element-prop(min-height, 26px);
+    @include element-prop(font-size, 14px);
+    @include element-prop(border-radius, 4px);
+    @include element-prop(padding, 0 var(--indent-xxs));
+    @include reset-current-modifier;
+  }
+
+  &.size-none {
+    @include set-current-modifier(size-none);
+    @include element-prop(height, auto);
+    @include element-prop(min-height, 0);
+    @include element-prop(padding, 0);
+    @include reset-current-modifier;
+  }
+}
+
+
+@include set-current-element(null);

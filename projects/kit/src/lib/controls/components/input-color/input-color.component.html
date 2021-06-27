@@ -1,0 +1,8 @@
+<label airMargin="none" class="air-input" airLayout="row" airPaddingStart="none" airText2 airColor="text-secondary">
+  <div class="color" [style.background-color]="value"></div>
+  <ng-container *ngIf="value">{{value}}</ng-container>
+  <ng-container *ngIf="!value && placeholder">{{placeholder}}</ng-container>
+  <input airStretch (touchend)="onTouched()" #inputElement
+         (change)="onColorChange($any($event.target).value)" type="color"
+         style="opacity: 0; position: absolute;left: 0;top: 0;cursor: pointer; visibility: hidden;">
+</label>

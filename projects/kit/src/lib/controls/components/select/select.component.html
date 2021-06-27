@@ -1,0 +1,46 @@
+<div cdk-overlay-origin #origin="cdkOverlayOrigin" class="select-container" [class.active]="opened">
+  <div class="selected-item" *ngIf="active else placeholderRef">
+    {{active.templateView}}
+  </div>
+  <ng-template #placeholderRef>
+    <div class="placeholder">
+      {{placeholder}}
+    </div>
+  </ng-template>
+  <svg style="min-width: 13px;" xmlns="http://www.w3.org/2000/svg" class="arrow" width="13" height="7"
+       viewBox="0 0 13 7" fill="none"
+       [class.active]="opened">
+    <path d="M1.5 1L6.5 6L11.5 1" stroke-width="1.6" stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </svg>
+</div>
+<ng-template
+  cdk-connected-overlay
+  cdkConnectedOverlayLockPosition
+  cdkConnectedOverlayHasBackdrop
+  cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop"
+  cdkConnectedOverlayPanelClass="air-select-panel"
+  [cdkConnectedOverlayOrigin]="origin"
+  [cdkConnectedOverlayOpen]="opened"
+  [cdkConnectedOverlayPositions]="positions"
+  [cdkConnectedOverlayWidth]="clientWidth"
+  [cdkConnectedOverlayOffsetY]="0"
+  [cdkConnectedOverlayOffsetX]="2"
+  (backdropClick)="close()"
+  (detach)="close()">
+  <div
+    airAutofocus
+    class="air-options"
+    #panel
+    role="listbox"
+    tabindex="-1"
+    [attr.id]="name + '-panel'"
+    [attr.aria-label]="placeholder || null"
+    [style.max-width]="clientWidth + 'px'"
+    (keydown.enter)="setActive()"
+    (keydown.space)="setActive()"
+    (keydown.arrowUp)="up()"
+    (keydown.arrowDown)="down()">
+    <ng-content></ng-content>
+  </div>
+</ng-template>

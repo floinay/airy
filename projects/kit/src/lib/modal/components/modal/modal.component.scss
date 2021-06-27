@@ -1,0 +1,43 @@
+@import "../../../cdk/styles";
+
+@include set-current-element(modal);
+.air-modal {
+  @include element-prop(background, var(--background-primary));
+  @include element-prop(padding, var(--indent-xxl));
+  @include element-prop(display, inline-flex);
+  @include element-prop(position, relative);
+  @include element-prop(min-width, 320px);
+  @include element-prop(flex-direction, column);
+  @include element-prop(max-width, 800px);
+  @include element-prop(overflow-x, auto);
+  @include element-prop(max-height, 90vh);
+}
+
+.air-modal-header {
+  margin-bottom: var(--indent-l);
+}
+
+.modal-close-wrapper {
+  @include element-prop(position, absolute);
+  @include element-prop(top, var(--indent-m));
+}
+
+::ng-deep {
+  .ltr {
+    .modal-close-wrapper {
+      @include set-current-element(modal-close-wrapper);
+      @include element-prop(right, var(--indent-m), start);
+      @include reset-current-element;
+    }
+  }
+
+  .rtl {
+    .modal-close-wrapper {
+      @include set-current-element(modal-close-wrapper);
+      @include element-prop(left, var(--indent-m), start);
+      @include reset-current-element;
+    }
+  }
+}
+
+@include reset-current-element;

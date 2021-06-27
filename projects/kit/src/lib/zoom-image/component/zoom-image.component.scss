@@ -1,0 +1,41 @@
+@import "../../cdk/styles";
+
+@include set-current-element(modal-image);
+.air-modal-image {
+  @include element-prop(background, var(--background-primary));
+  @include element-prop(display, inline-flex);
+  @include element-prop(position, relative);
+  @include element-prop(flex-direction, column);
+  @include element-prop(margin, var(--indent-xs));
+
+  img {
+    max-height: 90vh;
+    width: auto;
+    height: 100%;
+  }
+}
+
+.modal-close-wrapper {
+  @include element-prop(position, absolute);
+  @include element-prop(top, var(--indent-m));
+  @include element-prop(border, none);
+  @include element-prop(background-color, rgba(0, 0, 0, 0.6));
+  @include element-prop(border-radius, var(--indent-xxl));
+  @include element-prop(width, var(--icon__width, 30px));
+  @include element-prop(height, var(--icon__height, 30px));
+  @include element-prop(display, inline-flex);
+  @include element-prop(align-items, center);
+  @include element-prop(justify-content, center);
+
+  &:hover {
+    @include element-prop(background-color, rgba(0, 0, 0, 1));
+  }
+
+  air-dynamic-icon::ng-deep {
+    --icon__color: var(--color-current-contrast);
+    width: var(--icon__width, 12px);
+    height: var(--icon__height, 12px);
+  }
+}
+
+

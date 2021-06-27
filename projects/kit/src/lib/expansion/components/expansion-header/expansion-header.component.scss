@@ -1,0 +1,18 @@
+:host {
+  display: var(--expansion-header__display, flex);
+  cursor: var(--expansion-header__cursor, pointer);
+  align-items: var(--expansion-header__align-items, center);
+  user-select: var(--expansion-header__user-select, auto);
+
+  .icon-wrapper {
+    margin-inline-start: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    --icon__width: var(--expansion-header__icon-width, 13px);
+    --icon__height: var(--expansion-header__icon-height, 7px);
+    --icon__stroke: var(--expansion-header__icon-stroke, #A1A5C0);
+    --icon__fill: var(--expansion-header__icon-fill, none)
+  }
+
+}

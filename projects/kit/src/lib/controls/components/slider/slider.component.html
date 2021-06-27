@@ -1,0 +1,17 @@
+<ng-template #counterWithPercent let-count="count">{{count}}%</ng-template>
+<ng-template #defaultCounter>{{counter}}</ng-template>
+<div class="counter" *ngIf="showCounter">
+  <span style="visibility: hidden"><ng-container
+    *ngTemplateOutlet="counter ? counter: defaultCounter;context:maxValueContext"></ng-container></span>
+  <span class="counter-value"><ng-container
+    *ngTemplateOutlet="counter? counter :defaultCounter;context:counterContext"></ng-container></span>
+</div>
+<div class="slider" airFlex="1" #slider>
+  <button #button (pointerdown)="onDragStart()"
+          class="slider-button">
+    <span class="slider-button-pointer"></span>
+  </button>
+  <div class="slider-container">
+    <div #backgroundContainer class="slider-container-background" airImpositionTo="center start" airStretchY></div>
+  </div>
+</div>

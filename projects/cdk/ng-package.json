@@ -1,0 +1,22 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/cdk",
+  "assets": [
+    "./styles/**/*"
+  ],
+  "lib": {
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "@ng-web-apis/common": "@ng-web-apis/common",
+      "@ngneat/until-destroy": "@ngneat/until-destroy",
+      "@airy-ui/direction": "@airy-ui/direction",
+      "lodash-es": "lodash-es"
+    }
+  },
+  "allowedNonPeerDependencies": [
+    "lodash-es",
+    "@ng-web-apis/common",
+    "@ngneat/until-destroy",
+    "@airy-ui/direction"
+  ]
+}

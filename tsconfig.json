@@ -4,6 +4,28 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "button": [
+        "dist/button/button",
+        "dist/button"
+      ],
+      "buttons": [
+        "dist/buttons/buttons",
+        "dist/buttons"
+      ],
+      "cdk": [
+        "dist/cdk/cdk",
+        "dist/cdk"
+      ],
+      "direction": [
+        "dist/direction/direction",
+        "dist/direction"
+      ],
+      "kit": [
+        "dist/kit/kit",
+        "dist/kit"
+      ]
+    },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,

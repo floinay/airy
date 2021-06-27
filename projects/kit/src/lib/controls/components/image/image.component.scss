@@ -1,0 +1,28 @@
+@import "../../../cdk/styles";
+
+@include set-current-element(image-upload);
+:host {
+  @include element-prop(display, flex);
+  @include element-prop(width, 100%);
+  @include element-prop(max-width, var(--width));
+  @include element-prop(height, var(--height));
+  @include element-prop(position, relative);
+  @include element-prop(border-radius, 6px);
+  @include element-prop(font-size, var(--text1__font-size));
+  background-image: repeating-linear-gradient(0deg, var(--text-secondary), var(--text-secondary) 10px, transparent 10px, transparent 20px, var(--text-secondary) 20px), repeating-linear-gradient(90deg, var(--text-secondary), var(--text-secondary) 10px, transparent 10px, transparent 20px, var(--text-secondary) 20px), repeating-linear-gradient(180deg, var(--text-secondary), var(--text-secondary) 10px, transparent 10px, transparent 20px, var(--text-secondary) 20px), repeating-linear-gradient(270deg, var(--text-secondary), var(--text-secondary) 10px, transparent 10px, transparent 20px, var(--text-secondary) 20px);
+  background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+
+  .image {
+    @include set-current-element(image-upload-img);
+    @include element-prop(max-width, calc(var(--width) - 50%));
+    @include element-prop(width, 100%);
+    @include element-prop(height, auto);
+    @include element-prop(max-height, calc(var(--height) - 40%));
+    @include reset-current-element;
+  }
+}
+
+@include reset-current-modifier;
+@include reset-current-element;

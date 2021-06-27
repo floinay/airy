@@ -1,0 +1,10 @@
+<label class="label" airStretch airLayout="row" airLayoutAlign="center center" airImpositionContainer>
+  <input hidden type="file" airClearBeforeUpload (change)="inputChanged($event)">
+  <img [src]="src" *ngIf="src; else uploadContent" class="image">
+  <ng-template #uploadContent>
+    <ng-content></ng-content>
+  </ng-template>
+  <div airHideIfEmpty airMarginEnd="xs" airMarginTop="xs" airImpositionTo="top end" *ngIf="src">
+    <ng-content select="[actions]"></ng-content>
+  </div>
+</label>
