@@ -4,12 +4,19 @@
   "scripts": {
     "watch cdk": "ng build cdk --watch --configuration production",
     "build cdk": "ng build cdk --configuration production",
+    "publish cdk": "cd dist/cdk && npm publish",
     "watch layout": "ng build layout --watch --configuration production",
-    "build layout": "ng build layout --configuration production"
+    "build layout": "ng build layout --configuration production",
+    "publish layout": "cd dist/layout && npm publish",
+    "watch controls": "ng build controls --watch --configuration production",
+    "build controls": "ng build controls --configuration production",
+    "publish controls": "cd dist/controls && npm publish"
   },
   "private": true,
   "dependencies": {
-    "@airy-ui/cdk": "^2.1.0",
+    "@airy-ui/layout": "^2.0.1",
+    "@airy-ui/button": "^2.0.0",
+    "@airy-ui/cdk": "2.1.2",
     "@airy-ui/direction": "^2.1.0",
     "@angular/animations": "~12.1.0",
     "@angular/cdk": "^12.1.0",

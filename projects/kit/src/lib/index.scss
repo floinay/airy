@@ -1,6 +1,6 @@
 @import "cdk/styles";
 @import "layout/styles";
-@import "controls/styles";
-@import "controls/directives/input.directive";
+@import "../../../controls/src/lib/styles";
+@import "../../../controls/src/lib/directives/input.directive";
 @import "typography";
 @import "loaders";

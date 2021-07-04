@@ -1,0 +1,87 @@
+@import "~@airy-ui/cdk/styles";
+
+:host {
+  @include set-current-element(form-field);
+  @include element-prop(display, inline-flex);
+  @include element-prop(align-items, flex-start);
+  @include element-prop(width, 100%);
+  @include element-prop(height, auto);
+
+  &:not(.inline) {
+    @include element-prop(flex-direction, column);
+  }
+
+  .control {
+    @include set-current-element(form-field-control);
+    @include element-prop(position, relative);
+    @include element-prop(display, flex);
+    @include element-prop(align-items, center);
+    @include element-prop(width, 100%);
+
+    ::ng-deep {
+      .air-input {
+        padding-inline-start: calc(var(--input__padding, var(--indent-s)) + var(--input-padding-start));
+        padding-inline-end: calc(var(--input__padding, var(--indent-s)) + var(--input-padding-end))
+      }
+    }
+
+    .ff-prefix, .ff-suffix {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ff-suffix {
+
+      ::ng-deep {
+        button {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+
+    .ff-prefix {
+
+      ::ng-deep {
+        button {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+
+    ::ng-deep {
+      button {
+        margin: 0;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  .ltr {
+    .ff-prefix {
+      left: 0;
+    }
+
+    .ff-suffix {
+      right: 0;
+    }
+  }
+
+  .rtl {
+    .ff-prefix {
+      right: 0;
+    }
+
+    .ff-suffix {
+      left: 0;
+    }
+  }
+}
+
+@include reset-current-element;

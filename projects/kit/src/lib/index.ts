@@ -3,7 +3,7 @@ export * from './lists';
 export * from './tooltip';
 export * from './icon';
 export * from './expansion';
-export * from './controls';
+export * from '../../../controls/src/lib';
 export * from './nav';
 export * from './button';
 export * from './typography';

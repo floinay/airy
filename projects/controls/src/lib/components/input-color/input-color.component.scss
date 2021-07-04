@@ -1,0 +1,20 @@
+@import "~@airy-ui/cdk/styles";
+
+:host {
+  @include set-current-element(input-color);
+  @include element-prop(width, 100%);
+
+  .color {
+    @include set-current-element(input-color-color);
+    @include element-prop(width, 30px);
+    @include element-prop(height, 100%);
+    @include element-prop(border, 1px solid var(--border-color));
+    @include element-prop(border-inline-start, none);
+    @include element-prop(margin-inline-end, var(--indent-xs));
+    @include element-prop(border-radius, 2px);
+  }
+}
+
+@include reset-current-modifier;
+@include reset-current-element;
+

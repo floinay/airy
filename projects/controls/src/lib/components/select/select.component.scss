@@ -1,0 +1,78 @@
+@import "~@airy-ui/cdk/styles";
+
+:host {
+  @include set-current-element(select);
+  @include element-prop(display, inline-flex);
+  @include element-prop(flex-direction, column);
+  @include element-prop(background, var(--background-primary));
+  @include element-prop(height, 48px);
+  @include element-prop(cursor, pointer);
+  @include element-prop(border, 2px solid transparent);
+  @include element-prop(width, 100%);
+  @include element-prop(position, relative);
+
+  &::after {
+    content: '';
+    z-index: 1;
+    left: -2px;
+    position: absolute;
+    top: -2px;
+    width: calc(100% + 2px);
+    height: calc(100% + 4px);
+    border: 1px solid var(--border-color);
+  }
+
+  &.opened {
+    @include element-prop(padding, 0);
+    @include set-current-modifier(opened);
+    @include element-prop(border-color, var(--color-primary-light));
+    @include element-prop(border-bottom-color, transparent);
+    @include element-prop(outline, none);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .select-container {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    @include element-prop(padding, 0 var(--indent-m) 0 var(--indent-s));
+    @include element-prop(font-size, 14px);
+    @include element-prop(color, var(--text-primary));
+  }
+
+  .placeholder {
+    @include set-current-element(select-placeholder);
+    @include element-prop(color, var(--text-secondary));
+    @include element-prop(overflow, hidden);
+    @include element-prop(text-overflow, ellipsis);
+  }
+
+  .placeholder, .selected-item {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .arrow {
+    @include set-current-element(select-arrow);
+    @include element-prop(color, #000, $prop-name: stroke);
+    @include element-prop(margin-inline-start, auto);
+    @include element-prop(transition, transform 200ms ease-in-out);
+    @include element-prop(transform, rotate(0));
+
+    &.active {
+      @include set-current-modifier(active);
+      @include element-prop(transform, rotate(180deg));
+      @include reset-current-modifier;
+    }
+  }
+}
+
+@include reset-current-modifier;
+@include reset-current-element;

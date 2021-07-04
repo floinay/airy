@@ -1,5 +1,5 @@
 import {Directive, ElementRef, HostBinding, Input} from '@angular/core';
-import {camelToKebab} from '../../../../../../cdk/src/lib/helpers';
+import {camelToKebab} from '@airy-ui/cdk';
 
 const POSSIBLE_ATTRIBUTES = ['airH1', 'airH2', 'airH3', 'airH4', 'airH5', 'airFixedH1', 'airFixedH2', 'airFixedH3', 'airFixedH4', 'airFixedH5'];
 

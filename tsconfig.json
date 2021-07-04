@@ -17,6 +17,10 @@
         "dist/cdk/cdk",
         "dist/cdk"
       ],
+      "controls": [
+        "dist/controls/controls",
+        "dist/controls"
+      ],
       "direction": [
         "dist/direction/direction",
         "dist/direction"

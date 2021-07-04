@@ -1,0 +1,60 @@
+@import "~@airy-ui/cdk/styles";
+
+:host {
+  @include set-current-element(checkbox-container);
+  @include element-prop(display, inline-flex);
+  @include element-prop(user-select, none);
+
+  .air-label {
+    margin: 0 !important;
+    display: flex;
+    @include element-prop(align-items, center);
+  }
+
+  .checkbox {
+    @include set-current-element(checkbox);
+    @include element-prop(appearance, none);
+    @include element-prop(margin, 0);
+    @include element-prop(margin-inline-end, var(--indent-m));
+    @include element-prop(padding, 0);
+    @include element-prop(border, 1px solid current-color());
+    @include element-prop(background, var(--background-secondary));
+    @include element-prop(display, block);
+    @include element-prop(width, 20px);
+    @include element-prop(height, 20px);
+    @include element-prop(width, 20px, $prop-name: min-width);
+    @include element-prop(transition, background 200ms ease-in-out);
+    @include element-prop(border-radius, 1px);
+    @include element-prop(cursor, pointer);
+    @include element-prop(outline, none);
+    @include element-prop(position, relative);
+    @include reset-current-element;
+
+    svg {
+      @include set-current-element(checkbox-arrow);
+      @include element-prop(transition, fill 200ms ease-in-out);
+      @include element-prop(left, 0);
+      @include element-prop(top, 0);
+      @include element-prop(transform, translate(2.5px, 2.8px));
+      @include element-prop(position, absolute);
+      @include element-prop(fill, transparent);
+    }
+  }
+
+  &.active {
+    .checkbox {
+      @include set-current-element(checkbox);
+      @include set-current-modifier(active);
+      @include element-prop(background, current-color());
+      @include reset-current-modifier;
+
+      svg {
+        @include set-current-element(checkbox-arrow);
+        @include element-prop(fill, current-color($contrast: true));
+        @include reset-current-element;
+      }
+    }
+  }
+}
+
+@include reset-current-element;
