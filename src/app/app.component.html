@@ -1,0 +1,15 @@
+<air-page>
+  <app-header airStickyHeader></app-header>
+  <air-nav airStickyStart>
+    <a routerLink="/" header>
+      <air-icon name="logo" size="110px 54px"></air-icon>
+    </a>
+    <a air-list-item routerLinkActive="active" [routerLink]="page.url" *ngFor="let page of pages">
+      <air-icon size="l" name="nav/dashboard"></air-icon>
+      {{page.name}}
+    </a>
+  </air-nav>
+  <air-container>
+    <router-outlet></router-outlet>
+  </air-container>
+</air-page>

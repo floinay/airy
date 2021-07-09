@@ -1,0 +1,12 @@
+@use "sass:color";
+@import "~@airy-ui/cdk/styles";
+
+:host {
+  @include app-root();
+}
+
+
+air-nav {
+  min-width: 315px;
+}
+

@@ -4,7 +4,7 @@ import {LoadersStaticInjector} from './loaders-static-injector';
 import {LoaderComponent, ProgressBarComponent} from './components';
 import {AirIconModule} from '../icon';
 import {AIR_LOADER_DEFAULT_PROVIDERS} from './air-loaders.providers';
-import {AirCdkModule} from '../../../../cdk/src/lib';
+import {AirCdkModule} from '@airy-ui/cdk';
 
 const declarations = [LoadDirective, LoaderComponent, ProgressBarComponent];
 

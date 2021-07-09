@@ -8,7 +8,7 @@ import {
   mixinColor,
   mixinDisabled,
   mixinSize
-} from '../../../../../../cdk/src/lib';
+} from '@airy-ui/cdk';
 
 const IconBase: CanColorCtor & CanSizeCtor & CanDisabledCtor = mixinDisabled(mixinSize(mixinColor(HasElementRef, 'primary')));
 

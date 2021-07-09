@@ -7,10 +7,9 @@ import {TemplatePortal} from '@angular/cdk/portal';
 import {PopoverComponentInterface} from '../../interfaces';
 import {PopoverComponent} from '../../components';
 import {DOCUMENT} from '@angular/common';
-import {throwIf} from '../../../../../../cdk/src/lib';
 import {isEqual} from 'lodash-es';
-import {DirectionService} from '@airy-ui/kit';
-import {OptimalPositionService} from '@airy-ui/cdk/services/optimal-position.service';
+import {OptimalPositionService, throwIf} from '@airy-ui/cdk';
+import {DirectionService} from '@airy-ui/direction';
 
 const START_POSITION_LTR: ConnectedPosition = {
   originX: 'start',

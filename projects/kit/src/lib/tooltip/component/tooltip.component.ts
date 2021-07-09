@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, ElementRef, Input} from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
-import {randomId} from '@airy-ui/cdk/helpers';
+import {randomId} from '@airy-ui/cdk';
 
 @Component({
   selector: 'air-tooltip',

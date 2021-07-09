@@ -22,6 +22,8 @@
     & > .air-container, .air-content {
       @include set-current-element(page-content);
       @include element-prop(padding-top, var(--indent-xl));
+      @include element-prop(padding-inline-start, var(--indent-xxl, 60px));
+      @include element-prop(margin-inline-start, sticky-offset(start));
       @include element-prop(margin-top, sticky-offset(header));
       @include element-prop(box-sizing, content-box);
       @include element-prop(min-height, calc(100% - #{sticky-offset(header)} - #{sticky-offset(footer)}));
@@ -32,13 +34,6 @@
       & > * {
         width: 100%;
       }
-    }
-
-    &.has-start {
-      @include set-current-element(page-content);
-      @include element-prop(padding-inline-start, var(--indent-xxl, 60px));
-      @include element-prop(margin-inline-start, sticky-offset(start));
-      @include reset-current-element;
     }
 
     .header, .sticky-header {
@@ -107,7 +102,7 @@
 
     .sticky-start {
       @include set-current-element(page-sticky-start);
-      @include element-prop(start, 0, left);
+      @include element-prop(left, 0, start);
       @include reset-current-element;
     }
   }

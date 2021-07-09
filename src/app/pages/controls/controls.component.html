@@ -1,0 +1,47 @@
+<div airLayout="column">
+  <air-toggle airMarginBottom="l" color="primary">Is Toggle</air-toggle>
+  <air-checkbox>Is checkbox</air-checkbox>
+  <air-radio-group>
+    <air-radio-button value="first">First option</air-radio-button>
+    <air-radio-button value="second">Second Option</air-radio-button>
+  </air-radio-group>
+  <div airGrid airMarginTop="xl">
+    <air-form-field airGridItem="4">
+      <label air-label for="test_input">Name your college</label>
+      <input placeholder="The College" airInput id="test_input">
+    </air-form-field>
+    <air-form-field airGridItem="4">
+      <label air-label for="domain">Name your college</label>
+      <input airInput placeholder="Domain" id="domain">
+    </air-form-field>
+    <air-form-field airGridItem="4">
+      <label air-label for="subdomain">Subdomain</label>
+      <input airInput placeholder="Subdomain" id="subdomain">
+    </air-form-field>
+  </div>
+  <air-form-field airGrid airMarginBottom>
+    <input type="text" airInvisibleInput placeholder="Invisible input">
+  </air-form-field>
+  <air-form-field>
+    <label air-label for="textarea">Textarea example</label>
+    <textarea  id="textarea" airTextarea placeholder="Textarea placeholder" cdkTextAreaAutosize></textarea>
+  </air-form-field>
+  <air-form-field airMarginTop airGridItem="4">
+    <label air-label for="select">Select example</label>
+    <air-select placeholder="Please select options" id="select">
+      <air-option>Nothing</air-option>
+      <air-option value="1">First option</air-option>
+      <air-option value="2">Second option
+        <air-dynamic-icon airMarginStart name="umbrella"></air-dynamic-icon>
+      </air-option>
+    </air-select>
+  </air-form-field>
+  <air-file airMarginTop accept=".pdf" (onFileUpload)="loadedFile = $event">
+    <air-file-item *ngIf="loadedFile">
+      {{loadedFile.name}}
+      <button (click)="loadedFile = undefined" air-button fill="clear" airPaddingStart="s" airPaddingEnd="none">
+        <air-dynamic-icon size="xs" name="remove"></air-dynamic-icon>
+      </button>
+    </air-file-item>
+  </air-file>
+</div>

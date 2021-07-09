@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {NavComponent} from './nav.component';
 import {AirListModule} from '../lists';
-import {AirCdkModule} from '../../../../cdk/src/lib';
+import {AirCdkModule} from '@airy-ui/cdk';
 
 
 @NgModule({

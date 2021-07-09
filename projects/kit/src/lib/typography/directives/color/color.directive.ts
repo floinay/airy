@@ -1,5 +1,5 @@
 import {Directive, ElementRef, Input} from '@angular/core';
-import {ThemePalette} from '../../../../../../cdk/src/lib';
+import {ThemePalette} from '@airy-ui/cdk';
 
 type Color = ThemePalette | 'text-primary' | 'text-secondary';
 

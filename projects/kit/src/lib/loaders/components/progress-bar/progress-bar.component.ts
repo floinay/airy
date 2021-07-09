@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, ElementRef} from '@angular/core';
-import {CanColorCtor, HasElementRef, mixinColor} from '../../../../../../cdk/src/lib';
+import {CanColorCtor, HasElementRef, mixinColor} from '@airy-ui/cdk';
 
 const BarBase: CanColorCtor = mixinColor(HasElementRef, 'primary');
 

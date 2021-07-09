@@ -1,0 +1,21 @@
+<h1 airMarginBottom="xxl">Loaders and progress bars</h1>
+<h2 airMarginBottom>On Content</h2>
+<div [airLoad]="loaderState === 5">
+  <div airMarginBottom>
+    <button air-button color="accent" [airLoad]="loaderState === 1" (click)="loaderState = 1" airMarginEnd>Load me
+    </button>
+    <button air-button airMarginEnd [airLoad]="loaderState === 2" (click)="loaderState = 2">or Load me</button>
+    <button air-button color="danger" airMarginEnd [airLoad]="loaderState === 3" (click)="loaderState = 3">or Load me
+    </button>
+  </div>
+  <div>
+    <input airInput airGridItem="3" placeholder="its input" [airLoad]="loaderState === 4" airMarginEnd>
+    <button air-button (click)="loaderState = 4">Or Load input</button>
+  </div>
+</div>
+<button airMarginTop air-button (click)="loaderState = loaderState === 5 ? 3 : 5">Load all</button>
+<h2 airMarginTop="xxl">Progress bars by color</h2>
+<air-progress-bar airMarginTop></air-progress-bar>
+<air-progress-bar color="accent" airMarginTop></air-progress-bar>
+<air-progress-bar color="warn" airMarginTop></air-progress-bar>
+<air-progress-bar color="danger" airMarginTop></air-progress-bar>

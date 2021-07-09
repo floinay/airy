@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, ElementRef, Input, TemplateRef, ViewChild} from '@angular/core';
-import {CanColorCtor, HasElementRef, mixinColor, randomId} from '../../../../../../cdk/src/lib';
 import {PopoverComponentInterface} from '../../interfaces';
+import {CanColorCtor, HasElementRef, mixinColor, randomId} from '@airy-ui/cdk';
 
 const PopoverBase: CanColorCtor = mixinColor(HasElementRef, 'primary');
 

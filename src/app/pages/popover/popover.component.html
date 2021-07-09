@@ -1,0 +1,56 @@
+<div airLayout="column" airRowGap>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, animi autem delectus dolorem earum fugit illo labore
+    modi natus rem repudiandae sapiente sed similique sint totam. Consequatur, error, impedit! Iste.</p>
+  <p>At commodi deleniti, distinctio earum est harum, minus mollitia nam nostrum nulla omnis placeat quis veniam.
+    Accusamus adipisci aliquid culpa cupiditate, ipsa iusto laborum libero obcaecati possimus, similique voluptatibus
+    voluptatum?</p>
+  <p>Architecto asperiores at consequuntur debitis, deleniti eos et ex explicabo fugiat hic id in inventore ipsum nam
+    pariatur provident quia quibusdam quod sed tempora tenetur, unde, veniam vero voluptates voluptatibus.</p>
+  <p>Architecto at atque doloribus eligendi esse et eum ex, fugit hic impedit ipsam iure laborum laudantium nihil nulla
+    obcaecati omnis perferendis placeat quae quo quod sit, sunt vel vero vitae?</p>
+  <button air-button airGridItem="3" [airPopover]="popover">Test popover</button>
+  <air-popover #popover="popover">
+    <div airLayout="column">
+      <button (click)="test()" air-button airMarginBottom="s" fill="outline">Create new lesson</button>
+      <button air-button fill="outline">Add existing lesson</button>
+      <button air-button fill="outline">Add existing lesson</button>
+    </div>
+  </air-popover>
+
+  <button air-button airGridItem="3" [airPopover]="popoverHover" airPopoverShowEvent="mouseenter"
+          airPopoverHideEvent="mouseout">Hover popover
+  </button>
+  <air-popover #popoverHover="popover" color="danger">
+    <div airLayout="column">
+      <button (click)="test()" air-button airMarginBottom="s" fill="outline">Create new lesson</button>
+      <button air-button fill="outline">Add existing lesson</button>
+    </div>
+  </air-popover>
+
+  <button air-button airGridItem="3" color="warn" [airPopover]="popoverOutside"
+          airPopoverHideEvent="click outside">Popover hide click outside
+  </button>
+  <air-popover #popoverOutside="popover" color="warn">
+    <div airLayout="column">
+      <button (click)="test()" air-button airMarginBottom="s" fill="outline">Create new lesson</button>
+      <button air-button fill="outline">Add existing lesson</button>
+    </div>
+  </air-popover>
+
+  <button air-button fill="outline" color="danger" airPopoverPosition="over" [airPopover]="confirm">Delete</button>
+  <air-confirm #confirm="confirm">
+    <button airStretch air-button color="danger">Sure?</button>
+  </air-confirm>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, amet atque illum incidunt magnam possimus quam
+    quod quos reiciendis voluptatibus! Debitis in optio provident. Aliquid eos natus quidem rem voluptate.</p>
+  <p>Aliquid aut beatae distinctio dolore, dolorum expedita qui sunt voluptates voluptatibus. Accusamus aliquam ea eos
+    est ex expedita inventore itaque iusto laborum maiores minus necessitatibus omnis sapiente, suscipit unde vero!</p>
+  <p>Distinctio eos magnam veritatis? A alias amet assumenda blanditiis cupiditate dolor dolore ducimus enim excepturi
+    expedita facilis fugit ipsam laborum magnam modi molestiae, obcaecati optio praesentium quas recusandae temporibus
+    voluptatem!</p>
+  <p>Aliquid dignissimos ea impedit magni, repellendus reprehenderit? Atque consectetur, cumque illo ipsum magni saepe
+    sint suscipit voluptate. Aliquid architecto, asperiores atque ex nobis nulla omnis, placeat quae rem tempora
+    voluptate.</p>
+</div>
+
+<div style="height: 1800px;"></div>

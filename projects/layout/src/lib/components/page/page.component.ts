@@ -53,9 +53,6 @@ export class PageComponent implements AfterViewInit {
       } else {
         this.elementRef.nativeElement.style.setProperty(`--${name}__offset`, directive.offset + 'px');
       }
-      this.elementRef.nativeElement.classList.add(`has-${name}`);
-    } else {
-      this.elementRef.nativeElement.classList.remove(`has-${name}`);
     }
   }
 }

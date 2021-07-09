@@ -2,6 +2,7 @@
   "name": "airy-ui",
   "version": "2.0.1",
   "scripts": {
+    "serve": "ng serve",
     "watch cdk": "ng build cdk --watch --configuration production",
     "build cdk": "ng build cdk --configuration production",
     "publish cdk": "cd dist/cdk && npm publish",

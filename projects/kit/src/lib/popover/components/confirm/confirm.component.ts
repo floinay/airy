@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, TemplateRef, ViewChild} from '@angular/core';
 import {PopoverComponentInterface} from '../../interfaces';
-import {randomId} from '../../../../../../cdk/src/lib';
+import {randomId} from '@airy-ui/cdk';
 
 @Component({
   selector: 'air-confirm',
