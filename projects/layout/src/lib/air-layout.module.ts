@@ -24,6 +24,7 @@ import {
   StretchDirective,
 } from './directives';
 import {PortalModule} from '@angular/cdk/portal';
+import {AirDirectionModule} from '@airy-ui/direction';
 
 
 const declarations = [
@@ -53,7 +54,8 @@ const declarations = [
 @NgModule({
   declarations,
   imports: [
-    PortalModule
+    PortalModule,
+    AirDirectionModule
   ],
   providers: [],
   exports: declarations

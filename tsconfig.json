@@ -5,33 +5,24 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "paths": {
-      "button": [
-        "dist/button/button",
-        "dist/button"
+      "@angular/*": [
+        "./node_modules/@angular/*"
       ],
-      "buttons": [
-        "dist/buttons/buttons",
-        "dist/buttons"
+      "@airy-ui/*": [
+        "./node_modules/@airy-ui/*"
       ],
-      "cdk": [
-        "dist/cdk/cdk",
-        "dist/cdk"
+      "@ngneat/until-destroy": [
+        "./node_modules/@ngneat/until-destroy"
       ],
-      "controls": [
-        "dist/controls/controls",
-        "dist/controls"
+      "lodash-es": [
+        "./node_modules/lodash-es"
       ],
-      "direction": [
-        "dist/direction/direction",
-        "dist/direction"
+      "@ng-web-apis/common": [
+        "./node_modules/@ng-web-apis/common"
       ],
-      "kit": [
-        "dist/kit/kit",
-        "dist/kit"
-      ],
-      "layout": [
-        "dist/layout/layout",
-        "dist/layout"
+      "sandbox": [
+        "dist/sandbox/sandbox",
+        "dist/sandbox"
       ]
     },
     "forceConsistentCasingInFileNames": true,

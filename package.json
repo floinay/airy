@@ -1,6 +1,6 @@
 {
-  "name": "air",
-  "version": "2.0.0",
+  "name": "airy-ui",
+  "version": "2.0.1",
   "scripts": {
     "watch cdk": "ng build cdk --watch --configuration production",
     "build cdk": "ng build cdk --configuration production",
@@ -8,9 +8,14 @@
     "watch layout": "ng build layout --watch --configuration production",
     "build layout": "ng build layout --configuration production",
     "publish layout": "cd dist/layout && npm publish",
+    "link layout": "cd dist/layout && npm link",
     "watch controls": "ng build controls --watch --configuration production",
     "build controls": "ng build controls --configuration production",
-    "publish controls": "cd dist/controls && npm publish"
+    "publish controls": "cd dist/controls && npm publish",
+    "build direction": "ng build direction --configuration production",
+    "watch direction": "ng build direction --watch",
+    "link direction": "cd dist/direction && npm link",
+    "publish direction": "cd dist/direction && npm publish"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +27,7 @@
     "@angular/cdk": "^12.1.0",
     "@angular/common": "~12.1.0",
     "@angular/compiler": "~12.1.0",
-    "@angular/core": "~12.1.0",
+    "@angular/core": "~12.1.1",
     "@angular/forms": "~12.1.0",
     "@angular/platform-browser": "~12.1.0",
     "@angular/platform-browser-dynamic": "~12.1.0",

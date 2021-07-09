@@ -13,7 +13,10 @@ const declarations: Array<Type<any> | any[]> = [DirectionDirective];
 })
 export class AirDirectionModule {
 
-  static forRoot(defaultDirection?: Direction): ModuleWithProviders<AirDirectionModule> {
+  constructor(direction: DirectionService) {
+  }
+
+  static forRoot(defaultDirection: Direction): ModuleWithProviders<AirDirectionModule> {
     const providers: Provider[] = [DirectionService];
 
     if (defaultDirection) {

@@ -9,16 +9,11 @@ import {
   StylesFactory,
   StylesProvidersFactory
 } from '@airy-ui/cdk';
-import {Platform} from '@angular/cdk/platform';
+
 import {WINDOW} from '@ng-web-apis/common';
-import {ColGapPolyfillService} from './polyfill/col-gap-polyfill.service';
-import {RowGapPolyfillService} from './polyfill/row-gap-polyfill.service';
 
 const stylesFactories: StylesProvidersFactory = (injector: Injector): GenericObject<StylesFactory> => {
-  const colGapPolyfill = injector.get(ColGapPolyfillService);
-  const rowGapPolyfill = injector.get(RowGapPolyfillService);
   const ref = injector.get(ElementRef) as ElementRef<HTMLDivElement>;
-  const platform = injector.get(Platform);
   const window = injector.get(WINDOW);
   return {
     layoutAlign: (value: LayoutAlign): StringObject => {
@@ -34,25 +29,12 @@ const stylesFactories: StylesProvidersFactory = (injector: Injector): GenericObj
       return {};
     },
     colGap: (value: Gap): StringObject => {
-      if (platform.SAFARI || platform.IOS) {
-        colGapPolyfill.enable(ref.nativeElement);
-        return {
-          '--col-gap': `var(--indent-${value}, 0)`
-        };
-      }
-
       return {
         'column-gap': `var(--indent-${value}, 0)`,
         '--col-gap': `var(--indent-${value}, 0)`
       };
     },
     rowGap: (value: Gap): StringObject => {
-      if (platform.SAFARI || platform.IOS) {
-        rowGapPolyfill.enable(ref.nativeElement);
-        return {
-          '--row-gap': `var(--indent-${value}, 0)`
-        };
-      }
       return {
         'row-gap': `var(--indent-${value}, 0)`
       };

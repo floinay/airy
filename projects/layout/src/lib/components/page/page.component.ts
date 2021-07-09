@@ -3,7 +3,6 @@ import {BreakpointObserver} from '@angular/cdk/layout';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 import {EndDirective, FooterDirective, HeaderDirective, StartDirective} from '../../directives';
 import {StickyDirective} from '../../interfaces';
-import {DirectionService} from '@airy-ui/direction';
 import {BREAKPOINT_VALUES} from '@airy-ui/cdk';
 
 type OffsetName = 'header' | 'footer' | 'end' | 'start';
@@ -23,7 +22,6 @@ export class PageComponent implements AfterViewInit {
   @ContentChild(FooterDirective) footer?: FooterDirective;
 
   constructor(private elementRef: ElementRef,
-              private directionService: DirectionService,
               private breakpointObserver: BreakpointObserver) {
   }
 
@@ -55,6 +53,9 @@ export class PageComponent implements AfterViewInit {
       } else {
         this.elementRef.nativeElement.style.setProperty(`--${name}__offset`, directive.offset + 'px');
       }
+      this.elementRef.nativeElement.classList.add(`has-${name}`);
+    } else {
+      this.elementRef.nativeElement.classList.remove(`has-${name}`);
     }
   }
 }
