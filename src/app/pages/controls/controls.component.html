@@ -1,6 +1,10 @@
 <div airLayout="column">
   <air-toggle airMarginBottom="l" color="primary">Is Toggle</air-toggle>
   <air-checkbox>Is checkbox</air-checkbox>
+  <form [formGroup]="passwordsGroup">
+    <input type="password" formControlName="password">
+    <input type="password" formControlName="confirm_password">
+  </form>
   <air-radio-group>
     <air-radio-button value="first">First option</air-radio-button>
     <air-radio-button value="second">Second Option</air-radio-button>
@@ -24,7 +28,7 @@
   </air-form-field>
   <air-form-field>
     <label air-label for="textarea">Textarea example</label>
-    <textarea  id="textarea" airTextarea placeholder="Textarea placeholder" cdkTextAreaAutosize></textarea>
+    <textarea  id="textarea" airTextarea placeholder="Textarea placeholder"></textarea>
   </air-form-field>
   <air-form-field airMarginTop airGridItem="4">
     <label air-label for="select">Select example</label>

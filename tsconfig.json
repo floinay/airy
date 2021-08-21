@@ -17,12 +17,24 @@
       "lodash-es": [
         "./node_modules/lodash-es"
       ],
+      "icon": [
+        "dist/icon/icon",
+        "dist/icon"
+      ],
       "@ng-web-apis/common": [
         "./node_modules/@ng-web-apis/common"
+      ],
+      "modal": [
+        "dist/modal/modal",
+        "dist/modal"
       ],
       "sandbox": [
         "dist/sandbox/sandbox",
         "dist/sandbox"
+      ],
+      "typography": [
+        "dist/typography/typography",
+        "dist/typography"
       ]
     },
     "forceConsistentCasingInFileNames": true,

@@ -1,6 +1,6 @@
-@import "cdk/styles";
-@import "layout/styles";
-@import "../../../controls/src/lib/styles";
+@import "~@airy-ui/cdk/styles";
+@import "~@airy-ui/layout/styles";
+@import "../../../controls/index";
 @import "../../../controls/src/lib/directives/input.directive";
-@import "typography";
+@import "../../../typography/index";
 @import "loaders";

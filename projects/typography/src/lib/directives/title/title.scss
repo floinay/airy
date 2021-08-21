@@ -1,0 +1,15 @@
+@import "~@airy-ui/cdk/styles";
+@import "../../styles/mixins";
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin air-default-titles() {
+  @include air-tp(h1, 48px, 32px, 500);
+  @include air-tp(h2, 32px, 24px, 500);
+  @include air-tp(h3, 24px, 18px, 500);
+  @include air-tp(h4, 20px, 16px, 500);
+  @include air-tp(h5, 16px, 14px, 500);
+}

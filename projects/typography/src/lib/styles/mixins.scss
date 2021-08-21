@@ -1,0 +1,54 @@
+@import "~@airy-ui/cdk/styles";
+
+@mixin air-tp($element, $font-size, $mobile-font-size, $font-weight) {
+  @include set-current-element($element);
+  @include element-var(font-size, $font-size);
+  @include element-var(line-height, $font-size + 10px);
+  @include element-var(font-weight, $font-weight);
+  @include breakpoint(xs) {
+    @include element-var(font-size, $mobile-font-size);
+    @include element-var(line-height, $mobile-font-size + 10px);
+  }
+  .air-mobile, &.air-mobile {
+    @include element-var(font-size, $mobile-font-size);
+    @include element-var(line-height, $mobile-font-size + 10px);
+  }
+
+
+  .air-#{$element}, #{$element}, &.air-#{$element}, #{$element} {
+    font-size: get-element-var($element, font-size);
+    line-height: get-element-var($element, line-height);
+    font-weight: get-element-var($element, font-weight);
+    @include air-tp-deep;
+  }
+
+  .air-fixed-#{$element}, .air-fixed-#{$element} {
+    @include set-current-element(fixed-#{$element});
+    @include element-prop(font-size, $font-size);
+    @include element-prop(line-height, $font-size + 10px);
+    @include element-prop(font-weight, $font-weight);
+    @include reset-current-element;
+    @include air-tp-deep;
+  }
+
+  @include reset-current-element;
+}
+
+
+@mixin air-tp-deep {
+  &.air-tp-deep {
+    * {
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  &.air-tp-deep-important {
+    * {
+      font-size: inherit !important;
+      line-height: inherit !important;
+      font-weight: inherit !important;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 {
   "name": "@airy-ui/direction",
-  "version": "2.1.3",
+  "version": "2.1.6",
   "peerDependencies": {
-    "@angular/common": "^12.1.0",
-    "@angular/core": "^12.1.0",
-    "@ng-web-apis/common": "^1.9.0",
-    "@angular/cdk": "^12.1.0"
+    "@angular/common": "^12.2.2",
+    "@angular/core": "^12.2.2",
+    "@ng-web-apis/common": "^1.12.0",
+    "@angular/cdk": "^12.2.2"
   },
   "dependencies": {
     "tslib": "^2.2.0"

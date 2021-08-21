@@ -11,12 +11,15 @@ interface OpenWindowOptions {
 }
 
 @Injectable({providedIn: 'root'})
+/**
+ * @dynamic
+ */
 export class WindowService {
   constructor(@Inject(WINDOW) readonly window: Window) {
   }
 
   open({url, width, height, target}: OpenWindowOptions): Observable<void> {
-    const w = window.open(url, target || '', `width=${width},height=${height}`) as Window;
+    const w = this.window.open(url, target || '', `width=${width},height=${height}`) as Window;
     let closed = false;
     return interval(1000).pipe(
       takeWhile(() => !closed),

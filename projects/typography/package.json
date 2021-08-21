@@ -1,0 +1,12 @@
+{
+  "name": "@airy-ui/typography",
+  "version": "2.1.5",
+  "private": false,
+  "peerDependencies": {
+    "@angular/common": "^12.2.2",
+    "@angular/core": "^12.2.2"
+  },
+  "dependencies": {
+    "tslib": "^2.2.0"
+  }
+}

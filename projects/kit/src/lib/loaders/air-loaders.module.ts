@@ -2,7 +2,7 @@ import {Injector, NgModule} from '@angular/core';
 import {LoadDirective} from './directives';
 import {LoadersStaticInjector} from './loaders-static-injector';
 import {LoaderComponent, ProgressBarComponent} from './components';
-import {AirIconModule} from '../icon';
+import {AirIconModule} from '../../../../icon/src/lib';
 import {AIR_LOADER_DEFAULT_PROVIDERS} from './air-loaders.providers';
 import {AirCdkModule} from '@airy-ui/cdk';
 

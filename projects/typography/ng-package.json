@@ -1,0 +1,14 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/typography",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "assets": [
+    "./index.scss",
+    "./src/lib/styles/*",
+    "./src/lib/directives/color/color.scss",
+    "./src/lib/directives/text/text.scss",
+    "./src/lib/directives/title/title.scss"
+  ]
+}

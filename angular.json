@@ -307,6 +307,99 @@
           }
         }
       }
+    },
+    "typography": {
+      "projectType": "library",
+      "root": "projects/typography",
+      "sourceRoot": "projects/typography/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/typography/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/typography/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/typography/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/typography/src/test.ts",
+            "tsConfig": "projects/typography/tsconfig.spec.json",
+            "karmaConfig": "projects/typography/karma.conf.js"
+          }
+        }
+      }
+    },
+    "icon": {
+      "projectType": "library",
+      "root": "projects/icon",
+      "sourceRoot": "projects/icon/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/icon/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/icon/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/icon/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/icon/src/test.ts",
+            "tsConfig": "projects/icon/tsconfig.spec.json",
+            "karmaConfig": "projects/icon/karma.conf.js"
+          }
+        }
+      }
+    },
+    "modal": {
+      "projectType": "library",
+      "root": "projects/modal",
+      "sourceRoot": "projects/modal/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/modal/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/modal/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/modal/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/modal/src/test.ts",
+            "tsConfig": "projects/modal/tsconfig.spec.json",
+            "karmaConfig": "projects/modal/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "direction"

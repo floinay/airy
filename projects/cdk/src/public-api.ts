@@ -1,6 +1,7 @@
 import {StylesProvidersFactory} from './lib/services/styles/tokens';
 
 export * from './lib/core';
+export * from './lib/validators';
 export * from './lib/directives';
 export * from './lib/helpers';
 export * from './lib/types';

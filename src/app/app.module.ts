@@ -34,7 +34,7 @@ import {
   AirTooltipModule
 } from '../../projects/kit/src/lib';
 import {AirControlsModule} from '../../projects/controls/src/lib/air-controls.module';
-import {AirTypographyModule} from '../../projects/kit/src/lib/typography/air-typography.module';
+import {AirTypographyModule} from '../../projects/typography/src/lib';
 
 
 @NgModule({
