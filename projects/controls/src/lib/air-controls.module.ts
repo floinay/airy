@@ -28,8 +28,8 @@ import {AutocompleteDirective} from './directives/autocomplete/autocomplete.dire
 import {AirButtonModule} from '@airy-ui/button';
 import {AirLayoutModule} from '@airy-ui/layout';
 import {AirDirectionModule} from '@airy-ui/direction';
-import {AirTypographyModule} from 'typography';
-import {AirIconModule} from 'icon';
+import {AirTypographyModule} from '@airy-ui/typography';
+import {AirIconModule} from '@airy-ui/icon';
 
 const declarations = [
   AutocompleteComponent,
