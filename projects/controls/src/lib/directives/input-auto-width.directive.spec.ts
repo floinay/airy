@@ -1,4 +1,4 @@
-import {InputAutoWidthDirective} from './input-auto-width.directive';
+import { InputAutoWidthDirective } from './input-auto-width.directive';
 
 describe('InputAutoWidthDirective', () => {
   it('should create an instance', () => {

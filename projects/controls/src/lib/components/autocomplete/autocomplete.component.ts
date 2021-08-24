@@ -1,7 +1,6 @@
 import {
   AfterViewInit,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
+  ChangeDetectionStrategy, ChangeDetectorRef,
   Component,
   ContentChildren,
   EventEmitter,
@@ -11,9 +10,9 @@ import {
   TemplateRef,
   ViewChild
 } from '@angular/core';
+import {randomId, SelectionDispatcherService} from '@airy-ui/cdk';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 import {OptionComponent} from '../option/option.component';
-import {randomId, SelectionDispatcherService} from '@airy-ui/cdk';
 
 @Component({
   selector: 'air-autocomplete',

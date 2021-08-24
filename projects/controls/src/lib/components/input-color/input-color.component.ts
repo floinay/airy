@@ -2,7 +2,8 @@ import {
   AfterViewInit,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
-  Component, ElementRef,
+  Component,
+  ElementRef,
   forwardRef,
   Input,
   NgZone,
@@ -39,10 +40,10 @@ export class InputColorComponent implements ControlValueAccessor, AfterViewInit 
         const target = e.target as HTMLInputElement;
         this.onColorChange(target.value);
       })
-    );
+    )
   }
 
-  onColorChange(value: string): void {
+  onColorChange(value: string) {
     this.onChange(value);
     this.value = value;
     this.cdr.markForCheck();

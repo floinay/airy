@@ -1,7 +1,6 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, HostBinding, Input, Output} from '@angular/core';
 import {fileFromEvent} from '@airy-ui/cdk';
 
-
 @Component({
   selector: 'air-image-upload',
   templateUrl: './image.component.html',

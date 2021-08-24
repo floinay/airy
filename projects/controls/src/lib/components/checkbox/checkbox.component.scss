@@ -22,7 +22,6 @@
     @include element-prop(display, block);
     @include element-prop(width, 20px);
     @include element-prop(height, 20px);
-    @include element-prop(width, 20px, $prop-name: min-width);
     @include element-prop(transition, background 200ms ease-in-out);
     @include element-prop(border-radius, 1px);
     @include element-prop(cursor, pointer);
@@ -47,7 +46,6 @@
       @include set-current-modifier(active);
       @include element-prop(background, current-color());
       @include reset-current-modifier;
-
       svg {
         @include set-current-element(checkbox-arrow);
         @include element-prop(fill, current-color($contrast: true));

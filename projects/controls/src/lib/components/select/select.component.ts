@@ -14,10 +14,11 @@ import {
   QueryList
 } from '@angular/core';
 import {OptionComponent} from '../option/option.component';
+import {randomId} from '@airy-ui/cdk';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 import {ConnectedPosition} from '@angular/cdk/overlay';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {randomId, SelectionDispatcherService} from '@airy-ui/cdk';
+import {SelectionDispatcherService} from '@airy-ui/cdk';
 
 const CONNECTED_POSITIONS: ConnectedPosition[] = [
   {

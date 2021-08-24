@@ -8,8 +8,8 @@ import {
 } from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {RadioButtonComponent} from '../radio-button/radio-button.component';
-import {UniqueSelectionDispatcher} from '@angular/cdk/collections';
 import {randomId} from '@airy-ui/cdk';
+import {UniqueSelectionDispatcher} from '@angular/cdk/collections';
 
 @Component({
   selector: 'air-radio-group',

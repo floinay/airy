@@ -4,9 +4,6 @@ import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 import {WINDOW} from '@ng-web-apis/common';
 import {auditTime, debounceTime, tap} from 'rxjs/operators';
 
-/**
- * @dynamic
- */
 @Directive({
   selector: 'textarea[airTextareaAutosize]'
 })
@@ -26,7 +23,7 @@ export class TextareaAutosizeDirective implements AfterViewInit, DoCheck {
   }
 
   @HostListener('input')
-  _noopInputHandler(): void {
+  _noopInputHandler() {
     // no-op handler that ensures we're running change detection on input events.
   }
 
@@ -78,7 +75,7 @@ export class TextareaAutosizeDirective implements AfterViewInit, DoCheck {
   }
 
   private cacheLineHeight(): void {
-    const clonedArea = this.textarea.cloneNode(false) as HTMLTextAreaElement;
+    let clonedArea = this.textarea.cloneNode(false) as HTMLTextAreaElement;
     clonedArea.rows = 1;
     clonedArea.style.position = 'absolute';
     clonedArea.style.visibility = 'hidden';
@@ -90,10 +87,8 @@ export class TextareaAutosizeDirective implements AfterViewInit, DoCheck {
     clonedArea.style.maxHeight = '';
     clonedArea.style.overflow = 'hidden';
     clonedArea.value = '';
-    // tslint:disable-next-line:no-non-null-assertion
     this.textarea.parentNode!.appendChild(clonedArea);
     this.lineHeight = clonedArea.clientHeight;
-    // tslint:disable-next-line:no-non-null-assertion
     this.textarea.parentNode!.removeChild(clonedArea);
     this.setMinHeight();
     this.setMaxHeight();

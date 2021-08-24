@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {InputDirective, TextareaAutosizeDirective} from './directives';
-import {AirCdkModule} from '@airy-ui/cdk';
+
 import {
   AutocompleteComponent,
   CheckboxComponent,
@@ -20,14 +20,16 @@ import {
 import {FormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {OverlayModule} from '@angular/cdk/overlay';
-import {AirButtonModule} from '@airy-ui/button';
 import {AIR_CONTROLS_DEFAULT_PROVIDERS} from './air-controls.providers';
-import {AirLayoutModule} from '@airy-ui/layout';
-import {AutocompleteDirective} from './directives/autocomplete/autocomplete.directive';
+import {AirCdkModule} from '@airy-ui/cdk';
 import {InputAutoWidthDirective} from './directives/input-auto-width.directive';
 import {SimpleAutocompletePipe} from './pipes';
+import {AutocompleteDirective} from './directives/autocomplete/autocomplete.directive';
+import {AirButtonModule} from '@airy-ui/button';
+import {AirLayoutModule} from '@airy-ui/layout';
 import {AirDirectionModule} from '@airy-ui/direction';
-
+import {AirTypographyModule} from 'typography';
+import {AirIconModule} from 'icon';
 
 const declarations = [
   AutocompleteComponent,
@@ -61,7 +63,9 @@ const declarations = [
     OverlayModule,
     AirButtonModule,
     AirLayoutModule,
-    AirDirectionModule
+    AirDirectionModule,
+    AirTypographyModule,
+    AirIconModule
   ],
   providers: AIR_CONTROLS_DEFAULT_PROVIDERS,
   exports: declarations

@@ -26,16 +26,12 @@ interface CounterContext {
   count: number;
 }
 
-/**
- * @dynamic
- */
 @Component({
   selector: 'air-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   exportAs: 'slider',
-  // tslint:disable-next-line:no-host-metadata-property
   host: {
     'attr.role': 'slider'
   },
@@ -99,7 +95,7 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
               private ngZone: NgZone,
               @Inject(DOCUMENT) readonly document: Document,
               private direction: DirectionService) {
-    super(elementRef);
+    super(elementRef)
   }
 
   ngAfterViewInit(): void {
@@ -109,12 +105,12 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
       this.valueChange.pipe(
         auditTime(20),
         untilDestroyed(this),
-        filter(() => this.viewValue !== this.value)
+        filter(() => this.viewValue != this.value)
       ).subscribe(() => {
         this.value = this.viewValue;
         this.onChange(this.value);
       });
-    });
+    })
   }
 
 
@@ -208,7 +204,7 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
   private onChange(value: number): void {
   }
 
-  private ontTouched(): void {
+  private ontTouched() {
 
   }
 

@@ -1,4 +1,4 @@
-import {SimpleAutocompletePipe} from './simpleAutocomplete.pipe';
+import { SimpleAutocompletePipe } from './simpleAutocomplete.pipe';
 
 describe('AutocompletePipe', () => {
   it('create an instance', () => {

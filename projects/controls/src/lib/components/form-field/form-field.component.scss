@@ -6,6 +6,7 @@
   @include element-prop(align-items, flex-start);
   @include element-prop(width, 100%);
   @include element-prop(height, auto);
+  @include element-prop(min-height, 48px);
 
   &:not(.inline) {
     @include element-prop(flex-direction, column);

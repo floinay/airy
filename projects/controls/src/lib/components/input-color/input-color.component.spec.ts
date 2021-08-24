@@ -1,6 +1,6 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {InputColorComponent} from './input-color.component';
+import { InputColorComponent } from './input-color.component';
 
 describe('InputColorComponent', () => {
   let component: InputColorComponent;
@@ -8,9 +8,9 @@ describe('InputColorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [InputColorComponent]
+      declarations: [ InputColorComponent ]
     })
-      .compileComponents();
+    .compileComponents();
   });
 
   beforeEach(() => {

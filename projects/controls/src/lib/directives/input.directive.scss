@@ -6,6 +6,7 @@
   @include element-prop(appearance, none);
   @include element-prop(width, 100%);
   @include element-prop(height, 48px);
+  @include element-prop(min-height, 48px);
   @include element-prop(border, 1px solid var(--border-color));
   @include element-prop(outline, none);
   @include element-prop(padding, 0 var(--indent-s));

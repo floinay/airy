@@ -1,6 +1,6 @@
-import {TestBed} from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-import {AutocompleteService} from './autocomplete.service';
+import { AutocompleteService } from './autocomplete.service';
 
 describe('AutocompleteService', () => {
   let service: AutocompleteService;

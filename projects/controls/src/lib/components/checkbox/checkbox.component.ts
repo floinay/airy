@@ -27,7 +27,7 @@ export class CheckboxComponent extends CheckboxBase implements ControlValueAcces
     return this.value === this.enabledValue;
   }
 
-  value: any = false;
+  @Input() value: any = false;
 
   @Input() name = '';
 
