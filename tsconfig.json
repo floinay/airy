@@ -33,6 +33,10 @@
         "dist/sandbox/sandbox",
         "dist/sandbox"
       ],
+      "test": [
+        "dist/test/test",
+        "dist/test"
+      ],
       "typography": [
         "dist/typography/typography",
         "dist/typography"
