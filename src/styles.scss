@@ -1,5 +1,6 @@
 @import "~@airy-ui/cdk/styles";
 @import "~@airy-ui/cdk/styles/initial";
+@import "~@airy-ui/layout/styles";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 
 
@@ -19,7 +20,7 @@
   );
   --border-radius: 4px;
 
-  //@include air-grid(74px, 28px);
+  @include air-grid(74px, 28px);
   @include air-default-button-sizes;
   @include air-default-indents;
 

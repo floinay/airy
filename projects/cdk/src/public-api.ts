@@ -33,3 +33,4 @@ export {
   CLASSES_FACTORIES
 } from './lib/services/styles/tokens'
 
+export * from './lib/services/styles/parser/helpers';

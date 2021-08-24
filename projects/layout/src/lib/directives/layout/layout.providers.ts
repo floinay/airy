@@ -1,4 +1,4 @@
-import {ElementRef, Injector, Provider} from '@angular/core';
+import {Injector, Provider} from '@angular/core';
 import {parseLayoutAlign} from './helpers/parse-layout-align';
 import {LayoutAlign} from './types';
 import {Gap} from './types/gap';
@@ -9,12 +9,10 @@ import {
   StylesFactory,
   StylesProvidersFactory
 } from '@airy-ui/cdk';
+import {purePropName} from '@airy-ui/cdk';
 
-import {WINDOW} from '@ng-web-apis/common';
 
 const stylesFactories: StylesProvidersFactory = (injector: Injector): GenericObject<StylesFactory> => {
-  const ref = injector.get(ElementRef) as ElementRef<HTMLDivElement>;
-  const window = injector.get(WINDOW);
   return {
     layoutAlign: (value: LayoutAlign): StringObject => {
       if (value) {
@@ -39,10 +37,10 @@ const stylesFactories: StylesProvidersFactory = (injector: Injector): GenericObj
         'row-gap': `var(--indent-${value}, 0)`
       };
     },
-    colCount: (value: number) => {
-      const styles = window.getComputedStyle(ref.nativeElement);
-      const gap = styles.getPropertyValue('--col-gap');
-      if (value) {
+    colCount: (value: number, map: Map<string, string>) => {
+      const gapKey = Array.from(map.keys()).find(key => purePropName(key) === 'colGap');
+      if (value && gapKey) {
+        const gap = 'var(--indent-' + map.get(gapKey) + ')';
         return {
           '--col-width': `calc((100% - (${gap} * ${value - 1})) / ${value})`
         }

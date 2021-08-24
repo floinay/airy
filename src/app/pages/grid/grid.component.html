@@ -1,6 +1,12 @@
 <h1>
   Grid
 </h1>
+<div [airColCount]="3" airLayout="row wrap" airColGap="l">
+  <div airGridItem></div>
+  <div airGridItem></div>
+  <div airGridItem></div>
+  <div airGridItem></div>
+</div>
 <div airGridItem="12">12 - <span>{{getGridSize(12)}}</span></div>
 <div airGrid>
   <div airGridItem="1">1 - <span>{{getGridSize(1)}}</span></div>
