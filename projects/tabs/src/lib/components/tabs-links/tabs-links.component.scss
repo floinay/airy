@@ -1,0 +1,101 @@
+@import "~@airy-ui/cdk/styles";
+@include set-current-element(tab-links-container);
+:host {
+  @include element-prop(display, flex);
+  @include element-prop(position, relative);
+  @include element-prop(width, 100%);
+  @include element-prop(overflow-x, auto);
+  padding-bottom: 1px;
+
+  &.mode-tabs {
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100%;
+      @include element-prop(border-width, 1px, $prop-name: height);
+      @include element-prop(border-position, 1px, $prop-name: bottom);
+      @include element-prop(border-color, var(--border-color), $prop-name: background-color);
+    }
+  }
+
+  @include set-current-element(tab-link);
+
+  ::ng-deep {
+    .air-button {
+      @include element-prop(margin, 0);
+      @include element-prop(white-space, nowrap);
+    }
+  }
+
+  &.mode-buttons {
+    @include set-current-element(tab-button);
+
+    ::ng-deep {
+      .air-button {
+        @include element-prop(height, 36px);
+        @include element-prop(min-height, 36px);
+        @include element-var(padding, 0 var(--indent-m));
+
+        &:not(.active) {
+          @include element-prop(background, var(--background-primary));
+          @include element-prop(border, 1px solid current-color());
+          @include element-prop(color, var(--text-primary));
+
+          &:hover {
+            @include set-current-modifier(hover);
+            @include element-prop(background, current-color($shade: 50));
+            @include element-prop(color, current-color());
+            @include reset-current-modifier;
+          }
+        }
+
+        &:not(:last-child) {
+          @include element-prop(margin-end, var(--indent-xxs, 8px), $prop-name: margin-inline-end);
+        }
+      }
+    }
+
+    @include reset-current-modifier;
+  }
+
+  &.mode-tabs {
+    @include set-current-element(tab-link);
+
+    ::ng-deep {
+      .air-button {
+        @include element-prop(border, none);
+        @include element-prop(border-bottom, 3px solid transparent);
+        @include element-prop(color, var(--text-primary));
+        @include element-prop(background, transparent);
+        @include element-prop(border-radius, 0);
+        @include element-prop(padding-right, 3px);
+        @include element-prop(padding-left, 3px);
+        @include element-prop(height, 40px);
+        @include element-prop(min-height, 40px);
+        @include element-prop(align-items, flex-start);
+        @include element-prop(padding-top, 5px);
+
+        &:not(:last-child) {
+          @include element-prop(margin-end, var(--indent-xl, 40px), $prop-name: margin-inline-end);
+        }
+
+        &:hover {
+          @include set-current-modifier(hover);
+          @include element-prop(color, current-color());
+          @include reset-current-modifier;
+        }
+
+        &.active {
+          @include set-current-modifier(active);
+          @include element-prop(font-weight, 500);
+          @include element-prop(color, current-color());
+          @include element-prop(border-bottom-color, current-color());
+          @include reset-current-modifier;
+        }
+      }
+    }
+  }
+
+  @include reset-current-element;
+}

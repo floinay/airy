@@ -32,6 +32,10 @@
         "dist/sandbox/sandbox",
         "dist/sandbox"
       ],
+      "tabs": [
+        "dist/tabs/tabs",
+        "dist/tabs"
+      ],
       "test": [
         "dist/test/test",
         "dist/test"

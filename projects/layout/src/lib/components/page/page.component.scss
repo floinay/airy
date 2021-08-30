@@ -6,7 +6,6 @@
 
 :host {
   @include set-current-element(page-header);
-  @include element-var(height, 98px);
 
   @include set-current-element(page);
   @include element-prop(display, flex);
@@ -36,15 +35,8 @@
       }
     }
 
-    .header, .sticky-header {
-      @include set-current-element(page-header);
-      @include element-prop(height, prop-name(height));
-      @include reset-current-element;
-    }
-
     .sticky-header, .sticky-footer {
-      @include set-current-element(page-header);
-      @include element-prop(max-width, calc(100% - var(--page-start-end-sum, 0)));
+      max-width: calc(100% - var(--page-start-end-sum, 0));
     }
 
 

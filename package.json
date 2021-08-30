@@ -25,7 +25,9 @@
     "build-icon": "ng build icon --configuration production",
     "publish icon": "npm run build-icon && cd dist/icon && npm publish --access=public",
     "build-button": "ng build button --configuration production",
-    "publish button": "npm run build-button && cd dist/button && npm publish --access=public"
+    "publish button": "npm run build-button && cd dist/button && npm publish --access=public",
+    "build-tabs": "ng build tabs --configuration production",
+    "publish tabs": "npm run build-tabs && cd dist/tabs && npm publish --access=public"
   },
   "private": true,
   "dependencies": {
