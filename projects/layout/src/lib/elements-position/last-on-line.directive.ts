@@ -1,4 +1,12 @@
-import {ChangeDetectorRef, Directive, ElementRef, EventEmitter, HostBinding, OnInit, Output} from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Directive,
+  ElementRef,
+  EventEmitter,
+  HostBinding,
+  Output
+} from '@angular/core';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 import {PositionService} from './position.service';
 
@@ -6,7 +14,7 @@ import {PositionService} from './position.service';
   selector: '[airLastOnLine]'
 })
 @UntilDestroy()
-export class LastOnLineDirective implements OnInit {
+export class LastOnLineDirective implements AfterViewInit {
 
   private previousValue?: boolean;
   @HostBinding('class.air-last-on-line') lastOnLine = false;
@@ -17,7 +25,7 @@ export class LastOnLineDirective implements OnInit {
               private cdr: ChangeDetectorRef) {
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.check();
     this.positionService.watch().pipe(untilDestroyed(this)).subscribe(() => this.check());
   }

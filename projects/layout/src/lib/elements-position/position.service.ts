@@ -18,9 +18,9 @@ export class PositionService {
   }
 
   lastOnLine(el: HTMLElement): boolean {
-    const parent = el.parentElement;
-    if (!parent || parent.childNodes.length === 1) {
-      return true;
+    const parent = el.parentElement as HTMLElement;
+    if (!parent || parent.childNodes.length === 1 || el.nodeName === '#comment' || parent.nodeName === '#comment') {
+      return false;
     }
     if (this.hasHorizontalScrollbar(parent)) {
       throw new Error('FirstOnLine not working on parent with horizontal scroll');
@@ -32,20 +32,24 @@ export class PositionService {
     let lineWidth = 0;
     for (let i = 0; i < parent.childNodes.length; i++) {
       const node = parent.children[i] as HTMLElement;
+      if (node.nodeName === '#comment') {
+        continue;
+      }
       const nodeWidth = node.clientWidth + this.getMargin(node);
-
       lineWidth += nodeWidth;
       if (node === el) {
-        if (i === parent.childNodes.length - 1 || lineWidth === parentWidth) {
-          console.log(lineWidth === nodeWidth);
+        if (i === parent.childNodes.length - 1 || lineWidth === parentWidth || nodeWidth >= parentWidth) {
           return true;
         }
         if (lineWidth > parentWidth) {
           return false;
         }
 
-        const nextNode = parent.childNodes[i + 1] as HTMLElement;
-        const nextNodeWidth = nextNode.clientWidth + this.getMargin(nextNode);
+
+        const nextNodeWidth = this.getNextNodeWidth(i, Array.from(parent.childNodes) as HTMLElement[])
+        if (nextNodeWidth === 0) {
+          return true;
+        }
         const nextLineWidth = lineWidth + nextNodeWidth;
         return nextLineWidth >= parentWidth;
       }
@@ -55,10 +59,20 @@ export class PositionService {
     return false;
   }
 
+  private getNextNodeWidth(index = 0, nodes: HTMLElement[]): number {
+    index++;
+    const node = nodes[index];
+    const nextNodeWidth = node.nodeName === '#comment' ? 0 : node.clientWidth + this.getMargin(node);
+    if (nextNodeWidth === 0 && nodes.length - 1 > index) {
+      return this.getNextNodeWidth(index, nodes);
+    }
+    return nextNodeWidth;
+  }
+
   firstOnLine(el: HTMLElement): boolean {
     const parent = el.parentElement;
-    if (!parent || parent.childNodes.length === 1) {
-      return true;
+    if (!parent || parent.childNodes.length === 1 || el.nodeName === '#comment' || parent.nodeName === '#comment') {
+      return false;
     }
 
     if (this.hasHorizontalScrollbar(parent)) {
@@ -71,6 +85,9 @@ export class PositionService {
     let lineWidth = 0;
     for (let i = 0; i < parent.childNodes.length; i++) {
       const node = parent.childNodes[i] as HTMLElement;
+      if (node.nodeName === '#comment') {
+        continue;
+      }
       const nodeWidth = node.clientWidth + this.getMargin(node);
 
       lineWidth += nodeWidth;
@@ -104,11 +121,11 @@ export class PositionService {
 
   private getGap(el: HTMLElement): number {
     const gap = this.window.getComputedStyle(el).columnGap || '0px';
-    if (!gap.endsWith('px')) {
+    if (!gap.endsWith('px') && gap !== 'normal') {
       throw new Error('[startWidth, endWidth] support gap only in px');
     }
 
-    return parseFloat(gap);
+    return gap === 'normal' ? 0 : parseFloat(gap);
   }
 
   private getMargin(el: HTMLElement): number {
