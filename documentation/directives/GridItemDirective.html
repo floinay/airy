@@ -1,0 +1,1636 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>airy-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">airy-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li >GridItemDirective</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/layout/src/lib/directives/grid-item/grid-item.directive.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="../miscellaneous/typealiases.html#O" target="_self" >OnChanges</a></code>
+            </p>
+
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+                    <tr>
+                        <td class="col-md-3">Providers</td>
+                        <td class="col-md-9">
+                            <code>
+                                GRID_ITEM_PROVIDERS
+                            </code>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>
+  [airGridItem],
+  [xs.airGridItem],
+  [sm.airGridItem],
+  [md.airGridItem],
+  [lg.airGridItem],
+  [xl.airGridItem],
+  [ltSm.airGridItem],
+  [ltMd.airGridItem],
+  [ltLg.airGridItem],
+  [ltXl.airGridItem],
+  [gtSm.airGridItem],
+  [gtMd.airGridItem],
+  [gtLg.airGridItem],
+  [gtXs.airGridItem],
+  [airFilledGridItem],
+  [xs.airFilledGridItem],
+  [sm.airFilledGridItem],
+  [md.airFilledGridItem],
+  [lg.airFilledGridItem],
+  [xl.airFilledGridItem],
+  [ltSm.airFilledGridItem],
+  [ltMd.airFilledGridItem],
+  [ltLg.airFilledGridItem],
+  [ltXl.airFilledGridItem],
+  [gtSm.airFilledGridItem],
+  [gtMd.airFilledGridItem],
+  [gtLg.airFilledGridItem],
+  [gtXs.airFilledGridItem],
+  [airFixedGridItem],
+  [xs.airFixedGridItem],
+  [sm.airFixedGridItem],
+  [md.airFixedGridItem],
+  [lg.airFixedGridItem],
+  [xl.airFixedGridItem],
+  [ltSm.airFixedGridItem],
+  [ltMd.airFixedGridItem],
+  [ltLg.airFixedGridItem],
+  [ltXl.airFixedGridItem],
+  [gtSm.airFixedGridItem],
+  [gtMd.airFixedGridItem],
+  [gtLg.airFixedGridItem],
+  [gtXs.airFixedGridItem],
+  </code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#defaultClass" >defaultClass</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#airFilledGridItem" >airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#airFixedGridItem" >airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#airGridItem" >airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airFilledGridItem" >gtLg.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airFixedGridItem" >gtLg.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airGridItem" >gtLg.airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airFilledGridItem" >gtMd.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airFixedGridItem" >gtMd.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airGridItem" >gtMd.airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airFilledGridItem" >gtSm.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airFixedGridItem" >gtSm.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airGridItem" >gtSm.airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airFilledGridItem" >gtXs.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airFixedGridItem" >gtXs.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airGridItem" >gtXs.airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airFilledGridItem" >lg.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airFixedGridItem" >lg.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airGridItem" >lg.airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airFilledGridItem" >ltLg.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airFixedGridItem" >ltLg.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airGridItem" >ltLg.airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airFilledGridItem" >ltMd.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airFixedGridItem" >ltMd.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airGridItem" >ltMd.airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airFilledGridItem" >ltSm.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airFixedGridItem" >ltSm.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airGridItem" >ltSm.airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airFilledGridItem" >ltXl.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airFixedGridItem" >ltXl.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airGridItem" >ltXl.airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#md.airFilledGridItem" >md.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#md.airFixedGridItem" >md.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#md.airGridItem" >md.airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airFilledGridItem" >sm.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airFixedGridItem" >sm.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airGridItem" >sm.airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airFilledGridItem" >xl.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airFixedGridItem" >xl.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airGridItem" >xl.airGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airFilledGridItem" >xs.airFilledGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airFixedGridItem" >xs.airFixedGridItem</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airGridItem" >xs.airGridItem</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#class.air-grid-item" >class.air-grid-item</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(breakpointsStylesManager: <a href="../injectables/BreakpointsStylesManager.html" target="_self">BreakpointsStylesManager</a>, changesState: <a href="../injectables/ChangesState.html" target="_self">ChangesState&lt;string | string&gt;</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:128</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>breakpointsStylesManager</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BreakpointsStylesManager.html" target="_self" >BreakpointsStylesManager</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>changesState</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ChangesState.html" target="_self" >ChangesState&lt;string | string&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airFilledGridItem"></a>
+                        <b>airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:100</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airFixedGridItem"></a>
+                        <b>airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:115</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airGridItem"></a>
+                        <b>airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:85</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airFilledGridItem"></a>
+                        <b>gtLg.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:112</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airFixedGridItem"></a>
+                        <b>gtLg.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:127</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airGridItem"></a>
+                        <b>gtLg.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:97</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airFilledGridItem"></a>
+                        <b>gtMd.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:111</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airFixedGridItem"></a>
+                        <b>gtMd.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="126" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:126</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airGridItem"></a>
+                        <b>gtMd.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:96</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airFilledGridItem"></a>
+                        <b>gtSm.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:110</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airFixedGridItem"></a>
+                        <b>gtSm.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:125</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airGridItem"></a>
+                        <b>gtSm.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:95</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airFilledGridItem"></a>
+                        <b>gtXs.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:113</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airFixedGridItem"></a>
+                        <b>gtXs.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:128</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airGridItem"></a>
+                        <b>gtXs.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:98</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airFilledGridItem"></a>
+                        <b>lg.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:104</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airFixedGridItem"></a>
+                        <b>lg.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:119</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airGridItem"></a>
+                        <b>lg.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:89</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airFilledGridItem"></a>
+                        <b>ltLg.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:108</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airFixedGridItem"></a>
+                        <b>ltLg.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:123</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airGridItem"></a>
+                        <b>ltLg.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:93</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airFilledGridItem"></a>
+                        <b>ltMd.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:107</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airFixedGridItem"></a>
+                        <b>ltMd.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:122</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airGridItem"></a>
+                        <b>ltMd.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:92</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airFilledGridItem"></a>
+                        <b>ltSm.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="106" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:106</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airFixedGridItem"></a>
+                        <b>ltSm.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:121</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airGridItem"></a>
+                        <b>ltSm.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:91</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airFilledGridItem"></a>
+                        <b>ltXl.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:109</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airFixedGridItem"></a>
+                        <b>ltXl.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="124" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:124</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airGridItem"></a>
+                        <b>ltXl.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:94</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airFilledGridItem"></a>
+                        <b>md.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:103</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airFixedGridItem"></a>
+                        <b>md.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:118</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airGridItem"></a>
+                        <b>md.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:88</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airFilledGridItem"></a>
+                        <b>sm.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:102</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airFixedGridItem"></a>
+                        <b>sm.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:117</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airGridItem"></a>
+                        <b>sm.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:87</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airFilledGridItem"></a>
+                        <b>xl.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:105</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airFixedGridItem"></a>
+                        <b>xl.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:120</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airGridItem"></a>
+                        <b>xl.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:90</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airFilledGridItem"></a>
+                        <b>xs.airFilledGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:101</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airFixedGridItem"></a>
+                        <b>xs.airFixedGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="116" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:116</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airGridItem"></a>
+                        <b>xs.airGridItem</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#GridItem" target="_self" >GridItem</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:86</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3>HostBindings</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="class.air-grid-item"></a>
+                    <span class="name">
+                        <span ><b>class.air-grid-item</b></span>
+                        <a href="#class.air-grid-item"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <span ><b>ngOnChanges</b></span>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="135"
+                            class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:135</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="defaultClass"></a>
+                    <span class="name">
+                        <span ><b>defaultClass</b></span>
+                        <a href="#defaultClass"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;class.air-grid-item&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">projects/layout/src/lib/directives/grid-item/grid-item.directive.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Directive, HostBinding, Input, OnChanges, SimpleChanges} from &#x27;@angular/core&#x27;;
+import {GRID_ITEM_PROVIDERS} from &#x27;./grid-item.providers&#x27;;
+import {UntilDestroy, untilDestroyed} from &#x27;@ngneat/until-destroy&#x27;;
+import {BreakpointsStylesManager} from &#x27;@airy-ui/cdk&#x27;;
+import {ChangesState} from &#x27;@airy-ui/cdk&#x27;;
+
+type GridItem &#x3D;
+  1
+  | &#x27;1&#x27;
+  | 2
+  | &#x27;2&#x27;
+  | 3
+  | &#x27;3&#x27;
+  | 4
+  | &#x27;4&#x27;
+  | 5
+  | &#x27;5&#x27;
+  | 6
+  | &#x27;6&#x27;
+  | 7
+  | &#x27;7&#x27;
+  | 8
+  | &#x27;8&#x27;
+  | 9
+  | &#x27;9&#x27;
+  | 10
+  | &#x27;10&#x27;
+  | 11
+  | &#x27;11&#x27;
+  | 12
+  | &#x27;12&#x27;
+  | string;
+
+@Directive({
+  selector: &#x60;
+  [airGridItem],
+  [xs.airGridItem],
+  [sm.airGridItem],
+  [md.airGridItem],
+  [lg.airGridItem],
+  [xl.airGridItem],
+  [ltSm.airGridItem],
+  [ltMd.airGridItem],
+  [ltLg.airGridItem],
+  [ltXl.airGridItem],
+  [gtSm.airGridItem],
+  [gtMd.airGridItem],
+  [gtLg.airGridItem],
+  [gtXs.airGridItem],
+  [airFilledGridItem],
+  [xs.airFilledGridItem],
+  [sm.airFilledGridItem],
+  [md.airFilledGridItem],
+  [lg.airFilledGridItem],
+  [xl.airFilledGridItem],
+  [ltSm.airFilledGridItem],
+  [ltMd.airFilledGridItem],
+  [ltLg.airFilledGridItem],
+  [ltXl.airFilledGridItem],
+  [gtSm.airFilledGridItem],
+  [gtMd.airFilledGridItem],
+  [gtLg.airFilledGridItem],
+  [gtXs.airFilledGridItem],
+  [airFixedGridItem],
+  [xs.airFixedGridItem],
+  [sm.airFixedGridItem],
+  [md.airFixedGridItem],
+  [lg.airFixedGridItem],
+  [xl.airFixedGridItem],
+  [ltSm.airFixedGridItem],
+  [ltMd.airFixedGridItem],
+  [ltLg.airFixedGridItem],
+  [ltXl.airFixedGridItem],
+  [gtSm.airFixedGridItem],
+  [gtMd.airFixedGridItem],
+  [gtLg.airFixedGridItem],
+  [gtXs.airFixedGridItem],
+  &#x60;,
+  providers: [GRID_ITEM_PROVIDERS]
+})
+@UntilDestroy()
+export class GridItemDirective implements OnChanges {
+  @HostBinding(&#x27;class.air-grid-item&#x27;) defaultClass &#x3D; true;
+
+  @Input() airGridItem?: GridItem;
+  @Input(&#x27;xs.airGridItem&#x27;) xsAirGridItem?: GridItem;
+  @Input(&#x27;sm.airGridItem&#x27;) smAirGridItem?: GridItem;
+  @Input(&#x27;md.airGridItem&#x27;) mdAirGridItem?: GridItem;
+  @Input(&#x27;lg.airGridItem&#x27;) lgAirGridItem?: GridItem;
+  @Input(&#x27;xl.airGridItem&#x27;) xlAirGridItem?: GridItem;
+  @Input(&#x27;ltSm.airGridItem&#x27;) ltSmAirGridItem?: GridItem;
+  @Input(&#x27;ltMd.airGridItem&#x27;) ltMdAirGridItem?: GridItem;
+  @Input(&#x27;ltLg.airGridItem&#x27;) ltLgAirGridItem?: GridItem;
+  @Input(&#x27;ltXl.airGridItem&#x27;) ltXlAirGridItem?: GridItem;
+  @Input(&#x27;gtSm.airGridItem&#x27;) gtSmAirGridItem?: GridItem;
+  @Input(&#x27;gtMd.airGridItem&#x27;) gtMdAirGridItem?: GridItem;
+  @Input(&#x27;gtLg.airGridItem&#x27;) gtLgAirGridItem?: GridItem;
+  @Input(&#x27;gtXs.airGridItem&#x27;) gtXsAirGridItem?: GridItem;
+
+  @Input() airFilledGridItem?: GridItem;
+  @Input(&#x27;xs.airFilledGridItem&#x27;) xsAirFilledGridItem?: GridItem;
+  @Input(&#x27;sm.airFilledGridItem&#x27;) smAirFilledGridItem?: GridItem;
+  @Input(&#x27;md.airFilledGridItem&#x27;) mdAirFilledGridItem?: GridItem;
+  @Input(&#x27;lg.airFilledGridItem&#x27;) lgAirFilledGridItem?: GridItem;
+  @Input(&#x27;xl.airFilledGridItem&#x27;) xlAirFilledGridItem?: GridItem;
+  @Input(&#x27;ltSm.airFilledGridItem&#x27;) ltSmAirFilledGridItem?: GridItem;
+  @Input(&#x27;ltMd.airFilledGridItem&#x27;) ltMdAirFilledGridItem?: GridItem;
+  @Input(&#x27;ltLg.airFilledGridItem&#x27;) ltLgAirFilledGridItem?: GridItem;
+  @Input(&#x27;ltXl.airFilledGridItem&#x27;) ltXlAirFilledGridItem?: GridItem;
+  @Input(&#x27;gtSm.airFilledGridItem&#x27;) gtSmAirFilledGridItem?: GridItem;
+  @Input(&#x27;gtMd.airFilledGridItem&#x27;) gtMdAirFilledGridItem?: GridItem;
+  @Input(&#x27;gtLg.airFilledGridItem&#x27;) gtLgAirFilledGridItem?: GridItem;
+  @Input(&#x27;gtXs.airFilledGridItem&#x27;) gtXsAirFilledGridItem?: GridItem;
+
+  @Input() airFixedGridItem?: GridItem;
+  @Input(&#x27;xs.airFixedGridItem&#x27;) xsAirFixedGridItem?: GridItem;
+  @Input(&#x27;sm.airFixedGridItem&#x27;) smAirFixedGridItem?: GridItem;
+  @Input(&#x27;md.airFixedGridItem&#x27;) mdAirFixedGridItem?: GridItem;
+  @Input(&#x27;lg.airFixedGridItem&#x27;) lgAirFixedGridItem?: GridItem;
+  @Input(&#x27;xl.airFixedGridItem&#x27;) xlAirFixedGridItem?: GridItem;
+  @Input(&#x27;ltSm.airFixedGridItem&#x27;) ltSmAirFixedGridItem?: GridItem;
+  @Input(&#x27;ltMd.airFixedGridItem&#x27;) ltMdAirFixedGridItem?: GridItem;
+  @Input(&#x27;ltLg.airFixedGridItem&#x27;) ltLgAirFixedGridItem?: GridItem;
+  @Input(&#x27;ltXl.airFixedGridItem&#x27;) ltXlAirFixedGridItem?: GridItem;
+  @Input(&#x27;gtSm.airFixedGridItem&#x27;) gtSmAirFixedGridItem?: GridItem;
+  @Input(&#x27;gtMd.airFixedGridItem&#x27;) gtMdAirFixedGridItem?: GridItem;
+  @Input(&#x27;gtLg.airFixedGridItem&#x27;) gtLgAirFixedGridItem?: GridItem;
+  @Input(&#x27;gtXs.airFixedGridItem&#x27;) gtXsAirFixedGridItem?: GridItem;
+
+  constructor(private breakpointsStylesManager: BreakpointsStylesManager,
+              private changesState: ChangesState&lt;string, string&gt;) {
+    this.breakpointsStylesManager.watch().pipe(untilDestroyed(this)).subscribe();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.changesState.patch(changes);
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'GridItemDirective.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

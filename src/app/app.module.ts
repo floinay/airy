@@ -22,7 +22,8 @@ import {TooltipComponent} from './pages/tooltip/tooltip.component';
 import {PopoverComponent} from './pages/popover/popover.component';
 import {AirButtonModule} from '@airy-ui/button';
 import {AirDirectionModule} from '../../projects/direction/src/lib';
-import {AirLayoutModule} from '@airy-ui/layout';
+import {AirLayoutModule} from '../../projects/layout/src/lib/air-layout.module';
+import {AirElementsPositionModule} from '../../projects/layout/src/lib/elements-position/air-elements-position.module';
 import {AirLoadersModule} from '../../projects/kit/src/lib/loaders';
 import {AirPopoverModule} from '../../projects/kit/src/lib/popover';
 import {
@@ -130,6 +131,7 @@ import {AirTypographyModule} from '../../projects/typography/src/lib';
     FormsModule,
     RouterModule,
     HttpClientModule,
+    AirElementsPositionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

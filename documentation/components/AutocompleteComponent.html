@@ -1,0 +1,1553 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>airy-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">airy-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  AutocompleteComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/controls/src/lib/components/autocomplete/autocomplete.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">exportAs</td>
+                <td class="col-md-9"><code>autocomplete</code></td>
+            </tr>
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>air-autocomplete</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./autocomplete.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./autocomplete.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#active" >active</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#options" >options</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#selected" >selected</a>
+                            </li>
+                            <li>
+                                <a href="#template" >template</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#disablePrevious" >disablePrevious</a>
+                            </li>
+                            <li>
+                                <a href="#down" >down</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getSelectedId" >getSelectedId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#listenActivation" >listenActivation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#listenSelection" >listenSelection</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#setActive" >setActive</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setNameAndId" >setNameAndId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#unselectPrevious" >unselectPrevious</a>
+                            </li>
+                            <li>
+                                <a href="#up" >up</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#displayWith" >displayWith</a>
+                            </li>
+                            <li>
+                                <a href="#name" >name</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#onValueChange" >onValueChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(selectionDispatcher: <a href="../injectables/SelectionDispatcherService.html" target="_self">SelectionDispatcherService</a>, cdr: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>selectionDispatcher</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SelectionDispatcherService.html" target="_self" >SelectionDispatcherService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cdr</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayWith"></a>
+                        <b>displayWith</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:29</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="name"></a>
+                        <b>name</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>randomId(&#x27;autocomplete&#x27;)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:28</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onValueChange"></a>
+                        <b>onValueChange</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:33</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="disablePrevious"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>disablePrevious</b></span>
+                        <a href="#disablePrevious"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>disablePrevious(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:112</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="down"></a>
+                    <span class="name">
+                        <span ><b>down</b></span>
+                        <a href="#down"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>down()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSelectedId"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getSelectedId</b></span>
+                        <a href="#getSelectedId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSelectedId()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:120</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listenActivation"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>listenActivation</b></span>
+                        <a href="#listenActivation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>listenActivation()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listenSelection"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>listenSelection</b></span>
+                        <a href="#listenSelection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>listenSelection()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:38</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setActive"></a>
+                    <span class="name">
+                        <span ><b>setActive</b></span>
+                        <a href="#setActive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setActive()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:45</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setNameAndId"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setNameAndId</b></span>
+                        <a href="#setNameAndId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setNameAndId()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:74</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="unselectPrevious"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>unselectPrevious</b></span>
+                        <a href="#unselectPrevious"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>unselectPrevious(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:81</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="up"></a>
+                    <span class="name">
+                        <span ><b>up</b></span>
+                        <a href="#up"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>up()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:49</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="active"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>active</b></span>
+                        <a href="#active"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/OptionComponent.html" target="_self" >OptionComponent</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="options"></a>
+                    <span class="name">
+                            <span class="modifier">Optional</span>
+                        <span ><b>options</b></span>
+                        <a href="#options"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/OptionComponent.html" target="_self" >QueryList&lt;OptionComponent&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ContentChildren(OptionComponent)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selected"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>selected</b></span>
+                        <a href="#selected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/OptionComponent.html" target="_self" >OptionComponent</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="template"></a>
+                    <span class="name">
+                        <span ><b>template</b></span>
+                        <a href="#template"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>TemplateRef&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(TemplateRef, {static: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">projects/controls/src/lib/components/autocomplete/autocomplete.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  AfterViewInit,
+  ChangeDetectionStrategy, ChangeDetectorRef,
+  Component,
+  ContentChildren,
+  EventEmitter,
+  Input,
+  Output,
+  QueryList,
+  TemplateRef,
+  ViewChild
+} from &#x27;@angular/core&#x27;;
+import {randomId, SelectionDispatcherService} from &#x27;@airy-ui/cdk&#x27;;
+import {UntilDestroy, untilDestroyed} from &#x27;@ngneat/until-destroy&#x27;;
+import {OptionComponent} from &#x27;../option/option.component&#x27;;
+
+@Component({
+  selector: &#x27;air-autocomplete&#x27;,
+  templateUrl: &#x27;./autocomplete.component.html&#x27;,
+  exportAs: &#x27;autocomplete&#x27;,
+  styleUrls: [&#x27;./autocomplete.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+@UntilDestroy()
+export class AutocompleteComponent implements AfterViewInit {
+  @ViewChild(TemplateRef, {static: true}) template!: TemplateRef&lt;any&gt;;
+  @ContentChildren(OptionComponent) options?: QueryList&lt;OptionComponent&gt;;
+  @Input() name &#x3D; randomId(&#x27;autocomplete&#x27;);
+  @Input() displayWith?: &lt;T&gt;(value: T) &#x3D;&gt; string;
+  private selected?: OptionComponent;
+  private active?: OptionComponent;
+
+  @Output() readonly onValueChange &#x3D; new EventEmitter&lt;string&gt;()
+
+  constructor(private selectionDispatcher: SelectionDispatcherService, private cdr: ChangeDetectorRef) {
+  }
+
+  ngAfterViewInit(): void {
+    this.options?.changes.pipe(untilDestroyed(this)).subscribe(() &#x3D;&gt; this.setNameAndId());
+    this.setNameAndId();
+    this.listenActivation();
+    this.listenSelection();
+  }
+
+  setActive(): void {
+    this.options?.toArray()[this.getSelectedId()].activate();
+  }
+
+  up(): void {
+    let id &#x3D; this.getSelectedId();
+    if (id !&#x3D;&#x3D; 0) {
+      --id;
+    }
+    if (this.options) {
+      this.options.toArray()[id].select();
+    }
+  }
+
+  down(): void {
+    let id &#x3D; -1;
+    if (this.selected) {
+      id &#x3D; this.getSelectedId();
+    }
+
+    if (this.options) {
+      if (id !&#x3D;&#x3D; this.options.length - 1) {
+        ++id;
+      }
+
+      this.options.toArray()[id].select();
+    }
+  }
+
+  private setNameAndId(): void {
+    this.options?.forEach((option, id) &#x3D;&gt; {
+      option.name &#x3D; this.name;
+      option.id &#x3D; String(id);
+    });
+  }
+
+  private unselectPrevious(id: string): void {
+    this.options?.forEach(option &#x3D;&gt; {
+      if (option.id !&#x3D;&#x3D; id) {
+        option.unselect();
+      }
+    });
+  }
+
+  private listenSelection(): void {
+    this.selectionDispatcher.listen(&#x27;select-&#x27; + this.name).pipe(untilDestroyed(this)).subscribe(id &#x3D;&gt; {
+      this.unselectPrevious(id);
+      this.selected &#x3D; this.options?.find(option &#x3D;&gt; option.id &#x3D;&#x3D;&#x3D; id) as OptionComponent;
+      this.cdr.markForCheck();
+    });
+  }
+
+  private listenActivation(): void {
+    this.selectionDispatcher.listen(&#x27;active-&#x27; + this.name).pipe(untilDestroyed(this)).subscribe(id &#x3D;&gt; {
+      this.disablePrevious(id);
+      const active &#x3D; this.active &#x3D; this.options?.find(option &#x3D;&gt; option.id &#x3D;&#x3D;&#x3D; id);
+      if (active) {
+        if (this.displayWith) {
+          this.onValueChange.emit(this.displayWith(active.value));
+        } else {
+          this.onValueChange.emit(active.value);
+        }
+        this.cdr.markForCheck();
+      }
+    });
+  }
+
+  private disablePrevious(id: string): void {
+    this.options?.forEach(option &#x3D;&gt; {
+      if (option.id !&#x3D;&#x3D; id) {
+        option.deactivate();
+      }
+    });
+  }
+
+  private getSelectedId(): number {
+    return this.selected ? Number(this.selected.id) : 0;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-template&gt;
+  &lt;div class&#x3D;&quot;air-options air-autocomplete-options&quot; airAutofocus (keydown.enter)&#x3D;&quot;setActive()&quot;
+       (keydown.space)&#x3D;&quot;setActive()&quot;
+       (keydown.arrowUp)&#x3D;&quot;up()&quot;
+       (keydown.arrowDown)&#x3D;&quot;down()&quot;&gt;
+    &lt;ng-content&gt;&lt;/ng-content&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./autocomplete.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">::ng-deep {
+  .air-autocomplete-options {
+    border-color: var(--border-color);
+    border-width: 1px;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-template>  <div class="air-options air-autocomplete-options" airAutofocus (keydown.enter)="setActive()"       (keydown.space)="setActive()"       (keydown.arrowUp)="up()"       (keydown.arrowDown)="down()">    <ng-content></ng-content>  </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'ActionsPortalComponent', 'selector': 'air-actions-portal'},{'name': 'AutocompleteComponent', 'selector': 'air-autocomplete'},{'name': 'ButtonComponent', 'selector': 'button[air-button], a[air-button], label[air-button]'},{'name': 'CheckboxComponent', 'selector': 'air-checkbox'},{'name': 'CloseModalButtonComponent', 'selector': 'air-modal-close'},{'name': 'ConfirmComponent', 'selector': 'air-confirm'},{'name': 'ContainerComponent', 'selector': 'air-container, [air-container]'},{'name': 'DelimiterComponent', 'selector': 'air-delimiter'},{'name': 'DynamicIconComponent', 'selector': 'air-dynamic-icon'},{'name': 'ExpansionComponent', 'selector': 'air-expansion, [air-expansion]'},{'name': 'ExpansionHeaderComponent', 'selector': 'air-expansion-header, [air-expansion-header]'},{'name': 'FileComponent', 'selector': 'air-file'},{'name': 'FileItemComponent', 'selector': 'air-file-item'},{'name': 'FormFieldComponent', 'selector': 'air-form-field'},{'name': 'HeaderPortalComponent', 'selector': 'air-header-portal'},{'name': 'IconComponent', 'selector': 'air-icon'},{'name': 'ImageComponent', 'selector': 'air-image-upload'},{'name': 'InputColorComponent', 'selector': 'air-input-color'},{'name': 'LabelComponent', 'selector': '[air-label]'},{'name': 'ListComponent', 'selector': 'air-list, [air-list]'},{'name': 'ListItemComponent', 'selector': 'air-list-item, [air-list-item]'},{'name': 'LoaderComponent', 'selector': 'air-loader'},{'name': 'ModalComponent', 'selector': 'lib-modal'},{'name': 'ModalComponent', 'selector': 'air-modal'},{'name': 'NavComponent', 'selector': 'air-nav'},{'name': 'OptionComponent', 'selector': 'air-option'},{'name': 'PageComponent', 'selector': 'air-page'},{'name': 'PopoverComponent', 'selector': 'air-popover'},{'name': 'ProgressBarComponent', 'selector': 'air-progress-bar'},{'name': 'RadioButtonComponent', 'selector': 'air-radio-button'},{'name': 'RadioGroupComponent', 'selector': 'air-radio-group'},{'name': 'ScrollContainerComponent', 'selector': 'air-scroll-container, [air-scroll-container]'},{'name': 'SelectComponent', 'selector': 'air-select'},{'name': 'SliderComponent', 'selector': 'air-slider'},{'name': 'TabsLinksComponent', 'selector': 'air-tabs-links, [air-tabs-links]'},{'name': 'TabsLinksComponent', 'selector': 'air-tabs-links, [air-tabs-links]'},{'name': 'ToggleComponent', 'selector': 'air-toggle'},{'name': 'TooltipComponent', 'selector': 'air-tooltip'},{'name': 'ZoomImageComponent', 'selector': 'air-zoom-image'}];
+    var DIRECTIVES = [{'name': 'AbstractIndentsDirective', 'selector': ''},{'name': 'ActionsContainerDirective', 'selector': '[airActionsContainer]'},{'name': 'AutocompleteDirective', 'selector': 'input[airAutocomplete], textarea[airAutocomplete]'},{'name': 'AutofocusDirective', 'selector': '[airAutofocus]'},{'name': 'AvatarDirective', 'selector': '[airAvatar]'},{'name': 'BreakpointsDirective', 'selector': '[airBreakpoints]'},{'name': 'ClearInputBeforeUploadDirective', 'selector': 'input[airClearBeforeUpload]'},{'name': 'ColorDirective', 'selector': '[airColor]'},{'name': 'ContentDirective', 'selector': '[airContent]'},{'name': 'DirectionDirective', 'selector': '[airDirection]'},{'name': 'EndDirective', 'selector': '[airEnd],[airStickyEnd]'},{'name': 'FlexDirective', 'selector': '
+  [airFlex],
+  [xs.airFlex],
+  [sm.airFlex],
+  [md.airFlex],
+  [lg.airFlex],
+  [xl.airFlex],
+  [ltSm.airFlex],
+  [ltMd.airFlex],
+  [ltLg.airFlex],
+  [ltXl.airFlex],
+  [gtSm.airFlex],
+  [gtMd.airFlex],
+  [gtLg.airFlex],
+  [gtXs.airFlex],
+  '},{'name': 'FooterDirective', 'selector': '[airFooter], [airStickyFooter]'},{'name': 'GridItemDirective', 'selector': '
+  [airGridItem],
+  [xs.airGridItem],
+  [sm.airGridItem],
+  [md.airGridItem],
+  [lg.airGridItem],
+  [xl.airGridItem],
+  [ltSm.airGridItem],
+  [ltMd.airGridItem],
+  [ltLg.airGridItem],
+  [ltXl.airGridItem],
+  [gtSm.airGridItem],
+  [gtMd.airGridItem],
+  [gtLg.airGridItem],
+  [gtXs.airGridItem],
+  [airFilledGridItem],
+  [xs.airFilledGridItem],
+  [sm.airFilledGridItem],
+  [md.airFilledGridItem],
+  [lg.airFilledGridItem],
+  [xl.airFilledGridItem],
+  [ltSm.airFilledGridItem],
+  [ltMd.airFilledGridItem],
+  [ltLg.airFilledGridItem],
+  [ltXl.airFilledGridItem],
+  [gtSm.airFilledGridItem],
+  [gtMd.airFilledGridItem],
+  [gtLg.airFilledGridItem],
+  [gtXs.airFilledGridItem],
+  [airFixedGridItem],
+  [xs.airFixedGridItem],
+  [sm.airFixedGridItem],
+  [md.airFixedGridItem],
+  [lg.airFixedGridItem],
+  [xl.airFixedGridItem],
+  [ltSm.airFixedGridItem],
+  [ltMd.airFixedGridItem],
+  [ltLg.airFixedGridItem],
+  [ltXl.airFixedGridItem],
+  [gtSm.airFixedGridItem],
+  [gtMd.airFixedGridItem],
+  [gtLg.airFixedGridItem],
+  [gtXs.airFixedGridItem],
+  '},{'name': 'HeaderContainerDirective', 'selector': '[airHeaderContainer]'},{'name': 'HeaderDirective', 'selector': '[airHeader], [airStickyHeader]'},{'name': 'HideIfEmptyDirective', 'selector': '[airHideIfEmpty]'},{'name': 'ImpositionContainerDirective', 'selector': '[airImpositionContainer]'},{'name': 'ImpositionDirective', 'selector': '[airImpositionTo]'},{'name': 'InputAutoWidthDirective', 'selector': 'input[airInputAutoWidth]'},{'name': 'InputDirective', 'selector': 'input[airInput], textarea[airTextarea], input[airInvisibleInput], textarea[airInvisibleTextarea]'},{'name': 'LayoutDirective', 'selector': '
+  [airGrid],
+  [airLayout],
+  [xs.airLayout],
+  [sm.airLayout],
+  [md.airLayout],
+  [lg.airLayout],
+  [xl.airLayout],
+  [ltSm.airLayout],
+  [ltMd.airLayout],
+  [ltLg.airLayout],
+  [ltXl.airLayout],
+  [gtSm.airLayout],
+  [gtMd.airLayout],
+  [gtLg.airLayout],
+  [gtXs.airLayout],
+  [airRowGap],
+  [xs.airRowGap],
+  [sm.airRowGap],
+  [md.airRowGap],
+  [lg.airRowGap],
+  [xl.airRowGap],
+  [ltSm.airRowGap],
+  [ltMd.airRowGap],
+  [ltLg.airRowGap],
+  [ltXl.airRowGap],
+  [gtSm.airRowGap],
+  [gtMd.airRowGap],
+  [gtLg.airRowGap],
+  [gtXs.airRowGap],
+  [airColGap],
+  [xs.airColGap],
+  [sm.airColGap],
+  [md.airColGap],
+  [lg.airColGap],
+  [xl.airColGap],
+  [ltSm.airColGap],
+  [ltMd.airColGap],
+  [ltLg.airColGap],
+  [ltXl.airColGap],
+  [gtSm.airColGap],
+  [gtMd.airColGap],
+  [gtLg.airColGap],
+  [gtXs.airColGap],
+  [airColCount],
+  [xs.airColCount],
+  [sm.airColCount],
+  [md.airColCount],
+  [lg.airColCount],
+  [xl.airColCount],
+  [ltSm.airColCount],
+  [ltMd.airColCount],
+  [ltLg.airColCount],
+  [ltXl.airColCount],
+  [gtSm.airColCount],
+  [gtMd.airColCount],
+  [gtLg.airColCount],
+  [gtXs.airColCount],
+  [airColGap],
+  [xs.airColGap],
+  [sm.airColGap],
+  [md.airColGap],
+  [lg.airColGap],
+  [xl.airColGap],
+  [ltSm.airColGap],
+  [ltMd.airColGap],
+  [ltLg.airColGap],
+  [ltXl.airColGap],
+  [gtSm.airColGap],
+  [gtMd.airColGap],
+  [gtLg.airColGap],
+  [gtXs.airColGap],
+  '},{'name': 'LoadDirective', 'selector': '[airLoad], [airLoadWhen]'},{'name': 'MarginsDirective', 'selector': '
+  [airMargin],
+  [xs.airMargin],
+  [sm.airMargin],
+  [md.airMargin],
+  [lg.airMargin],
+  [xl.airMargin],
+  [ltSm.airMargin],
+  [ltMd.airMargin],
+  [ltLg.airMargin],
+  [ltXl.airMargin],
+  [gtSm.airMargin],
+  [gtMd.airMargin],
+  [gtLg.airMargin],
+  [gtXs.airMargin],
+  [airMarginTop],
+  [xs.airMarginTop],
+  [sm.airMarginTop],
+  [md.airMarginTop],
+  [lg.airMarginTop],
+  [xl.airMarginTop],
+  [ltSm.airMarginTop],
+  [ltMd.airMarginTop],
+  [ltLg.airMarginTop],
+  [ltXl.airMarginTop],
+  [gtSm.airMarginTop],
+  [gtMd.airMarginTop],
+  [gtLg.airMarginTop],
+  [gtXs.airMarginTop],
+  [airMarginBottom],
+  [xs.airMarginBottom],
+  [sm.airMarginBottom],
+  [md.airMarginBottom],
+  [lg.airMarginBottom],
+  [xl.airMarginBottom],
+  [ltSm.airMarginBottom],
+  [ltMd.airMarginBottom],
+  [ltLg.airMarginBottom],
+  [ltXl.airMarginBottom],
+  [gtSm.airMarginBottom],
+  [gtMd.airMarginBottom],
+  [gtLg.airMarginBottom],
+  [gtXs.airMarginBottom],
+  [airMarginStart],
+  [xs.airMarginStart],
+  [sm.airMarginStart],
+  [md.airMarginStart],
+  [lg.airMarginStart],
+  [xl.airMarginStart],
+  [ltSm.airMarginStart],
+  [ltMd.airMarginStart],
+  [ltLg.airMarginStart],
+  [ltXl.airMarginStart],
+  [gtSm.airMarginStart],
+  [gtMd.airMarginStart],
+  [gtLg.airMarginStart],
+  [gtXs.airMarginStart],
+  [airMarginEnd],
+  [xs.airMarginEnd],
+  [sm.airMarginEnd],
+  [md.airMarginEnd],
+  [lg.airMarginEnd],
+  [xl.airMarginEnd],
+  [ltSm.airMarginEnd],
+  [ltMd.airMarginEnd],
+  [ltLg.airMarginEnd],
+  [ltXl.airMarginEnd],
+  [gtSm.airMarginEnd],
+  [gtMd.airMarginEnd],
+  [gtLg.airMarginEnd],
+  [gtXs.airMarginEnd],
+  [airMarginHorizontal],
+  [xs.airMarginHorizontal],
+  [sm.airMarginHorizontal],
+  [md.airMarginHorizontal],
+  [lg.airMarginHorizontal],
+  [xl.airMarginHorizontal],
+  [ltSm.airMarginHorizontal],
+  [ltMd.airMarginHorizontal],
+  [ltLg.airMarginHorizontal],
+  [ltXl.airMarginHorizontal],
+  [gtSm.airMarginHorizontal],
+  [gtMd.airMarginHorizontal],
+  [gtLg.airMarginHorizontal],
+  [gtXs.airMarginHorizontal],
+  [airMarginVertical],
+  [xs.airMarginVertical],
+  [sm.airMarginVertical],
+  [md.airMarginVertical],
+  [lg.airMarginVertical],
+  [xl.airMarginVertical],
+  [ltSm.airMarginVertical],
+  [ltMd.airMarginVertical],
+  [ltLg.airMarginVertical],
+  [ltXl.airMarginVertical],
+  [gtSm.airMarginVertical],
+  [gtMd.airMarginVertical],
+  [gtLg.airMarginVertical],
+  [gtXs.airMarginVertical]
+  '},{'name': 'OverlayDirective', 'selector': '[airOverlay]'},{'name': 'PaddingsDirective', 'selector': '
+  [airPadding],
+  [airPaddingStart],
+  [airPaddingEnd],
+  [xs.airPadding],
+  [sm.airPadding],
+  [md.airPadding],
+  [lg.airPadding],
+  [xl.airPadding],
+  [ltSm.airPadding],
+  [ltMd.airPadding],
+  [ltLg.airPadding],
+  [ltXl.airPadding],
+  [gtSm.airPadding],
+  [gtMd.airPadding],
+  [gtLg.airPadding],
+  [gtXs.airPadding],
+  [airPaddingTop],
+  [xs.airPaddingTop],
+  [sm.airPaddingTop],
+  [md.airPaddingTop],
+  [lg.airPaddingTop],
+  [xl.airPaddingTop],
+  [ltSm.airPaddingTop],
+  [ltMd.airPaddingTop],
+  [ltLg.airPaddingTop],
+  [ltXl.airPaddingTop],
+  [gtSm.airPaddingTop],
+  [gtMd.airPaddingTop],
+  [gtLg.airPaddingTop],
+  [gtXs.airPaddingTop],
+  [airPaddingBottom],
+  [xs.airPaddingBottom],
+  [sm.airPaddingBottom],
+  [md.airPaddingBottom],
+  [lg.airPaddingBottom],
+  [xl.airPaddingBottom],
+  [ltSm.airPaddingBottom],
+  [ltMd.airPaddingBottom],
+  [ltLg.airPaddingBottom],
+  [ltXl.airPaddingBottom],
+  [gtSm.airPaddingBottom],
+  [gtMd.airPaddingBottom],
+  [gtLg.airPaddingBottom],
+  [gtXs.airPaddingBottom],
+  [airPaddingStart],
+  [xs.airPaddingStart],
+  [sm.airPaddingStart],
+  [md.airPaddingStart],
+  [lg.airPaddingStart],
+  [xl.airPaddingStart],
+  [ltSm.airPaddingStart],
+  [ltMd.airPaddingStart],
+  [ltLg.airPaddingStart],
+  [ltXl.airPaddingStart],
+  [gtSm.airPaddingStart],
+  [gtMd.airPaddingStart],
+  [gtLg.airPaddingStart],
+  [gtXs.airPaddingStart],
+  [airPaddingEnd],
+  [xs.airPaddingEnd],
+  [sm.airPaddingEnd],
+  [md.airPaddingEnd],
+  [lg.airPaddingEnd],
+  [xl.airPaddingEnd],
+  [ltSm.airPaddingEnd],
+  [ltMd.airPaddingEnd],
+  [ltLg.airPaddingEnd],
+  [ltXl.airPaddingEnd],
+  [gtSm.airPaddingEnd],
+  [gtMd.airPaddingEnd],
+  [gtLg.airPaddingEnd],
+  [gtXs.airPaddingEnd],
+  [airPaddingHorizontal],
+  [xs.airPaddingHorizontal],
+  [sm.airPaddingHorizontal],
+  [md.airPaddingHorizontal],
+  [lg.airPaddingHorizontal],
+  [xl.airPaddingHorizontal],
+  [ltSm.airPaddingHorizontal],
+  [ltMd.airPaddingHorizontal],
+  [ltLg.airPaddingHorizontal],
+  [ltXl.airPaddingHorizontal],
+  [gtSm.airPaddingHorizontal],
+  [gtMd.airPaddingHorizontal],
+  [gtLg.airPaddingHorizontal],
+  [gtXs.airPaddingHorizontal],
+  [airPaddingVertical],
+  [xs.airPaddingVertical],
+  [sm.airPaddingVertical],
+  [md.airPaddingVertical],
+  [lg.airPaddingVertical],
+  [xl.airPaddingVertical],
+  [ltSm.airPaddingVertical],
+  [ltMd.airPaddingVertical],
+  [ltLg.airPaddingVertical],
+  [ltXl.airPaddingVertical],
+  [gtSm.airPaddingVertical],
+  [gtMd.airPaddingVertical],
+  [gtLg.airPaddingVertical],
+  [gtXs.airPaddingVertical],
+  '},{'name': 'PopoverDirective', 'selector': '[airPopover]'},{'name': 'ScrollDirective', 'selector': '[airScroll]'},{'name': 'ScrollToMeDirective', 'selector': '[airScrollToMe]'},{'name': 'StartDirective', 'selector': '[airStart], [airStickyStart]'},{'name': 'StretchDirective', 'selector': '[airStretch], [airStretchX], [airStretchY], [airStretchForcibly], [airStretchForciblyX], [airStretchForciblyY]'},{'name': 'TabLinkDirective', 'selector': '[airTabLink]'},{'name': 'TabLinkDirective', 'selector': '[airTabLink]'},{'name': 'TextareaAutosizeDirective', 'selector': 'textarea[airTextareaAutosize]'},{'name': 'TextDirectionDirective', 'selector': '[airTextStart], [airTextEnd], [airTextCenter]'},{'name': 'TextDirective', 'selector': '[airText1], [airText2], [airText3], [airFixedText1], [airFixedText2], [airFixedText3]'},{'name': 'ThemeDirective', 'selector': '[airTheme]'},{'name': 'TitleDirective', 'selector': '[airH1], [airH2], [airH3], [airH4], [airH5], [airFixedH1], [airFixedH2], [airFixedH3], [airFixedH4], [airFixedH5]'},{'name': 'TooltipDirective', 'selector': '[airTooltip]'},{'name': 'ZoomImageDirective', 'selector': '[airZoomImage]'}];
+    var ACTUAL_COMPONENT = {'name': 'AutocompleteComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AutocompleteComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

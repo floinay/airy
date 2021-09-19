@@ -1,0 +1,2858 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>airy-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">airy-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li >MarginsDirective</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/layout/src/lib/directives/indents/margins.directive.ts</code>
+        </p>
+
+
+
+
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+                    <tr>
+                        <td class="col-md-3">Providers</td>
+                        <td class="col-md-9">
+                            <code>
+                                MARGINS_PROVIDERS
+                            </code>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>
+  [airMargin],
+  [xs.airMargin],
+  [sm.airMargin],
+  [md.airMargin],
+  [lg.airMargin],
+  [xl.airMargin],
+  [ltSm.airMargin],
+  [ltMd.airMargin],
+  [ltLg.airMargin],
+  [ltXl.airMargin],
+  [gtSm.airMargin],
+  [gtMd.airMargin],
+  [gtLg.airMargin],
+  [gtXs.airMargin],
+  [airMarginTop],
+  [xs.airMarginTop],
+  [sm.airMarginTop],
+  [md.airMarginTop],
+  [lg.airMarginTop],
+  [xl.airMarginTop],
+  [ltSm.airMarginTop],
+  [ltMd.airMarginTop],
+  [ltLg.airMarginTop],
+  [ltXl.airMarginTop],
+  [gtSm.airMarginTop],
+  [gtMd.airMarginTop],
+  [gtLg.airMarginTop],
+  [gtXs.airMarginTop],
+  [airMarginBottom],
+  [xs.airMarginBottom],
+  [sm.airMarginBottom],
+  [md.airMarginBottom],
+  [lg.airMarginBottom],
+  [xl.airMarginBottom],
+  [ltSm.airMarginBottom],
+  [ltMd.airMarginBottom],
+  [ltLg.airMarginBottom],
+  [ltXl.airMarginBottom],
+  [gtSm.airMarginBottom],
+  [gtMd.airMarginBottom],
+  [gtLg.airMarginBottom],
+  [gtXs.airMarginBottom],
+  [airMarginStart],
+  [xs.airMarginStart],
+  [sm.airMarginStart],
+  [md.airMarginStart],
+  [lg.airMarginStart],
+  [xl.airMarginStart],
+  [ltSm.airMarginStart],
+  [ltMd.airMarginStart],
+  [ltLg.airMarginStart],
+  [ltXl.airMarginStart],
+  [gtSm.airMarginStart],
+  [gtMd.airMarginStart],
+  [gtLg.airMarginStart],
+  [gtXs.airMarginStart],
+  [airMarginEnd],
+  [xs.airMarginEnd],
+  [sm.airMarginEnd],
+  [md.airMarginEnd],
+  [lg.airMarginEnd],
+  [xl.airMarginEnd],
+  [ltSm.airMarginEnd],
+  [ltMd.airMarginEnd],
+  [ltLg.airMarginEnd],
+  [ltXl.airMarginEnd],
+  [gtSm.airMarginEnd],
+  [gtMd.airMarginEnd],
+  [gtLg.airMarginEnd],
+  [gtXs.airMarginEnd],
+  [airMarginHorizontal],
+  [xs.airMarginHorizontal],
+  [sm.airMarginHorizontal],
+  [md.airMarginHorizontal],
+  [lg.airMarginHorizontal],
+  [xl.airMarginHorizontal],
+  [ltSm.airMarginHorizontal],
+  [ltMd.airMarginHorizontal],
+  [ltLg.airMarginHorizontal],
+  [ltXl.airMarginHorizontal],
+  [gtSm.airMarginHorizontal],
+  [gtMd.airMarginHorizontal],
+  [gtLg.airMarginHorizontal],
+  [gtXs.airMarginHorizontal],
+  [airMarginVertical],
+  [xs.airMarginVertical],
+  [sm.airMarginVertical],
+  [md.airMarginVertical],
+  [lg.airMarginVertical],
+  [xl.airMarginVertical],
+  [ltSm.airMarginVertical],
+  [ltMd.airMarginVertical],
+  [ltLg.airMarginVertical],
+  [ltXl.airMarginVertical],
+  [gtSm.airMarginVertical],
+  [gtMd.airMarginVertical],
+  [gtLg.airMarginVertical],
+  [gtXs.airMarginVertical]
+  </code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#airMargin" >airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#airMarginBottom" >airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#airMarginEnd" >airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#airMarginHorizontal" >airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#airMarginStart" >airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#airMarginTop" >airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#airMarginVertical" >airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airMargin" >gtLg.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airMarginBottom" >gtLg.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airMarginEnd" >gtLg.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airMarginHorizontal" >gtLg.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airMarginStart" >gtLg.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airMarginTop" >gtLg.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airMarginVertical" >gtLg.airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airMargin" >gtMd.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airMarginBottom" >gtMd.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airMarginEnd" >gtMd.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airMarginHorizontal" >gtMd.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airMarginStart" >gtMd.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airMarginTop" >gtMd.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airMarginVertical" >gtMd.airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airMargin" >gtSm.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airMarginBottom" >gtSm.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airMarginEnd" >gtSm.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airMarginHorizontal" >gtSm.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airMarginStart" >gtSm.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airMarginTop" >gtSm.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airMarginVertical" >gtSm.airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airMargin" >gtXs.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airMarginBottom" >gtXs.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airMarginEnd" >gtXs.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airMarginHorizontal" >gtXs.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airMarginStart" >gtXs.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airMarginTop" >gtXs.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airMarginVertical" >gtXs.airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airMargin" >lg.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airMarginBottom" >lg.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airMarginEnd" >lg.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airMarginHorizontal" >lg.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airMarginStart" >lg.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airMarginTop" >lg.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airMarginVertical" >lg.airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airMargin" >ltLg.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airMarginBottom" >ltLg.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airMarginEnd" >ltLg.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airMarginHorizontal" >ltLg.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airMarginStart" >ltLg.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airMarginTop" >ltLg.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airMarginVertical" >ltLg.airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airMargin" >ltMd.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airMarginBottom" >ltMd.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airMarginEnd" >ltMd.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airMarginHorizontal" >ltMd.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airMarginStart" >ltMd.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airMarginTop" >ltMd.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airMarginVertical" >ltMd.airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airMargin" >ltSm.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airMarginBottom" >ltSm.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airMarginEnd" >ltSm.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airMarginHorizontal" >ltSm.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airMarginStart" >ltSm.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airMarginTop" >ltSm.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airMarginVertical" >ltSm.airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airMargin" >ltXl.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airMarginBottom" >ltXl.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airMarginEnd" >ltXl.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airMarginHorizontal" >ltXl.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airMarginStart" >ltXl.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airMarginTop" >ltXl.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airMarginVertical" >ltXl.airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#md.airMargin" >md.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#md.airMarginBottom" >md.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#md.airMarginEnd" >md.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#md.airMarginHorizontal" >md.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#md.airMarginStart" >md.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#md.airMarginTop" >md.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#md.airMarginVertical" >md.airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airMargin" >sm.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airMarginBottom" >sm.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airMarginEnd" >sm.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airMarginHorizontal" >sm.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airMarginStart" >sm.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airMarginTop" >sm.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airMarginVertical" >sm.airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airMargin" >xl.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airMarginBottom" >xl.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airMarginEnd" >xl.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airMarginHorizontal" >xl.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airMarginStart" >xl.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airMarginTop" >xl.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airMarginVertical" >xl.airMarginVertical</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airMargin" >xs.airMargin</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airMarginBottom" >xs.airMarginBottom</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airMarginEnd" >xs.airMarginEnd</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airMarginHorizontal" >xs.airMarginHorizontal</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airMarginStart" >xs.airMarginStart</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airMarginTop" >xs.airMarginTop</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airMarginVertical" >xs.airMarginVertical</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airMargin"></a>
+                        <b>airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:110</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airMarginBottom"></a>
+                        <b>airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:140</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airMarginEnd"></a>
+                        <b>airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="170" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:170</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airMarginHorizontal"></a>
+                        <b>airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="185" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:185</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airMarginStart"></a>
+                        <b>airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:155</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airMarginTop"></a>
+                        <b>airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:125</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airMarginVertical"></a>
+                        <b>airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="200" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:200</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airMargin"></a>
+                        <b>gtLg.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:122</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airMarginBottom"></a>
+                        <b>gtLg.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:152</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airMarginEnd"></a>
+                        <b>gtLg.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="182" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:182</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airMarginHorizontal"></a>
+                        <b>gtLg.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="197" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:197</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airMarginStart"></a>
+                        <b>gtLg.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:167</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airMarginTop"></a>
+                        <b>gtLg.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:137</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airMarginVertical"></a>
+                        <b>gtLg.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="212" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:212</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airMargin"></a>
+                        <b>gtMd.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:121</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airMarginBottom"></a>
+                        <b>gtMd.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="151" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:151</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airMarginEnd"></a>
+                        <b>gtMd.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="181" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:181</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airMarginHorizontal"></a>
+                        <b>gtMd.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="196" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:196</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airMarginStart"></a>
+                        <b>gtMd.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="166" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:166</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airMarginTop"></a>
+                        <b>gtMd.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="136" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:136</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airMarginVertical"></a>
+                        <b>gtMd.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="211" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:211</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airMargin"></a>
+                        <b>gtSm.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:120</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airMarginBottom"></a>
+                        <b>gtSm.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="150" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:150</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airMarginEnd"></a>
+                        <b>gtSm.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:180</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airMarginHorizontal"></a>
+                        <b>gtSm.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:195</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airMarginStart"></a>
+                        <b>gtSm.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="165" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:165</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airMarginTop"></a>
+                        <b>gtSm.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:135</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airMarginVertical"></a>
+                        <b>gtSm.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="210" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:210</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airMargin"></a>
+                        <b>gtXs.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:123</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airMarginBottom"></a>
+                        <b>gtXs.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="153" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:153</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airMarginEnd"></a>
+                        <b>gtXs.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="183" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:183</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airMarginHorizontal"></a>
+                        <b>gtXs.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="198" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:198</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airMarginStart"></a>
+                        <b>gtXs.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:168</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airMarginTop"></a>
+                        <b>gtXs.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:138</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airMarginVertical"></a>
+                        <b>gtXs.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:213</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airMargin"></a>
+                        <b>lg.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:114</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airMarginBottom"></a>
+                        <b>lg.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="144" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:144</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airMarginEnd"></a>
+                        <b>lg.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="174" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:174</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airMarginHorizontal"></a>
+                        <b>lg.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="189" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:189</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airMarginStart"></a>
+                        <b>lg.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:159</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airMarginTop"></a>
+                        <b>lg.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:129</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airMarginVertical"></a>
+                        <b>lg.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="204" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:204</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airMargin"></a>
+                        <b>ltLg.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:118</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airMarginBottom"></a>
+                        <b>ltLg.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:148</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airMarginEnd"></a>
+                        <b>ltLg.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="178" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:178</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airMarginHorizontal"></a>
+                        <b>ltLg.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="193" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:193</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airMarginStart"></a>
+                        <b>ltLg.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:163</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airMarginTop"></a>
+                        <b>ltLg.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="133" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:133</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airMarginVertical"></a>
+                        <b>ltLg.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="208" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:208</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airMargin"></a>
+                        <b>ltMd.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:117</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airMarginBottom"></a>
+                        <b>ltMd.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:147</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airMarginEnd"></a>
+                        <b>ltMd.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:177</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airMarginHorizontal"></a>
+                        <b>ltMd.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="192" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:192</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airMarginStart"></a>
+                        <b>ltMd.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="162" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:162</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airMarginTop"></a>
+                        <b>ltMd.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="132" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:132</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airMarginVertical"></a>
+                        <b>ltMd.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="207" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:207</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airMargin"></a>
+                        <b>ltSm.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="116" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:116</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airMarginBottom"></a>
+                        <b>ltSm.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:146</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airMarginEnd"></a>
+                        <b>ltSm.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="176" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:176</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airMarginHorizontal"></a>
+                        <b>ltSm.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="191" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:191</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airMarginStart"></a>
+                        <b>ltSm.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:161</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airMarginTop"></a>
+                        <b>ltSm.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:131</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airMarginVertical"></a>
+                        <b>ltSm.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="206" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:206</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airMargin"></a>
+                        <b>ltXl.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:119</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airMarginBottom"></a>
+                        <b>ltXl.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="149" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:149</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airMarginEnd"></a>
+                        <b>ltXl.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="179" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:179</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airMarginHorizontal"></a>
+                        <b>ltXl.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="194" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:194</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airMarginStart"></a>
+                        <b>ltXl.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="164" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:164</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airMarginTop"></a>
+                        <b>ltXl.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="134" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:134</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airMarginVertical"></a>
+                        <b>ltXl.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="209" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:209</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airMargin"></a>
+                        <b>md.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:113</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airMarginBottom"></a>
+                        <b>md.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:143</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airMarginEnd"></a>
+                        <b>md.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="173" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:173</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airMarginHorizontal"></a>
+                        <b>md.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="188" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:188</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airMarginStart"></a>
+                        <b>md.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="158" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:158</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airMarginTop"></a>
+                        <b>md.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:128</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airMarginVertical"></a>
+                        <b>md.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="203" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:203</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airMargin"></a>
+                        <b>sm.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:112</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airMarginBottom"></a>
+                        <b>sm.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:142</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airMarginEnd"></a>
+                        <b>sm.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="172" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:172</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airMarginHorizontal"></a>
+                        <b>sm.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:187</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airMarginStart"></a>
+                        <b>sm.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="157" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:157</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airMarginTop"></a>
+                        <b>sm.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:127</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airMarginVertical"></a>
+                        <b>sm.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="202" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:202</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airMargin"></a>
+                        <b>xl.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:115</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airMarginBottom"></a>
+                        <b>xl.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:145</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airMarginEnd"></a>
+                        <b>xl.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="175" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:175</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airMarginHorizontal"></a>
+                        <b>xl.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:190</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airMarginStart"></a>
+                        <b>xl.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:160</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airMarginTop"></a>
+                        <b>xl.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:130</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airMarginVertical"></a>
+                        <b>xl.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="205" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:205</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airMargin"></a>
+                        <b>xs.airMargin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:111</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airMarginBottom"></a>
+                        <b>xs.airMarginBottom</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:141</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airMarginEnd"></a>
+                        <b>xs.airMarginEnd</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="171" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:171</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airMarginHorizontal"></a>
+                        <b>xs.airMarginHorizontal</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="186" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:186</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airMarginStart"></a>
+                        <b>xs.airMarginStart</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="156" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:156</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airMarginTop"></a>
+                        <b>xs.airMarginTop</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="126" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:126</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airMarginVertical"></a>
+                        <b>xs.airMarginVertical</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ThemeSizeWithNegative" target="_self" >ThemeSizeWithNegative</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="201" class="link-to-prism">projects/layout/src/lib/directives/indents/margins.directive.ts:201</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Directive, Input} from &#x27;@angular/core&#x27;;
+import {AbstractIndentsDirective} from &#x27;./abstract-indents-directive&#x27;;
+import {ThemeSizeWithNegative} from &#x27;@airy-ui/cdk&#x27;;
+import {MARGINS_PROVIDERS} from &#x27;./indents.providers&#x27;;
+
+@Directive({
+  selector: &#x60;
+  [airMargin],
+  [xs.airMargin],
+  [sm.airMargin],
+  [md.airMargin],
+  [lg.airMargin],
+  [xl.airMargin],
+  [ltSm.airMargin],
+  [ltMd.airMargin],
+  [ltLg.airMargin],
+  [ltXl.airMargin],
+  [gtSm.airMargin],
+  [gtMd.airMargin],
+  [gtLg.airMargin],
+  [gtXs.airMargin],
+  [airMarginTop],
+  [xs.airMarginTop],
+  [sm.airMarginTop],
+  [md.airMarginTop],
+  [lg.airMarginTop],
+  [xl.airMarginTop],
+  [ltSm.airMarginTop],
+  [ltMd.airMarginTop],
+  [ltLg.airMarginTop],
+  [ltXl.airMarginTop],
+  [gtSm.airMarginTop],
+  [gtMd.airMarginTop],
+  [gtLg.airMarginTop],
+  [gtXs.airMarginTop],
+  [airMarginBottom],
+  [xs.airMarginBottom],
+  [sm.airMarginBottom],
+  [md.airMarginBottom],
+  [lg.airMarginBottom],
+  [xl.airMarginBottom],
+  [ltSm.airMarginBottom],
+  [ltMd.airMarginBottom],
+  [ltLg.airMarginBottom],
+  [ltXl.airMarginBottom],
+  [gtSm.airMarginBottom],
+  [gtMd.airMarginBottom],
+  [gtLg.airMarginBottom],
+  [gtXs.airMarginBottom],
+  [airMarginStart],
+  [xs.airMarginStart],
+  [sm.airMarginStart],
+  [md.airMarginStart],
+  [lg.airMarginStart],
+  [xl.airMarginStart],
+  [ltSm.airMarginStart],
+  [ltMd.airMarginStart],
+  [ltLg.airMarginStart],
+  [ltXl.airMarginStart],
+  [gtSm.airMarginStart],
+  [gtMd.airMarginStart],
+  [gtLg.airMarginStart],
+  [gtXs.airMarginStart],
+  [airMarginEnd],
+  [xs.airMarginEnd],
+  [sm.airMarginEnd],
+  [md.airMarginEnd],
+  [lg.airMarginEnd],
+  [xl.airMarginEnd],
+  [ltSm.airMarginEnd],
+  [ltMd.airMarginEnd],
+  [ltLg.airMarginEnd],
+  [ltXl.airMarginEnd],
+  [gtSm.airMarginEnd],
+  [gtMd.airMarginEnd],
+  [gtLg.airMarginEnd],
+  [gtXs.airMarginEnd],
+  [airMarginHorizontal],
+  [xs.airMarginHorizontal],
+  [sm.airMarginHorizontal],
+  [md.airMarginHorizontal],
+  [lg.airMarginHorizontal],
+  [xl.airMarginHorizontal],
+  [ltSm.airMarginHorizontal],
+  [ltMd.airMarginHorizontal],
+  [ltLg.airMarginHorizontal],
+  [ltXl.airMarginHorizontal],
+  [gtSm.airMarginHorizontal],
+  [gtMd.airMarginHorizontal],
+  [gtLg.airMarginHorizontal],
+  [gtXs.airMarginHorizontal],
+  [airMarginVertical],
+  [xs.airMarginVertical],
+  [sm.airMarginVertical],
+  [md.airMarginVertical],
+  [lg.airMarginVertical],
+  [xl.airMarginVertical],
+  [ltSm.airMarginVertical],
+  [ltMd.airMarginVertical],
+  [ltLg.airMarginVertical],
+  [ltXl.airMarginVertical],
+  [gtSm.airMarginVertical],
+  [gtMd.airMarginVertical],
+  [gtLg.airMarginVertical],
+  [gtXs.airMarginVertical]
+  &#x60;,
+  providers: MARGINS_PROVIDERS
+})
+export class MarginsDirective extends AbstractIndentsDirective {
+  @Input() airMargin: ThemeSizeWithNegative;
+  @Input(&#x27;xs.airMargin&#x27;) xsAirMargin: ThemeSizeWithNegative;
+  @Input(&#x27;sm.airMargin&#x27;) smAirMargin: ThemeSizeWithNegative;
+  @Input(&#x27;md.airMargin&#x27;) mdAirMargin: ThemeSizeWithNegative;
+  @Input(&#x27;lg.airMargin&#x27;) lgAirMargin: ThemeSizeWithNegative;
+  @Input(&#x27;xl.airMargin&#x27;) xlAirMargin: ThemeSizeWithNegative;
+  @Input(&#x27;ltSm.airMargin&#x27;) ltSmAirMargin: ThemeSizeWithNegative;
+  @Input(&#x27;ltMd.airMargin&#x27;) ltMdAirMargin: ThemeSizeWithNegative;
+  @Input(&#x27;ltLg.airMargin&#x27;) ltLgAirMargin: ThemeSizeWithNegative;
+  @Input(&#x27;ltXl.airMargin&#x27;) ltXlAirMargin: ThemeSizeWithNegative;
+  @Input(&#x27;gtSm.airMargin&#x27;) gtSmAirMargin: ThemeSizeWithNegative;
+  @Input(&#x27;gtMd.airMargin&#x27;) gtMdAirMargin: ThemeSizeWithNegative;
+  @Input(&#x27;gtLg.airMargin&#x27;) gtLgAirMargin: ThemeSizeWithNegative;
+  @Input(&#x27;gtXs.airMargin&#x27;) gtXsAirMargin: ThemeSizeWithNegative;
+
+  @Input() airMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;xs.airMarginTop&#x27;) xsAirMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;sm.airMarginTop&#x27;) smAirMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;md.airMarginTop&#x27;) mdAirMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;lg.airMarginTop&#x27;) lgAirMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;xl.airMarginTop&#x27;) xlAirMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;ltSm.airMarginTop&#x27;) ltSmAirMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;ltMd.airMarginTop&#x27;) ltMdAirMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;ltLg.airMarginTop&#x27;) ltLgAirMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;ltXl.airMarginTop&#x27;) ltXlAirMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;gtSm.airMarginTop&#x27;) gtSmAirMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;gtMd.airMarginTop&#x27;) gtMdAirMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;gtLg.airMarginTop&#x27;) gtLgAirMarginTop: ThemeSizeWithNegative;
+  @Input(&#x27;gtXs.airMarginTop&#x27;) gtXsAirMarginTop: ThemeSizeWithNegative;
+
+  @Input() airMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;xs.airMarginBottom&#x27;) xsAirMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;sm.airMarginBottom&#x27;) smAirMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;md.airMarginBottom&#x27;) mdAirMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;lg.airMarginBottom&#x27;) lgAirMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;xl.airMarginBottom&#x27;) xlAirMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;ltSm.airMarginBottom&#x27;) ltSmAirMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;ltMd.airMarginBottom&#x27;) ltMdAirMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;ltLg.airMarginBottom&#x27;) ltLgAirMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;ltXl.airMarginBottom&#x27;) ltXlAirMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;gtSm.airMarginBottom&#x27;) gtSmAirMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;gtMd.airMarginBottom&#x27;) gtMdAirMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;gtLg.airMarginBottom&#x27;) gtLgAirMarginBottom: ThemeSizeWithNegative;
+  @Input(&#x27;gtXs.airMarginBottom&#x27;) gtXsAirMarginBottom: ThemeSizeWithNegative;
+
+  @Input() airMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;xs.airMarginStart&#x27;) xsAirMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;sm.airMarginStart&#x27;) smAirMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;md.airMarginStart&#x27;) mdAirMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;lg.airMarginStart&#x27;) lgAirMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;xl.airMarginStart&#x27;) xlAirMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;ltSm.airMarginStart&#x27;) ltSmAirMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;ltMd.airMarginStart&#x27;) ltMdAirMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;ltLg.airMarginStart&#x27;) ltLgAirMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;ltXl.airMarginStart&#x27;) ltXlAirMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;gtSm.airMarginStart&#x27;) gtSmAirMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;gtMd.airMarginStart&#x27;) gtMdAirMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;gtLg.airMarginStart&#x27;) gtLgAirMarginStart: ThemeSizeWithNegative;
+  @Input(&#x27;gtXs.airMarginStart&#x27;) gtXsAirMarginStart: ThemeSizeWithNegative;
+
+  @Input() airMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;xs.airMarginEnd&#x27;) xsAirMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;sm.airMarginEnd&#x27;) smAirMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;md.airMarginEnd&#x27;) mdAirMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;lg.airMarginEnd&#x27;) lgAirMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;xl.airMarginEnd&#x27;) xlAirMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;ltSm.airMarginEnd&#x27;) ltSmAirMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;ltMd.airMarginEnd&#x27;) ltMdAirMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;ltLg.airMarginEnd&#x27;) ltLgAirMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;ltXl.airMarginEnd&#x27;) ltXlAirMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;gtSm.airMarginEnd&#x27;) gtSmAirMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;gtMd.airMarginEnd&#x27;) gtMdAirMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;gtLg.airMarginEnd&#x27;) gtLgAirMarginEnd: ThemeSizeWithNegative;
+  @Input(&#x27;gtXs.airMarginEnd&#x27;) gtXsAirMarginEnd: ThemeSizeWithNegative;
+
+  @Input() airMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;xs.airMarginHorizontal&#x27;) xsAirMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;sm.airMarginHorizontal&#x27;) smAirMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;md.airMarginHorizontal&#x27;) mdAirMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;lg.airMarginHorizontal&#x27;) lgAirMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;xl.airMarginHorizontal&#x27;) xlAirMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;ltSm.airMarginHorizontal&#x27;) ltSmAirMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;ltMd.airMarginHorizontal&#x27;) ltMdAirMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;ltLg.airMarginHorizontal&#x27;) ltLgAirMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;ltXl.airMarginHorizontal&#x27;) ltXlAirMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;gtSm.airMarginHorizontal&#x27;) gtSmAirMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;gtMd.airMarginHorizontal&#x27;) gtMdAirMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;gtLg.airMarginHorizontal&#x27;) gtLgAirMarginHorizontal: ThemeSizeWithNegative;
+  @Input(&#x27;gtXs.airMarginHorizontal&#x27;) gtXsAirMarginHorizontal: ThemeSizeWithNegative;
+
+  @Input() airMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;xs.airMarginVertical&#x27;) xsAirMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;sm.airMarginVertical&#x27;) smAirMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;md.airMarginVertical&#x27;) mdAirMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;lg.airMarginVertical&#x27;) lgAirMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;xl.airMarginVertical&#x27;) xlAirMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;ltSm.airMarginVertical&#x27;) ltSmAirMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;ltMd.airMarginVertical&#x27;) ltMdAirMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;ltLg.airMarginVertical&#x27;) ltLgAirMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;ltXl.airMarginVertical&#x27;) ltXlAirMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;gtSm.airMarginVertical&#x27;) gtSmAirMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;gtMd.airMarginVertical&#x27;) gtMdAirMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;gtLg.airMarginVertical&#x27;) gtLgAirMarginVertical: ThemeSizeWithNegative;
+  @Input(&#x27;gtXs.airMarginVertical&#x27;) gtXsAirMarginVertical: ThemeSizeWithNegative;
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'MarginsDirective.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -158,14 +158,14 @@ export class LayoutDirective implements OnChanges {
   @Input('md.airLayoutAlign') mdAirLayoutAlign: LayoutAlign;
   @Input('lg.airLayoutAlign') lgAirLayoutAlign: LayoutAlign;
   @Input('xl.airLayoutAlign') xlAirLayoutAlign: LayoutAlign;
-  @Input('ltSm.airLayoutAlign') ltAirSmLayoutAlign: LayoutAlign;
-  @Input('ltMd.airLayoutAlign') ltAirMdLayoutAlign: LayoutAlign;
-  @Input('ltLg.airLayoutAlign') ltAirLgLayoutAlign: LayoutAlign;
-  @Input('ltXl.airLayoutAlign') ltAirXlLayoutAlign: LayoutAlign;
-  @Input('gtSm.airLayoutAlign') gtAirSmLayoutAlign: LayoutAlign;
-  @Input('gtMd.airLayoutAlign') gtAirMdLayoutAlign: LayoutAlign;
-  @Input('gtLg.airLayoutAlign') gtAirLgLayoutAlign: LayoutAlign;
-  @Input('gtXs.airLayoutAlign') gtAirXsLayoutAlign: LayoutAlign;
+  @Input('ltSm.airLayoutAlign') ltSmAirLayoutAlign: LayoutAlign;
+  @Input('ltMd.airLayoutAlign') ltMdAirLayoutAlign: LayoutAlign;
+  @Input('ltLg.airLayoutAlign') ltLgAirLayoutAlign: LayoutAlign;
+  @Input('ltXl.airLayoutAlign') ltXlAirLayoutAlign: LayoutAlign;
+  @Input('gtSm.airLayoutAlign') gtSmAirLayoutAlign: LayoutAlign;
+  @Input('gtMd.airLayoutAlign') gtMdAirLayoutAlign: LayoutAlign;
+  @Input('gtLg.airLayoutAlign') gtLgAirLayoutAlign: LayoutAlign;
+  @Input('gtXs.airLayoutAlign') gtXsAirLayoutAlign: LayoutAlign;
 
   constructor(private changesState: ChangesState<string, string>,
               private elementRef: ElementRef<HTMLDivElement>,

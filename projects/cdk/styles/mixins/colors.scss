@@ -37,6 +37,13 @@
   @include _air-color-map-options(disabled, $disabled, $contrast);
   @include _air-color-map-options(success, $success, $contrast);
   @include can-tp-colors();
+  @include can-border-colors;
+}
+
+@mixin can-border-colors() {
+  .color-border {
+    --color-current: var(--border-color);
+  }
 }
 
 @mixin can-tp-colors() {

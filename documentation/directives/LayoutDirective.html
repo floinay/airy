@@ -1,0 +1,2472 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>airy-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">airy-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li >LayoutDirective</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/layout/src/lib/directives/layout/layout.directive.ts</code>
+        </p>
+
+
+
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="../miscellaneous/typealiases.html#O" target="_self" >OnChanges</a></code>
+            </p>
+
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+                    <tr>
+                        <td class="col-md-3">Providers</td>
+                        <td class="col-md-9">
+                            <code>
+                                LAYOUT_PROVIDERS
+                            </code>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>
+  [airGrid],
+  [airLayout],
+  [xs.airLayout],
+  [sm.airLayout],
+  [md.airLayout],
+  [lg.airLayout],
+  [xl.airLayout],
+  [ltSm.airLayout],
+  [ltMd.airLayout],
+  [ltLg.airLayout],
+  [ltXl.airLayout],
+  [gtSm.airLayout],
+  [gtMd.airLayout],
+  [gtLg.airLayout],
+  [gtXs.airLayout],
+  [airRowGap],
+  [xs.airRowGap],
+  [sm.airRowGap],
+  [md.airRowGap],
+  [lg.airRowGap],
+  [xl.airRowGap],
+  [ltSm.airRowGap],
+  [ltMd.airRowGap],
+  [ltLg.airRowGap],
+  [ltXl.airRowGap],
+  [gtSm.airRowGap],
+  [gtMd.airRowGap],
+  [gtLg.airRowGap],
+  [gtXs.airRowGap],
+  [airColGap],
+  [xs.airColGap],
+  [sm.airColGap],
+  [md.airColGap],
+  [lg.airColGap],
+  [xl.airColGap],
+  [ltSm.airColGap],
+  [ltMd.airColGap],
+  [ltLg.airColGap],
+  [ltXl.airColGap],
+  [gtSm.airColGap],
+  [gtMd.airColGap],
+  [gtLg.airColGap],
+  [gtXs.airColGap],
+  [airColCount],
+  [xs.airColCount],
+  [sm.airColCount],
+  [md.airColCount],
+  [lg.airColCount],
+  [xl.airColCount],
+  [ltSm.airColCount],
+  [ltMd.airColCount],
+  [ltLg.airColCount],
+  [ltXl.airColCount],
+  [gtSm.airColCount],
+  [gtMd.airColCount],
+  [gtLg.airColCount],
+  [gtXs.airColCount],
+  [airColGap],
+  [xs.airColGap],
+  [sm.airColGap],
+  [md.airColGap],
+  [lg.airColGap],
+  [xl.airColGap],
+  [ltSm.airColGap],
+  [ltMd.airColGap],
+  [ltLg.airColGap],
+  [ltXl.airColGap],
+  [gtSm.airColGap],
+  [gtMd.airColGap],
+  [gtLg.airColGap],
+  [gtXs.airColGap],
+  </code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#flex" >flex</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#airColCount" >airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#airColGap" >airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#airLayout" >airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#airLayoutAlign" >airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#airRowGap" >airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airColCount" >gtLg.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airColGap" >gtLg.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airLayout" >gtLg.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airLayoutAlign" >gtLg.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#gtLg.airRowGap" >gtLg.airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airColCount" >gtMd.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airColGap" >gtMd.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airLayout" >gtMd.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airLayoutAlign" >gtMd.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#gtMd.airRowGap" >gtMd.airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airColCount" >gtSm.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airColGap" >gtSm.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airLayout" >gtSm.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airLayoutAlign" >gtSm.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#gtSm.airRowGap" >gtSm.airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airColCount" >gtXs.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airColGap" >gtXs.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airLayout" >gtXs.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airLayoutAlign" >gtXs.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#gtXs.airRowGap" >gtXs.airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airColCount" >lg.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airColGap" >lg.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airLayout" >lg.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airLayoutAlign" >lg.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#lg.airRowGap" >lg.airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airColCount" >ltLg.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airColGap" >ltLg.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airLayout" >ltLg.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airLayoutAlign" >ltLg.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#ltLg.airRowGap" >ltLg.airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airColCount" >ltMd.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airColGap" >ltMd.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airLayout" >ltMd.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airLayoutAlign" >ltMd.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#ltMd.airRowGap" >ltMd.airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airColCount" >ltSm.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airColGap" >ltSm.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airLayout" >ltSm.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airLayoutAlign" >ltSm.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#ltSm.airRowGap" >ltSm.airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airColCount" >ltXl.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airColGap" >ltXl.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airLayout" >ltXl.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airLayoutAlign" >ltXl.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#ltXl.airRowGap" >ltXl.airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#md.airColCount" >md.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#md.airColGap" >md.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#md.airLayout" >md.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#md.airLayoutAlign" >md.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#md.airRowGap" >md.airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airColCount" >sm.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airColGap" >sm.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airLayout" >sm.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airLayoutAlign" >sm.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#sm.airRowGap" >sm.airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airColCount" >xl.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airColGap" >xl.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airLayout" >xl.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airLayoutAlign" >xl.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#xl.airRowGap" >xl.airRowGap</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airColCount" >xs.airColCount</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airColGap" >xs.airColGap</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airLayout" >xs.airLayout</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airLayoutAlign" >xs.airLayoutAlign</a>
+                            </li>
+                            <li>
+                                <a href="#xs.airRowGap" >xs.airRowGap</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#class.air-grid" >class.air-grid</a>
+                            </li>
+                            <li>
+                                <a href="#style.display" >style.display</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#isGrid" >isGrid</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(changesState: <a href="../injectables/ChangesState.html" target="_self">ChangesState&lt;string | string&gt;</a>, elementRef: ElementRef<HTMLDivElement>, breakpointsStylesManager: <a href="../injectables/BreakpointsStylesManager.html" target="_self">BreakpointsStylesManager</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:168</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>changesState</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ChangesState.html" target="_self" >ChangesState&lt;string | string&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>elementRef</td>
+                                                  
+                                                        <td>
+                                                                    <code>ElementRef&lt;HTMLDivElement&gt;</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>breakpointsStylesManager</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BreakpointsStylesManager.html" target="_self" >BreakpointsStylesManager</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airColCount"></a>
+                        <b>airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:95</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airColGap"></a>
+                        <b>airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="140" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:140</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airLayout"></a>
+                        <b>airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;row&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:110</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airLayoutAlign"></a>
+                        <b>airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:155</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="airRowGap"></a>
+                        <b>airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:125</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airColCount"></a>
+                        <b>gtLg.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:107</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airColGap"></a>
+                        <b>gtLg.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="152" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:152</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airLayout"></a>
+                        <b>gtLg.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="122" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:122</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airLayoutAlign"></a>
+                        <b>gtLg.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:167</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtLg.airRowGap"></a>
+                        <b>gtLg.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="137" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:137</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airColCount"></a>
+                        <b>gtMd.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="106" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:106</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airColGap"></a>
+                        <b>gtMd.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="151" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:151</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airLayout"></a>
+                        <b>gtMd.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:121</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airLayoutAlign"></a>
+                        <b>gtMd.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="166" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:166</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtMd.airRowGap"></a>
+                        <b>gtMd.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="136" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:136</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airColCount"></a>
+                        <b>gtSm.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:105</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airColGap"></a>
+                        <b>gtSm.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="150" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:150</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airLayout"></a>
+                        <b>gtSm.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="120" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:120</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airLayoutAlign"></a>
+                        <b>gtSm.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="165" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:165</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtSm.airRowGap"></a>
+                        <b>gtSm.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:135</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airColCount"></a>
+                        <b>gtXs.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:108</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airColGap"></a>
+                        <b>gtXs.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="153" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:153</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airLayout"></a>
+                        <b>gtXs.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:123</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airLayoutAlign"></a>
+                        <b>gtXs.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:168</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gtXs.airRowGap"></a>
+                        <b>gtXs.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:138</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airColCount"></a>
+                        <b>lg.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:99</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airColGap"></a>
+                        <b>lg.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="144" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:144</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airLayout"></a>
+                        <b>lg.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:114</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airLayoutAlign"></a>
+                        <b>lg.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:159</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lg.airRowGap"></a>
+                        <b>lg.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:129</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airColCount"></a>
+                        <b>ltLg.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:103</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airColGap"></a>
+                        <b>ltLg.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="148" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:148</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airLayout"></a>
+                        <b>ltLg.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="118" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:118</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airLayoutAlign"></a>
+                        <b>ltLg.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:163</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltLg.airRowGap"></a>
+                        <b>ltLg.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="133" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:133</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airColCount"></a>
+                        <b>ltMd.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="102" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:102</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airColGap"></a>
+                        <b>ltMd.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="147" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:147</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airLayout"></a>
+                        <b>ltMd.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:117</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airLayoutAlign"></a>
+                        <b>ltMd.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="162" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:162</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltMd.airRowGap"></a>
+                        <b>ltMd.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="132" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:132</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airColCount"></a>
+                        <b>ltSm.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:101</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airColGap"></a>
+                        <b>ltSm.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:146</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airLayout"></a>
+                        <b>ltSm.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="116" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:116</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airLayoutAlign"></a>
+                        <b>ltSm.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:161</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltSm.airRowGap"></a>
+                        <b>ltSm.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:131</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airColCount"></a>
+                        <b>ltXl.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:104</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airColGap"></a>
+                        <b>ltXl.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="149" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:149</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airLayout"></a>
+                        <b>ltXl.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:119</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airLayoutAlign"></a>
+                        <b>ltXl.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="164" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:164</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ltXl.airRowGap"></a>
+                        <b>ltXl.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="134" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:134</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airColCount"></a>
+                        <b>md.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:98</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airColGap"></a>
+                        <b>md.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:143</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airLayout"></a>
+                        <b>md.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:113</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airLayoutAlign"></a>
+                        <b>md.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="158" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:158</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="md.airRowGap"></a>
+                        <b>md.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:128</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airColCount"></a>
+                        <b>sm.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:97</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airColGap"></a>
+                        <b>sm.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:142</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airLayout"></a>
+                        <b>sm.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:112</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airLayoutAlign"></a>
+                        <b>sm.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="157" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:157</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sm.airRowGap"></a>
+                        <b>sm.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:127</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airColCount"></a>
+                        <b>xl.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:100</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airColGap"></a>
+                        <b>xl.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="145" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:145</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airLayout"></a>
+                        <b>xl.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:115</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airLayoutAlign"></a>
+                        <b>xl.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="160" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:160</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xl.airRowGap"></a>
+                        <b>xl.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:130</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airColCount"></a>
+                        <b>xs.airColCount</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:96</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airColGap"></a>
+                        <b>xs.airColGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="141" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:141</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airLayout"></a>
+                        <b>xs.airLayout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Layout" target="_self" >Layout</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:111</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airLayoutAlign"></a>
+                        <b>xs.airLayoutAlign</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#LayoutAlign" target="_self" >LayoutAlign</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="156" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:156</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="xs.airRowGap"></a>
+                        <b>xs.airRowGap</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Gap" target="_self" >Gap</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="126" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:126</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3>HostBindings</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="class.air-grid"></a>
+                    <span class="name">
+                        <span ><b>class.air-grid</b></span>
+                        <a href="#class.air-grid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:91</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="style.display"></a>
+                    <span class="name">
+                        <span ><b>style.display</b></span>
+                        <a href="#style.display"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;flex&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:88</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <span ><b>ngOnChanges</b></span>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="176"
+                            class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:176</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="flex"></a>
+                    <span class="name">
+                        <span ><b>flex</b></span>
+                        <a href="#flex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;flex&#x27;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @HostBinding(&#x27;style.display&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:88</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isGrid"></a>
+                        <span class="name"><b>isGrid</b><a href="#isGrid"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isGrid()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">projects/layout/src/lib/directives/layout/layout.directive.ts:91</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Directive, ElementRef, HostBinding, Input, OnChanges, SimpleChanges} from &#x27;@angular/core&#x27;;
+import {Layout, LayoutAlign} from &#x27;./types&#x27;;
+import {LAYOUT_PROVIDERS} from &#x27;./layout.providers&#x27;;
+import {UntilDestroy, untilDestroyed} from &#x27;@ngneat/until-destroy&#x27;;
+import {Gap} from &#x27;./types/gap&#x27;;
+import {BreakpointsStylesManager} from &#x27;@airy-ui/cdk&#x27;;
+import {ChangesState} from &#x27;@airy-ui/cdk&#x27;;
+
+
+@Directive({
+  selector: &#x60;
+  [airGrid],
+  [airLayout],
+  [xs.airLayout],
+  [sm.airLayout],
+  [md.airLayout],
+  [lg.airLayout],
+  [xl.airLayout],
+  [ltSm.airLayout],
+  [ltMd.airLayout],
+  [ltLg.airLayout],
+  [ltXl.airLayout],
+  [gtSm.airLayout],
+  [gtMd.airLayout],
+  [gtLg.airLayout],
+  [gtXs.airLayout],
+  [airRowGap],
+  [xs.airRowGap],
+  [sm.airRowGap],
+  [md.airRowGap],
+  [lg.airRowGap],
+  [xl.airRowGap],
+  [ltSm.airRowGap],
+  [ltMd.airRowGap],
+  [ltLg.airRowGap],
+  [ltXl.airRowGap],
+  [gtSm.airRowGap],
+  [gtMd.airRowGap],
+  [gtLg.airRowGap],
+  [gtXs.airRowGap],
+  [airColGap],
+  [xs.airColGap],
+  [sm.airColGap],
+  [md.airColGap],
+  [lg.airColGap],
+  [xl.airColGap],
+  [ltSm.airColGap],
+  [ltMd.airColGap],
+  [ltLg.airColGap],
+  [ltXl.airColGap],
+  [gtSm.airColGap],
+  [gtMd.airColGap],
+  [gtLg.airColGap],
+  [gtXs.airColGap],
+  [airColCount],
+  [xs.airColCount],
+  [sm.airColCount],
+  [md.airColCount],
+  [lg.airColCount],
+  [xl.airColCount],
+  [ltSm.airColCount],
+  [ltMd.airColCount],
+  [ltLg.airColCount],
+  [ltXl.airColCount],
+  [gtSm.airColCount],
+  [gtMd.airColCount],
+  [gtLg.airColCount],
+  [gtXs.airColCount],
+  [airColGap],
+  [xs.airColGap],
+  [sm.airColGap],
+  [md.airColGap],
+  [lg.airColGap],
+  [xl.airColGap],
+  [ltSm.airColGap],
+  [ltMd.airColGap],
+  [ltLg.airColGap],
+  [ltXl.airColGap],
+  [gtSm.airColGap],
+  [gtMd.airColGap],
+  [gtLg.airColGap],
+  [gtXs.airColGap],
+  &#x60;,
+  providers: LAYOUT_PROVIDERS
+})
+@UntilDestroy()
+export class LayoutDirective implements OnChanges {
+  @HostBinding(&#x27;style.display&#x27;) flex &#x3D; &#x27;flex&#x27;;
+
+  @HostBinding(&#x27;class.air-grid&#x27;)
+  get isGrid(): boolean {
+    return this.elementRef.nativeElement.hasAttribute(&#x27;airGrid&#x27;);
+  }
+
+  @Input() airColCount?: number;
+  @Input(&#x27;xs.airColCount&#x27;) xsAirColCount?: number;
+  @Input(&#x27;sm.airColCount&#x27;) smAirColCount?: number;
+  @Input(&#x27;md.airColCount&#x27;) mdAirColCount?: number;
+  @Input(&#x27;lg.airColCount&#x27;) lgAirColCount?: number;
+  @Input(&#x27;xl.airColCount&#x27;) xlAirColCount?: number;
+  @Input(&#x27;ltSm.airColCount&#x27;) ltSmAirColCount?: number;
+  @Input(&#x27;ltMd.airColCount&#x27;) ltMdAirColCount?: number;
+  @Input(&#x27;ltLg.airColCount&#x27;) ltLgAirColCount?: number;
+  @Input(&#x27;ltXl.airColCount&#x27;) ltXlAirColCount?: number;
+  @Input(&#x27;gtSm.airColCount&#x27;) gtSmAirColCount?: number;
+  @Input(&#x27;gtMd.airColCount&#x27;) gtMdAirColCount?: number;
+  @Input(&#x27;gtLg.airColCount&#x27;) gtLgAirColCount?: number;
+  @Input(&#x27;gtXs.airColCount&#x27;) gtXsAirColCount?: number;
+
+  @Input() airLayout: Layout &#x3D; &#x27;row&#x27;;
+  @Input(&#x27;xs.airLayout&#x27;) xsAirLayout: Layout;
+  @Input(&#x27;sm.airLayout&#x27;) smAirLayout: Layout;
+  @Input(&#x27;md.airLayout&#x27;) mdAirLayout: Layout;
+  @Input(&#x27;lg.airLayout&#x27;) lgAirLayout: Layout;
+  @Input(&#x27;xl.airLayout&#x27;) xlAirLayout: Layout;
+  @Input(&#x27;ltSm.airLayout&#x27;) ltSmAirLayout: Layout;
+  @Input(&#x27;ltMd.airLayout&#x27;) ltMdAirLayout: Layout;
+  @Input(&#x27;ltLg.airLayout&#x27;) ltLgAirLayout: Layout;
+  @Input(&#x27;ltXl.airLayout&#x27;) ltXlAirLayout: Layout;
+  @Input(&#x27;gtSm.airLayout&#x27;) gtSmAirLayout: Layout;
+  @Input(&#x27;gtMd.airLayout&#x27;) gtMdAirLayout: Layout;
+  @Input(&#x27;gtLg.airLayout&#x27;) gtLgAirLayout: Layout;
+  @Input(&#x27;gtXs.airLayout&#x27;) gtXsAirLayout: Layout;
+
+  @Input() airRowGap: Gap;
+  @Input(&#x27;xs.airRowGap&#x27;) xsAirRowGap: Gap;
+  @Input(&#x27;sm.airRowGap&#x27;) smAirRowGap: Gap;
+  @Input(&#x27;md.airRowGap&#x27;) mdAirRowGap: Gap;
+  @Input(&#x27;lg.airRowGap&#x27;) lgAirRowGap: Gap;
+  @Input(&#x27;xl.airRowGap&#x27;) xlAirRowGap: Gap;
+  @Input(&#x27;ltSm.airRowGap&#x27;) ltSmAirRowGap: Gap;
+  @Input(&#x27;ltMd.airRowGap&#x27;) ltMdAirRowGap: Gap;
+  @Input(&#x27;ltLg.airRowGap&#x27;) ltLgAirRowGap: Gap;
+  @Input(&#x27;ltXl.airRowGap&#x27;) ltXlAirRowGap: Gap;
+  @Input(&#x27;gtSm.airRowGap&#x27;) gtSmAirRowGap: Gap;
+  @Input(&#x27;gtMd.airRowGap&#x27;) gtMdAirRowGap: Gap;
+  @Input(&#x27;gtLg.airRowGap&#x27;) gtLgAirRowGap: Gap;
+  @Input(&#x27;gtXs.airRowGap&#x27;) gtXsAirRowGap: Gap;
+
+  @Input() airColGap: Gap;
+  @Input(&#x27;xs.airColGap&#x27;) xsAirColGap: Gap;
+  @Input(&#x27;sm.airColGap&#x27;) smAirColGap: Gap;
+  @Input(&#x27;md.airColGap&#x27;) mdAirColGap: Gap;
+  @Input(&#x27;lg.airColGap&#x27;) lgAirColGap: Gap;
+  @Input(&#x27;xl.airColGap&#x27;) xlAirColGap: Gap;
+  @Input(&#x27;ltSm.airColGap&#x27;) ltSmAirColGap: Gap;
+  @Input(&#x27;ltMd.airColGap&#x27;) ltMdAirColGap: Gap;
+  @Input(&#x27;ltLg.airColGap&#x27;) ltLgAirColGap: Gap;
+  @Input(&#x27;ltXl.airColGap&#x27;) ltXlAirColGap: Gap;
+  @Input(&#x27;gtSm.airColGap&#x27;) gtSmAirColGap: Gap;
+  @Input(&#x27;gtMd.airColGap&#x27;) gtMdAirColGap: Gap;
+  @Input(&#x27;gtLg.airColGap&#x27;) gtLgAirColGap: Gap;
+  @Input(&#x27;gtXs.airColGap&#x27;) gtXsAirColGap: Gap;
+
+  @Input() airLayoutAlign: LayoutAlign;
+  @Input(&#x27;xs.airLayoutAlign&#x27;) xsAirLayoutAlign: LayoutAlign;
+  @Input(&#x27;sm.airLayoutAlign&#x27;) smAirLayoutAlign: LayoutAlign;
+  @Input(&#x27;md.airLayoutAlign&#x27;) mdAirLayoutAlign: LayoutAlign;
+  @Input(&#x27;lg.airLayoutAlign&#x27;) lgAirLayoutAlign: LayoutAlign;
+  @Input(&#x27;xl.airLayoutAlign&#x27;) xlAirLayoutAlign: LayoutAlign;
+  @Input(&#x27;ltSm.airLayoutAlign&#x27;) ltSmAirLayoutAlign: LayoutAlign;
+  @Input(&#x27;ltMd.airLayoutAlign&#x27;) ltMdAirLayoutAlign: LayoutAlign;
+  @Input(&#x27;ltLg.airLayoutAlign&#x27;) ltLgAirLayoutAlign: LayoutAlign;
+  @Input(&#x27;ltXl.airLayoutAlign&#x27;) ltXlAirLayoutAlign: LayoutAlign;
+  @Input(&#x27;gtSm.airLayoutAlign&#x27;) gtSmAirLayoutAlign: LayoutAlign;
+  @Input(&#x27;gtMd.airLayoutAlign&#x27;) gtMdAirLayoutAlign: LayoutAlign;
+  @Input(&#x27;gtLg.airLayoutAlign&#x27;) gtLgAirLayoutAlign: LayoutAlign;
+  @Input(&#x27;gtXs.airLayoutAlign&#x27;) gtXsAirLayoutAlign: LayoutAlign;
+
+  constructor(private changesState: ChangesState&lt;string, string&gt;,
+              private elementRef: ElementRef&lt;HTMLDivElement&gt;,
+              breakpointsStylesManager: BreakpointsStylesManager) {
+    breakpointsStylesManager.watch().pipe(untilDestroyed(this)).subscribe();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.changesState.patch(changes);
+  }
+
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'LayoutDirective.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

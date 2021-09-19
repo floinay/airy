@@ -1,0 +1,1878 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>airy-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">airy-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >PopoverService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/kit/src/lib/popover/directives/popover/popover.service.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#hideDebounce" >hideDebounce</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#hideEvent" >hideEvent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#ignoreHide" >ignoreHide</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onHideEventChanged$" >onHideEventChanged$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onShowEventChanged$" >onShowEventChanged$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#overlayRef" >overlayRef</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#popover" >popover</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#position" >position</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#showEvent" >showEvent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#viewRef" >viewRef</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getHideEvent" >getHideEvent</a>
+                            </li>
+                            <li>
+                                <a href="#hide" >hide</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#listenHideEvent" >listenHideEvent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#listenShowEvent" >listenShowEvent</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setClassesToPopoverContent" >setClassesToPopoverContent</a>
+                            </li>
+                            <li>
+                                <a href="#setHideDebounce" >setHideDebounce</a>
+                            </li>
+                            <li>
+                                <a href="#setHideEvent" >setHideEvent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setOptimalPositionAndAddClassesToPopoverContent" >setOptimalPositionAndAddClassesToPopoverContent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setOverlaySize" >setOverlaySize</a>
+                            </li>
+                            <li>
+                                <a href="#setPopover" >setPopover</a>
+                            </li>
+                            <li>
+                                <a href="#setPosition" >setPosition</a>
+                            </li>
+                            <li>
+                                <a href="#setShowEvent" >setShowEvent</a>
+                            </li>
+                            <li>
+                                <a href="#show" >show</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateOverlayPosition" >updateOverlayPosition</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#connectedPosition" >connectedPosition</a>
+                                </li>
+                                <li>
+                                    <a href="#isOverPosition" >isOverPosition</a>
+                                </li>
+                                <li>
+                                    <a href="#isStartPosition" >isStartPosition</a>
+                                </li>
+                                <li>
+                                    <a href="#popoverContentElement" >popoverContentElement</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(elementRef: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, directionService: <a href="../injectables/DirectionService.html" target="_self">DirectionService</a>, viewContainerRef: <a href="https://angular.io/api/core/ViewContainerRef" target="_blank">ViewContainerRef</a>, overlay: <a href="../undefineds/O.html" target="_self">Overlay</a>, optimalPositionService: <a href="../injectables/OptimalPositionService.html" target="_self">OptimalPositionService</a>, document: Document, zone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>, overlayPositionBuilder: <a href="../undefineds/O.html" target="_self">OverlayPositionBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:65</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>elementRef</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>directionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DirectionService.html" target="_self" >DirectionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>viewContainerRef</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ViewContainerRef" target="_blank" >ViewContainerRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>overlay</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../miscellaneous/typealiases.html#O" target="_self" >Overlay</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>optimalPositionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OptimalPositionService.html" target="_self" >OptimalPositionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>document</td>
+                                                  
+                                                        <td>
+                                                                    <code>Document</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>zone</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/NgZone" target="_blank" >NgZone</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>overlayPositionBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../miscellaneous/typealiases.html#O" target="_self" >OverlayPositionBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getHideEvent"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>getHideEvent</b></span>
+                        <a href="#getHideEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getHideEvent()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="196"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:196</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#O" target="_self" >Observable | undefined</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hide"></a>
+                    <span class="name">
+                        <span ><b>hide</b></span>
+                        <a href="#hide"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hide()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="239"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:239</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listenHideEvent"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>listenHideEvent</b></span>
+                        <a href="#listenHideEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>listenHideEvent()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="189"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:189</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listenShowEvent"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>listenShowEvent</b></span>
+                        <a href="#listenShowEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>listenShowEvent()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="183"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:183</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="253"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:253</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setClassesToPopoverContent"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setClassesToPopoverContent</b></span>
+                        <a href="#setClassesToPopoverContent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setClassesToPopoverContent(position: ConnectedPosition)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="152"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:152</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>position</td>
+                                    <td>
+                                            <code>ConnectedPosition</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setHideDebounce"></a>
+                    <span class="name">
+                        <span ><b>setHideDebounce</b></span>
+                        <a href="#setHideDebounce"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setHideDebounce(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:107</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setHideEvent"></a>
+                    <span class="name">
+                        <span ><b>setHideEvent</b></span>
+                        <a href="#setHideEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setHideEvent(event: <a href="../undefineds/PopoverHideEvent.html" target="_self">PopoverHideEvent</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="174"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:174</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#PopoverHideEvent" target="_self" >PopoverHideEvent</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setOptimalPositionAndAddClassesToPopoverContent"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setOptimalPositionAndAddClassesToPopoverContent</b></span>
+                        <a href="#setOptimalPositionAndAddClassesToPopoverContent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setOptimalPositionAndAddClassesToPopoverContent()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="135"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:135</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setOverlaySize"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setOverlaySize</b></span>
+                        <a href="#setOverlaySize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setOverlaySize()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="260"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:260</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setPopover"></a>
+                    <span class="name">
+                        <span ><b>setPopover</b></span>
+                        <a href="#setPopover"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setPopover(popover: <a href="../interfaces/PopoverComponentInterface.html" target="_self">PopoverComponentInterface</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:79</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>popover</td>
+                                    <td>
+                                                <code><a href="../interfaces/PopoverComponentInterface.html" target="_self" >PopoverComponentInterface</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setPosition"></a>
+                    <span class="name">
+                        <span ><b>setPosition</b></span>
+                        <a href="#setPosition"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setPosition(position: <a href="../undefineds/PopoverPosition.html" target="_self">PopoverPosition</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>position</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#PopoverPosition" target="_self" >PopoverPosition</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setShowEvent"></a>
+                    <span class="name">
+                        <span ><b>setShowEvent</b></span>
+                        <a href="#setShowEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setShowEvent(event: <a href="../undefineds/PopoverShowEvent.html" target="_self">PopoverShowEvent</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="165"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:165</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#PopoverShowEvent" target="_self" >PopoverShowEvent</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="show"></a>
+                    <span class="name">
+                        <span ><b>show</b></span>
+                        <a href="#show"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>show()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:115</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateOverlayPosition"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>updateOverlayPosition</b></span>
+                        <a href="#updateOverlayPosition"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateOverlayPosition(position: ConnectedPosition)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="91"
+                            class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:91</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>position</td>
+                                    <td>
+                                            <code>ConnectedPosition</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hideDebounce"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>hideDebounce</b></span>
+                        <a href="#hideDebounce"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>50</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hideEvent"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>hideEvent</b></span>
+                        <a href="#hideEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#PopoverHideEvent" target="_self" >PopoverHideEvent</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;click&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ignoreHide"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>ignoreHide</b></span>
+                        <a href="#ignoreHide"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onHideEventChanged$"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>onHideEventChanged$</b></span>
+                        <a href="#onHideEventChanged$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject&lt;void&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onShowEventChanged$"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>onShowEventChanged$</b></span>
+                        <a href="#onShowEventChanged$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject&lt;void&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="overlayRef"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>overlayRef</b></span>
+                        <a href="#overlayRef"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#O" target="_self" >OverlayRef</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.overlay.create({
+    positionStrategy: this.overlayPositionBuilder
+      .flexibleConnectedTo(this.elementRef)
+      .withPositions([START_POSITION_LTR])
+  })</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:53</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="popover"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>popover</b></span>
+                        <a href="#popover"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/PopoverComponentInterface.html" target="_self" >PopoverComponentInterface</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:63</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="position"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>position</b></span>
+                        <a href="#position"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#PopoverPosition" target="_self" >PopoverPosition</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;start&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:59</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showEvent"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>showEvent</b></span>
+                        <a href="#showEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#PopoverShowEvent" target="_self" >PopoverShowEvent</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;click&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:49</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="viewRef"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>viewRef</b></span>
+                        <a href="#viewRef"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../components/PopoverComponent.html" target="_self" >EmbeddedViewRef&lt;PopoverComponent&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:65</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="connectedPosition"></a>
+                        <span class="name"><b>connectedPosition</b><a href="#connectedPosition"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>connectedPosition()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:99</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isOverPosition"></a>
+                        <span class="name"><b>isOverPosition</b><a href="#isOverPosition"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isOverPosition()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="157" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:157</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isStartPosition"></a>
+                        <span class="name"><b>isStartPosition</b><a href="#isStartPosition"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isStartPosition()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="161" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:161</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="popoverContentElement"></a>
+                        <span class="name"><b>popoverContentElement</b><a href="#popoverContentElement"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>popoverContentElement()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="231" class="link-to-prism">projects/kit/src/lib/popover/directives/popover/popover.service.ts:231</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {ElementRef, EmbeddedViewRef, Inject, Injectable, NgZone, OnDestroy, ViewContainerRef} from &#x27;@angular/core&#x27;;
+import {ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef} from &#x27;@angular/cdk/overlay&#x27;;
+import {fromEvent, Observable, Subject} from &#x27;rxjs&#x27;;
+import {UntilDestroy, untilDestroyed} from &#x27;@ngneat/until-destroy&#x27;;
+import {debounceTime, filter, takeUntil} from &#x27;rxjs/operators&#x27;;
+import {TemplatePortal} from &#x27;@angular/cdk/portal&#x27;;
+import {PopoverComponentInterface} from &#x27;../../interfaces&#x27;;
+import {PopoverComponent} from &#x27;../../components&#x27;;
+import {DOCUMENT} from &#x27;@angular/common&#x27;;
+import {isEqual} from &#x27;lodash-es&#x27;;
+import {OptimalPositionService, throwIf} from &#x27;@airy-ui/cdk&#x27;;
+import {DirectionService} from &#x27;@airy-ui/direction&#x27;;
+
+const START_POSITION_LTR: ConnectedPosition &#x3D; {
+  originX: &#x27;start&#x27;,
+  originY: &#x27;top&#x27;,
+  overlayX: &#x27;start&#x27;,
+  overlayY: &#x27;bottom&#x27;
+};
+
+const START_POSITION_RTL: ConnectedPosition &#x3D; {
+  originX: &#x27;end&#x27;,
+  originY: &#x27;top&#x27;,
+  overlayX: &#x27;end&#x27;,
+  overlayY: &#x27;bottom&#x27;
+};
+
+
+const OVER_POSITION: ConnectedPosition &#x3D; {
+  originX: &#x27;center&#x27;,
+  originY: &#x27;center&#x27;,
+  overlayX: &#x27;center&#x27;,
+  overlayY: &#x27;center&#x27;,
+  offsetY: 0,
+};
+
+export type PopoverShowEvent &#x3D; &#x27;click&#x27; | &#x27;mouseenter&#x27;;
+export type PopoverHideEvent &#x3D; &#x27;click outside&#x27; | &#x27;mouseout&#x27; | &#x27;click&#x27;;
+export type PopoverPosition &#x3D; &#x27;start&#x27; | &#x27;over&#x27;;
+
+@Injectable()
+@UntilDestroy()
+export class PopoverService implements OnDestroy {
+  private hideDebounce &#x3D; 50;
+
+  private onShowEventChanged$ &#x3D; new Subject&lt;void&gt;();
+  private onHideEventChanged$ &#x3D; new Subject&lt;void&gt;();
+
+  private showEvent: PopoverShowEvent &#x3D; &#x27;click&#x27;;
+
+  private hideEvent: PopoverHideEvent &#x3D; &#x27;click&#x27;;
+
+  private overlayRef: OverlayRef &#x3D; this.overlay.create({
+    positionStrategy: this.overlayPositionBuilder
+      .flexibleConnectedTo(this.elementRef)
+      .withPositions([START_POSITION_LTR])
+  });
+
+  private position: PopoverPosition &#x3D; &#x27;start&#x27;;
+
+  private ignoreHide &#x3D; false;
+
+  private popover?: PopoverComponentInterface;
+
+  private viewRef?: EmbeddedViewRef&lt;PopoverComponent&gt;;
+
+  constructor(private elementRef: ElementRef,
+              private directionService: DirectionService,
+              private viewContainerRef: ViewContainerRef,
+              private overlay: Overlay,
+              private optimalPositionService: OptimalPositionService,
+              @Inject(DOCUMENT) readonly document: Document,
+              private zone: NgZone,
+              private overlayPositionBuilder: OverlayPositionBuilder) {
+    this.listenShowEvent();
+    this.listenHideEvent();
+  }
+
+  setPopover(popover: PopoverComponentInterface): void {
+    this.popover &#x3D; popover;
+  }
+
+  setPosition(position: PopoverPosition): void {
+    if (this.position &#x3D;&#x3D;&#x3D; position) {
+      return;
+    }
+    this.position &#x3D; position;
+    this.updateOverlayPosition(this.connectedPosition);
+  }
+
+  private updateOverlayPosition(position: ConnectedPosition): void {
+    this.overlayRef.updatePositionStrategy(
+      this.overlayPositionBuilder
+        .flexibleConnectedTo(this.elementRef)
+        .withPositions([position])
+    );
+  }
+
+  private get connectedPosition(): ConnectedPosition {
+    if (this.position &#x3D;&#x3D;&#x3D; &#x27;over&#x27;) {
+      return OVER_POSITION;
+    }
+
+    return this.directionService.isLtr() ? START_POSITION_LTR : START_POSITION_RTL;
+  }
+
+  setHideDebounce(value: number): void {
+    this.hideDebounce &#x3D; value;
+    this.onHideEventChanged$.next();
+    this.onShowEventChanged$.next();
+    this.listenHideEvent();
+    this.listenShowEvent();
+  }
+
+  show(): void {
+    if (this.viewRef || this.overlayRef.hasAttached()) {
+      return;
+    }
+    if (!this.popover) {
+      throw new Error(&#x27;Please set popover component&#x27;);
+    }
+
+    if (this.isOverPosition) {
+      this.setOverlaySize();
+    }
+
+
+    this.ignoreHide &#x3D; true;
+    const portal &#x3D; new TemplatePortal(this.popover.template, this.viewContainerRef);
+    this.viewRef &#x3D; this.overlayRef.attach(portal);
+    setTimeout(() &#x3D;&gt; this.setOptimalPositionAndAddClassesToPopoverContent(), 20);
+    setTimeout(() &#x3D;&gt; this.ignoreHide &#x3D; false, 100);
+  }
+
+  private setOptimalPositionAndAddClassesToPopoverContent(): void {
+    if (this.isStartPosition) {
+      const optimalPosition &#x3D; this.optimalPositionService.optimalPosition({
+        connectedElement: this.overlayRef.overlayElement,
+        connectedTo: this.elementRef.nativeElement,
+        position: this.connectedPosition
+      });
+
+      if (!isEqual(this.connectedPosition, optimalPosition)) {
+        this.updateOverlayPosition(optimalPosition);
+      } else {
+        this.updateOverlayPosition(this.connectedPosition);
+      }
+      this.setClassesToPopoverContent(optimalPosition);
+    }
+  }
+
+  private setClassesToPopoverContent(position: ConnectedPosition): void {
+    this.popoverContentElement?.classList.add(&#x27;position-x-&#x27; + position.originX);
+    this.popoverContentElement?.classList.add(&#x27;position-y-&#x27; + position.originY);
+  }
+
+  private get isOverPosition(): boolean {
+    return this.position &#x3D;&#x3D;&#x3D; &#x27;over&#x27;;
+  }
+
+  private get isStartPosition(): boolean {
+    return this.position &#x3D;&#x3D;&#x3D; &#x27;start&#x27;;
+  }
+
+  setShowEvent(event: PopoverShowEvent): void {
+    if (event &#x3D;&#x3D;&#x3D; this.showEvent) {
+      return;
+    }
+    this.onShowEventChanged$.next();
+    this.showEvent &#x3D; event;
+    this.listenShowEvent();
+  }
+
+  setHideEvent(event: PopoverHideEvent): void {
+    if (event &#x3D;&#x3D;&#x3D; this.hideEvent) {
+      return;
+    }
+    this.onHideEventChanged$.next();
+    this.hideEvent &#x3D; event;
+    this.listenHideEvent();
+  }
+
+  private listenShowEvent(): void {
+    fromEvent(this.elementRef.nativeElement, this.showEvent)
+      .pipe(untilDestroyed(this), takeUntil(this.onShowEventChanged$))
+      .subscribe(() &#x3D;&gt; this.show());
+  }
+
+  private listenHideEvent(): void {
+    const event &#x3D; this.getHideEvent() as Observable&lt;any&gt;;
+    throwIf(!event, &#x27;Please set correct hide event&#x27;);
+    event.subscribe(() &#x3D;&gt; this.hide());
+  }
+
+
+  private getHideEvent(): Observable&lt;any&gt; | undefined {
+    if (this.hideEvent &#x3D;&#x3D;&#x3D; &#x27;mouseout&#x27;) {
+      return fromEvent(this.document, &#x27;mousemove&#x27;)
+        .pipe(untilDestroyed(this),
+          debounceTime(this.hideDebounce),
+          takeUntil(this.onHideEventChanged$),
+          filter(e &#x3D;&gt; {
+            return (!this.elementRef.nativeElement.contains(e.target)
+              &amp;&amp; !this.popoverContentElement?.contains(e.target as Node)
+            );
+          }));
+    } else if (this.hideEvent &#x3D;&#x3D;&#x3D; &#x27;click&#x27;) {
+      return fromEvent(this.document.body, &#x27;click&#x27;)
+        .pipe(
+          untilDestroyed(this),
+          debounceTime(this.hideDebounce),
+          takeUntil(this.onHideEventChanged$),
+          filter(() &#x3D;&gt; !this.ignoreHide)
+        );
+    } else if (this.hideEvent &#x3D;&#x3D;&#x3D; &#x27;click outside&#x27;) {
+      return fromEvent(this.document.body, &#x27;click&#x27;)
+        .pipe(
+          untilDestroyed(this),
+          debounceTime(this.hideDebounce),
+          takeUntil(this.onHideEventChanged$),
+          filter((e) &#x3D;&gt; {
+            return !this.ignoreHide
+              &amp;&amp; (!this.popoverContentElement?.contains(e.target as Node)
+                &amp;&amp; (!this.elementRef.nativeElement.contains(e.target)));
+          }));
+    }
+
+    return undefined;
+  }
+
+  private get popoverContentElement(): HTMLElement | null {
+    if (this.popover?.id) {
+      return this.document.getElementById(this.popover.id);
+    }
+
+    return null;
+  }
+
+  hide(): void {
+    const element &#x3D; this.popoverContentElement;
+    if (element) {
+      element.classList.add(&#x27;hide&#x27;);
+      setTimeout(() &#x3D;&gt; {
+        this.viewRef?.detach();
+        this.overlayRef.detach();
+        this.viewRef &#x3D; undefined;
+      }, 100);
+    }
+
+  }
+
+
+  ngOnDestroy(): void {
+    this.onShowEventChanged$.complete();
+    this.onHideEventChanged$.complete();
+    this.hide();
+    this.overlayRef.dispose();
+  }
+
+  private setOverlaySize(): void {
+    this.overlayRef.updateSize({
+      width: this.elementRef.nativeElement.offsetWidth,
+      height: this.elementRef.nativeElement.offsetHeight
+    });
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'PopoverService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -20,7 +20,8 @@ export type ThemePalette =
   | 'success'
   | undefined
   | 'text-primary'
-  | 'text-secondary';
+  | 'text-secondary'
+  | 'border';
 
 
 export function mixinColor<T extends Constructor<HasElementRef>>(

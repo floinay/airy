@@ -1,0 +1,936 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>airy-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">airy-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  PopoverComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/kit/src/lib/popover/components/popover/popover.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+                <code><a href="../miscellaneous/variables.html#PopoverBase" target="_self" >PopoverBase</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="../interfaces/PopoverComponentInterface.html" target="_self" >PopoverComponentInterface</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">exportAs</td>
+                <td class="col-md-9"><code>popover</code></td>
+            </tr>
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>air-popover</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./popover.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./popover.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#elementRef" >elementRef</a>
+                            </li>
+                            <li>
+                                <a href="#template" >template</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#id" >id</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(elementRef: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">projects/kit/src/lib/popover/components/popover/popover.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>elementRef</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="id"></a>
+                        <b>id</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>randomId()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">projects/kit/src/lib/popover/components/popover/popover.component.ts:17</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="elementRef"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>elementRef</b></span>
+                        <a href="#elementRef"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">projects/kit/src/lib/popover/components/popover/popover.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="template"></a>
+                    <span class="name">
+                        <span ><b>template</b></span>
+                        <a href="#template"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>TemplateRef&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(TemplateRef, {static: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">projects/kit/src/lib/popover/components/popover/popover.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {ChangeDetectionStrategy, Component, ElementRef, Input, TemplateRef, ViewChild} from &#x27;@angular/core&#x27;;
+import {PopoverComponentInterface} from &#x27;../../interfaces&#x27;;
+import {CanColorCtor, HasElementRef, mixinColor, randomId} from &#x27;@airy-ui/cdk&#x27;;
+
+const PopoverBase: CanColorCtor &#x3D; mixinColor(HasElementRef, &#x27;primary&#x27;);
+
+@Component({
+  selector: &#x27;air-popover&#x27;,
+  templateUrl: &#x27;./popover.component.html&#x27;,
+  exportAs: &#x27;popover&#x27;,
+  styleUrls: [&#x27;./popover.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  // tslint:disable-next-line:no-inputs-metadata-property
+  inputs: [&#x27;color&#x27;]
+})
+export class PopoverComponent extends PopoverBase implements PopoverComponentInterface {
+  @Input() id &#x3D; randomId();
+  @ViewChild(TemplateRef, {static: true}) template!: TemplateRef&lt;any&gt;;
+
+  constructor(public elementRef: ElementRef) {
+    super(elementRef);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-template&gt;
+  &lt;div [class]&#x3D;&quot;&#x27;popover&#x27; + &#x27; color-&#x27; + color&quot; [id]&#x3D;&quot;id&quot;&gt;
+    &lt;div class&#x3D;&quot;popover-content&quot;&gt;
+      &lt;ng-content&gt;&lt;/ng-content&gt;
+    &lt;/div&gt;
+    &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;17&quot; height&#x3D;&quot;13&quot; viewBox&#x3D;&quot;0 0 17 13&quot; fill&#x3D;&quot;none&quot; class&#x3D;&quot;arrow&quot;&gt;
+      &lt;path fill-rule&#x3D;&quot;evenodd&quot; clip-rule&#x3D;&quot;evenodd&quot; d&#x3D;&quot;M0.622314 0L4.10221 12.4953L16.3979 0H0.622314Z&quot;/&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./popover.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;~@airy-ui/cdk/styles&quot;;
+
+:host {
+  display: none !important;
+}
+
+@keyframes show-popover {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes hide-popover {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.popover {
+  @include set-current-element(popover);
+  @include element-prop(display, inline-flex);
+  @include element-prop(position, relative);
+  @include element-prop(padding, var(--indent-m) var(--indent-l));
+  @include element-prop(background-color, current-color($shade: light));
+  @include element-prop(border-radius, 6px);
+
+  &amp;:not(.hide) {
+    @include element-prop(animation, 200ms ease-in-out show-popover);
+  }
+
+  &amp;.hide {
+    @include set-current-modifier(hide);
+    animation: 140ms ease-in-out hide-popover;
+    @include reset-current-modifier;
+  }
+
+  .popover-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .arrow {
+    @include set-current-element(popover-arrow);
+    @include element-prop(position, absolute);
+    @include element-prop(fill, current-color($shade: light));
+  }
+
+  &amp;.position-y-top {
+    @include set-current-element(popover);
+    @include element-prop(transform, translateY(-13px));
+
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(bottom, 0);
+      @include element-prop(transform, translateY(100%));
+      @include reset-current-element;
+    }
+  }
+
+  &amp;.position-y-bottom.position-x-start {
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(transform, translateY(-100%) scale(-1) rotateY(-190deg))
+    }
+  }
+
+  &amp;.position-y-top.position-x-start {
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(transform, translateY(100%))
+    }
+  }
+
+  &amp;.position-y-top.position-x-end {
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(transform, translateY(100%) scaleX(-1))
+    }
+  }
+
+  &amp;.position-y-bottom.position-x-end {
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(transform, translateY(-100%) scale(-1))
+    }
+  }
+
+  &amp;.position-x-start {
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(left, var(--indent-l));
+      @include reset-current-element;
+    }
+  }
+
+  &amp;.position-x-end {
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(right, var(--indent-l));
+      @include reset-current-element;
+    }
+  }
+
+  &amp;.position-y-bottom {
+    @include set-current-element(popover);
+    @include element-prop(transform, translateY(13px));
+
+    .arrow {
+      @include set-current-element(popover-arrow);
+      @include element-prop(top, 0);
+      @include element-prop(transform, translateY(-100%));
+      @include reset-current-element;
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-template>  <div [class]="\'popover\' + \' color-\' + color" [id]="id">    <div class="popover-content">      <ng-content></ng-content>    </div>    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none" class="arrow">      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.622314 0L4.10221 12.4953L16.3979 0H0.622314Z"/>    </svg>  </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'ActionsPortalComponent', 'selector': 'air-actions-portal'},{'name': 'AutocompleteComponent', 'selector': 'air-autocomplete'},{'name': 'ButtonComponent', 'selector': 'button[air-button], a[air-button], label[air-button]'},{'name': 'CheckboxComponent', 'selector': 'air-checkbox'},{'name': 'CloseModalButtonComponent', 'selector': 'air-modal-close'},{'name': 'ConfirmComponent', 'selector': 'air-confirm'},{'name': 'ContainerComponent', 'selector': 'air-container, [air-container]'},{'name': 'DelimiterComponent', 'selector': 'air-delimiter'},{'name': 'DynamicIconComponent', 'selector': 'air-dynamic-icon'},{'name': 'ExpansionComponent', 'selector': 'air-expansion, [air-expansion]'},{'name': 'ExpansionHeaderComponent', 'selector': 'air-expansion-header, [air-expansion-header]'},{'name': 'FileComponent', 'selector': 'air-file'},{'name': 'FileItemComponent', 'selector': 'air-file-item'},{'name': 'FormFieldComponent', 'selector': 'air-form-field'},{'name': 'HeaderPortalComponent', 'selector': 'air-header-portal'},{'name': 'IconComponent', 'selector': 'air-icon'},{'name': 'ImageComponent', 'selector': 'air-image-upload'},{'name': 'InputColorComponent', 'selector': 'air-input-color'},{'name': 'LabelComponent', 'selector': '[air-label]'},{'name': 'ListComponent', 'selector': 'air-list, [air-list]'},{'name': 'ListItemComponent', 'selector': 'air-list-item, [air-list-item]'},{'name': 'LoaderComponent', 'selector': 'air-loader'},{'name': 'ModalComponent', 'selector': 'lib-modal'},{'name': 'ModalComponent', 'selector': 'air-modal'},{'name': 'NavComponent', 'selector': 'air-nav'},{'name': 'OptionComponent', 'selector': 'air-option'},{'name': 'PageComponent', 'selector': 'air-page'},{'name': 'PopoverComponent', 'selector': 'air-popover'},{'name': 'ProgressBarComponent', 'selector': 'air-progress-bar'},{'name': 'RadioButtonComponent', 'selector': 'air-radio-button'},{'name': 'RadioGroupComponent', 'selector': 'air-radio-group'},{'name': 'ScrollContainerComponent', 'selector': 'air-scroll-container, [air-scroll-container]'},{'name': 'SelectComponent', 'selector': 'air-select'},{'name': 'SliderComponent', 'selector': 'air-slider'},{'name': 'TabsLinksComponent', 'selector': 'air-tabs-links, [air-tabs-links]'},{'name': 'TabsLinksComponent', 'selector': 'air-tabs-links, [air-tabs-links]'},{'name': 'ToggleComponent', 'selector': 'air-toggle'},{'name': 'TooltipComponent', 'selector': 'air-tooltip'},{'name': 'ZoomImageComponent', 'selector': 'air-zoom-image'}];
+    var DIRECTIVES = [{'name': 'AbstractIndentsDirective', 'selector': ''},{'name': 'ActionsContainerDirective', 'selector': '[airActionsContainer]'},{'name': 'AutocompleteDirective', 'selector': 'input[airAutocomplete], textarea[airAutocomplete]'},{'name': 'AutofocusDirective', 'selector': '[airAutofocus]'},{'name': 'AvatarDirective', 'selector': '[airAvatar]'},{'name': 'BreakpointsDirective', 'selector': '[airBreakpoints]'},{'name': 'ClearInputBeforeUploadDirective', 'selector': 'input[airClearBeforeUpload]'},{'name': 'ColorDirective', 'selector': '[airColor]'},{'name': 'ContentDirective', 'selector': '[airContent]'},{'name': 'DirectionDirective', 'selector': '[airDirection]'},{'name': 'EndDirective', 'selector': '[airEnd],[airStickyEnd]'},{'name': 'FlexDirective', 'selector': '
+  [airFlex],
+  [xs.airFlex],
+  [sm.airFlex],
+  [md.airFlex],
+  [lg.airFlex],
+  [xl.airFlex],
+  [ltSm.airFlex],
+  [ltMd.airFlex],
+  [ltLg.airFlex],
+  [ltXl.airFlex],
+  [gtSm.airFlex],
+  [gtMd.airFlex],
+  [gtLg.airFlex],
+  [gtXs.airFlex],
+  '},{'name': 'FooterDirective', 'selector': '[airFooter], [airStickyFooter]'},{'name': 'GridItemDirective', 'selector': '
+  [airGridItem],
+  [xs.airGridItem],
+  [sm.airGridItem],
+  [md.airGridItem],
+  [lg.airGridItem],
+  [xl.airGridItem],
+  [ltSm.airGridItem],
+  [ltMd.airGridItem],
+  [ltLg.airGridItem],
+  [ltXl.airGridItem],
+  [gtSm.airGridItem],
+  [gtMd.airGridItem],
+  [gtLg.airGridItem],
+  [gtXs.airGridItem],
+  [airFilledGridItem],
+  [xs.airFilledGridItem],
+  [sm.airFilledGridItem],
+  [md.airFilledGridItem],
+  [lg.airFilledGridItem],
+  [xl.airFilledGridItem],
+  [ltSm.airFilledGridItem],
+  [ltMd.airFilledGridItem],
+  [ltLg.airFilledGridItem],
+  [ltXl.airFilledGridItem],
+  [gtSm.airFilledGridItem],
+  [gtMd.airFilledGridItem],
+  [gtLg.airFilledGridItem],
+  [gtXs.airFilledGridItem],
+  [airFixedGridItem],
+  [xs.airFixedGridItem],
+  [sm.airFixedGridItem],
+  [md.airFixedGridItem],
+  [lg.airFixedGridItem],
+  [xl.airFixedGridItem],
+  [ltSm.airFixedGridItem],
+  [ltMd.airFixedGridItem],
+  [ltLg.airFixedGridItem],
+  [ltXl.airFixedGridItem],
+  [gtSm.airFixedGridItem],
+  [gtMd.airFixedGridItem],
+  [gtLg.airFixedGridItem],
+  [gtXs.airFixedGridItem],
+  '},{'name': 'HeaderContainerDirective', 'selector': '[airHeaderContainer]'},{'name': 'HeaderDirective', 'selector': '[airHeader], [airStickyHeader]'},{'name': 'HideIfEmptyDirective', 'selector': '[airHideIfEmpty]'},{'name': 'ImpositionContainerDirective', 'selector': '[airImpositionContainer]'},{'name': 'ImpositionDirective', 'selector': '[airImpositionTo]'},{'name': 'InputAutoWidthDirective', 'selector': 'input[airInputAutoWidth]'},{'name': 'InputDirective', 'selector': 'input[airInput], textarea[airTextarea], input[airInvisibleInput], textarea[airInvisibleTextarea]'},{'name': 'LayoutDirective', 'selector': '
+  [airGrid],
+  [airLayout],
+  [xs.airLayout],
+  [sm.airLayout],
+  [md.airLayout],
+  [lg.airLayout],
+  [xl.airLayout],
+  [ltSm.airLayout],
+  [ltMd.airLayout],
+  [ltLg.airLayout],
+  [ltXl.airLayout],
+  [gtSm.airLayout],
+  [gtMd.airLayout],
+  [gtLg.airLayout],
+  [gtXs.airLayout],
+  [airRowGap],
+  [xs.airRowGap],
+  [sm.airRowGap],
+  [md.airRowGap],
+  [lg.airRowGap],
+  [xl.airRowGap],
+  [ltSm.airRowGap],
+  [ltMd.airRowGap],
+  [ltLg.airRowGap],
+  [ltXl.airRowGap],
+  [gtSm.airRowGap],
+  [gtMd.airRowGap],
+  [gtLg.airRowGap],
+  [gtXs.airRowGap],
+  [airColGap],
+  [xs.airColGap],
+  [sm.airColGap],
+  [md.airColGap],
+  [lg.airColGap],
+  [xl.airColGap],
+  [ltSm.airColGap],
+  [ltMd.airColGap],
+  [ltLg.airColGap],
+  [ltXl.airColGap],
+  [gtSm.airColGap],
+  [gtMd.airColGap],
+  [gtLg.airColGap],
+  [gtXs.airColGap],
+  [airColCount],
+  [xs.airColCount],
+  [sm.airColCount],
+  [md.airColCount],
+  [lg.airColCount],
+  [xl.airColCount],
+  [ltSm.airColCount],
+  [ltMd.airColCount],
+  [ltLg.airColCount],
+  [ltXl.airColCount],
+  [gtSm.airColCount],
+  [gtMd.airColCount],
+  [gtLg.airColCount],
+  [gtXs.airColCount],
+  [airColGap],
+  [xs.airColGap],
+  [sm.airColGap],
+  [md.airColGap],
+  [lg.airColGap],
+  [xl.airColGap],
+  [ltSm.airColGap],
+  [ltMd.airColGap],
+  [ltLg.airColGap],
+  [ltXl.airColGap],
+  [gtSm.airColGap],
+  [gtMd.airColGap],
+  [gtLg.airColGap],
+  [gtXs.airColGap],
+  '},{'name': 'LoadDirective', 'selector': '[airLoad], [airLoadWhen]'},{'name': 'MarginsDirective', 'selector': '
+  [airMargin],
+  [xs.airMargin],
+  [sm.airMargin],
+  [md.airMargin],
+  [lg.airMargin],
+  [xl.airMargin],
+  [ltSm.airMargin],
+  [ltMd.airMargin],
+  [ltLg.airMargin],
+  [ltXl.airMargin],
+  [gtSm.airMargin],
+  [gtMd.airMargin],
+  [gtLg.airMargin],
+  [gtXs.airMargin],
+  [airMarginTop],
+  [xs.airMarginTop],
+  [sm.airMarginTop],
+  [md.airMarginTop],
+  [lg.airMarginTop],
+  [xl.airMarginTop],
+  [ltSm.airMarginTop],
+  [ltMd.airMarginTop],
+  [ltLg.airMarginTop],
+  [ltXl.airMarginTop],
+  [gtSm.airMarginTop],
+  [gtMd.airMarginTop],
+  [gtLg.airMarginTop],
+  [gtXs.airMarginTop],
+  [airMarginBottom],
+  [xs.airMarginBottom],
+  [sm.airMarginBottom],
+  [md.airMarginBottom],
+  [lg.airMarginBottom],
+  [xl.airMarginBottom],
+  [ltSm.airMarginBottom],
+  [ltMd.airMarginBottom],
+  [ltLg.airMarginBottom],
+  [ltXl.airMarginBottom],
+  [gtSm.airMarginBottom],
+  [gtMd.airMarginBottom],
+  [gtLg.airMarginBottom],
+  [gtXs.airMarginBottom],
+  [airMarginStart],
+  [xs.airMarginStart],
+  [sm.airMarginStart],
+  [md.airMarginStart],
+  [lg.airMarginStart],
+  [xl.airMarginStart],
+  [ltSm.airMarginStart],
+  [ltMd.airMarginStart],
+  [ltLg.airMarginStart],
+  [ltXl.airMarginStart],
+  [gtSm.airMarginStart],
+  [gtMd.airMarginStart],
+  [gtLg.airMarginStart],
+  [gtXs.airMarginStart],
+  [airMarginEnd],
+  [xs.airMarginEnd],
+  [sm.airMarginEnd],
+  [md.airMarginEnd],
+  [lg.airMarginEnd],
+  [xl.airMarginEnd],
+  [ltSm.airMarginEnd],
+  [ltMd.airMarginEnd],
+  [ltLg.airMarginEnd],
+  [ltXl.airMarginEnd],
+  [gtSm.airMarginEnd],
+  [gtMd.airMarginEnd],
+  [gtLg.airMarginEnd],
+  [gtXs.airMarginEnd],
+  [airMarginHorizontal],
+  [xs.airMarginHorizontal],
+  [sm.airMarginHorizontal],
+  [md.airMarginHorizontal],
+  [lg.airMarginHorizontal],
+  [xl.airMarginHorizontal],
+  [ltSm.airMarginHorizontal],
+  [ltMd.airMarginHorizontal],
+  [ltLg.airMarginHorizontal],
+  [ltXl.airMarginHorizontal],
+  [gtSm.airMarginHorizontal],
+  [gtMd.airMarginHorizontal],
+  [gtLg.airMarginHorizontal],
+  [gtXs.airMarginHorizontal],
+  [airMarginVertical],
+  [xs.airMarginVertical],
+  [sm.airMarginVertical],
+  [md.airMarginVertical],
+  [lg.airMarginVertical],
+  [xl.airMarginVertical],
+  [ltSm.airMarginVertical],
+  [ltMd.airMarginVertical],
+  [ltLg.airMarginVertical],
+  [ltXl.airMarginVertical],
+  [gtSm.airMarginVertical],
+  [gtMd.airMarginVertical],
+  [gtLg.airMarginVertical],
+  [gtXs.airMarginVertical]
+  '},{'name': 'OverlayDirective', 'selector': '[airOverlay]'},{'name': 'PaddingsDirective', 'selector': '
+  [airPadding],
+  [airPaddingStart],
+  [airPaddingEnd],
+  [xs.airPadding],
+  [sm.airPadding],
+  [md.airPadding],
+  [lg.airPadding],
+  [xl.airPadding],
+  [ltSm.airPadding],
+  [ltMd.airPadding],
+  [ltLg.airPadding],
+  [ltXl.airPadding],
+  [gtSm.airPadding],
+  [gtMd.airPadding],
+  [gtLg.airPadding],
+  [gtXs.airPadding],
+  [airPaddingTop],
+  [xs.airPaddingTop],
+  [sm.airPaddingTop],
+  [md.airPaddingTop],
+  [lg.airPaddingTop],
+  [xl.airPaddingTop],
+  [ltSm.airPaddingTop],
+  [ltMd.airPaddingTop],
+  [ltLg.airPaddingTop],
+  [ltXl.airPaddingTop],
+  [gtSm.airPaddingTop],
+  [gtMd.airPaddingTop],
+  [gtLg.airPaddingTop],
+  [gtXs.airPaddingTop],
+  [airPaddingBottom],
+  [xs.airPaddingBottom],
+  [sm.airPaddingBottom],
+  [md.airPaddingBottom],
+  [lg.airPaddingBottom],
+  [xl.airPaddingBottom],
+  [ltSm.airPaddingBottom],
+  [ltMd.airPaddingBottom],
+  [ltLg.airPaddingBottom],
+  [ltXl.airPaddingBottom],
+  [gtSm.airPaddingBottom],
+  [gtMd.airPaddingBottom],
+  [gtLg.airPaddingBottom],
+  [gtXs.airPaddingBottom],
+  [airPaddingStart],
+  [xs.airPaddingStart],
+  [sm.airPaddingStart],
+  [md.airPaddingStart],
+  [lg.airPaddingStart],
+  [xl.airPaddingStart],
+  [ltSm.airPaddingStart],
+  [ltMd.airPaddingStart],
+  [ltLg.airPaddingStart],
+  [ltXl.airPaddingStart],
+  [gtSm.airPaddingStart],
+  [gtMd.airPaddingStart],
+  [gtLg.airPaddingStart],
+  [gtXs.airPaddingStart],
+  [airPaddingEnd],
+  [xs.airPaddingEnd],
+  [sm.airPaddingEnd],
+  [md.airPaddingEnd],
+  [lg.airPaddingEnd],
+  [xl.airPaddingEnd],
+  [ltSm.airPaddingEnd],
+  [ltMd.airPaddingEnd],
+  [ltLg.airPaddingEnd],
+  [ltXl.airPaddingEnd],
+  [gtSm.airPaddingEnd],
+  [gtMd.airPaddingEnd],
+  [gtLg.airPaddingEnd],
+  [gtXs.airPaddingEnd],
+  [airPaddingHorizontal],
+  [xs.airPaddingHorizontal],
+  [sm.airPaddingHorizontal],
+  [md.airPaddingHorizontal],
+  [lg.airPaddingHorizontal],
+  [xl.airPaddingHorizontal],
+  [ltSm.airPaddingHorizontal],
+  [ltMd.airPaddingHorizontal],
+  [ltLg.airPaddingHorizontal],
+  [ltXl.airPaddingHorizontal],
+  [gtSm.airPaddingHorizontal],
+  [gtMd.airPaddingHorizontal],
+  [gtLg.airPaddingHorizontal],
+  [gtXs.airPaddingHorizontal],
+  [airPaddingVertical],
+  [xs.airPaddingVertical],
+  [sm.airPaddingVertical],
+  [md.airPaddingVertical],
+  [lg.airPaddingVertical],
+  [xl.airPaddingVertical],
+  [ltSm.airPaddingVertical],
+  [ltMd.airPaddingVertical],
+  [ltLg.airPaddingVertical],
+  [ltXl.airPaddingVertical],
+  [gtSm.airPaddingVertical],
+  [gtMd.airPaddingVertical],
+  [gtLg.airPaddingVertical],
+  [gtXs.airPaddingVertical],
+  '},{'name': 'PopoverDirective', 'selector': '[airPopover]'},{'name': 'ScrollDirective', 'selector': '[airScroll]'},{'name': 'ScrollToMeDirective', 'selector': '[airScrollToMe]'},{'name': 'StartDirective', 'selector': '[airStart], [airStickyStart]'},{'name': 'StretchDirective', 'selector': '[airStretch], [airStretchX], [airStretchY], [airStretchForcibly], [airStretchForciblyX], [airStretchForciblyY]'},{'name': 'TabLinkDirective', 'selector': '[airTabLink]'},{'name': 'TabLinkDirective', 'selector': '[airTabLink]'},{'name': 'TextareaAutosizeDirective', 'selector': 'textarea[airTextareaAutosize]'},{'name': 'TextDirectionDirective', 'selector': '[airTextStart], [airTextEnd], [airTextCenter]'},{'name': 'TextDirective', 'selector': '[airText1], [airText2], [airText3], [airFixedText1], [airFixedText2], [airFixedText3]'},{'name': 'ThemeDirective', 'selector': '[airTheme]'},{'name': 'TitleDirective', 'selector': '[airH1], [airH2], [airH3], [airH4], [airH5], [airFixedH1], [airFixedH2], [airFixedH3], [airFixedH4], [airFixedH5]'},{'name': 'TooltipDirective', 'selector': '[airTooltip]'},{'name': 'ZoomImageDirective', 'selector': '[airZoomImage]'}];
+    var ACTUAL_COMPONENT = {'name': 'PopoverComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PopoverComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -17,6 +17,10 @@
       "lodash-es": [
         "./node_modules/lodash-es"
       ],
+      "avatar": [
+        "dist/avatar/avatar",
+        "dist/avatar"
+      ],
       "icon": [
         "dist/icon/icon",
         "dist/icon"

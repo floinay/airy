@@ -1,0 +1,418 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>airy-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">airy-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li
+  >
+  CounterContext</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>projects/controls/src/lib/components/slider/slider.component.ts</code>
+        </p>
+
+
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#count" 
+>
+                                            count
+                                        </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="count"></a>
+                                        <span class="name "><b>count</b>
+                                            <a href="#count">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>count:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  forwardRef,
+  HostBinding,
+  Inject,
+  Input,
+  NgZone,
+  TemplateRef,
+  ViewChild
+} from &#x27;@angular/core&#x27;;
+import {CanColorCtor, HasElementRef, mixinColor} from &#x27;@airy-ui/cdk&#x27;;
+import {DirectionService} from &#x27;@airy-ui/direction&#x27;;
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from &#x27;@angular/forms&#x27;;
+import {fromEvent, Subject} from &#x27;rxjs&#x27;;
+import {auditTime, filter, takeUntil} from &#x27;rxjs/operators&#x27;;
+import {DOCUMENT} from &#x27;@angular/common&#x27;;
+import {UntilDestroy, untilDestroyed} from &#x27;@ngneat/until-destroy&#x27;;
+
+const SliderBase: CanColorCtor &#x3D; mixinColor(HasElementRef, &#x27;primary&#x27;);
+
+interface CounterContext {
+  count: number;
+}
+
+@Component({
+  selector: &#x27;air-slider&#x27;,
+  templateUrl: &#x27;./slider.component.html&#x27;,
+  styleUrls: [&#x27;./slider.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  exportAs: &#x27;slider&#x27;,
+  host: {
+    &#x27;attr.role&#x27;: &#x27;slider&#x27;
+  },
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() &#x3D;&gt; SliderComponent),
+      multi: true
+    }
+  ]
+})
+@UntilDestroy()
+export class SliderComponent extends SliderBase implements AfterViewInit, ControlValueAccessor {
+  private readonly onPointerUp$ &#x3D; new Subject&lt;void&gt;();
+  private readonly valueChange &#x3D; new Subject&lt;void&gt;();
+  private dragStarted &#x3D; false;
+  private buttonX!: number;
+  private viewInit &#x3D; false;
+  @ViewChild(&#x27;button&#x27;, {static: true, read: ElementRef}) button!: ElementRef&lt;HTMLButtonElement&gt;;
+  @ViewChild(&#x27;slider&#x27;, {static: true, read: ElementRef}) slider!: ElementRef&lt;HTMLDivElement&gt;;
+  @ViewChild(&#x27;counterWithPercent&#x27;, {static: true, read: TemplateRef}) templatePercent!: TemplateRef&lt;CounterContext&gt;;
+  @ViewChild(&#x27;backgroundContainer&#x27;, {static: true, read: ElementRef}) backgroundContainer!: ElementRef&lt;HTMLDivElement&gt;;
+  @HostBinding(&#x27;attr.tabindex&#x27;)
+  @Input() tabindex &#x3D; 0;
+
+  @Input() showCounter &#x3D; true;
+
+  @Input() counter?: TemplateRef&lt;CounterContext&gt;;
+
+  @HostBinding(&#x27;attr.aria-valuemin&#x27;)
+  @Input() min &#x3D; 0;
+
+  @HostBinding(&#x27;attr.aria-valuemax&#x27;)
+  @Input() max &#x3D; 100;
+
+  @Input() step &#x3D; 1;
+
+  @Input() value &#x3D; 0;
+
+  viewValue &#x3D; this.value;
+
+  get counterContext(): CounterContext {
+    return {count: this.viewValue};
+  }
+
+  get maxValueContext(): CounterContext {
+    return {count: this.max};
+  }
+
+  get sliderPosition(): number {
+    return this.slider.nativeElement.getBoundingClientRect().x;
+  }
+
+  get sliderSize(): number {
+    return this.slider.nativeElement.getBoundingClientRect().width;
+  }
+
+
+  constructor(private elementRef: ElementRef,
+              private cdr: ChangeDetectorRef,
+              private ngZone: NgZone,
+              @Inject(DOCUMENT) readonly document: Document,
+              private direction: DirectionService) {
+    super(elementRef)
+  }
+
+  ngAfterViewInit(): void {
+    this.viewInit &#x3D; true;
+    this.updatePosition();
+    this.ngZone.runOutsideAngular(() &#x3D;&gt; {
+      this.valueChange.pipe(
+        auditTime(20),
+        untilDestroyed(this),
+        filter(() &#x3D;&gt; this.viewValue !&#x3D; this.value)
+      ).subscribe(() &#x3D;&gt; {
+        this.value &#x3D; this.viewValue;
+        this.onChange(this.value);
+      });
+    })
+  }
+
+
+  writeValue(obj: any): void {
+    if (!this.dragStarted) {
+      this.value &#x3D; obj;
+      this.viewValue &#x3D; this.value;
+      this.cdr.markForCheck();
+      this.updatePosition();
+    }
+  }
+
+  move(event: PointerEvent): void {
+    const x &#x3D; this.minMaxPosition(event.clientX - this.buttonX);
+    const oneStepMap &#x3D; this.sliderSize / this.max;
+    this.viewValue &#x3D; this.getValueFromX(x);
+    this.cdr.markForCheck();
+    this.updateButtonPosition(x);
+    this.updateBackgroundWidth(this.viewValue * oneStepMap);
+    this.valueChange.next();
+  }
+
+
+  onDragStart(): void {
+    if (!this.dragStarted) {
+      this.subscribeUpMove();
+    }
+    this.buttonX &#x3D; this.sliderSize + this.sliderPosition;
+    this.dragStarted &#x3D; true;
+  }
+
+  onDragEnd(): void {
+    this.onPointerUp$.next();
+    this.dragStarted &#x3D; false;
+    this.valueChange.next();
+  }
+
+  private updatePosition(): void {
+    if (this.viewInit) {
+      const oneStepMap &#x3D; this.sliderSize / this.max;
+      const x &#x3D; oneStepMap * this.value;
+      this.updateBackgroundWidth(x);
+      this.updateButtonPosition(this.minMaxPosition(this.direction.isRtl() ? x * -1 : x));
+    }
+  }
+
+  private getValueFromX(x: number): number {
+    return Math.abs(Math.ceil(x / this.sliderSize * 100));
+  }
+
+  private updateBackgroundWidth(width: number): void {
+    this.backgroundContainer.nativeElement.style.width &#x3D; width + &#x27;px&#x27;;
+  }
+
+  private updateButtonPosition(x: number): void {
+    this.button.nativeElement.style.setProperty(&#x27;transform&#x27;, &#x60;translateX(${x}px)&#x60;);
+  }
+
+  private minMaxPosition(position: number): number {
+    if (this.direction.isRtl()) {
+      if (position &gt; 0) {
+        position &#x3D; 0;
+      } else if (position &lt; (this.sliderSize * -1)) {
+        position &#x3D; this.sliderSize * -1;
+      }
+    } else {
+      if (position &lt; 0) {
+        position &#x3D; 0;
+      } else if (position &gt; this.sliderSize) {
+        position &#x3D; this.sliderSize;
+      }
+    }
+
+    return position;
+  }
+
+  private subscribeUpMove(): void {
+    this.ngZone.run(() &#x3D;&gt; {
+      fromEvent&lt;PointerEvent&gt;(this.document, &#x27;pointerup&#x27;)
+        .pipe(takeUntil(this.onPointerUp$), untilDestroyed(this))
+        .subscribe(this.onDragEnd.bind(this));
+      fromEvent&lt;PointerEvent&gt;(this.document, &#x27;pointercancel&#x27;)
+        .pipe(takeUntil(this.onPointerUp$), untilDestroyed(this))
+        .subscribe(this.onDragEnd.bind(this));
+      fromEvent&lt;PointerEvent&gt;(this.document, &#x27;pointermove&#x27;)
+        .pipe(takeUntil(this.onPointerUp$), untilDestroyed(this))
+        .subscribe(this.move.bind(this));
+    });
+  }
+
+  private onChange(value: number): void {
+  }
+
+  private ontTouched() {
+
+  }
+
+  registerOnChange(fn: any): void {
+    this.onChange &#x3D; fn;
+  }
+
+  registerOnTouched(fn: any): void {
+    this.ontTouched &#x3D; fn;
+  }
+}
+
+</code></pre>
+    </div>
+</div>
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'CounterContext.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

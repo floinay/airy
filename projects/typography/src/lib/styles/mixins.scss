@@ -19,6 +19,9 @@
     font-size: get-element-var($element, font-size);
     line-height: get-element-var($element, line-height);
     font-weight: get-element-var($element, font-weight);
+    --line-height: #{get-element-var($element, line-height)};
+    --font-size: #{get-element-var($element, font-size)};
+    --font-weight: #{get-element-var($element, font-weight)};
     @include air-tp-deep;
   }
 

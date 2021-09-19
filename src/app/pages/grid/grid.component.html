@@ -1,11 +1,11 @@
 <h1>
   Grid
 </h1>
-<div [airColCount]="3" airLayout="row wrap" airColGap="l">
-  <div airGridItem></div>
-  <div airGridItem></div>
-  <div airGridItem></div>
-  <div airGridItem></div>
+<div airLayout="row wrap" airColGap="l">
+  <div airGridItem airLastOnLine airMarginEnd="l" airMarginHorizontal="auto" class="flt"></div>
+  <div airGridItem airLastOnLine airMarginEnd="l" airMarginHorizontal="auto" class="flt"></div>
+  <div airGridItem airLastOnLine airMarginEnd="l" airMarginHorizontal="auto" class="flt"></div>
+  <div airGridItem airLastOnLine airMarginHorizontal="auto" class="flt"></div>
 </div>
 <div airGridItem="12">12 - <span>{{getGridSize(12)}}</span></div>
 <div airGrid>

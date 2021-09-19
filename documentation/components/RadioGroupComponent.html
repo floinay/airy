@@ -1,0 +1,1239 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>airy-ui documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">airy-ui documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  RadioGroupComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>projects/controls/src/lib/components/radio-group/radio-group.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/forms/ControlValueAccessor" target="_blank" >ControlValueAccessor</a></code>
+                    <code><a href="https://angular.io/api/core/AfterContentInit" target="_blank" >AfterContentInit</a></code>
+                    <code><a href="../miscellaneous/typealiases.html#O" target="_self" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../components/RadioGroupComponent.html" target="_self" >{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() &#x3D;&gt; RadioGroupComponent), multi: true }</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>air-radio-group</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>radio-group.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>radio-group.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#buttons" >buttons</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Optional</span>
+                                <a href="#selectionListener" >selectionListener</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#listenSelection" >listenSelection</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterContentInit" >ngAfterContentInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#registerOnChange" >registerOnChange</a>
+                            </li>
+                            <li>
+                                <a href="#registerOnTouched" >registerOnTouched</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setButtonsName" >setButtonsName</a>
+                            </li>
+                            <li>
+                                <a href="#writeValue" >writeValue</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#name" >name</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(usd: <a href="../undefineds/patch.html" target="_self">UniqueSelectionDispatcher</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/controls/src/lib/components/radio-group/radio-group.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>usd</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../miscellaneous/functions.html#patch" target="_self" >UniqueSelectionDispatcher</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="name"></a>
+                        <b>name</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>randomId()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">projects/controls/src/lib/components/radio-group/radio-group.component.ts:22</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listenSelection"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>listenSelection</b></span>
+                        <a href="#listenSelection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>listenSelection()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">projects/controls/src/lib/components/radio-group/radio-group.component.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterContentInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterContentInit</b></span>
+                        <a href="#ngAfterContentInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterContentInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">projects/controls/src/lib/components/radio-group/radio-group.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">projects/controls/src/lib/components/radio-group/radio-group.component.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerOnChange"></a>
+                    <span class="name">
+                        <span ><b>registerOnChange</b></span>
+                        <a href="#registerOnChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registerOnChange(fn: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">projects/controls/src/lib/components/radio-group/radio-group.component.ts:35</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fn</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerOnTouched"></a>
+                    <span class="name">
+                        <span ><b>registerOnTouched</b></span>
+                        <a href="#registerOnTouched"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>registerOnTouched(fn: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">projects/controls/src/lib/components/radio-group/radio-group.component.ts:38</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fn</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setButtonsName"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>setButtonsName</b></span>
+                        <a href="#setButtonsName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setButtonsName()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">projects/controls/src/lib/components/radio-group/radio-group.component.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="writeValue"></a>
+                    <span class="name">
+                        <span ><b>writeValue</b></span>
+                        <a href="#writeValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>writeValue(obj: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">projects/controls/src/lib/components/radio-group/radio-group.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>obj</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buttons"></a>
+                    <span class="name">
+                        <span ><b>buttons</b></span>
+                        <a href="#buttons"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>QueryList&lt;RadioButtonComponent&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ContentChildren(RadioButtonComponent)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/controls/src/lib/components/radio-group/radio-group.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectionListener"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Optional</span>
+                        <span ><b>selectionListener</b></span>
+                        <a href="#selectionListener"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">projects/controls/src/lib/components/radio-group/radio-group.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  AfterContentInit,
+  ChangeDetectionStrategy,
+  Component,
+  ContentChildren,
+  forwardRef, Input, OnDestroy,
+  QueryList
+} from &#x27;@angular/core&#x27;;
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from &#x27;@angular/forms&#x27;;
+import {RadioButtonComponent} from &#x27;../radio-button/radio-button.component&#x27;;
+import {randomId} from &#x27;@airy-ui/cdk&#x27;;
+import {UniqueSelectionDispatcher} from &#x27;@angular/cdk/collections&#x27;;
+
+@Component({
+  selector: &#x27;air-radio-group&#x27;,
+  templateUrl: &#x27;radio-group.component.html&#x27;,
+  styleUrls: [&#x27;radio-group.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [{provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() &#x3D;&gt; RadioGroupComponent), multi: true}],
+})
+export class RadioGroupComponent implements ControlValueAccessor, AfterContentInit, OnDestroy {
+  @Input() name &#x3D; randomId();
+
+  @ContentChildren(RadioButtonComponent) buttons!: QueryList&lt;RadioButtonComponent&gt;;
+  private selectionListener?: () &#x3D;&gt; void;
+
+  constructor(private usd: UniqueSelectionDispatcher) {
+  }
+
+  ngAfterContentInit(): void {
+    this.listenSelection();
+    this.setButtonsName();
+  }
+
+  registerOnChange(fn: any): void {
+  }
+
+  registerOnTouched(fn: any): void {
+  }
+
+  writeValue(obj: any): void {
+  }
+
+  private setButtonsName(): void {
+    this.buttons.forEach((button) &#x3D;&gt; button.name &#x3D; this.name);
+  }
+
+  private listenSelection(): void {
+    this.selectionListener &#x3D; this.usd.listen((id: string, name: string) &#x3D;&gt; {
+      if (name &#x3D;&#x3D;&#x3D; this.name) {
+        this.buttons.forEach((button) &#x3D;&gt; {
+          if (button.id !&#x3D;&#x3D; id) {
+            button.deactivate();
+          }
+        });
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.selectionListener) {
+      this.selectionListener();
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-content&gt;&lt;/ng-content&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>radio-group.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-content></ng-content></div>'
+    var COMPONENTS = [{'name': 'ActionsPortalComponent', 'selector': 'air-actions-portal'},{'name': 'AutocompleteComponent', 'selector': 'air-autocomplete'},{'name': 'ButtonComponent', 'selector': 'button[air-button], a[air-button], label[air-button]'},{'name': 'CheckboxComponent', 'selector': 'air-checkbox'},{'name': 'CloseModalButtonComponent', 'selector': 'air-modal-close'},{'name': 'ConfirmComponent', 'selector': 'air-confirm'},{'name': 'ContainerComponent', 'selector': 'air-container, [air-container]'},{'name': 'DelimiterComponent', 'selector': 'air-delimiter'},{'name': 'DynamicIconComponent', 'selector': 'air-dynamic-icon'},{'name': 'ExpansionComponent', 'selector': 'air-expansion, [air-expansion]'},{'name': 'ExpansionHeaderComponent', 'selector': 'air-expansion-header, [air-expansion-header]'},{'name': 'FileComponent', 'selector': 'air-file'},{'name': 'FileItemComponent', 'selector': 'air-file-item'},{'name': 'FormFieldComponent', 'selector': 'air-form-field'},{'name': 'HeaderPortalComponent', 'selector': 'air-header-portal'},{'name': 'IconComponent', 'selector': 'air-icon'},{'name': 'ImageComponent', 'selector': 'air-image-upload'},{'name': 'InputColorComponent', 'selector': 'air-input-color'},{'name': 'LabelComponent', 'selector': '[air-label]'},{'name': 'ListComponent', 'selector': 'air-list, [air-list]'},{'name': 'ListItemComponent', 'selector': 'air-list-item, [air-list-item]'},{'name': 'LoaderComponent', 'selector': 'air-loader'},{'name': 'ModalComponent', 'selector': 'lib-modal'},{'name': 'ModalComponent', 'selector': 'air-modal'},{'name': 'NavComponent', 'selector': 'air-nav'},{'name': 'OptionComponent', 'selector': 'air-option'},{'name': 'PageComponent', 'selector': 'air-page'},{'name': 'PopoverComponent', 'selector': 'air-popover'},{'name': 'ProgressBarComponent', 'selector': 'air-progress-bar'},{'name': 'RadioButtonComponent', 'selector': 'air-radio-button'},{'name': 'RadioGroupComponent', 'selector': 'air-radio-group'},{'name': 'ScrollContainerComponent', 'selector': 'air-scroll-container, [air-scroll-container]'},{'name': 'SelectComponent', 'selector': 'air-select'},{'name': 'SliderComponent', 'selector': 'air-slider'},{'name': 'TabsLinksComponent', 'selector': 'air-tabs-links, [air-tabs-links]'},{'name': 'TabsLinksComponent', 'selector': 'air-tabs-links, [air-tabs-links]'},{'name': 'ToggleComponent', 'selector': 'air-toggle'},{'name': 'TooltipComponent', 'selector': 'air-tooltip'},{'name': 'ZoomImageComponent', 'selector': 'air-zoom-image'}];
+    var DIRECTIVES = [{'name': 'AbstractIndentsDirective', 'selector': ''},{'name': 'ActionsContainerDirective', 'selector': '[airActionsContainer]'},{'name': 'AutocompleteDirective', 'selector': 'input[airAutocomplete], textarea[airAutocomplete]'},{'name': 'AutofocusDirective', 'selector': '[airAutofocus]'},{'name': 'AvatarDirective', 'selector': '[airAvatar]'},{'name': 'BreakpointsDirective', 'selector': '[airBreakpoints]'},{'name': 'ClearInputBeforeUploadDirective', 'selector': 'input[airClearBeforeUpload]'},{'name': 'ColorDirective', 'selector': '[airColor]'},{'name': 'ContentDirective', 'selector': '[airContent]'},{'name': 'DirectionDirective', 'selector': '[airDirection]'},{'name': 'EndDirective', 'selector': '[airEnd],[airStickyEnd]'},{'name': 'FlexDirective', 'selector': '
+  [airFlex],
+  [xs.airFlex],
+  [sm.airFlex],
+  [md.airFlex],
+  [lg.airFlex],
+  [xl.airFlex],
+  [ltSm.airFlex],
+  [ltMd.airFlex],
+  [ltLg.airFlex],
+  [ltXl.airFlex],
+  [gtSm.airFlex],
+  [gtMd.airFlex],
+  [gtLg.airFlex],
+  [gtXs.airFlex],
+  '},{'name': 'FooterDirective', 'selector': '[airFooter], [airStickyFooter]'},{'name': 'GridItemDirective', 'selector': '
+  [airGridItem],
+  [xs.airGridItem],
+  [sm.airGridItem],
+  [md.airGridItem],
+  [lg.airGridItem],
+  [xl.airGridItem],
+  [ltSm.airGridItem],
+  [ltMd.airGridItem],
+  [ltLg.airGridItem],
+  [ltXl.airGridItem],
+  [gtSm.airGridItem],
+  [gtMd.airGridItem],
+  [gtLg.airGridItem],
+  [gtXs.airGridItem],
+  [airFilledGridItem],
+  [xs.airFilledGridItem],
+  [sm.airFilledGridItem],
+  [md.airFilledGridItem],
+  [lg.airFilledGridItem],
+  [xl.airFilledGridItem],
+  [ltSm.airFilledGridItem],
+  [ltMd.airFilledGridItem],
+  [ltLg.airFilledGridItem],
+  [ltXl.airFilledGridItem],
+  [gtSm.airFilledGridItem],
+  [gtMd.airFilledGridItem],
+  [gtLg.airFilledGridItem],
+  [gtXs.airFilledGridItem],
+  [airFixedGridItem],
+  [xs.airFixedGridItem],
+  [sm.airFixedGridItem],
+  [md.airFixedGridItem],
+  [lg.airFixedGridItem],
+  [xl.airFixedGridItem],
+  [ltSm.airFixedGridItem],
+  [ltMd.airFixedGridItem],
+  [ltLg.airFixedGridItem],
+  [ltXl.airFixedGridItem],
+  [gtSm.airFixedGridItem],
+  [gtMd.airFixedGridItem],
+  [gtLg.airFixedGridItem],
+  [gtXs.airFixedGridItem],
+  '},{'name': 'HeaderContainerDirective', 'selector': '[airHeaderContainer]'},{'name': 'HeaderDirective', 'selector': '[airHeader], [airStickyHeader]'},{'name': 'HideIfEmptyDirective', 'selector': '[airHideIfEmpty]'},{'name': 'ImpositionContainerDirective', 'selector': '[airImpositionContainer]'},{'name': 'ImpositionDirective', 'selector': '[airImpositionTo]'},{'name': 'InputAutoWidthDirective', 'selector': 'input[airInputAutoWidth]'},{'name': 'InputDirective', 'selector': 'input[airInput], textarea[airTextarea], input[airInvisibleInput], textarea[airInvisibleTextarea]'},{'name': 'LayoutDirective', 'selector': '
+  [airGrid],
+  [airLayout],
+  [xs.airLayout],
+  [sm.airLayout],
+  [md.airLayout],
+  [lg.airLayout],
+  [xl.airLayout],
+  [ltSm.airLayout],
+  [ltMd.airLayout],
+  [ltLg.airLayout],
+  [ltXl.airLayout],
+  [gtSm.airLayout],
+  [gtMd.airLayout],
+  [gtLg.airLayout],
+  [gtXs.airLayout],
+  [airRowGap],
+  [xs.airRowGap],
+  [sm.airRowGap],
+  [md.airRowGap],
+  [lg.airRowGap],
+  [xl.airRowGap],
+  [ltSm.airRowGap],
+  [ltMd.airRowGap],
+  [ltLg.airRowGap],
+  [ltXl.airRowGap],
+  [gtSm.airRowGap],
+  [gtMd.airRowGap],
+  [gtLg.airRowGap],
+  [gtXs.airRowGap],
+  [airColGap],
+  [xs.airColGap],
+  [sm.airColGap],
+  [md.airColGap],
+  [lg.airColGap],
+  [xl.airColGap],
+  [ltSm.airColGap],
+  [ltMd.airColGap],
+  [ltLg.airColGap],
+  [ltXl.airColGap],
+  [gtSm.airColGap],
+  [gtMd.airColGap],
+  [gtLg.airColGap],
+  [gtXs.airColGap],
+  [airColCount],
+  [xs.airColCount],
+  [sm.airColCount],
+  [md.airColCount],
+  [lg.airColCount],
+  [xl.airColCount],
+  [ltSm.airColCount],
+  [ltMd.airColCount],
+  [ltLg.airColCount],
+  [ltXl.airColCount],
+  [gtSm.airColCount],
+  [gtMd.airColCount],
+  [gtLg.airColCount],
+  [gtXs.airColCount],
+  [airColGap],
+  [xs.airColGap],
+  [sm.airColGap],
+  [md.airColGap],
+  [lg.airColGap],
+  [xl.airColGap],
+  [ltSm.airColGap],
+  [ltMd.airColGap],
+  [ltLg.airColGap],
+  [ltXl.airColGap],
+  [gtSm.airColGap],
+  [gtMd.airColGap],
+  [gtLg.airColGap],
+  [gtXs.airColGap],
+  '},{'name': 'LoadDirective', 'selector': '[airLoad], [airLoadWhen]'},{'name': 'MarginsDirective', 'selector': '
+  [airMargin],
+  [xs.airMargin],
+  [sm.airMargin],
+  [md.airMargin],
+  [lg.airMargin],
+  [xl.airMargin],
+  [ltSm.airMargin],
+  [ltMd.airMargin],
+  [ltLg.airMargin],
+  [ltXl.airMargin],
+  [gtSm.airMargin],
+  [gtMd.airMargin],
+  [gtLg.airMargin],
+  [gtXs.airMargin],
+  [airMarginTop],
+  [xs.airMarginTop],
+  [sm.airMarginTop],
+  [md.airMarginTop],
+  [lg.airMarginTop],
+  [xl.airMarginTop],
+  [ltSm.airMarginTop],
+  [ltMd.airMarginTop],
+  [ltLg.airMarginTop],
+  [ltXl.airMarginTop],
+  [gtSm.airMarginTop],
+  [gtMd.airMarginTop],
+  [gtLg.airMarginTop],
+  [gtXs.airMarginTop],
+  [airMarginBottom],
+  [xs.airMarginBottom],
+  [sm.airMarginBottom],
+  [md.airMarginBottom],
+  [lg.airMarginBottom],
+  [xl.airMarginBottom],
+  [ltSm.airMarginBottom],
+  [ltMd.airMarginBottom],
+  [ltLg.airMarginBottom],
+  [ltXl.airMarginBottom],
+  [gtSm.airMarginBottom],
+  [gtMd.airMarginBottom],
+  [gtLg.airMarginBottom],
+  [gtXs.airMarginBottom],
+  [airMarginStart],
+  [xs.airMarginStart],
+  [sm.airMarginStart],
+  [md.airMarginStart],
+  [lg.airMarginStart],
+  [xl.airMarginStart],
+  [ltSm.airMarginStart],
+  [ltMd.airMarginStart],
+  [ltLg.airMarginStart],
+  [ltXl.airMarginStart],
+  [gtSm.airMarginStart],
+  [gtMd.airMarginStart],
+  [gtLg.airMarginStart],
+  [gtXs.airMarginStart],
+  [airMarginEnd],
+  [xs.airMarginEnd],
+  [sm.airMarginEnd],
+  [md.airMarginEnd],
+  [lg.airMarginEnd],
+  [xl.airMarginEnd],
+  [ltSm.airMarginEnd],
+  [ltMd.airMarginEnd],
+  [ltLg.airMarginEnd],
+  [ltXl.airMarginEnd],
+  [gtSm.airMarginEnd],
+  [gtMd.airMarginEnd],
+  [gtLg.airMarginEnd],
+  [gtXs.airMarginEnd],
+  [airMarginHorizontal],
+  [xs.airMarginHorizontal],
+  [sm.airMarginHorizontal],
+  [md.airMarginHorizontal],
+  [lg.airMarginHorizontal],
+  [xl.airMarginHorizontal],
+  [ltSm.airMarginHorizontal],
+  [ltMd.airMarginHorizontal],
+  [ltLg.airMarginHorizontal],
+  [ltXl.airMarginHorizontal],
+  [gtSm.airMarginHorizontal],
+  [gtMd.airMarginHorizontal],
+  [gtLg.airMarginHorizontal],
+  [gtXs.airMarginHorizontal],
+  [airMarginVertical],
+  [xs.airMarginVertical],
+  [sm.airMarginVertical],
+  [md.airMarginVertical],
+  [lg.airMarginVertical],
+  [xl.airMarginVertical],
+  [ltSm.airMarginVertical],
+  [ltMd.airMarginVertical],
+  [ltLg.airMarginVertical],
+  [ltXl.airMarginVertical],
+  [gtSm.airMarginVertical],
+  [gtMd.airMarginVertical],
+  [gtLg.airMarginVertical],
+  [gtXs.airMarginVertical]
+  '},{'name': 'OverlayDirective', 'selector': '[airOverlay]'},{'name': 'PaddingsDirective', 'selector': '
+  [airPadding],
+  [airPaddingStart],
+  [airPaddingEnd],
+  [xs.airPadding],
+  [sm.airPadding],
+  [md.airPadding],
+  [lg.airPadding],
+  [xl.airPadding],
+  [ltSm.airPadding],
+  [ltMd.airPadding],
+  [ltLg.airPadding],
+  [ltXl.airPadding],
+  [gtSm.airPadding],
+  [gtMd.airPadding],
+  [gtLg.airPadding],
+  [gtXs.airPadding],
+  [airPaddingTop],
+  [xs.airPaddingTop],
+  [sm.airPaddingTop],
+  [md.airPaddingTop],
+  [lg.airPaddingTop],
+  [xl.airPaddingTop],
+  [ltSm.airPaddingTop],
+  [ltMd.airPaddingTop],
+  [ltLg.airPaddingTop],
+  [ltXl.airPaddingTop],
+  [gtSm.airPaddingTop],
+  [gtMd.airPaddingTop],
+  [gtLg.airPaddingTop],
+  [gtXs.airPaddingTop],
+  [airPaddingBottom],
+  [xs.airPaddingBottom],
+  [sm.airPaddingBottom],
+  [md.airPaddingBottom],
+  [lg.airPaddingBottom],
+  [xl.airPaddingBottom],
+  [ltSm.airPaddingBottom],
+  [ltMd.airPaddingBottom],
+  [ltLg.airPaddingBottom],
+  [ltXl.airPaddingBottom],
+  [gtSm.airPaddingBottom],
+  [gtMd.airPaddingBottom],
+  [gtLg.airPaddingBottom],
+  [gtXs.airPaddingBottom],
+  [airPaddingStart],
+  [xs.airPaddingStart],
+  [sm.airPaddingStart],
+  [md.airPaddingStart],
+  [lg.airPaddingStart],
+  [xl.airPaddingStart],
+  [ltSm.airPaddingStart],
+  [ltMd.airPaddingStart],
+  [ltLg.airPaddingStart],
+  [ltXl.airPaddingStart],
+  [gtSm.airPaddingStart],
+  [gtMd.airPaddingStart],
+  [gtLg.airPaddingStart],
+  [gtXs.airPaddingStart],
+  [airPaddingEnd],
+  [xs.airPaddingEnd],
+  [sm.airPaddingEnd],
+  [md.airPaddingEnd],
+  [lg.airPaddingEnd],
+  [xl.airPaddingEnd],
+  [ltSm.airPaddingEnd],
+  [ltMd.airPaddingEnd],
+  [ltLg.airPaddingEnd],
+  [ltXl.airPaddingEnd],
+  [gtSm.airPaddingEnd],
+  [gtMd.airPaddingEnd],
+  [gtLg.airPaddingEnd],
+  [gtXs.airPaddingEnd],
+  [airPaddingHorizontal],
+  [xs.airPaddingHorizontal],
+  [sm.airPaddingHorizontal],
+  [md.airPaddingHorizontal],
+  [lg.airPaddingHorizontal],
+  [xl.airPaddingHorizontal],
+  [ltSm.airPaddingHorizontal],
+  [ltMd.airPaddingHorizontal],
+  [ltLg.airPaddingHorizontal],
+  [ltXl.airPaddingHorizontal],
+  [gtSm.airPaddingHorizontal],
+  [gtMd.airPaddingHorizontal],
+  [gtLg.airPaddingHorizontal],
+  [gtXs.airPaddingHorizontal],
+  [airPaddingVertical],
+  [xs.airPaddingVertical],
+  [sm.airPaddingVertical],
+  [md.airPaddingVertical],
+  [lg.airPaddingVertical],
+  [xl.airPaddingVertical],
+  [ltSm.airPaddingVertical],
+  [ltMd.airPaddingVertical],
+  [ltLg.airPaddingVertical],
+  [ltXl.airPaddingVertical],
+  [gtSm.airPaddingVertical],
+  [gtMd.airPaddingVertical],
+  [gtLg.airPaddingVertical],
+  [gtXs.airPaddingVertical],
+  '},{'name': 'PopoverDirective', 'selector': '[airPopover]'},{'name': 'ScrollDirective', 'selector': '[airScroll]'},{'name': 'ScrollToMeDirective', 'selector': '[airScrollToMe]'},{'name': 'StartDirective', 'selector': '[airStart], [airStickyStart]'},{'name': 'StretchDirective', 'selector': '[airStretch], [airStretchX], [airStretchY], [airStretchForcibly], [airStretchForciblyX], [airStretchForciblyY]'},{'name': 'TabLinkDirective', 'selector': '[airTabLink]'},{'name': 'TabLinkDirective', 'selector': '[airTabLink]'},{'name': 'TextareaAutosizeDirective', 'selector': 'textarea[airTextareaAutosize]'},{'name': 'TextDirectionDirective', 'selector': '[airTextStart], [airTextEnd], [airTextCenter]'},{'name': 'TextDirective', 'selector': '[airText1], [airText2], [airText3], [airFixedText1], [airFixedText2], [airFixedText3]'},{'name': 'ThemeDirective', 'selector': '[airTheme]'},{'name': 'TitleDirective', 'selector': '[airH1], [airH2], [airH3], [airH4], [airH5], [airFixedH1], [airFixedH2], [airFixedH3], [airFixedH4], [airFixedH5]'},{'name': 'TooltipDirective', 'selector': '[airTooltip]'},{'name': 'ZoomImageDirective', 'selector': '[airZoomImage]'}];
+    var ACTUAL_COMPONENT = {'name': 'RadioGroupComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RadioGroupComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       
+       <script type="module" src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
