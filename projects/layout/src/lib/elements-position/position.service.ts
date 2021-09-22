@@ -18,55 +18,68 @@ export class PositionService {
   }
 
   lastOnLine(el: HTMLElement): boolean {
-    const parent = el.parentElement as HTMLElement;
-    if (!parent || parent.childNodes.length === 1 || el.nodeName === '#comment' || parent.nodeName === '#comment') {
+    const {parent, children} = this.parentAndChildren(el);
+    if (this.parentOrElementInvalid(parent, el)) {
       return false;
     }
-    if (this.hasHorizontalScrollbar(parent)) {
-      throw new Error('FirstOnLine not working on parent with horizontal scroll');
-    }
-
     const parentWidth = this.getWidthWithoutPaddings(parent);
     const parentGap = this.getGap(parent);
-
     let lineWidth = 0;
-    for (let i = 0; i < parent.childNodes.length; i++) {
-      const node = parent.children[i] as HTMLElement;
-      if (node.nodeName === '#comment') {
-        continue;
-      }
-      const nodeWidth = node.clientWidth + this.getMargin(node);
+    for (let i = 0; i < children.length; i++) {
+      const node = children[i];
+      const nodeWidth = this.childNodeWidth(node);
       lineWidth += nodeWidth;
-      if (node === el) {
-        if (i === parent.childNodes.length - 1 || lineWidth === parentWidth || nodeWidth >= parentWidth) {
+      if (el === node) {
+        if (this.isLastElement(i, children) || lineWidth === parentWidth || nodeWidth >= parentWidth) {
           return true;
         }
-        if (lineWidth > parentWidth) {
-          return false;
+
+        if (lineWidth < parentWidth) {
+          const nextNodeWidth = this.getNextNodeWidth(i, children);
+          if (nextNodeWidth + lineWidth > parentWidth) {
+            console.log(lineWidth, nextNodeWidth, parentWidth, el);
+          }
+          return nextNodeWidth + lineWidth > parentWidth;
         }
 
+        return false;
 
-        const nextNodeWidth = this.getNextNodeWidth(i, Array.from(parent.childNodes) as HTMLElement[])
-        if (nextNodeWidth === 0) {
-          return true;
-        }
-        const nextLineWidth = lineWidth + nextNodeWidth;
-        return nextLineWidth >= parentWidth;
       }
-      lineWidth += parentGap;
+      if (lineWidth === parentWidth) {
+        lineWidth = 0;
+      }
+      if (lineWidth > parentWidth) {
+        lineWidth = nodeWidth + parentGap;
+      } else {
+        lineWidth += parentGap;
+      }
     }
-
     return false;
   }
 
-  private getNextNodeWidth(index = 0, nodes: HTMLElement[]): number {
-    index++;
-    const node = nodes[index];
-    const nextNodeWidth = node.nodeName === '#comment' ? 0 : node.clientWidth + this.getMargin(node);
-    if (nextNodeWidth === 0 && nodes.length - 1 > index) {
-      return this.getNextNodeWidth(index, nodes);
-    }
-    return nextNodeWidth;
+
+  private isLastElement(i: number, children: Array<any>): boolean {
+    return i + 1 === children.length;
+  }
+
+  private childNodeWidth(node: HTMLElement): number {
+    return node.clientWidth + this.getMargin(node);
+  }
+
+  private needSkipNode(el: HTMLElement): boolean {
+    return el.nodeName === '#comment';
+  }
+
+  private parentAndChildren(el: HTMLElement): { parent: HTMLElement, children: HTMLElement[] } {
+    const parent = el.parentElement as HTMLElement;
+    return {
+      parent,
+      children: Array.from(parent.childNodes).filter(el => !this.needSkipNode(el as HTMLElement)) as HTMLElement[]
+    };
+  }
+
+  private parentOrElementInvalid(parent: HTMLElement, el: HTMLElement): boolean {
+    return !parent || parent.childNodes.length === 1 || el.nodeName === '#comment' || parent.nodeName === '#comment' || this.hasHorizontalScrollbar(parent);
   }
 
   firstOnLine(el: HTMLElement): boolean {
@@ -114,9 +127,19 @@ export class PositionService {
     return el.scrollWidth > el.clientWidth;
   }
 
+  private getNextNodeWidth(index = 0, nodes: HTMLElement[]): number {
+    index++;
+    const node = nodes[index];
+    const nextNodeWidth = node.nodeName === '#comment' ? 0 : node.clientWidth + this.getMargin(node);
+    if (nextNodeWidth === 0 && nodes.length - 1 > index) {
+      return this.getNextNodeWidth(index, nodes);
+    }
+    return nextNodeWidth;
+  }
+
   private getWidthWithoutPaddings(el: HTMLElement): number {
     const computedStyle = this.window.getComputedStyle(el);
-    return el.clientWidth - parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight);
+    return el.clientWidth - (parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight));
   }
 
   private getGap(el: HTMLElement): number {

@@ -1,38 +1,6 @@
-<h1>
-  Grid
-</h1>
-<ng-container>
-</ng-container>
-<div airLayout="row wrap" airColGap="l">
-  <div airGridItem airLastOnLine airMarginEnd="l" airMarginHorizontal="auto" class="flt"></div>
-  <div airGridItem airLastOnLine airMarginEnd="l" airMarginHorizontal="auto" class="flt"></div>
-  <div airGridItem airLastOnLine airMarginEnd="l" airMarginHorizontal="auto" class="flt"></div>
-  <div airGridItem airLastOnLine airMarginEnd="l" airMarginHorizontal="auto" class="flt"></div>
-  <div airGridItem airLastOnLine airMarginHorizontal="auto" class="flt"></div>
-</div>
-<div airGridItem="12">12 - <span>{{getGridSize(12)}}</span></div>
-<div airGrid>
-  <div airGridItem="1">1 - <span>{{getGridSize(1)}}</span></div>
-  <div airGridItem="11">11 - <span>{{getGridSize(11)}}</span></div>
-</div>
-<div airGrid>
-  <div airGridItem="2">2 - <span>{{getGridSize(2)}}</span></div>
-  <div airGridItem="10">10 - <span>{{getGridSize(10)}}</span></div>
-</div>
-<div airGrid>
-  <div airGridItem="3">3 - <span>{{getGridSize(3)}}</span></div>
-  <div airGridItem="9">9 - <span>{{getGridSize(9)}}</span></div>
-</div>
-<div airGrid>
-  <div airGridItem="4">4 - <span>{{getGridSize(4)}}</span></div>
-  <div airGridItem="8">8 - <span>{{getGridSize(8)}}</span></div>
-</div>
-<div airGrid>
-  <div airGridItem="5">5 - <span>{{getGridSize(5)}}</span></div>
-  <div airGridItem="7">7 - <span>{{getGridSize(7)}}</span></div>
-</div>
-
-<div airGrid>
-  <div airGridItem="6">6 - <span>{{getGridSize(6)}}</span></div>
-  <div airGridItem="6">6 - <span>{{getGridSize(6)}}</span></div>
+<div class="item-wrapper" airLastOnLine *ngFor="let item of statistics; index as i">
+  <div class="item" airTextCenter airLayout="column" airLayoutAlign="start center">
+    <div airColor="primary" airH2 class="value">{{item.value || 0}}</div>
+    <div class="name" airText2 [innerHTML]="item.name">{{item.name}}</div>
+  </div>
 </div>

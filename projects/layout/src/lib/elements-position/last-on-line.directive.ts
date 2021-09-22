@@ -38,7 +38,7 @@ export class LastOnLineDirective implements AfterViewInit {
         this.airLastOnLineChange.emit(this.lastOnLine);
         this.previousValue = this.lastOnLine;
       }
-    }, 0);
+    }, 100);
   }
 
 }

@@ -7,6 +7,21 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GridComponent implements OnInit {
+  statistics = [
+    {name: '950 שרשורי הפורום במכללה', value:950 },
+    {name: '950 שרשורי הפורום במכללה', value:2 },
+    {name: '950 שרשורי הפורום במכללה', value:2 },
+    {name: '950 שרשורי הפורום במכללה', value:2 },
+    {name: '950 שרשורי הפורום במכללה', value:2 },
+    {name: '950 שרשורי הפורום במכללה', value:2 },
+    {name: '950 שרשורי הפורום במכללה', value:2 },
+    {name: '950 שרשורי הפורום במכללה', value:2 },
+    {name: '950 שרשורי הפורום במכללה', value:2 },
+    {name: '950 שרשורי הפורום במכללה', value:2 },
+    {name: '950 שרשורי הפורום במכללה', value:2 },
+    {name: '950 שרשורי הפורום במכללה', value:2 },
+    {name: '950 שרשורי הפורום במכללה', value:2 },
+  ];
   constructor() {
   }
 
