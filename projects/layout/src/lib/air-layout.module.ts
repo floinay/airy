@@ -18,8 +18,6 @@ import {
   ImpositionContainerDirective,
   ImpositionDirective,
   LayoutDirective,
-  MarginsDirective,
-  PaddingsDirective,
   StartDirective,
   StretchDirective,
 } from './directives';
@@ -41,8 +39,6 @@ const declarations = [
   ContentDirective,
   ContainerComponent,
   FlexDirective,
-  PaddingsDirective,
-  MarginsDirective,
   ScrollContainerComponent,
   ImpositionContainerDirective,
   ImpositionDirective,

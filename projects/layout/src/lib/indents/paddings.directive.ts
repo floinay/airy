@@ -110,19 +110,19 @@ import {ThemeSize} from '@airy-ui/cdk';
 })
 export class PaddingsDirective extends AbstractIndentsDirective {
   @Input() airPadding: ThemeSize;
-  @Input('xs.airPadding') xsAirPadding: ThemeSize;
-  @Input('sm.airPadding') smAirPadding: ThemeSize;
-  @Input('md.airPadding') mdAirPadding: ThemeSize;
-  @Input('lg.airPadding') lgAirPadding: ThemeSize;
-  @Input('xl.airPadding') xlAirPadding: ThemeSize;
-  @Input('ltSm.airPadding') ltSmAirPadding: ThemeSize;
-  @Input('ltMd.airPadding') ltMdAirPadding: ThemeSize;
-  @Input('ltLg.airPadding') ltLgAirPadding: ThemeSize;
-  @Input('ltXl.airPadding') ltXlAirPadding: ThemeSize;
-  @Input('gtSm.airPadding') gtSmAirPadding: ThemeSize;
-  @Input('gtMd.airPadding') gtMdAirPadding: ThemeSize;
-  @Input('gtLg.airPadding') gtLgAirPadding: ThemeSize;
-  @Input('gtXs.airPadding') gtXsAirPadding: ThemeSize;
+  @Input('xs.airPadding') xsAirPadding: ThemeSize | string;
+  @Input('sm.airPadding') smAirPadding: ThemeSize | string;
+  @Input('md.airPadding') mdAirPadding: ThemeSize | string;
+  @Input('lg.airPadding') lgAirPadding: ThemeSize | string;
+  @Input('xl.airPadding') xlAirPadding: ThemeSize | string;
+  @Input('ltSm.airPadding') ltSmAirPadding: ThemeSize | string;
+  @Input('ltMd.airPadding') ltMdAirPadding: ThemeSize | string;
+  @Input('ltLg.airPadding') ltLgAirPadding: ThemeSize | string;
+  @Input('ltXl.airPadding') ltXlAirPadding: ThemeSize | string;
+  @Input('gtSm.airPadding') gtSmAirPadding: ThemeSize | string;
+  @Input('gtMd.airPadding') gtMdAirPadding: ThemeSize | string;
+  @Input('gtLg.airPadding') gtLgAirPadding: ThemeSize | string;
+  @Input('gtXs.airPadding') gtXsAirPadding: ThemeSize | string;
 
   @Input() airPaddingTop: ThemeSize;
   @Input('xs.airPaddingTop') xsAirPaddingTop: ThemeSize;

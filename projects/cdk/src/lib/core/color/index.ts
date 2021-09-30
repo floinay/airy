@@ -1,1 +1,1 @@
-export {CanColor, CanColorCtor, ThemePalette, mixinColor} from './color';
+export {CanColor, CanColorCtor, ThemePalette, mixinColor, setColor, SetColorOptions} from './color';

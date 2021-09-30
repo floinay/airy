@@ -16,12 +16,6 @@
   },
   "private": true,
   "dependencies": {
-    "@airy-ui/button": "^2.1.5",
-    "@airy-ui/cdk": "^2.1.8",
-    "@airy-ui/direction": "^2.1.6",
-    "@airy-ui/icon": "^2.1.5",
-    "@airy-ui/layout": "^2.2.0",
-    "@airy-ui/typography": "^2.1.5",
     "@angular/animations": "~12.2.0",
     "@angular/cdk": "^12.2.2",
     "@angular/common": "~12.2.0",

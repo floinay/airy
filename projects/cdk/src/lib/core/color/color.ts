@@ -1,12 +1,18 @@
 import {Constructor} from '../../types';
 import {HasElementRef} from '../../types';
+import {ElementRef} from '@angular/core';
 
 export interface CanColor {
   color: ThemePalette;
-
   defaultColor: ThemePalette | undefined;
 }
 
+export interface SetColorOptions {
+  value: ThemePalette;
+  previousValue: ThemePalette;
+  elementRef: ElementRef<HTMLElement>;
+  defaultValue: ThemePalette;
+}
 
 export type CanColorCtor = Constructor<CanColor>;
 
@@ -36,18 +42,12 @@ export function mixinColor<T extends Constructor<HasElementRef>>(
     }
 
     set color(value: ThemePalette) {
-      const colorPalette = value || this.defaultColor;
-
-      if (colorPalette !== this._color) {
-        if (this._color) {
-          this._elementRef.nativeElement.classList.remove(`color-${this._color}`);
-        }
-        if (colorPalette) {
-          this._elementRef.nativeElement.classList.add(`color-${colorPalette}`);
-        }
-
-        this._color = colorPalette;
-      }
+      setColor({
+        value,
+        previousValue: this._color,
+        defaultValue: this.defaultColor,
+        elementRef: this._elementRef
+      });
     }
 
     constructor(...args: any[]) {
@@ -58,35 +58,18 @@ export function mixinColor<T extends Constructor<HasElementRef>>(
 }
 
 
-export function mixinSetColor<T extends Constructor<HasElementRef>>(
-  base: T, defaultColor?: ThemePalette): CanColorCtor & T {
-  return class extends base {
-    // tslint:disable-next-line:variable-name
-    private _color: ThemePalette;
-    defaultColor = defaultColor;
+export const setColor = ({value, previousValue, elementRef, defaultValue}: SetColorOptions): ThemePalette => {
+  const color = value || defaultValue;
 
-    get color(): ThemePalette {
-      return this._color;
+  if (color !== previousValue) {
+
+    if (previousValue) {
+      elementRef.nativeElement.classList.remove(`color-${previousValue}`);
+    }
+    if (color) {
+      elementRef.nativeElement.classList.add(`color-${color}`);
     }
 
-    setColor(value: ThemePalette) {
-      const colorPalette = value || this.defaultColor;
-
-      if (colorPalette !== this._color) {
-        if (this._color) {
-          this._elementRef.nativeElement.classList.remove(`color-${this._color}`);
-        }
-        if (colorPalette) {
-          this._elementRef.nativeElement.classList.add(`color-${colorPalette}`);
-        }
-
-        this._color = colorPalette;
-      }
-    }
-
-    constructor(...args: any[]) {
-      super(...args);
-      this.setColor(defaultColor);
-    }
-  };
+  }
+  return color;
 }

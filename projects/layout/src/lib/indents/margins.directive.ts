@@ -113,14 +113,14 @@ export class MarginsDirective extends AbstractIndentsDirective {
   @Input('md.airMargin') mdAirMargin: ThemeSizeWithNegative;
   @Input('lg.airMargin') lgAirMargin: ThemeSizeWithNegative;
   @Input('xl.airMargin') xlAirMargin: ThemeSizeWithNegative;
-  @Input('ltSm.airMargin') ltSmAirMargin: ThemeSizeWithNegative;
-  @Input('ltMd.airMargin') ltMdAirMargin: ThemeSizeWithNegative;
-  @Input('ltLg.airMargin') ltLgAirMargin: ThemeSizeWithNegative;
-  @Input('ltXl.airMargin') ltXlAirMargin: ThemeSizeWithNegative;
-  @Input('gtSm.airMargin') gtSmAirMargin: ThemeSizeWithNegative;
-  @Input('gtMd.airMargin') gtMdAirMargin: ThemeSizeWithNegative;
-  @Input('gtLg.airMargin') gtLgAirMargin: ThemeSizeWithNegative;
-  @Input('gtXs.airMargin') gtXsAirMargin: ThemeSizeWithNegative;
+  @Input('ltSm.airMargin') ltSmAirMargin: ThemeSizeWithNegative | string;
+  @Input('ltMd.airMargin') ltMdAirMargin: ThemeSizeWithNegative | string;
+  @Input('ltLg.airMargin') ltLgAirMargin: ThemeSizeWithNegative | string;
+  @Input('ltXl.airMargin') ltXlAirMargin: ThemeSizeWithNegative | string;
+  @Input('gtSm.airMargin') gtSmAirMargin: ThemeSizeWithNegative | string;
+  @Input('gtMd.airMargin') gtMdAirMargin: ThemeSizeWithNegative | string;
+  @Input('gtLg.airMargin') gtLgAirMargin: ThemeSizeWithNegative | string;
+  @Input('gtXs.airMargin') gtXsAirMargin: ThemeSizeWithNegative | string;
 
   @Input() airMarginTop: ThemeSizeWithNegative;
   @Input('xs.airMarginTop') xsAirMarginTop: ThemeSizeWithNegative;
