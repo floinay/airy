@@ -7,7 +7,7 @@ import {
   ScrollContainerComponent
 } from './components';
 import {
-  ActionsContainerDirective, BreakpointsDirective,
+  ActionsContainerDirective, AirIndentsModule, BreakpointsDirective,
   ContentDirective,
   EndDirective,
   FlexDirective,
@@ -51,7 +51,8 @@ const declarations = [
   declarations,
   imports: [
     PortalModule,
-    AirDirectionModule
+    AirDirectionModule,
+    AirIndentsModule
   ],
   providers: [],
   exports: declarations

@@ -107,7 +107,7 @@ import {MARGINS_PROVIDERS} from './indents.providers';
   providers: MARGINS_PROVIDERS
 })
 export class MarginsDirective extends AbstractIndentsDirective {
-  @Input() airMargin: ThemeSizeWithNegative;
+  @Input() airMargin: ThemeSizeWithNegative | string;
   @Input('xs.airMargin') xsAirMargin: ThemeSizeWithNegative;
   @Input('sm.airMargin') smAirMargin: ThemeSizeWithNegative;
   @Input('md.airMargin') mdAirMargin: ThemeSizeWithNegative;

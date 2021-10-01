@@ -2,6 +2,7 @@ import {Component, NO_ERRORS_SCHEMA} from "@angular/core";
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {MarginsDirective} from './margins.directive';
 import {By} from '@angular/platform-browser';
+import {indentVar} from './indent-var';
 
 interface ExpectHasStyleOptions {
   id: string;
@@ -15,7 +16,6 @@ interface ExpectHasStyleOptions {
     <div id="double" airMargin="xl l"></div>
     <div id="triple" airMargin="xs xl l"></div>
     <div id="quadruple" airMargin="xs l s xxl"></div>
-
   `
 })
 class HostComponent {
@@ -26,7 +26,8 @@ describe('[airMargin] directive', () => {
   let component: HostComponent;
 
   const elementById = (id: string): HTMLElement => fixture.debugElement.query(By.css(`#${id}`)).nativeElement;
-  const expectHasStyle = ({id, name, value}: ExpectHasStyleOptions) => expect(elementById(id).style[name]).toBe(value);
+  const expectHasStyle = ({id, name, value}: ExpectHasStyleOptions) => expect(elementById(id).style[name])
+    .toBe(indentVar(value));
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [MarginsDirective, HostComponent], schemas: [NO_ERRORS_SCHEMA],
@@ -37,9 +38,13 @@ describe('[airMargin] directive', () => {
     component = fixture.componentInstance;
   });
 
-  it('set single margin', () => {
-    expectHasStyle({id: 'single', name: 'margin', value: 'var(--indent-l'})
-  })
+  it('single', () => {
+    expectHasStyle({id: 'single', name: 'margin', value: 'l'})
+  });
+
+  it('double', () => {
+    expectHasStyle({id: 'double', name: 'margin', value: 'xl l'})
+  });
 
 
 });
