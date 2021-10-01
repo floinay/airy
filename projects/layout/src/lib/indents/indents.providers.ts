@@ -1,6 +1,6 @@
 import {Provider} from '@angular/core';
 import {breakpointsStylesProviders} from '@airy-ui/cdk';
-import {indentVar} from './helpers/indent-var';
+import {indentVar} from './indent-var';
 
 
 export const PADDINGS_PROVIDERS: Provider[] = breakpointsStylesProviders({

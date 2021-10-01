@@ -12,8 +12,11 @@ export const DEFAULT_VALUES_MAP = {
 };
 export const isNegative = (size: string) => size.includes('-');
 export const isMultiple = (size: string) => size.includes(' ');
-export const multipleSize = (size: string) => size.split(' ').reduce((previous, current) => `${previous} ${singleSize(current)}`)
-export const pureSizeName = (size: string): keyof typeof DEFAULT_VALUES_MAP => size.replace('-', '')
+export const multipleSize = (size: string) => size
+  .split(' ')
+  .reduce((previous, current) => `${previous} ${singleSize(current)}`, '')
+  .trim();
+export const pureSizeName = (size: string): keyof typeof DEFAULT_VALUES_MAP => size === '' ? 'm' : size.replace('-', '')
   .replace('default', 'm') as keyof typeof DEFAULT_VALUES_MAP;
 export const singleSize = (size: string) => {
   if (isStatic(size)) {
