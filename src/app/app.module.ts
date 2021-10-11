@@ -36,7 +36,6 @@ import {
 } from '../../projects/kit/src/lib';
 import {AirControlsModule} from '../../projects/controls/src/lib/air-controls.module';
 import {AirTypographyModule} from '../../projects/typography/src/lib';
-import {AirIndentsModule} from '../../projects/layout/src/lib/indents';
 
 
 @NgModule({
@@ -118,7 +117,6 @@ import {AirIndentsModule} from '../../projects/layout/src/lib/indents';
     AirTooltipModule,
     AirNavModule,
     AirLayoutModule,
-    AirIndentsModule,
     AirTypographyModule,
     AirButtonModule,
     AirListModule,

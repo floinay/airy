@@ -1,6 +1,6 @@
 {
   "name": "airy-ui",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "scripts": {
     "serve": "ng serve",
     "docs generate": "npx compodoc -p tsconfig.doc.json",

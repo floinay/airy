@@ -28,7 +28,7 @@
   </air-form-field>
   <air-form-field>
     <label air-label for="textarea">Textarea example</label>
-    <textarea  id="textarea" airTextarea placeholder="Textarea placeholder"></textarea>
+    <textarea id="textarea" airTextarea placeholder="Textarea placeholder"></textarea>
   </air-form-field>
   <air-form-field airMarginTop airGridItem="4">
     <label air-label for="select">Select example</label>
@@ -48,4 +48,12 @@
       </button>
     </air-file-item>
   </air-file>
+  <air-select [formControl]="status"
+              [placeholder]="'enroll_requests.filter.status_placeholder'">
+    <air-option>{{'enroll_requests.filter.status_show_all'}}</air-option>
+    <air-option [value]="0">{{'enroll_requests.filter.status_show_pending'}}</air-option>
+    <air-option [value]="1">{{'enroll_requests.filter.status_show_accepted'}}</air-option>
+    <air-option [value]="2">{{'enroll_requests.filter.status_show_rejected'}}</air-option>
+    <air-option [value]="3">{{'enroll_requests.filter.status_show_dissolved'}}</air-option>
+  </air-select>
 </div>

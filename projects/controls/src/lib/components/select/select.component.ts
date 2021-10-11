@@ -135,7 +135,7 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
   }
 
   private setLastValueIfExists(): void {
-    if (this.lastValue) {
+    if (this.lastValue !== undefined) {
       this.activate(this.lastValue);
       this.lastValue = undefined;
     }
@@ -154,6 +154,7 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
   }
 
   private activate(value: any) {
+    console.log(value);
     this.options?.forEach(option => {
       if (option.value === value) {
         option.activate(false);

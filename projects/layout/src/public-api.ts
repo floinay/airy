@@ -6,3 +6,4 @@ export * from './lib/elements-position/air-elements-position.module';
 export * from './lib/elements-position/last-on-line.directive';
 export * from './lib/elements-position/first-on-line.directive';
 export * from './lib/elements-position/position.service';
+export * from './lib/indents';

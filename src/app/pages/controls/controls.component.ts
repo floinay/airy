@@ -14,6 +14,7 @@ export class ControlsComponent implements OnInit {
     password: new FormControl(),
     confirm_password: new FormControl()
   }, [confirmValidator('password', 'confirm_password')])
+  status = new FormControl(0);
 
   constructor() {
   }

@@ -7,7 +7,7 @@ import {
   ScrollContainerComponent
 } from './components';
 import {
-  ActionsContainerDirective, AirIndentsModule, BreakpointsDirective,
+  ActionsContainerDirective, BreakpointsDirective,
   ContentDirective,
   EndDirective,
   FlexDirective,
@@ -23,6 +23,7 @@ import {
 } from './directives';
 import {PortalModule} from '@angular/cdk/portal';
 import {AirDirectionModule} from '@airy-ui/direction';
+import {AirIndentsModule} from './indents';
 
 
 const declarations = [
@@ -55,7 +56,7 @@ const declarations = [
     AirIndentsModule
   ],
   providers: [],
-  exports: declarations
+  exports: [declarations, AirIndentsModule]
 })
 export class AirLayoutModule {
 }
