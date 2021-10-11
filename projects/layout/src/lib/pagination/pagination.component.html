@@ -1,0 +1,10 @@
+<ng-container *ngIf="isSimple">
+  <a [routerLink]="page" routerLinkActive="active" *ngFor="let page of simplePagesList; let i = index">{{i + 1}}</a>
+</ng-container>
+<ng-container *ngIf="!isSimple && currentPage > 2">
+  <a [routerLink]="getLink(1)" routerLinkActive="active">1</a>
+  …
+  <a [routerLink]="page.link" routerLinkActive="active" *ngFor="let page of midPagesList">{{page.i}}</a>
+  …
+  <a [routerLink]="getLink(pagesCount)" routerLinkActive="active">1</a>
+</ng-container>
