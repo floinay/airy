@@ -25,5 +25,9 @@ export const APP_PAGES: { name: string, url: string }[] = [
   {
     name: 'Popover',
     url: '/popover'
+  },
+  {
+    name: 'Pagination',
+    url: '/pagination'
   }
 ];

@@ -1,7 +1,18 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {Pagination} from './pagination';
+import { ChangeDetectionStrategy, Component, ElementRef, Input } from '@angular/core';
+import { Pagination } from './pagination';
+import { ActivatedRoute } from '@angular/router';
+import { CanColorCtor, HasElementRef, mixinColor } from '@airy-ui/cdk';
 
-const SIMPLE_PAGINATION_ITEMS_COUNT = 7;
+const PaginationBase: CanColorCtor = mixinColor(HasElementRef, 'primary');
+
+
+const MIN_CURRENT_PAGE = 4;
+
+interface PageOrDelimiter {
+  url: string[];
+  delimiter?: true;
+  page: number;
+}
 
 @Component({
   selector: 'air-pagination',
@@ -9,84 +20,89 @@ const SIMPLE_PAGINATION_ITEMS_COUNT = 7;
   styleUrls: ['./pagination.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PaginationComponent implements OnInit {
+export class PaginationComponent extends PaginationBase {
   private _link: string[] = [];
-  private _options!: Pagination;
+  private _pagination!: Pagination;
+  pages: PageOrDelimiter[] = [];
   @Input() hideFirst = true;
 
-  @Input() set options(value: Pagination) {
-    this._options = value;
+  @Input() set pagination(value: Pagination) {
+    this._pagination = value;
+    this.generatePages();
   }
 
-  get options(): Pagination {
-    return this._options;
+  get pagination(): Pagination {
+    return this._pagination;
   }
 
   get currentPage(): number {
-    return this.options.current_page;
+    return this.pagination.current_page;
   }
 
   @Input() set link(value: string[]) {
     this._link = value;
   }
 
-  get pagesCount() {
-    return Math.ceil(this.options.total / this.options.per_page);
-  }
-
-  get simplePagesList(): string[][] {
-    const pages: string[][] = [];
-    for (let i = 0; i < this.pagesCount; i++) {
-      pages.push(this.getLink(i));
-    }
-
-    return pages;
-  }
-
-  get midPagesList(): { i: number, link: string[] }[] {
-    return [
-      {
-        i: this.currentPage - 1,
-        link: this.getLink(this.currentPage - 1),
-      }, {
-        i: this.currentPage,
-        link: this.getLink(this.currentPage),
-      },
-      {
-        i: this.currentPage + 1,
-        link: this.getLink(this.currentPage + 1),
-      }
-    ];
-  }
-
-  get isSimple(): boolean {
-    return this.pagesCount <= SIMPLE_PAGINATION_ITEMS_COUNT;
-  }
-
   get link(): string[] {
     return this._link;
   }
 
-  get currentPageLink(): string[] {
-    if (this.hideFirst && this.options.current_page === 1) {
-      return this._link;
-    }
+  get pagesCount() {
+    return Math.ceil(this.pagination.total / this.pagination.per_page);
+  }
 
-    return [...this._link, String(this.options.current_page)];
+  constructor(private route: ActivatedRoute, elementRef: ElementRef) {
+    super(elementRef);
   }
 
   getLink(page: number) {
-    if (page === this.options.current_page) {
-      return this.currentPageLink;
+    if (page === 1 && this.hideFirst) {
+      return this.link;
     }
 
     return [...this.link, String(page)];
   }
 
-  constructor() {
+  getLinkContext(page: PageOrDelimiter): { url: string[], page: number, active: boolean } {
+    return {...page, active: this.currentPage === page.page};
   }
 
-  ngOnInit(): void {
+  private generatePages(): void {
+    let pages: PageOrDelimiter[] = [];
+    if (this.currentPage <= MIN_CURRENT_PAGE) {
+      pages = this.generatePagesDiapason(1, MIN_CURRENT_PAGE);
+    } else {
+      pages = [this.generatePage(1), this.generateDelimiter()];
+      pages.push(this.generatePage(this.currentPage - 1));
+      pages.push(this.generatePage(this.currentPage));
+    }
+
+    if (this.pagesCount - this.currentPage < MIN_CURRENT_PAGE) {
+      pages = [...pages, ...this.generatePagesDiapason(this.currentPage + 1, this.pagesCount)];
+    } else {
+      pages.push(this.generatePage(this.currentPage + 1));
+      pages.push(this.generateDelimiter());
+      pages.push(this.generatePage(this.pagesCount));
+    }
+
+    this.pages = pages;
+  }
+
+  private generatePagesDiapason(from: number, to: number): PageOrDelimiter[] {
+    const pages: PageOrDelimiter[] = [];
+    for (let i = from; i <= to; i++) {
+      pages.push(this.generatePage(i));
+    }
+
+    return pages;
+  }
+
+  private generatePage(i: number): PageOrDelimiter {
+    return {url: this.getLink(i), page: i};
+  }
+
+  private generateDelimiter(): PageOrDelimiter {
+    return {url: [], page: 0, delimiter: true};
   }
 
 }

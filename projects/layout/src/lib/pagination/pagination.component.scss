@@ -1,0 +1,34 @@
+@import "~@airy-ui/cdk";
+
+:host {
+  display: var(--pagination__display, flex);
+  align-items: center;
+}
+
+a, .link {
+  text-decoration: var(--pagination-link__text-decoration, none);
+  color: var(--pagination-link__color, var(--text-primary, #13192A));
+  font-size: var(--pagination-link__font-size, var(--text2__font-size, 14px));
+  line-height: var(--pagination-link__line-height, 1);
+  border: var(--pagination-link__border, 1px solid transparent);
+  padding: var(--pagination-link__padding, 9px 10px);
+  border-radius: var(--pagination-link__border-radius, 1px);
+  min-width: var(--pagination-link__min-width, 38px);
+  text-align: var(--pagination-link__text-align, center);
+
+  &:hover {
+    color: var(--pagination-link-hover__color, #{current-color()});
+  }
+
+  &.active {
+    border-color: var(--pagination-link-active__border-color, var(--border-color, #E8EAF5));
+    color: var(--pagination-link-active__color, #{current-color()});
+    font-weight: var(--pagination-link-active__font-weight, 500);
+  }
+}
+
+.delimiter {
+  color: var(--pagination-delimiter__color, var(--text-primary, #13192A));
+  font-size: var(--pagination-delimiter__font-size, var(--text2__font-size, 14px));
+  line-height: var(--pagination-delimiter__line-height, 1);
+}
