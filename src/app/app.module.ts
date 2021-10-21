@@ -37,7 +37,7 @@ import {
 import { AirControlsModule } from '../../projects/controls/src/lib/air-controls.module';
 import { AirTypographyModule } from '../../projects/typography/src/lib';
 import { PaginationComponent } from './components/pagination/pagination.component';
-import { AirPaginationModule } from '../../projects/layout/src/lib/pagination/pagination.module';
+import { AirPaginationModule } from '../../projects/pagination/src/lib/pagination.module';
 
 
 @NgModule({

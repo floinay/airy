@@ -37,7 +37,6 @@ export class PositionService {
         if (lineWidth < parentWidth) {
           const nextNodeWidth = this.getNextNodeWidth(i, children);
           if (nextNodeWidth + lineWidth > parentWidth) {
-            console.log(lineWidth, nextNodeWidth, parentWidth, el);
           }
           return nextNodeWidth + lineWidth > parentWidth;
         }

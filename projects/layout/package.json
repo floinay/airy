@@ -1,6 +1,6 @@
 {
   "name": "@airy-ui/layout",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "private": false,
   "peerDependencies": {
     "@angular/common": ">=11.0.0",

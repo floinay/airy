@@ -1,4 +1,4 @@
-@import "~@airy-ui/cdk";
+@import "../../../../node_modules/@airy-ui/cdk/index";
 
 :host {
   display: var(--pagination__display, flex);

@@ -1,0 +1,12 @@
+{
+  "name": "@airy-ui/pagination",
+  "private": false,
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": "^12.0.0",
+    "@angular/core": "^12.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

@@ -154,7 +154,6 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
   }
 
   private activate(value: any) {
-    console.log(value);
     this.options?.forEach(option => {
       if (option.value === value) {
         option.activate(false);

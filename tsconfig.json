@@ -32,6 +32,10 @@
         "dist/modal/modal",
         "dist/modal"
       ],
+      "pagination": [
+        "dist/pagination/pagination",
+        "dist/pagination"
+      ],
       "sandbox": [
         "dist/sandbox/sandbox",
         "dist/sandbox"

@@ -29,7 +29,6 @@ export class OptimalPositionService {
     }
 
     if (this.isNeedChangeTop(connectedToRef.top, connectedElement.offsetHeight, position)) {
-      console.log('change top');
       optimal.originY = 'bottom';
       optimal.overlayY = 'top';
       optimal.offsetY = optimal.offsetY ? optimal.offsetY * -1 : 0;
@@ -48,9 +47,6 @@ export class OptimalPositionService {
 
   private isNeedChangeTop(top: number, height: number, position: ConnectedPosition): boolean {
     const offset: number = position.offsetY || 0;
-
-    console.log(top, height, offset, position.originY);
-
     return top < (height - offset) && position.originY === 'top';
   }
 

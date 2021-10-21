@@ -8,6 +8,7 @@
     "publish typography": "ng build typography --configuration production && cd dist/typography && npm publish --access public",
     "publish cdk": "ng build cdk --configuration production && cd dist/cdk && npm publish",
     "publish layout": "ng build layout --configuration production && cd dist/layout && npm publish",
+    "publish pagination": "ng build pagination --configuration production && cd dist/pagination && npm publish --access public",
     "publish controls": "ng build controls --configuration production && cd dist/controls && npm publish",
     "publish direction": "ng build direction --configuration production && cd dist/direction && npm publish",
     "publish icon": "ng build icon --configuration production && cd dist/icon && npm publish --access=public",
