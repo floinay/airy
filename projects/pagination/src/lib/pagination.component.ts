@@ -1,9 +1,10 @@
-import { ChangeDetectionStrategy, Component, ElementRef, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, Inject, Input } from '@angular/core';
 import { Pagination } from './pagination';
 import { ActivatedRoute } from '@angular/router';
 import { CanColorCtor, HasElementRef, mixinColor } from '@airy-ui/cdk';
+import { PAGINATION_OPTIONS, PaginationOptions } from './pagination-options-token';
 
-const PaginationBase: CanColorCtor = mixinColor(HasElementRef, 'primary');
+const PaginationBase: CanColorCtor = mixinColor(HasElementRef, 'accent');
 
 
 const MIN_CURRENT_PAGE = 4;
@@ -51,7 +52,7 @@ export class PaginationComponent extends PaginationBase {
     return Math.ceil(this.pagination.total / this.pagination.per_page);
   }
 
-  constructor(private route: ActivatedRoute, elementRef: ElementRef) {
+  constructor(private route: ActivatedRoute, elementRef: ElementRef, @Inject(PAGINATION_OPTIONS) readonly options: PaginationOptions) {
     super(elementRef);
   }
 
@@ -69,15 +70,21 @@ export class PaginationComponent extends PaginationBase {
 
   private generatePages(): void {
     let pages: PageOrDelimiter[] = [];
+    const currentPageEndPosition = this.pagesCount - this.currentPage;
     if (this.currentPage <= MIN_CURRENT_PAGE) {
       pages = this.generatePagesDiapason(1, MIN_CURRENT_PAGE);
     } else {
       pages = [this.generatePage(1), this.generateDelimiter()];
-      pages.push(this.generatePage(this.currentPage - 1));
-      pages.push(this.generatePage(this.currentPage));
+      if (currentPageEndPosition < MIN_CURRENT_PAGE) {
+        console.log(MIN_CURRENT_PAGE - currentPageEndPosition, this.currentPage);
+        pages = [...pages, ...this.generatePagesDiapason(this.currentPage - (MIN_CURRENT_PAGE - currentPageEndPosition), this.currentPage)];
+      } else {
+        pages.push(this.generatePage(this.currentPage - 1));
+        pages.push(this.generatePage(this.currentPage));
+      }
     }
 
-    if (this.pagesCount - this.currentPage < MIN_CURRENT_PAGE) {
+    if (currentPageEndPosition < MIN_CURRENT_PAGE) {
       pages = [...pages, ...this.generatePagesDiapason(this.currentPage + 1, this.pagesCount)];
     } else {
       pages.push(this.generatePage(this.currentPage + 1));
