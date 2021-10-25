@@ -1,4 +1,12 @@
-import { ChangeDetectionStrategy, Component, ElementRef, forwardRef, HostBinding, HostListener, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef, EventEmitter,
+  forwardRef,
+  HostBinding,
+  HostListener,
+  Input, Output
+} from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CanColorCtor, CanDisabledCtor, HasElementRef, mixinColor, mixinDisabled } from '@airy-ui/cdk';
 
@@ -16,7 +24,7 @@ const MixinBase: CanDisabledCtor & CanColorCtor = mixinColor(mixinDisabled(HasEl
 })
 export class ToggleComponent extends MixinBase implements ControlValueAccessor {
   @HostBinding('class.active')
-  status = false;
+  @Input() status = false;
 
   @HostBinding('attr.tabindex') @Input() tabindex = 0;
 
@@ -24,12 +32,17 @@ export class ToggleComponent extends MixinBase implements ControlValueAccessor {
 
   @Input() disabledValue: unknown = false;
 
+  @Output() readonly onChange = new EventEmitter<boolean | unknown>();
+
   @HostListener('click')
   @HostListener('keyup.space')
   @HostListener('keyup.enter')
   toggle(): void {
     this.status = !this.status;
-    this.onChange(this.status ? this.enabledValue : this.disabledValue);
+    const value = this.status ? this.enabledValue : this.disabledValue;
+    this.onChangeAccessor(value);
+    this.onTouched();
+    this.onChange.emit(value);
   }
 
   constructor(elementRef: ElementRef) {
@@ -42,14 +55,14 @@ export class ToggleComponent extends MixinBase implements ControlValueAccessor {
   }
 
   registerOnChange(fn: () => void): void {
-    this.onChange = fn;
+    this.onChangeAccessor = fn;
   }
 
   registerOnTouched(fn: () => void): void {
     this.onTouched = fn;
   }
 
-  onChange(value: unknown): void {
+  onChangeAccessor(value: unknown): void {
   }
 
   onTouched(): void {
