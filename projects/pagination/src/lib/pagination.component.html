@@ -1,4 +1,4 @@
-<a class="prev-or-next" *ngIf="currentPage !== 1" [routerLink]="getLink(currentPage - 1)"
+<a class="prev-or-next" *ngIf="showPreviousButton" [routerLink]="getLink(currentPage - 1)"
    [inlineSVG]="options.previousButtonIcon">
 </a>
 <ng-template #link let-url="url" let-page="page" let-active="active">
@@ -6,7 +6,7 @@
 </ng-template>
 <ng-template #delimiter>
   <svg class="delimiter" xmlns="http://www.w3.org/2000/svg" width="14" height="3" viewBox="0 0 14 3" fill="none">
-    <path id="â¢â¢â¢ copy 6" fill-rule="evenodd" clip-rule="evenodd"
+    <path fill-rule="evenodd" clip-rule="evenodd"
           d="M1.50704 3C1.09389 3 0.739438 2.85446 0.443662 2.56338C0.147886 2.2723 0 1.92019 0 1.50704C0 1.09389 0.147886 0.739438 0.443662 0.443662C0.739438 0.147886 1.09389 0 1.50704 0C1.92019 0 2.2723 0.147886 2.56338 0.443662C2.85446 0.739438 3 1.09389 3 1.50704C3 1.9108 2.85446 2.26056 2.56338 2.55634C2.2723 2.85211 1.92019 3 1.50704 3ZM6.87324 3C6.46009 3 6.10564 2.85446 5.80986 2.56338C5.51408 2.2723 5.3662 1.92019 5.3662 1.50704C5.3662 1.09389 5.51408 0.739438 5.80986 0.443662C6.10564 0.147886 6.46009 0 6.87324 0C7.28639 0 7.6385 0.147886 7.92958 0.443662C8.22066 0.739438 8.3662 1.09389 8.3662 1.50704C8.3662 1.9108 8.22066 2.26056 7.92958 2.55634C7.6385 2.85211 7.28639 3 6.87324 3ZM11.1761 2.56338C11.4718 2.85446 11.8263 3 12.2394 3C12.6526 3 13.0047 2.85211 13.2958 2.55634C13.5869 2.26056 13.7324 1.9108 13.7324 1.50704C13.7324 1.09389 13.5869 0.739438 13.2958 0.443662C13.0047 0.147886 12.6526 0 12.2394 0C11.8263 0 11.4718 0.147886 11.1761 0.443662C10.8803 0.739438 10.7324 1.09389 10.7324 1.50704C10.7324 1.92019 10.8803 2.2723 11.1761 2.56338Z"
           fill="#13192A"/>
   </svg>
@@ -16,6 +16,6 @@
     *ngTemplateOutlet="pageOrDelimiter.delimiter ? delimiter : link; context:getLinkContext(pageOrDelimiter)">
   </ng-container>
 </ng-container>
-<a *ngIf="currentPage !== pagesCount" [routerLink]="getLink(currentPage + 1)" class="next prev-or-next"
+<a *ngIf="showNextButton" [routerLink]="getLink(currentPage + 1)" class="next prev-or-next"
    [inlineSVG]="options.nextButtonIcon">
 </a>

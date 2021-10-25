@@ -12,9 +12,9 @@ import { Pagination } from '../../../../projects/pagination/src/lib/pagination';
 export class PaginationComponent implements OnInit {
   pagination$: Observable<Pagination> = this.route.paramMap.pipe(map(m => {
     return {
-      total: 100,
+      total: 200,
       current_page: Number(m.get('page')) || 1,
-      per_page: 8
+      per_page: 12
     };
   }));
 

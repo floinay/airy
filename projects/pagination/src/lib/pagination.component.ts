@@ -40,6 +40,14 @@ export class PaginationComponent extends PaginationBase {
     return this.pagination.current_page;
   }
 
+  get showNextButton() {
+    return this.currentPage < this.pagesCount && this.pagesCount > MIN_CURRENT_PAGE;
+  }
+
+  get showPreviousButton() {
+    return this.currentPage > 1 && this.pagesCount > MIN_CURRENT_PAGE;
+  }
+
   @Input() set link(value: string[]) {
     this._link = value;
   }
@@ -71,12 +79,15 @@ export class PaginationComponent extends PaginationBase {
   private generatePages(): void {
     let pages: PageOrDelimiter[] = [];
     const currentPageEndPosition = this.pagesCount - this.currentPage;
+    if (this.pagesCount <= MIN_CURRENT_PAGE) {
+      this.pages = this.generatePagesDiapason(1, this.pagesCount);
+      return;
+    }
     if (this.currentPage <= MIN_CURRENT_PAGE) {
       pages = this.generatePagesDiapason(1, MIN_CURRENT_PAGE);
     } else {
       pages = [this.generatePage(1), this.generateDelimiter()];
       if (currentPageEndPosition < MIN_CURRENT_PAGE) {
-        console.log(MIN_CURRENT_PAGE - currentPageEndPosition, this.currentPage);
         pages = [...pages, ...this.generatePagesDiapason(this.currentPage - (MIN_CURRENT_PAGE - currentPageEndPosition), this.currentPage)];
       } else {
         pages.push(this.generatePage(this.currentPage - 1));
