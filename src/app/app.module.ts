@@ -131,10 +131,10 @@ import { AirPaginationModule } from '../../projects/pagination/src/lib/paginatio
     AirPaginationModule,
     AirListModule,
     AirIconModule.forRoot({
-      pathToStaticIcons: '/assets/icons',
-      defaultFormat: 'svg',
-      pathToSprites: '/assets/sprites/sprite.svg',
-      defaultSprite: 'default'
+      pathToSprites: '/assets/sprites/',
+      defaultSprite: 'sprite',
+      pathToStaticIcons: 'assets/icons',
+      defaultFormat: 'svg'
     }),
     AirExpansionModule.forRoot({defaultIconName: 'expand', defaultIconSize: 's'}),
     ReactiveFormsModule,

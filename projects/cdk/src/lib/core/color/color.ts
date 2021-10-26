@@ -1,6 +1,6 @@
-import {Constructor} from '../../types';
-import {HasElementRef} from '../../types';
-import {ElementRef} from '@angular/core';
+import { Constructor } from '../../types';
+import { HasElementRef } from '../../types';
+import { ElementRef } from '@angular/core';
 
 export interface CanColor {
   color: ThemePalette;
@@ -11,7 +11,6 @@ export interface SetColorOptions {
   value: ThemePalette;
   previousValue: ThemePalette;
   elementRef: ElementRef<HTMLElement>;
-  defaultValue: ThemePalette;
 }
 
 export type CanColorCtor = Constructor<CanColor>;
@@ -45,9 +44,9 @@ export function mixinColor<T extends Constructor<HasElementRef>>(
       setColor({
         value,
         previousValue: this._color,
-        defaultValue: this.defaultColor,
         elementRef: this._elementRef
       });
+      this._color = value;
     }
 
     constructor(...args: any[]) {
@@ -58,11 +57,9 @@ export function mixinColor<T extends Constructor<HasElementRef>>(
 }
 
 
-export const setColor = ({value, previousValue, elementRef, defaultValue}: SetColorOptions): ThemePalette => {
-  const color = value || defaultValue;
-
+export const setColor = ({value, previousValue, elementRef}: SetColorOptions): ThemePalette => {
+  const color = value;
   if (color !== previousValue) {
-
     if (previousValue) {
       elementRef.nativeElement.classList.remove(`color-${previousValue}`);
     }
@@ -72,4 +69,4 @@ export const setColor = ({value, previousValue, elementRef, defaultValue}: SetCo
 
   }
   return color;
-}
+};

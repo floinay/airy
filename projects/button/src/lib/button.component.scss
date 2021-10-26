@@ -16,17 +16,44 @@
   @include element-prop(text-align, center);
   @include element-prop(justify-content, center);
   @include element-prop(background, current-color());
-  @include element-prop(color, current-color($contrast: true));
   @include element-prop(font-weight, 400);
   @include element-prop(font-size, 16px);
   @include element-prop(transition, none);
   @include element-prop(position, relative);
   @include element-prop(max-height, 100%);
 
-  &:not(.clear):not(.outline):not(.reverse) {
-    ::ng-deep {
-      air-dynamic-icon, svg {
-        --icon__color: #{current-color($contrast:true)};
+  &:not(.color-text-primary):not(.color-text-secondary) {
+    @include element-prop(color, current-color($contrast: true));
+
+    &:not(.clear):not(.outline):not(.reverse) {
+      ::ng-deep {
+        air-dynamic-icon, svg {
+          --icon__color: #{current-color($contrast:true)};
+        }
+      }
+    }
+  }
+
+  &.color-text-primary {
+    @include element-prop(color, var(--text-primary));
+
+    &:not(.clear):not(.outline):not(.reverse) {
+      ::ng-deep {
+        air-dynamic-icon, svg {
+          --icon__color: var(--text-secondary);
+        }
+      }
+    }
+  }
+
+  &.color-text-secondary {
+    @include element-prop(color, var(--text-secondary));
+
+    &:not(.clear):not(.outline):not(.reverse) {
+      ::ng-deep {
+        air-dynamic-icon, svg {
+          --icon__color: var(--text-primary);
+        }
       }
     }
   }
