@@ -25,6 +25,10 @@
         "dist/icon/icon",
         "dist/icon"
       ],
+      "lists": [
+        "dist/lists/lists",
+        "dist/lists"
+      ],
       "@ng-web-apis/common": [
         "./node_modules/@ng-web-apis/common"
       ],

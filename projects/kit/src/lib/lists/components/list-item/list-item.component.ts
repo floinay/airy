@@ -1,7 +1,7 @@
-import {ChangeDetectionStrategy, Component, HostBinding} from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'air-list-item, [air-list-item]',
+  selector: 'air-old-list-item, [air-old-list-item]',
   templateUrl: './list-item.component.html',
   styleUrls: ['./list-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -38,9 +38,9 @@ import { AirControlsModule } from '../../projects/controls/src/lib/air-controls.
 import { AirTypographyModule } from '../../projects/typography/src/lib';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { AirPaginationModule } from '../../projects/pagination/src/lib/pagination.module';
-import { TableComponent } from './pages/table/table.component';
-import { AirTableModule } from '../../projects/table/src/lib/table.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ListComponent } from './pages/list/list.component';
+import { AirListsModule } from '../../projects/lists/src/lib/air-lists.module';
 
 
 @NgModule({
@@ -61,12 +61,13 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     TooltipComponent,
     PopoverComponent,
     PaginationComponent,
-    TableComponent,
+    ListComponent,
   ],
   imports: [
     AirDirectionModule,
     AirLoadersModule,
     AirPopoverModule,
+    AirListsModule,
     RouterModule.forRoot([{
       path: '',
       component: HomeComponent
@@ -122,8 +123,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
         path: 'pagination/:page',
         component: PaginationComponent,
       }, {
-        path: 'table',
-        component: TableComponent,
+        path: 'list',
+        component: ListComponent,
       },
     ]),
     AirTabsModule,
@@ -137,7 +138,6 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     AirButtonModule,
     AirPaginationModule,
     AirListModule,
-    AirTableModule,
     AirIconModule.forRoot({
       pathToSprites: '/assets/sprites/',
       defaultSprite: 'sprite',

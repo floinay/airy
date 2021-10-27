@@ -1,13 +1,13 @@
-import {Inject, Injectable, Optional} from '@angular/core';
-import {DEFAULT_DIRECTION} from '../direction.providers';
-import {Direction, Directionality} from '@angular/cdk/bidi';
-import {LOCAL_STORAGE} from '@ng-web-apis/common';
-import {BehaviorSubject, Observable} from 'rxjs';
-import {DOCUMENT} from '@angular/common';
-import {filter} from 'rxjs/operators';
-import {DirectionDispatcher} from './direction-dispatcher';
-import {ActiveDirectionDispatcherService} from './active-direction-dispatcher.service';
-import {FakeDirectionDispatcherService} from './fake-direction-dispatcher.service';
+import { Inject, Injectable, Optional } from '@angular/core';
+import { DEFAULT_DIRECTION } from '../direction.providers';
+import { Direction, Directionality } from '@angular/cdk/bidi';
+import { LOCAL_STORAGE } from '@ng-web-apis/common';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { DOCUMENT } from '@angular/common';
+import { filter } from 'rxjs/operators';
+import { DirectionDispatcher } from './direction-dispatcher';
+import { ActiveDirectionDispatcherService } from './active-direction-dispatcher.service';
+import { FakeDirectionDispatcherService } from './fake-direction-dispatcher.service';
 
 const LAST_DIRECTION_KEY = 'air_direction';
 
@@ -65,6 +65,7 @@ export class DirectionService {
     this.document.body.classList.add(direction);
     this.document.body.style.setProperty('direction', direction);
     this.document.body.style.setProperty('--direction', direction);
+    this.document.body.dir = direction;
   }
 
   get direction(): Direction {

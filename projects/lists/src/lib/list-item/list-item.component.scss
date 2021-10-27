@@ -1,0 +1,48 @@
+@import "~@airy-ui/cdk";
+
+:host {
+  position: relative;
+  display: var(--list-item__display, flex);
+  min-height: var(--list-item__min-height, 80px);
+  padding: var(--list-item__padding, var(--indent-l));
+  background: var(--list-item__background, var(--background-primary));
+  border: var(--list-item__border, 1px solid var(--border-color));
+  align-items: var(--list-item__align-items, center);
+  border-radius: var(--list-item__border-radius, var(--border-radius, 6px));
+
+  &::before {
+    top: var(--list-item-counter__top, 10px);
+    font-size: var(--text3__font-size);
+    line-height: 1;
+    color: var(--text-secondary);
+  }
+}
+
+::ng-deep {
+  .ltr {
+    .air-list-item {
+      &::before {
+        @include breakpoint(gtSm) {
+          left: var(--list-item-counter__left, 10px);
+        }
+        @include breakpoint(ltMd) {
+          right: var(--list-item-counter__right, 10px);
+        }
+      }
+    }
+  }
+
+  .rtl {
+    .air-list-item {
+      &::before {
+        @include breakpoint(gtSm) {
+          right: var(--list-item-counter__left, 10px);
+        }
+        @include breakpoint(ltMd) {
+          left: var(--list-item-counter__right, 10px);
+        }
+      }
+    }
+  }
+}
+

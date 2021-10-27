@@ -31,7 +31,7 @@ export const APP_PAGES: { name: string, url: string }[] = [
     url: '/pagination'
   },
   {
-    name: 'Table',
-    url: '/table'
+    name: 'List',
+    url: '/list'
   }
 ];

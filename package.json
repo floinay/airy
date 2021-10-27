@@ -3,10 +3,12 @@
   "version": "2.0.4",
   "scripts": {
     "serve": "ng serve",
+    "sprite": "svg2sprite ./src/assets/dynamic-icons ./src/assets/sprites/sprite.svg --stripAttrs width --stripAttrs height --stripAttrs fill --stripAttrs stroke --stripAttrs id",
     "docs generate": "npx compodoc -p tsconfig.doc.json",
     "docs serve": "compodoc -s",
     "publish typography": "ng build typography --configuration production && cd dist/typography && npm publish --access public",
     "publish cdk": "ng build cdk --configuration production && cd dist/cdk && npm publish",
+    "publish lists": "ng build lists --configuration production && cd dist/lists && npm publish --access public",
     "publish layout": "ng build layout --configuration production && cd dist/layout && npm publish",
     "publish pagination": "ng build pagination --configuration production && cd dist/pagination && npm publish --access public",
     "publish controls": "ng build controls --configuration production && cd dist/controls && npm publish",
@@ -58,6 +60,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "ng-packagr": "^12.2.0",
+    "svg2sprite-cli": "^2.0.1",
     "typescript": "~4.3.5"
   }
 }
