@@ -38,6 +38,9 @@ import { AirControlsModule } from '../../projects/controls/src/lib/air-controls.
 import { AirTypographyModule } from '../../projects/typography/src/lib';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { AirPaginationModule } from '../../projects/pagination/src/lib/pagination.module';
+import { TableComponent } from './pages/table/table.component';
+import { AirTableModule } from '../../projects/table/src/lib/table.module';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 @NgModule({
@@ -58,6 +61,7 @@ import { AirPaginationModule } from '../../projects/pagination/src/lib/paginatio
     TooltipComponent,
     PopoverComponent,
     PaginationComponent,
+    TableComponent,
   ],
   imports: [
     AirDirectionModule,
@@ -117,6 +121,9 @@ import { AirPaginationModule } from '../../projects/pagination/src/lib/paginatio
       }, {
         path: 'pagination/:page',
         component: PaginationComponent,
+      }, {
+        path: 'table',
+        component: TableComponent,
       },
     ]),
     AirTabsModule,
@@ -130,6 +137,7 @@ import { AirPaginationModule } from '../../projects/pagination/src/lib/paginatio
     AirButtonModule,
     AirPaginationModule,
     AirListModule,
+    AirTableModule,
     AirIconModule.forRoot({
       pathToSprites: '/assets/sprites/',
       defaultSprite: 'sprite',
@@ -141,7 +149,8 @@ import { AirPaginationModule } from '../../projects/pagination/src/lib/paginatio
     FormsModule,
     RouterModule,
     HttpClientModule,
-    AirElementsPositionModule
+    AirElementsPositionModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

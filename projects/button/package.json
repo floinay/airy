@@ -1,6 +1,6 @@
 {
   "name": "@airy-ui/button",
-  "version": "2.2.0",
+  "version": "2.4.0",
   "peerDependencies": {
     "@angular/common": "^12.2.2",
     "@angular/core": "^12.2.2",

@@ -1,0 +1,48 @@
+<table air-list-table [dataSource]="data">
+  <ng-container airColumnDef="order">
+    <td cdkDragHandle (touchstart)="dragDisabled = false"
+        (touchend)="dragDisabled = true"
+        (mousedown)="dragDisabled = false"
+        (mouseup)="dragDisabled = true" air-cell *airCellDef="let element">
+      <button air-button fill="clear" color="text-secondary">
+        <air-dynamic-icon color="text-secondary" name="context-menu"></air-dynamic-icon>
+      </button>
+    </td>
+  </ng-container>
+  <ng-container airColumnDef="name">
+    <td air-cell *airCellDef="let element">
+      <h4><a airColor="text-primary" [href]="'/admin/courses'">{{element.name}}</a></h4>
+    </td>
+  </ng-container>
+  <ng-container airColumnDef="sections">
+    <td air-cell *airCellDef="let element" airText2>
+      {{'admin_courses.sections'}}
+    </td>
+  </ng-container>
+  <ng-container airColumnDef="students">
+    <td air-cell *airCellDef="let element" airText2>
+      {{'admin_courses.students'}}
+    </td>
+  </ng-container>
+  <ng-container airColumnDef="status">
+    <td air-cell *airCellDef="let element" airText2>
+      <air-toggle [status]="true" color="success"></air-toggle>
+      {{'admin_courses.publish'}}
+    </td>
+  </ng-container>
+  <ng-container airColumnDef="buttons">
+    <td air-cell *airCellDef="let element" airText2>
+      <button air-button fill="clear" color="text-secondary">
+        <air-dynamic-icon name="clone" color="text-secondary"></air-dynamic-icon>
+      </button>
+      <button air-button fill="clear" color="danger">
+        <air-dynamic-icon name="trash" color="danger"></air-dynamic-icon>
+      </button>
+    </td>
+  </ng-container>
+  <tbody>
+  <tr cdkDrag (cdkDragReleased)="dragDisabled = true" [cdkDragDisabled]="dragDisabled" air-row
+      *airRowDef="let row; columns: displayedColumns;">
+  </tr>
+  </tbody>
+</table>
