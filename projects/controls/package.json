@@ -1,6 +1,6 @@
 {
   "name": "@airy-ui/controls",
-  "version": "2.7.0",
+  "version": "2.7.2",
   "private": false,
   "peerDependencies": {
     "@angular/common": "^12.1.0",
