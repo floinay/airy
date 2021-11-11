@@ -9,6 +9,7 @@
   @include element-prop(padding, 0);
   @include element-prop(display, inline-flex);
   @include element-prop(align-items, center);
+  @include element-prop(flex-shrink, 0);
 }
 
 svg {

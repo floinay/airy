@@ -27,6 +27,7 @@
     @include element-prop(cursor, pointer);
     @include element-prop(outline, none);
     @include element-prop(position, relative);
+    @include element-prop(flex-shrink, 0);
     @include reset-current-element;
 
     svg {
