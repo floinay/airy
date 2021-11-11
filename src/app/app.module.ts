@@ -25,7 +25,6 @@ import { AirDirectionModule } from '../../projects/direction/src/lib';
 import { AirLayoutModule } from '../../projects/layout/src/lib/air-layout.module';
 import { AirElementsPositionModule } from '../../projects/layout/src/lib/elements-position/air-elements-position.module';
 import { AirLoadersModule } from '../../projects/kit/src/lib/loaders';
-import { AirPopoverModule } from '../../projects/kit/src/lib/popover';
 import {
   AirExpansionModule,
   AirIconModule,
@@ -41,6 +40,7 @@ import { AirPaginationModule } from '../../projects/pagination/src/lib/paginatio
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ListComponent } from './pages/list/list.component';
 import { AirListsModule } from '../../projects/lists/src/lib/air-lists.module';
+import { AirPopoverModule } from '../../projects/popover/src/lib';
 
 
 @NgModule({

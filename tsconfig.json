@@ -40,6 +40,10 @@
         "dist/pagination/pagination",
         "dist/pagination"
       ],
+      "popover": [
+        "dist/popover/popover",
+        "dist/popover"
+      ],
       "sandbox": [
         "dist/sandbox/sandbox",
         "dist/sandbox"
