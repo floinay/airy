@@ -1,12 +1,12 @@
 <ng-content select="label, [air-label]"></ng-content>
 <div class="control">
-  <div class="ff-suffix" airHideIfEmpty #suffix>
+  <div class="ff-prefix" airHideIfEmpty #suffix>
     <ng-content
       select="[start]">
     </ng-content>
   </div>
   <ng-content></ng-content>
-  <div class="ff-prefix" airHideIfEmpty #prefix>
+  <div class="ff-suffix" airHideIfEmpty #prefix>
     <ng-content
       select="[end]">
     </ng-content>

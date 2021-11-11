@@ -12,7 +12,7 @@
     "publish lists": "ng build lists --configuration production && cd dist/lists && npm publish --access public",
     "publish layout": "ng build layout --configuration production && cd dist/layout && npm publish",
     "publish pagination": "ng build pagination --configuration production && cd dist/pagination && npm publish --access public",
-    "publish controls": "ng build controls --configuration production && cd dist/controls && npm publish",
+    "publish controls": "ng build controls --configuration production && cd dist/controls && npm publish --access public",
     "publish direction": "ng build direction --configuration production && cd dist/direction && npm publish",
     "publish icon": "ng build icon --configuration production && cd dist/icon && npm publish --access=public",
     "publish button": "ng build button --configuration production && cd dist/button && npm publish --access=public",
