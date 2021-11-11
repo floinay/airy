@@ -1,15 +1,15 @@
-import {ElementRef, EmbeddedViewRef, Inject, Injectable, NgZone, OnDestroy, ViewContainerRef} from '@angular/core';
-import {ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef} from '@angular/cdk/overlay';
-import {fromEvent, Observable, Subject} from 'rxjs';
-import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {debounceTime, filter, takeUntil} from 'rxjs/operators';
-import {TemplatePortal} from '@angular/cdk/portal';
-import {PopoverComponentInterface} from '../../interfaces';
-import {PopoverComponent} from '../../components';
-import {DOCUMENT} from '@angular/common';
-import {isEqual} from 'lodash-es';
-import {OptimalPositionService, throwIf} from '@airy-ui/cdk';
-import {DirectionService} from '@airy-ui/direction';
+import { ElementRef, EmbeddedViewRef, Inject, Injectable, NgZone, OnDestroy, ViewContainerRef } from '@angular/core';
+import { ConnectedPosition, Overlay, OverlayPositionBuilder, OverlayRef } from '@angular/cdk/overlay';
+import { fromEvent, Observable, Subject } from 'rxjs';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { debounceTime, filter, takeUntil } from 'rxjs/operators';
+import { TemplatePortal } from '@angular/cdk/portal';
+import { PopoverComponentInterface } from '../../interfaces';
+import { PopoverComponent } from '../../components';
+import { DOCUMENT } from '@angular/common';
+import { isEqual } from 'lodash-es';
+import { OptimalPositionService, throwIf } from '@airy-ui/cdk';
+import { DirectionService } from '@airy-ui/direction';
 
 const START_POSITION_LTR: ConnectedPosition = {
   originX: 'start',
@@ -259,8 +259,8 @@ export class PopoverService implements OnDestroy {
 
   private setOverlaySize(): void {
     this.overlayRef.updateSize({
-      width: this.elementRef.nativeElement.offsetWidth,
-      height: this.elementRef.nativeElement.offsetHeight
+      minWidth: this.elementRef.nativeElement.offsetWidth,
+      minHeight: this.elementRef.nativeElement.offsetHeight
     });
   }
 }
