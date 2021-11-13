@@ -29,8 +29,8 @@
     --text-secondary-light: var(--text-primary);
     --text-primary-dark: var(--text-secondary);
     --text-primary-light: var(--text-secondary);
-    @include can-color(text-secondary);
-    @include can-color(text-primary);
+    @include can-color(text-secondary, ());
+    @include can-color(text-primary, ());
   }
 
   --contrast-dark: #{map-get($contrast, dark)};

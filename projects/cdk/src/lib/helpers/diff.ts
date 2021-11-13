@@ -1,4 +1,4 @@
-import {isPlainObject, reduce} from 'lodash-es';
+import { isPlainObject, reduce, isEqual } from 'lodash-es';
 
 
 export type DiffObject = Array<unknown> | {
@@ -7,7 +7,7 @@ export type DiffObject = Array<unknown> | {
 
 export function diff(first: DiffObject, second: DiffObject): boolean {
   if (isArraysAndLengthNotEqual(first, second)) {
-    return false;
+    return true;
   }
   return !!Object.keys(reduce(first, (result, value, key) => {
     if (isPlainObject(value)) {

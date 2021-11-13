@@ -13,12 +13,12 @@ import {
   Output,
   QueryList
 } from '@angular/core';
-import {OptionComponent} from '../option/option.component';
-import {randomId} from '@airy-ui/cdk';
-import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {ConnectedPosition} from '@angular/cdk/overlay';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {SelectionDispatcherService} from '@airy-ui/cdk';
+import { OptionComponent } from '../option/option.component';
+import { randomId } from '@airy-ui/cdk';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { ConnectedPosition } from '@angular/cdk/overlay';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { SelectionDispatcherService } from '@airy-ui/cdk';
 
 const CONNECTED_POSITIONS: ConnectedPosition[] = [
   {
@@ -51,6 +51,7 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
     return Math.round(this.elementRef.nativeElement.getBoundingClientRect().width);
   }
 
+  private pendingValue?: any;
   private lastValue?: any;
 
   constructor(private selectionDispatcher: SelectionDispatcherService,
@@ -123,10 +124,11 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
 
 
   writeValue(value: any): void {
-    if (this.options) {
+    if (this.options?.length) {
       this.activate(value);
     } else {
       this.lastValue = value;
+      this.pendingValue = value;
     }
   }
 
@@ -135,14 +137,16 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
   }
 
   private setLastValueIfExists(): void {
-    if (this.lastValue !== undefined) {
+    if (this.pendingValue !== undefined) {
+      this.activate(this.pendingValue);
+      this.pendingValue = undefined;
+    } else if (this.lastValue !== undefined && !this.active) {
       this.activate(this.lastValue);
-      this.lastValue = undefined;
     }
   }
 
   private activateEmptyValueOption() {
-    if (!this.lastValue && !this.active && !this.placeholder) {
+    if (!this.pendingValue && !this.active && !this.placeholder) {
       const noValueOption = this.options?.find(option => option.value === undefined || option.value === '');
       if (noValueOption) {
         noValueOption.activate(false);
@@ -154,6 +158,7 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
   }
 
   private activate(value: any) {
+    this.lastValue = value;
     this.options?.forEach(option => {
       if (option.value === value) {
         option.activate(false);
