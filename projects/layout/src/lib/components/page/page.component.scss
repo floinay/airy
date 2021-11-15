@@ -9,7 +9,7 @@
 
   @include set-current-element(page);
   @include element-prop(display, flex);
-  @include element-prop(flex-direction, column);
+  @include element-prop(flex-direction, row);
   @include element-prop(position, relative);
   @include element-prop(width, 100%);
   @include element-prop(margin, 0);
@@ -17,12 +17,27 @@
   @include element-prop(padding-bottom, sticky-offset(footer));
   @include element-prop(padding-inline-end, sticky-offset(end));
 
+  .sticky-end-space {
+    width: sticky-offset(end);
+  }
+
+  .sticky-start-space {
+    width: sticky-offset(start);
+  }
+
+  .sticky-end-space, .sticky-start-space {
+    height: 1px;
+    margin-top: -1px;
+  }
+
   ::ng-deep {
     & > .air-container, .air-content {
       @include set-current-element(page-content);
       @include element-prop(padding-top, var(--indent-xl));
       @include element-prop(padding-inline-start, var(--indent-xxl, 60px));
-      @include element-prop(margin-inline-start, sticky-offset(start));
+      @include element-prop(padding-inline-end, var(--indent-xxl, 60px));
+      @include element-prop(margin-inline-start, auto);
+      @include element-prop(margin-inline-end, auto);
       @include element-prop(margin-top, sticky-offset(header));
       @include element-prop(box-sizing, content-box);
       @include element-prop(min-height, calc(100% - #{sticky-offset(header)} - #{sticky-offset(footer)}));

@@ -1,9 +1,9 @@
-import {AfterViewInit, ChangeDetectionStrategy, Component, ContentChild, ElementRef,} from '@angular/core';
-import {BreakpointObserver} from '@angular/cdk/layout';
-import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {EndDirective, FooterDirective, HeaderDirective, StartDirective} from '../../directives';
-import {StickyDirective} from '../../interfaces';
-import {BREAKPOINT_VALUES} from '@airy-ui/cdk';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ContentChild, ElementRef, } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { EndDirective, FooterDirective, HeaderDirective, StartDirective } from '../../directives';
+import { StickyDirective } from '../../interfaces';
+import { BREAKPOINT_VALUES } from '@airy-ui/cdk';
 
 type OffsetName = 'header' | 'footer' | 'end' | 'start';
 
@@ -20,6 +20,14 @@ export class PageComponent implements AfterViewInit {
   @ContentChild(EndDirective) end?: EndDirective;
   @ContentChild(HeaderDirective) header?: HeaderDirective;
   @ContentChild(FooterDirective) footer?: FooterDirective;
+
+  get startIsSticky(): boolean {
+    return !!this.start?.sticky;
+  }
+
+  get endIsSticky(): boolean {
+    return !!this.end?.sticky;
+  }
 
   constructor(private elementRef: ElementRef,
               private breakpointObserver: BreakpointObserver) {

@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import {
   ActionsPortalComponent,
   ContainerComponent,
@@ -21,9 +21,11 @@ import {
   StartDirective,
   StretchDirective,
 } from './directives';
-import {PortalModule} from '@angular/cdk/portal';
-import {AirDirectionModule} from '@airy-ui/direction';
-import {AirIndentsModule} from './indents';
+import { PortalModule } from '@angular/cdk/portal';
+import { AirDirectionModule } from '@airy-ui/direction';
+import { AirIndentsModule } from './indents';
+import { AirCdkModule } from '@airy-ui/cdk';
+import { CommonModule } from '@angular/common';
 
 
 const declarations = [
@@ -53,7 +55,8 @@ const declarations = [
   imports: [
     PortalModule,
     AirDirectionModule,
-    AirIndentsModule
+    AirIndentsModule,
+    CommonModule
   ],
   providers: [],
   exports: [declarations, AirIndentsModule]

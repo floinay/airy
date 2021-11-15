@@ -1,5 +1,7 @@
 <ng-content select="[airStickyHeader], [airHeader]"></ng-content>
 <ng-content select="[airStickyStart],[airStart]"></ng-content>
+<div class="sticky-start-space" *ngIf="startIsSticky"></div>
 <ng-content select="[air-container],air-container,[airContent]"></ng-content>
 <ng-content select="[airStickyEnd],[airEnd]"></ng-content>
+<div class="sticky-end-space" *ngIf="endIsSticky"></div>
 <ng-content select="[airStickyFooter],[airFooter]"></ng-content>
