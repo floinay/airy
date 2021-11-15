@@ -41,6 +41,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ListComponent } from './pages/list/list.component';
 import { AirListsModule } from '../../projects/lists/src/lib/air-lists.module';
 import { AirPopoverModule } from '../../projects/popover/src/lib';
+import { AirTableLikeCellModule } from '../../projects/layout/src/lib/table-like-cell/air-table-like-cell.module';
 
 
 @NgModule({
@@ -67,6 +68,7 @@ import { AirPopoverModule } from '../../projects/popover/src/lib';
     AirDirectionModule,
     AirLoadersModule,
     AirPopoverModule,
+    AirTableLikeCellModule,
     AirListsModule,
     RouterModule.forRoot([{
       path: '',

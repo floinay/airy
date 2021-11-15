@@ -7,3 +7,5 @@ export * from './lib/elements-position/last-on-line.directive';
 export * from './lib/elements-position/first-on-line.directive';
 export * from './lib/elements-position/position.service';
 export * from './lib/indents';
+export * from './lib/table-like-cell/table-like-cell.directive';
+export * from './lib/table-like-cell/air-table-like-cell.module';
