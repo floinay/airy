@@ -48,9 +48,26 @@
       </button>
     </air-file-item>
   </air-file>
-  <air-select [formControl]="status"
-              [placeholder]="'enroll_requests.filter.status_placeholder'">
-    <air-option>All</air-option>
-    <air-option *ngFor="let option of selectValues$ | async" [value]="option.key">{{option.value}}</air-option>
-  </air-select>
+  <div airLayout="row" airMargin="l auto" airStretch>
+    <air-select [formControl]="status" airGridItem="3"
+                [placeholder]="'enroll_requests.filter.status_placeholder'">
+      <air-option>All</air-option>
+      <air-option *ngFor="let option of selectValues$ | async" [value]="option.key">{{option.value}}</air-option>
+    </air-select>
+  </div>
+  <form airLayout="row" airColGap="m">
+    <air-form-field airGridItem="3">
+      <input airInput [placeholder]="'admin_courses.search_placeholder'">
+      <air-dynamic-icon airMarginEnd="s" end color="text-secondary" name="search"></air-dynamic-icon>
+    </air-form-field>
+    <air-select airGridItem="3">
+      <air-option>{{'admin_courses.all_categories'}}</air-option>
+      <air-option>second option</air-option>
+    </air-select>
+    <air-select airGridItem="3" [placeholder]="'admin_courses.statuses'">
+      <air-option>{{'admin_courses.all_statuses'}}</air-option>
+      <air-option>second option</air-option>
+    </air-select>
+    <a airMarginStart="auto" air-button>{{'admin_courses.create'}}</a>
+  </form>
 </div>

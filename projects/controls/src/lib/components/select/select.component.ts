@@ -48,7 +48,11 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
 
   @HostBinding('style.max-width')
   get clientWidth(): number {
-    return Math.round(this.elementRef.nativeElement.getBoundingClientRect().width);
+    return this.elementRef.nativeElement.offsetWidth;
+  }
+
+  get clientHeight(): number {
+    return this.elementRef.nativeElement.clientHeight;
   }
 
   private pendingValue?: any;

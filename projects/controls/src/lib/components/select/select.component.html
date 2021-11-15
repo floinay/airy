@@ -41,6 +41,8 @@
     (keydown.space)="setActive()"
     (keydown.arrowUp)="up()"
     (keydown.arrowDown)="down()">
+    <div class="active-select-border" (click)="close()" [style.width]="clientWidth + 'px'"
+         [style.height]="clientHeight + 'px'"></div>
     <ng-content></ng-content>
   </div>
 </ng-template>

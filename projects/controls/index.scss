@@ -16,6 +16,14 @@
   }
 }
 
+.active-select-border {
+  position: absolute;
+  border: 2px solid var(--color-primary-light);
+  height: 100%;
+  transform: translateY(-100%) translateX(-2px);
+  border-bottom: none;
+}
+
 .air-select-panel {
   @include element-prop(border, 2px solid var(--color-primary-light));
   @include element-prop(border-top, none);
