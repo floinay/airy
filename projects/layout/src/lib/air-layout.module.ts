@@ -7,7 +7,8 @@ import {
   ScrollContainerComponent
 } from './components';
 import {
-  ActionsContainerDirective, BreakpointsDirective,
+  ActionsContainerDirective,
+  BreakpointsDirective,
   ContentDirective,
   EndDirective,
   FlexDirective,
@@ -24,7 +25,6 @@ import {
 import { PortalModule } from '@angular/cdk/portal';
 import { AirDirectionModule } from '@airy-ui/direction';
 import { AirIndentsModule } from './indents';
-import { AirCdkModule } from '@airy-ui/cdk';
 import { CommonModule } from '@angular/common';
 
 

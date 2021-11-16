@@ -37,10 +37,11 @@ export const listenResize = (window: Window) => {
 export class TableLikeCellDirective implements OnInit, OnDestroy {
   private lastWidth = 0;
   @Input('airTableLikeCell') name!: string;
+  private initialized = false;
 
   @HostBinding('style.width')
   get maxWidth(): string {
-    return widthsByName[this.name] ? widthsByName[this.name] + 'px' : 'auto';
+    return this.initialized && widthsByName[this.name] ? widthsByName[this.name] + 'px' : 'auto';
   }
 
   get nativeElement(): HTMLElement {
@@ -48,7 +49,7 @@ export class TableLikeCellDirective implements OnInit, OnDestroy {
   }
 
   get nativeWidth(): number {
-    this.lastWidth = Math.round(this.nativeElement.getBoundingClientRect().width);
+    this.lastWidth = Math.ceil(this.nativeElement.getBoundingClientRect().width);
     return this.lastWidth;
   }
 
@@ -57,8 +58,10 @@ export class TableLikeCellDirective implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.append();
-    this.setWidth();
+    setTimeout(() => {
+      this.append();
+      this.setWidth();
+    });
   }
 
   public setWidth(): void {
@@ -66,6 +69,8 @@ export class TableLikeCellDirective implements OnInit, OnDestroy {
     if (!(this.name in widthsByName) || widthsByName[this.name] < width) {
       widthsByName[this.name] = width;
     }
+    this.initialized = true;
+    this.cdr.markForCheck();
   }
 
   private append(this: TableLikeCellDirective): void {

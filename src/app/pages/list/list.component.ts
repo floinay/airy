@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { random } from 'lodash-es';
 
 @Component({
   selector: 'app-list',
@@ -8,6 +9,10 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@
 })
 export class ListComponent implements OnInit {
   showMe = true;
+
+  get randBool(): boolean {
+    return !!random(1);
+  }
 
   constructor(cdr: ChangeDetectorRef) {
     setTimeout(() => {
