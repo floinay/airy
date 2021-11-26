@@ -8,6 +8,7 @@ import {
   ViewChild
 } from '@angular/core';
 import {SelectionDispatcherService} from '@airy-ui/cdk';
+import {DirectionService} from '@airy-ui/direction';
 
 @Component({
   selector: 'air-option',
@@ -36,6 +37,9 @@ export class OptionComponent {
   private previousStatus = false;
   private activateAfterInit = false;
 
+  @HostBinding('attr.dir')
+  direction = this.directionService.direction;
+
   @HostBinding('class.active')
   selected = false;
 
@@ -59,7 +63,11 @@ export class OptionComponent {
 
   constructor(private cdr: ChangeDetectorRef,
               private elementRef: ElementRef,
-              private selectionDispatcher: SelectionDispatcherService) {
+              private selectionDispatcher: SelectionDispatcherService,
+              private directionService: DirectionService) {
+    this.directionService.getState().subscribe(direction => {
+      this.direction = direction;
+    });
   }
 
 

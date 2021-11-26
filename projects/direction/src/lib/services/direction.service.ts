@@ -29,6 +29,10 @@ export class DirectionService {
     return this.state$.pipe(filter(dir => Boolean(dir))) as Observable<Direction>;
   }
 
+  getState(): Observable<Direction> {
+    return this.state$ as Observable<Direction>;
+  }
+
   switch(): void {
     this.set(this.isRtl() ? 'ltr' : 'rtl');
   }

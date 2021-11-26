@@ -20,6 +20,9 @@ export class ControlsComponent implements OnInit {
 
   selectValues = new BehaviorSubject([{value: 1, key: 1}, {value: 2, key: 2}, {value: 3, key: 3}]);
   selectValues$ = this.selectValues.pipe(debounceTime(100));
+  sliderGroup = new FormGroup(({
+    opacity: new FormControl()
+  }));
 
   constructor() {
     setTimeout(() => {

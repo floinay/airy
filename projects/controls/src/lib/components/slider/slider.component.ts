@@ -50,6 +50,7 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
   private dragStarted = false;
   private buttonX!: number;
   private viewInit = false;
+  private subscription: any;
   @ViewChild('button', {static: true, read: ElementRef}) button!: ElementRef<HTMLButtonElement>;
   @ViewChild('slider', {static: true, read: ElementRef}) slider!: ElementRef<HTMLDivElement>;
   @ViewChild('counterWithPercent', {static: true, read: TemplateRef}) templatePercent!: TemplateRef<CounterContext>;
@@ -95,10 +96,10 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
               private ngZone: NgZone,
               @Inject(DOCUMENT) readonly document: Document,
               private direction: DirectionService) {
-    super(elementRef)
+    super(elementRef);
   }
 
-  ngAfterViewInit(): void {
+  sliderInit() {
     this.viewInit = true;
     this.updatePosition();
     this.ngZone.runOutsideAngular(() => {
@@ -110,7 +111,17 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
         this.value = this.viewValue;
         this.onChange(this.value);
       });
-    })
+    });
+  }
+
+  ngAfterViewInit(): void {
+    if (!this.subscription) {
+      this.subscription = this.direction.getState().subscribe(newDir => {
+        this.sliderInit();
+      });
+    } else {
+      this.sliderInit();
+    }
   }
 
 
@@ -153,7 +164,7 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
       const oneStepMap = this.sliderSize / this.max;
       const x = oneStepMap * this.value;
       this.updateBackgroundWidth(x);
-      this.updateButtonPosition(this.minMaxPosition(this.direction.isRtl() ? x * -1 : x));
+      this.updateButtonPosition(this.direction.isRtl() ? x * -1 : x);
     }
   }
 
@@ -163,9 +174,13 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
 
   private updateBackgroundWidth(width: number): void {
     this.backgroundContainer.nativeElement.style.width = width + 'px';
+    this.backgroundContainer.nativeElement.style.left = 'unset';
+    this.backgroundContainer.nativeElement.style.right = 'unset';
   }
 
   private updateButtonPosition(x: number): void {
+    const SLIDER_BUTTON_HALF_WIDTH = 7;
+    x += this.direction.isRtl() ? SLIDER_BUTTON_HALF_WIDTH : -SLIDER_BUTTON_HALF_WIDTH;
     this.button.nativeElement.style.setProperty('transform', `translateX(${x}px)`);
   }
 
@@ -177,10 +192,12 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
         position = this.sliderSize * -1;
       }
     } else {
-      if (position < 0) {
-        position = 0;
-      } else if (position > this.sliderSize) {
+      if (position > 0) {
         position = this.sliderSize;
+      } else if (position < (this.sliderSize * -1)) {
+        position = 0;
+      } else {
+        position = this.sliderSize + position;
       }
     }
 

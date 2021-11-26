@@ -60,13 +60,11 @@
   @include element-prop(position, absolute);
   @include element-prop(background, none);
   @include element-prop(top, 0);
-  @include element-prop(position, absolute);
   @include element-prop(z-index, 2);
 }
 
 .slider-button-pointer {
   @include set-current-element(slider-button-pointer);
-  @include element-prop(transform, translateX(50%));
   @include element-prop(border-radius, 100%);
   @include element-prop(width, 14px);
   @include element-prop(display, block);
