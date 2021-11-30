@@ -26,12 +26,14 @@ const CONNECTED_POSITIONS: ConnectedPosition[] = [
     originY: 'bottom',
     overlayX: 'start',
     overlayY: 'top',
+    panelClass: 'panel-bottom'
   },
   {
     originX: 'start',
-    originY: 'bottom',
+    originY: 'top',
     overlayX: 'start',
     overlayY: 'bottom',
+    panelClass: 'panel-top'
   },
 ];
 
@@ -52,6 +54,7 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
   }
 
   get clientHeight(): number {
+    console.info('clientHeight', this.elementRef.nativeElement.clientHeight);
     return this.elementRef.nativeElement.clientHeight;
   }
 
@@ -106,6 +109,7 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
   }
 
   down(): void {
+    console.info('down started');
     let id = this.getSelectedId();
     if (this.options) {
       if (id !== this.options.length - 1) {
@@ -117,6 +121,7 @@ export class SelectComponent implements AfterContentInit, ControlValueAccessor {
   }
 
   up(): void {
+    console.info('up started');
     let id = this.getSelectedId();
     if (id !== 0) {
       --id;

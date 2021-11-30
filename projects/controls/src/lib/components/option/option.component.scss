@@ -20,10 +20,6 @@
   &:hover, &.active {
     background: var(--color-primary-50);
   }
-
-  &:not(:last-child) {
-    @include element-prop(border-bottom, 1px solid var(--border-color));
-  }
 }
 
 @include reset-current-element;
