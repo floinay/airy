@@ -1,10 +1,10 @@
 {
   "name": "@airy-ui/controls",
-  "version": "2.7.10",
+  "version": "2.7.11",
   "private": false,
   "peerDependencies": {
-    "@angular/common": "^12.1.0",
-    "@angular/core": "^12.1.0"
+    "@angular/common": "^12.1.0 || ^13.0.0",
+    "@angular/core": "^12.1.0 || ^13.0.0"
   },
   "dependencies": {
     "tslib": "^2.2.0"

@@ -1,9 +1,9 @@
 {
   "name": "@airy-ui/icon",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "peerDependencies": {
-    "@angular/common": "^12.2.2",
-    "@angular/core": "^12.2.2"
+    "@angular/common": "^12.2.2 || ^13.0.0",
+    "@angular/core": "^12.2.2 || ^13.0.0"
   },
   "dependencies": {
     "tslib": "^2.2.0"
