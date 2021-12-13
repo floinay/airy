@@ -7,7 +7,7 @@
   @include element-prop(height, 48px);
   @include element-prop(min-height, 48px);
   @include element-prop(display, inline-flex);
-  @include element-prop(border-radius, 6px);
+  @include element-prop(border-radius, var(--border-radius));
   @include element-prop(cursor, pointer);
   @include element-prop(align-items, center);
   @include element-prop(padding, 0 20px);

@@ -1,5 +1,5 @@
 export * from './lists';
-export * from './tooltip';
+export * from '../../../tooltip/src/lib';
 export * from '../../../icon/src/lib';
 export * from './expansion';
 export * from './nav';

@@ -60,6 +60,10 @@
         "dist/test/test",
         "dist/test"
       ],
+      "tooltip": [
+        "dist/tooltip/tooltip",
+        "dist/tooltip"
+      ],
       "typography": [
         "dist/typography/typography",
         "dist/typography"

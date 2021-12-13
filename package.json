@@ -17,6 +17,7 @@
     "publish icon": "ng build icon --configuration production && cd dist/icon && npm publish --access=public",
     "publish button": "ng build button --configuration production && cd dist/button && npm publish --access=public",
     "publish tabs": "ng build tabs --configuration production && cd dist/tabs && npm publish --access=public",
+    "publish tooltip": "ng build tooltip --configuration production && cd dist/tooltip && npm publish --access=public",
     "install deps": "npm i @airy-ui/button @airy-ui/cdk @airy-ui/layout @airy-ui/controls @airy-ui/direction @airy-ui/icon @airy-ui/tabs @airy-ui/typography"
   },
   "private": true,
