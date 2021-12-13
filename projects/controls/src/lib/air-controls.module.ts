@@ -30,6 +30,7 @@ import {AirLayoutModule} from '@airy-ui/layout';
 import {AirDirectionModule} from '@airy-ui/direction';
 import {AirTypographyModule} from '@airy-ui/typography';
 import {AirIconModule} from '@airy-ui/icon';
+import { AirRadioButtonsModule } from './radio-buttons/air-radio-buttons.module';
 
 const declarations = [
   AutocompleteComponent,
@@ -41,9 +42,7 @@ const declarations = [
   TextareaAutosizeDirective,
   InputDirective,
   CheckboxComponent,
-  RadioGroupComponent,
   FileComponent,
-  RadioButtonComponent,
   SelectComponent,
   OptionComponent,
   FileItemComponent,
@@ -65,7 +64,8 @@ const declarations = [
     AirLayoutModule,
     AirDirectionModule,
     AirTypographyModule,
-    AirIconModule
+    AirIconModule,
+    AirRadioButtonsModule
   ],
   providers: AIR_CONTROLS_DEFAULT_PROVIDERS,
   exports: declarations
