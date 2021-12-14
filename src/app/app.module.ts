@@ -23,7 +23,9 @@ import { PopoverComponent } from './pages/popover/popover.component';
 import { AirButtonModule } from '@airy-ui/button';
 import { AirDirectionModule } from '../../projects/direction/src/lib';
 import { AirLayoutModule } from '../../projects/layout/src/lib/air-layout.module';
-import { AirElementsPositionModule } from '../../projects/layout/src/lib/elements-position/air-elements-position.module';
+import {
+  AirElementsPositionModule
+} from '../../projects/layout/src/lib/elements-position/air-elements-position.module';
 import { AirLoadersModule } from '../../projects/kit/src/lib/loaders';
 import {
   AirExpansionModule,
@@ -42,6 +44,7 @@ import { ListComponent } from './pages/list/list.component';
 import { AirListsModule } from '../../projects/lists/src/lib/air-lists.module';
 import { AirPopoverModule } from '../../projects/popover/src/lib';
 import { AirTableLikeCellModule } from '../../projects/layout/src/lib/table-like-cell/air-table-like-cell.module';
+import { AirRadioButtonsModule } from '../../projects/controls/src/lib/radio-buttons';
 
 
 @NgModule({
@@ -69,6 +72,7 @@ import { AirTableLikeCellModule } from '../../projects/layout/src/lib/table-like
     AirLoadersModule,
     AirPopoverModule,
     AirTableLikeCellModule,
+    AirRadioButtonsModule,
     AirListsModule,
     RouterModule.forRoot([{
       path: '',

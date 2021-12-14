@@ -1,0 +1,42 @@
+@import "~@airy-ui/cdk";
+
+:host {
+  @include set-current-element(radio-button);
+  @include element-prop(cursor, pointer);
+  @include element-prop(display, flex);
+  @include element-prop(align-items, center);
+  @include element-prop(column-gap, var(--indent-xs));
+}
+
+.label {
+  @include set-current-element(radio-button-label);
+  @include element-prop(width, 20px);
+  @include element-prop(height, 20px);
+  @include element-prop(border-radius, 100%);
+  @include element-prop(border, 1px solid var(--border-color));
+}
+
+:host {
+  &.active {
+    @include set-current-modifier(active);
+
+    .label {
+      @include set-current-element(radio-button-label);
+      @include element-prop(border, 6px solid #{current-color()})
+    }
+
+    @include reset-current-modifier;
+  }
+
+  &:hover {
+    @include set-current-modifier(hover);
+
+    .label {
+      @include set-current-element(radio-button-label);
+      @include element-prop(border-color, #{current-color(dark)});
+      @include reset-current-element;
+    }
+
+    @include reset-current-modifier;
+  }
+}

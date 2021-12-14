@@ -5,8 +5,8 @@
     <input type="password" formControlName="password">
     <input type="password" formControlName="confirm_password">
   </form>
-  <air-radio-group>
-    <air-radio-button value="first">First option</air-radio-button>
+  <air-radio-group [formControl]="radio">
+    <air-radio-button *ngIf="timer$ | async" value="first">First option</air-radio-button>
     <air-radio-button value="second">Second Option</air-radio-button>
   </air-radio-group>
   <div airGrid airMarginTop="xl">
