@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
+import { GlobalPositionStrategy, GlobalPositionStrategyOffset } from '@airy-ui/cdk';
 
 
 @Component({
@@ -17,9 +18,9 @@ export class ModalComponent {
   @Input() maxHeight?: number | string;
   @Input() maxWidth?: number | string;
   @Input() hasBackdrop = true;
-  @Input() backdropClass: string[] = ['air-modal-backdrop']
+  @Input() backdropClass: string[] = ['air-modal-backdrop'];
   @Input() panelClass: string[] = ['air-modal-panel'];
-  @Output() readonly onModalClose = new EventEmitter<void>()
+  @Output() readonly onModalClose = new EventEmitter<void>();
   @Output() scroll = new EventEmitter<Event>();
   @Input() position: GlobalPositionStrategy = 'center';
   @Input() offset: GlobalPositionStrategyOffset;

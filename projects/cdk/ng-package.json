@@ -6,18 +6,6 @@
     "./index.scss"
   ],
   "lib": {
-    "entryFile": "src/public-api.ts",
-    "umdModuleIds": {
-      "@ng-web-apis/common": "@ng-web-apis/common",
-      "@ngneat/until-destroy": "@ngneat/until-destroy",
-      "@airy-ui/direction": "@airy-ui/direction",
-      "lodash-es": "lodash-es"
-    }
-  },
-  "allowedNonPeerDependencies": [
-    "lodash-es",
-    "@ng-web-apis/common",
-    "@ngneat/until-destroy",
-    "@airy-ui/direction"
-  ]
+    "entryFile": "src/public-api.ts"
+  }
 }
