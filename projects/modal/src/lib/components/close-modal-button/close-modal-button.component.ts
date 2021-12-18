@@ -8,4 +8,5 @@ import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 })
 export class CloseModalButtonComponent {
   @Input() color = "danger"
+  @Input() size?: 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | string = 'm';
 }

@@ -33,5 +33,9 @@ export const APP_PAGES: { name: string, url: string }[] = [
   {
     name: 'List',
     url: '/list'
+  },
+  {
+    name: 'Modal',
+    url: '/modal'
   }
 ];

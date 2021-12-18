@@ -1,7 +1,5 @@
-/*
- * Public API Surface of modal
- */
-
-export * from './lib/modal.service';
-export * from './lib/modal.component';
-export * from './lib/modal.module';
+export * from './lib/air-modal.module';
+export * from './lib/modal-options.providers';
+export * from './lib/modal-ref';
+export * from './lib/components';
+export * from './lib/services';

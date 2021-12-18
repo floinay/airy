@@ -1,0 +1,7 @@
+<span airHideIfEmpty (click)="close()" class="modal-close-wrapper">
+  <ng-content select="[close],air-modal-close"></ng-content>
+</span>
+<header airHideIfEmpty class="air-modal-header">
+  <ng-content select="[header]"></ng-content>
+</header>
+<ng-content></ng-content>

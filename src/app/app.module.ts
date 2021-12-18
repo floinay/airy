@@ -45,6 +45,8 @@ import { AirListsModule } from '../../projects/lists/src/lib/air-lists.module';
 import { AirPopoverModule } from '../../projects/popover/src/lib';
 import { AirTableLikeCellModule } from '../../projects/layout/src/lib/table-like-cell/air-table-like-cell.module';
 import { AirRadioButtonsModule } from '../../projects/controls/src/lib/radio-buttons';
+import { ModalComponent } from './pages/modal/modal.component';
+import { AirModalModule } from '../../projects/modal/src/lib/air-modal.module';
 
 
 @NgModule({
@@ -66,6 +68,7 @@ import { AirRadioButtonsModule } from '../../projects/controls/src/lib/radio-but
     PopoverComponent,
     PaginationComponent,
     ListComponent,
+    ModalComponent,
   ],
   imports: [
     AirDirectionModule,
@@ -74,10 +77,15 @@ import { AirRadioButtonsModule } from '../../projects/controls/src/lib/radio-but
     AirTableLikeCellModule,
     AirRadioButtonsModule,
     AirListsModule,
+    AirModalModule,
     RouterModule.forRoot([{
       path: '',
       component: HomeComponent
     },
+      {
+        path: 'modal',
+        component: ModalComponent
+      },
       {
         path: 'tooltips',
         component: TooltipComponent,

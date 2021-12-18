@@ -1,14 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-modal',
-  template: `
-    <p>
-      modal works!
-    </p>
-  `,
-  styles: [
-  ]
+  selector: 'app-modal',
+  templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
 

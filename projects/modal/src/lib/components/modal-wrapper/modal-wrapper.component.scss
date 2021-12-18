@@ -1,7 +1,7 @@
-@import "../../../cdk/styles";
+@import "~@airy-ui/cdk/styles";
 
-@include set-current-element(modal);
-.air-modal {
+:host {
+  @include set-current-element(modal);
   @include element-prop(background, var(--background-primary));
   @include element-prop(padding, var(--indent-xxl));
   @include element-prop(display, inline-flex);
@@ -9,8 +9,44 @@
   @include element-prop(min-width, 320px);
   @include element-prop(flex-direction, column);
   @include element-prop(max-width, 800px);
+  @include element-prop(width, 100%);
   @include element-prop(overflow-x, auto);
   @include element-prop(max-height, 90vh);
+  @include element-prop(border-radius, 4px);
+}
+
+@media screen and (max-width: 836px) {
+  :host {
+    @include element-prop(max-width, calc(100vw - var(--indent-s) * 2));
+
+    .air-modal {
+      @include element-prop(max-width, calc(100vw - var(--indent-s) * 2));
+      @include element-prop(width, 100%);
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
+      scrollbar-width: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 599px) {
+  :host {
+    .air-modal {
+      @include element-prop(min-width, calc(100vw - 32px));
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  :host {
+    .air-modal {
+      @include element-prop(min-width, calc(100vw - 32px));
+    }
+  }
 }
 
 .air-modal-header {
@@ -40,4 +76,5 @@
   }
 }
 
+@include reset-current-modifier;
 @include reset-current-element;

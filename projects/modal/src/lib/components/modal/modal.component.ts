@@ -1,11 +1,5 @@
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  EventEmitter,
-  Input,
-  Output
-} from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
+
 
 @Component({
   selector: 'air-modal',
@@ -26,6 +20,9 @@ export class ModalComponent {
   @Input() backdropClass: string[] = ['air-modal-backdrop']
   @Input() panelClass: string[] = ['air-modal-panel'];
   @Output() readonly onModalClose = new EventEmitter<void>()
+  @Output() scroll = new EventEmitter<Event>();
+  @Input() position: GlobalPositionStrategy = 'center';
+  @Input() offset: GlobalPositionStrategyOffset;
 
   open(): void {
     this.status = true;

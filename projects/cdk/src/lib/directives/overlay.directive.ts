@@ -1,10 +1,14 @@
-import {Directive, EventEmitter, Input, OnDestroy, Output, TemplateRef, ViewContainerRef} from '@angular/core';
-import {Overlay, OverlayConfig, OverlayRef} from '@angular/cdk/overlay';
-import {TemplatePortal} from '@angular/cdk/portal';
-import {Direction} from '@angular/cdk/bidi';
-import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {Subscription} from 'rxjs';
-import {DirectionService} from '@airy-ui/direction';
+import { Directive, EventEmitter, Input, OnDestroy, Output, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Overlay, OverlayConfig, OverlayRef, PositionStrategy } from '@angular/cdk/overlay';
+import { TemplatePortal } from '@angular/cdk/portal';
+import { Direction } from '@angular/cdk/bidi';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { Subscription } from 'rxjs';
+import { DirectionService } from '@airy-ui/direction';
+import {
+  GlobalPositionStrategy,
+  GlobalPositionStrategyBuilderService, GlobalPositionStrategyOffset
+} from '../services/global-position-strategy-builder.service';
 
 @Directive({
   selector: '[airOverlay]',
@@ -23,6 +27,8 @@ export class OverlayDirective implements OnDestroy {
   @Input() airOverlayMaxHeight?: number | string;
   @Input() airOverlayDirection?: Direction = this.directionService.direction;
   @Input() airOverlayDisposeOnNavigation = false;
+  @Input() airOverlayPosition: GlobalPositionStrategy = 'center';
+  @Input() airOverlayOffset: GlobalPositionStrategyOffset;
   private backdropSubscription?: Subscription;
 
   @Input() set airOverlayOpen(status: boolean) {
@@ -34,10 +40,15 @@ export class OverlayDirective implements OnDestroy {
   @Output() readonly airOverlayBackdropClick = new EventEmitter<void>();
   @Output() readonly airOverlayOnClose = new EventEmitter<void>();
 
+  get positionStrategy(): PositionStrategy {
+    return this.positionStrategyBuilder.build(this.airOverlayPosition, this.airOverlayOffset);
+  }
+
   private overlayRef?: OverlayRef;
 
   private get overlayConfig(): OverlayConfig {
     return {
+      positionStrategy: this.positionStrategy,
       hasBackdrop: this.airOverlayHasBackdrop,
       panelClass: this.airOverlayPanelClass,
       backdropClass: this.airOverlayBackdropClass,
@@ -56,6 +67,7 @@ export class OverlayDirective implements OnDestroy {
 
   constructor(private overlay: Overlay,
               private templateRef: TemplateRef<any>,
+              private positionStrategyBuilder: GlobalPositionStrategyBuilderService,
               private directionService: DirectionService,
               private viewContainerRef: ViewContainerRef) {
   }
@@ -83,7 +95,7 @@ export class OverlayDirective implements OnDestroy {
       }
       this.airOverlayKeydownEvents.emit(e);
     });
-    overlayRef.outsidePointerEvents().pipe(untilDestroyed(this)).subscribe()
+    overlayRef.outsidePointerEvents().pipe(untilDestroyed(this)).subscribe();
   }
 
   detach(): void {
