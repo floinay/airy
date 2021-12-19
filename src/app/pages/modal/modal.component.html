@@ -3,5 +3,11 @@
   <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur doloribus ex illum inventore ipsum magni nostrum numquam, perferendis repellendus saepe tempore ullam. Consectetur cumque incidunt labore quam velit veniam voluptas?</span><span>A eveniet impedit rerum tempora ullam. Animi esse officiis placeat sit totam! A accusantium aspernatur assumenda atque commodi, dolorem ex, fugiat harum hic nisi non repellendus sit tempora tempore vel!</span>
   </p>
 </air-modal>
+<air-modal position="top start" #topStart>
+  <h2 header>test</h2>]
+  <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur doloribus ex illum inventore ipsum magni nostrum numquam, perferendis repellendus saepe tempore ullam. Consectetur cumque incidunt labore quam velit veniam voluptas?</span><span>A eveniet impedit rerum tempora ullam. Animi esse officiis placeat sit totam! A accusantium aspernatur assumenda atque commodi, dolorem ex, fugiat harum hic nisi non repellendus sit tempora tempore vel!</span>
+  </p>
+</air-modal>
 
-<button air-button (click)="modal.open()">Show Modal</button>
+<button air-button (click)="modal.open()">Show Modal On Center</button>
+<button air-button (click)="topStart.open()">Show modal On Top Start</button>

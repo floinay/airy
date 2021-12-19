@@ -1,6 +1,6 @@
 {
   "name": "@airy-ui/cdk",
-  "version": "2.6.1",
+  "version": "3.0.1",
   "private": false,
   "peerDependencies": {
     "@angular/common": "^12.2.2 || ^13.0.0",
