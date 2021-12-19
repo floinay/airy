@@ -1,4 +1,4 @@
-@import "~@airy-ui/cdk/styles/index";
+@import "@airy-ui/cdk/styles";
 
 @mixin air-grid($col-width, $indent) {
   --gap: #{$indent};

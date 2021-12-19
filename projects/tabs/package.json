@@ -1,6 +1,6 @@
 {
   "name": "@airy-ui/tabs",
-  "version": "2.1.7",
+  "version": "3.0.0",
   "private": false,
   "peerDependencies": {
     "@angular/common": "^12.2.2 || ^13.0.0",

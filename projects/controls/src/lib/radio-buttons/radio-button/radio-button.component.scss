@@ -1,4 +1,4 @@
-@import "~@airy-ui/cdk";
+@import "@airy-ui/cdk";
 
 :host {
   @include set-current-element(radio-button);

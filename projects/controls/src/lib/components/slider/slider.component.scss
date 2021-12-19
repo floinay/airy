@@ -1,4 +1,4 @@
-@import "~@airy-ui/cdk/styles";
+@import "@airy-ui/cdk/styles";
 
 :host {
   @include set-current-element(slider);

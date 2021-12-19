@@ -1,9 +1,10 @@
 @import '~@angular/cdk/overlay-prebuilt.css';
 @import "@airy-ui/cdk/styles/initial";
 @import "@airy-ui/cdk/styles";
-@import "~@airy-ui/layout/styles";
-@import "~@airy-ui/typography";
-@import "../projects/controls/index";
+@import "@airy-ui/layout/styles";
+//@import "@airy-ui/typography";
+//@import "../projects/typography";
+
 
 
 .cdk-drop-list-dragging .cdk-drag {
@@ -30,7 +31,7 @@
   );
   --border-radius: 6px;
 
-  @include air-grid(74px, 28px);
+  //@include air-grid(74px, 28px);
   @include air-default-button-sizes;
   @include air-default-indents;
 }

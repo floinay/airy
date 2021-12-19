@@ -1,4 +1,4 @@
-@import "~@airy-ui/cdk/styles";
+@import "@airy-ui/cdk/styles";
 
 @mixin air-tp($element, $font-size, $mobile-font-size, $font-weight) {
   @include set-current-element($element);
