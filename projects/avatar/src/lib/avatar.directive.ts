@@ -1,5 +1,5 @@
-import {Directive, ElementRef} from '@angular/core';
-import {CanSizeCtor, HasElementRef, mixinSize} from '@airy-ui/cdk';
+import { Directive, ElementRef } from '@angular/core';
+import { CanSizeCtor, HasElementRef, mixinSize } from '@airy-ui/cdk';
 
 const AvatarBase: CanSizeCtor = mixinSize(HasElementRef);
 
@@ -9,12 +9,11 @@ const AvatarBase: CanSizeCtor = mixinSize(HasElementRef);
   inputs: ['size'],
   host: {
     '[class.air-avatar]': `true`,
-    '[style.border-radius]': `'var(--border-radius, 100%)'`
+    '[style.border-radius]': `'var(--avatar__border-radius, 100%)'`
   }
 })
 export class AvatarDirective extends AvatarBase {
   constructor(elementRef: ElementRef) {
     super(elementRef);
   }
-
 }

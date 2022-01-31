@@ -18,7 +18,6 @@ import {
   HeaderDirective,
   ImpositionContainerDirective,
   ImpositionDirective,
-  LayoutDirective,
   StartDirective,
   StretchDirective,
 } from './directives';
@@ -26,6 +25,7 @@ import { PortalModule } from '@angular/cdk/portal';
 import { AirDirectionModule } from '@airy-ui/direction';
 import { AirIndentsModule } from './indents';
 import { CommonModule } from '@angular/common';
+import { LayoutModule } from './layout/layout.module';
 
 
 const declarations = [
@@ -38,7 +38,6 @@ const declarations = [
   EndDirective,
   StartDirective,
   GridItemDirective,
-  LayoutDirective,
   ContentDirective,
   ContainerComponent,
   FlexDirective,
@@ -56,10 +55,11 @@ const declarations = [
     PortalModule,
     AirDirectionModule,
     AirIndentsModule,
-    CommonModule
+    CommonModule,
+    LayoutModule
   ],
   providers: [],
-  exports: [declarations, AirIndentsModule]
+  exports: [declarations, AirIndentsModule, LayoutModule]
 })
 export class AirLayoutModule {
 }

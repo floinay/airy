@@ -7,15 +7,7 @@ import {
   HostListener,
   Input
 } from '@angular/core';
-import {
-  CanColorCtor,
-  CanSizeCtor,
-  HasElementRef,
-  mixinColor,
-  mixinSize,
-  randomId,
-  SelectionDispatcherService
-} from '@airy-ui/cdk';
+import { CanColorCtor, HasElementRef, mixinColor, randomId, SelectionDispatcherService } from '@airy-ui/cdk';
 
 const ButtonBase: CanColorCtor = mixinColor(HasElementRef, 'primary');
 
