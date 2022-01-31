@@ -1,9 +1,17 @@
-import {ChangeDetectionStrategy, Component, ElementRef, HostBinding, Input} from '@angular/core';
-import {AirFill} from './types';
-import {AirExpand} from './types';
-import {CanColorCtor, CanSizeCtor, mixinColor, mixinSize, HasElementRef} from '@airy-ui/cdk';
+import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, Input } from '@angular/core';
+import { AirFill } from './types';
+import { AirExpand } from './types';
+import {
+  CanColorCtor,
+  CanSizeCtor,
+  mixinColor,
+  mixinSize,
+  HasElementRef,
+  mixinDisabled,
+  CanDisabledCtor
+} from '@airy-ui/cdk';
 
-const ButtonBase: CanColorCtor & CanSizeCtor = mixinColor(mixinSize(HasElementRef), 'primary');
+const ButtonBase: CanColorCtor & CanSizeCtor & CanDisabledCtor = mixinDisabled(mixinColor(mixinSize(HasElementRef), 'primary'));
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -17,7 +25,7 @@ const ButtonBase: CanColorCtor & CanSizeCtor = mixinColor(mixinSize(HasElementRe
   styleUrls: ['./button.component.scss'],
   // tslint:disable-next-line:no-inputs-metadata-property
   inputs: [
-    'color', 'size'
+    'color', 'size', 'disabled'
   ]
 })
 export class ButtonComponent extends ButtonBase {

@@ -1,4 +1,4 @@
-export * from './layout/layout.directive';
+export * from '../layout/layout.directive';
 export * from './start/start.directive';
 export * from './end/end.directive';
 export * from './footer/footer.directive';

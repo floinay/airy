@@ -8,6 +8,7 @@
     "docs serve": "compodoc -s",
     "publish typography": "ng build typography --configuration production && cd dist/typography && npm publish --access public",
     "publish cdk": "ng build cdk --configuration production && cd dist/cdk && npm publish",
+    "publish avatar": "ng build avatar --configuration production && cd dist/avatar && npm publish --access public",
     "publish popover": "ng build popover --configuration production && cd dist/popover && npm publish --access public",
     "publish lists": "ng build lists --configuration production && cd dist/lists && npm publish --access public",
     "publish layout": "ng build layout --configuration production && cd dist/layout && npm publish",

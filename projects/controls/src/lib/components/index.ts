@@ -10,5 +10,4 @@ export * from './file/file.component';
 export * from './file/file-item/file-item.component';
 export * from './image/image.component';
 export * from './input-color/input-color.component';
-export * from './slider/slider.component';
 export * from './autocomplete/autocomplete.component';

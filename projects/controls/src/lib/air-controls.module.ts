@@ -11,10 +11,7 @@ import {
   InputColorComponent,
   LabelComponent,
   OptionComponent,
-  RadioButtonComponent,
-  RadioGroupComponent,
   SelectComponent,
-  SliderComponent,
   ToggleComponent
 } from './components';
 import {FormsModule} from '@angular/forms';
@@ -30,7 +27,8 @@ import {AirLayoutModule} from '@airy-ui/layout';
 import {AirDirectionModule} from '@airy-ui/direction';
 import {AirTypographyModule} from '@airy-ui/typography';
 import {AirIconModule} from '@airy-ui/icon';
-import { AirRadioButtonsModule } from './radio-buttons/air-radio-buttons.module';
+import {AirRadioButtonsModule} from './radio-buttons/air-radio-buttons.module';
+import {SliderModule} from "./slider/slider.module";
 
 const declarations = [
   AutocompleteComponent,
@@ -48,9 +46,7 @@ const declarations = [
   FileItemComponent,
   ImageComponent,
   InputColorComponent,
-  SliderComponent,
   AutocompleteDirective,
-  SliderComponent
 ];
 
 @NgModule({
@@ -65,10 +61,11 @@ const declarations = [
     AirDirectionModule,
     AirTypographyModule,
     AirIconModule,
-    AirRadioButtonsModule
+    AirRadioButtonsModule,
+    SliderModule
   ],
   providers: AIR_CONTROLS_DEFAULT_PROVIDERS,
-  exports: declarations
+  exports: [declarations, SliderModule]
 })
 export class AirControlsModule {
 }

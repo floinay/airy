@@ -1,5 +1,5 @@
 <ng-template #counterWithPercent let-count="count">{{count}}%</ng-template>
-<ng-template #defaultCounter>{{counter}}</ng-template>
+<ng-template #defaultCounter let-count="count">{{count}}</ng-template>
 <div class="counter" *ngIf="showCounter">
   <span style="visibility: hidden"><ng-container
     *ngTemplateOutlet="counter ? counter: defaultCounter;context:maxValueContext"></ng-container></span>

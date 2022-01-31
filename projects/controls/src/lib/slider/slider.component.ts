@@ -75,7 +75,7 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
   viewValue = this.value;
 
   get counterContext(): CounterContext {
-    return {count: this.viewValue};
+    return {count: this.viewValue || 0};
   }
 
   get maxValueContext(): CounterContext {
@@ -136,11 +136,10 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
 
   move(event: PointerEvent): void {
     const x = this.minMaxPosition(event.clientX - this.buttonX);
-    const oneStepMap = this.sliderSize / this.max;
     this.viewValue = this.getValueFromX(x);
     this.cdr.markForCheck();
     this.updateButtonPosition(x);
-    this.updateBackgroundWidth(this.viewValue * oneStepMap);
+    this.updateBackgroundWidth(x < 0 ? x * -1 : x);
     this.valueChange.next();
   }
 
@@ -169,7 +168,7 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
   }
 
   private getValueFromX(x: number): number {
-    return Math.abs(Math.ceil(x / this.sliderSize * 100));
+    return Math.abs(Math.ceil(x / this.sliderSize * this.max));
   }
 
   private updateBackgroundWidth(width: number): void {
