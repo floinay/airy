@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component, ElementRef, Inject, Input } from '@angular/core';
-import { Pagination } from './pagination';
-import { ActivatedRoute } from '@angular/router';
-import { CanColorCtor, HasElementRef, mixinColor } from '@airy-ui/cdk';
-import { PAGINATION_OPTIONS, PaginationOptions } from './pagination-options-token';
+import {ChangeDetectionStrategy, Component, ElementRef, Inject, Input} from '@angular/core';
+import {Pagination, PaginationCamel} from './pagination';
+import {ActivatedRoute} from '@angular/router';
+import {CanColorCtor, HasElementRef, mixinColor} from '@airy-ui/cdk';
+import {PAGINATION_OPTIONS, PaginationOptions} from './pagination-options-token';
 
 const PaginationBase: CanColorCtor = mixinColor(HasElementRef, 'accent');
 
@@ -23,16 +23,21 @@ interface PageOrDelimiter {
 })
 export class PaginationComponent extends PaginationBase {
   private _link: string[] = [];
-  private _pagination!: Pagination;
+  private _pagination!: PaginationCamel;
   pages: PageOrDelimiter[] = [];
   @Input() hideFirst = true;
 
-  @Input() set pagination(value: Pagination) {
-    this._pagination = value;
+  @Input() set pagination(value: Pagination | PaginationCamel) {
+    if ('per_page' in value) {
+      this._pagination = value;
+    } else {
+      this._pagination = {total: value.total, per_page: value.perPage, current_page: value.currentPage};
+    }
+
     this.generatePages();
   }
 
-  get pagination(): Pagination {
+  get pagination(): PaginationCamel {
     return this._pagination;
   }
 
