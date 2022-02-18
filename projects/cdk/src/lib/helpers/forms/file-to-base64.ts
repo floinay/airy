@@ -1,7 +1,6 @@
-import {fromPromise} from 'rxjs/internal-compatibility';
-import {Observable} from 'rxjs';
+import {Observable, from} from 'rxjs';
 
-export const fileToBase64 = (file: File): Observable<string> => fromPromise(new Promise((resolve, reject) => {
+export const fileToBase64 = (file: File): Observable<string | unknown> => from(new Promise((resolve, reject) => {
   const reader = new FileReader();
   reader.readAsDataURL(file);
   reader.onload = () => resolve(reader.result as string);
