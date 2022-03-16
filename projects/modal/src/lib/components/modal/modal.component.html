@@ -1,5 +1,5 @@
 <ng-template airOverlay [airOverlayPosition]="position" [airOverlayOffset]="offset" [airOverlayPanelClass]="panelClass"
-             (airOverlayBackdropClick)="close()"
+             (airOverlayBackdropClick)="onBackdropClick()"
              [airOverlayOpen]="status" (airOverlayOnClose)="status = false; onModalClose.emit()">
   <air-modal-wrapper (scroll)="scroll.emit($event)" (onCloseButtonClick)="close()">
     <ng-content close select="[close],air-modal-close"></ng-content>

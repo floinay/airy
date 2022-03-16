@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
-import { GlobalPositionStrategy, GlobalPositionStrategyOffset } from '@airy-ui/cdk';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, Output} from '@angular/core';
+import {GlobalPositionStrategy, GlobalPositionStrategyOffset} from '@airy-ui/cdk';
 
 
 @Component({
@@ -24,10 +24,17 @@ export class ModalComponent {
   @Output() scroll = new EventEmitter<Event>();
   @Input() position: GlobalPositionStrategy = 'center';
   @Input() offset: GlobalPositionStrategyOffset;
+  @Input() closeOnBackdropClick = true;
 
   open(): void {
     this.status = true;
     this.cdr.markForCheck();
+  }
+
+  onBackdropClick(): void {
+    if (this.closeOnBackdropClick) {
+      this.close();
+    }
   }
 
   close(): void {
