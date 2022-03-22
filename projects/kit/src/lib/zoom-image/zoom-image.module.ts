@@ -3,12 +3,10 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import {ZoomImageComponent} from './component';
 import {ZoomImageDirective} from './directive';
 import {ZoomImageService} from './services';
-import {
-  AirButtonModule,
-  AirCdkModule,
-  AirIconModule,
-  AirLayoutModule
-} from '@airy-ui/kit';
+import {AirCdkModule} from '@airy-ui/cdk';
+import {AirIconModule} from '@airy-ui/icon';
+import {AirLayoutModule} from '@airy-ui/layout';
+import {AirButtonModule} from '@airy-ui/button';
 
 const declarations = [ZoomImageComponent, ZoomImageDirective];
 
