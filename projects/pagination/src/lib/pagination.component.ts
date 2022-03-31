@@ -103,7 +103,7 @@ export class PaginationComponent extends PaginationBase {
     if (currentPageEndPosition < MIN_CURRENT_PAGE) {
       pages = [...pages, ...this.generatePagesDiapason(this.currentPage + 1, this.pagesCount)];
     } else {
-      pages.push(this.generatePage(this.currentPage + 1));
+      pages.push(this.generatePage(Math.max(MIN_CURRENT_PAGE, this.currentPage) + 1));
       pages.push(this.generateDelimiter());
       pages.push(this.generatePage(this.pagesCount));
     }
