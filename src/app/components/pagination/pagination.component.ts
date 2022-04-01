@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
-import {Pagination, PaginationCamel} from '../../../../projects/pagination/src/lib/pagination';
+import {PaginationCamel} from '../../../../projects/pagination/src/lib/pagination';
 
 @Component({
   selector: 'app-pagination',

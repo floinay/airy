@@ -7,7 +7,7 @@ import {PAGINATION_OPTIONS, PaginationOptions} from './pagination-options-token'
 const PaginationBase: CanColorCtor = mixinColor(HasElementRef, 'accent');
 
 
-const MIN_CURRENT_PAGE = 4;
+const MIN_CURRENT_PAGE = 3;
 
 interface PageOrDelimiter {
   url: string[];
@@ -84,7 +84,7 @@ export class PaginationComponent extends PaginationBase {
   private generatePages(): void {
     let pages: PageOrDelimiter[] = [];
     const currentPageEndPosition = this.pagesCount - this.currentPage;
-    if (this.pagesCount <= MIN_CURRENT_PAGE) {
+    if (this.pagesCount <= MIN_CURRENT_PAGE + 2) {
       this.pages = this.generatePagesDiapason(1, this.pagesCount);
       return;
     }
