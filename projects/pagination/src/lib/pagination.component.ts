@@ -4,7 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {CanColorCtor, HasElementRef, mixinColor} from '@airy-ui/cdk';
 import {PAGINATION_OPTIONS, PaginationOptions} from './pagination-options-token';
 import {take} from 'rxjs/operators';
-import {clone} from 'lodash-es';
+import {clone, isEmpty} from 'lodash-es';
 
 const PaginationBase: CanColorCtor = mixinColor(HasElementRef, 'accent');
 const MIN_CURRENT_PAGE = 3;
@@ -73,7 +73,7 @@ export class PaginationComponent extends PaginationBase {
       params = clone(params);
 
       for (let key in params) {
-        if (params[key] === null || params[key] === undefined || params[key] === '') {
+        if (isEmpty(params[key])) {
           delete params[key];
         }
       }
