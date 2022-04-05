@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {CanColorCtor, HasElementRef, mixinColor} from '@airy-ui/cdk';
 import {PAGINATION_OPTIONS, PaginationOptions} from './pagination-options-token';
 import {take} from 'rxjs/operators';
+import {clone} from 'lodash-es';
 
 const PaginationBase: CanColorCtor = mixinColor(HasElementRef, 'accent');
 const MIN_CURRENT_PAGE = 3;
@@ -25,7 +26,6 @@ export class PaginationComponent extends PaginationBase {
   private _link: string[] = [];
   private _pagination!: PaginationCamel;
   pages: PageOrDelimiter[] = [];
-  queryParams: {} = {};
   @Input() hideFirst = true;
 
   @Input() set pagination(value: Pagination | PaginationCamel) {
@@ -66,6 +66,24 @@ export class PaginationComponent extends PaginationBase {
     return Math.ceil(this.pagination.total / this.pagination.per_page);
   }
 
+  get queryParams() {
+    let queryParams;
+
+    this.route.queryParams.pipe(take(1)).subscribe(params => {
+      params = clone(params);
+
+      for (let key in params) {
+        if (params[key] === null || params[key] === undefined || params[key] === '') {
+          delete params[key];
+        }
+      }
+
+      queryParams = params;
+    });
+
+    return queryParams;
+  }
+
   constructor(private route: ActivatedRoute, elementRef: ElementRef, @Inject(PAGINATION_OPTIONS) readonly options: PaginationOptions) {
     super(elementRef);
   }
@@ -85,8 +103,6 @@ export class PaginationComponent extends PaginationBase {
   private generatePages(): void {
     let pages: PageOrDelimiter[] = [];
     const currentPageEndPosition = this.pagesCount - this.currentPage;
-
-    this.route.queryParams.pipe(take(1)).subscribe(queryParams => this.queryParams = queryParams);
 
     if (this.pagesCount <= MIN_CURRENT_PAGE + 2) {
       this.pages = this.generatePagesDiapason(1, this.pagesCount);
