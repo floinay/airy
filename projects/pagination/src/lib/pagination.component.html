@@ -1,8 +1,9 @@
 <a class="prev-or-next" *ngIf="showPreviousButton" [routerLink]="getLink(currentPage - 1)"
+   [queryParams]="queryParams"
    [inlineSVG]="options.previousButtonIcon">
 </a>
-<ng-template #link let-url="url" let-page="page" let-active="active">
-  <a class="link" [class.active]="active" [routerLink]="url">{{page}}</a>
+<ng-template #link let-url="url" let-page="page" let-active="active" let-queryParams="queryParams">
+  <a class="link" [class.active]="active" [routerLink]="url" [queryParams]="queryParams">{{page}}</a>
 </ng-template>
 <ng-template #delimiter>
   <svg class="delimiter" xmlns="http://www.w3.org/2000/svg" width="14" height="3" viewBox="0 0 14 3" fill="none">
@@ -16,6 +17,6 @@
     *ngTemplateOutlet="pageOrDelimiter.delimiter ? delimiter : link; context:getLinkContext(pageOrDelimiter)">
   </ng-container>
 </ng-container>
-<a *ngIf="showNextButton" [routerLink]="getLink(currentPage + 1)" class="next prev-or-next"
+<a *ngIf="showNextButton" [routerLink]="getLink(currentPage + 1)" [queryParams]="queryParams" class="next prev-or-next"
    [inlineSVG]="options.nextButtonIcon">
 </a>

@@ -3,16 +3,16 @@ import {Pagination, PaginationCamel} from './pagination';
 import {ActivatedRoute} from '@angular/router';
 import {CanColorCtor, HasElementRef, mixinColor} from '@airy-ui/cdk';
 import {PAGINATION_OPTIONS, PaginationOptions} from './pagination-options-token';
+import {take} from 'rxjs/operators';
 
 const PaginationBase: CanColorCtor = mixinColor(HasElementRef, 'accent');
-
-
 const MIN_CURRENT_PAGE = 3;
 
 interface PageOrDelimiter {
   url: string[];
   delimiter?: true;
   page: number;
+  queryParams?: {};
 }
 
 @Component({
@@ -25,6 +25,7 @@ export class PaginationComponent extends PaginationBase {
   private _link: string[] = [];
   private _pagination!: PaginationCamel;
   pages: PageOrDelimiter[] = [];
+  queryParams: {} = {};
   @Input() hideFirst = true;
 
   @Input() set pagination(value: Pagination | PaginationCamel) {
@@ -84,10 +85,14 @@ export class PaginationComponent extends PaginationBase {
   private generatePages(): void {
     let pages: PageOrDelimiter[] = [];
     const currentPageEndPosition = this.pagesCount - this.currentPage;
+
+    this.route.queryParams.pipe(take(1)).subscribe(queryParams => this.queryParams = queryParams);
+
     if (this.pagesCount <= MIN_CURRENT_PAGE + 2) {
       this.pages = this.generatePagesDiapason(1, this.pagesCount);
       return;
     }
+
     if (this.currentPage <= MIN_CURRENT_PAGE) {
       pages = this.generatePagesDiapason(1, MIN_CURRENT_PAGE);
     } else {
@@ -113,6 +118,7 @@ export class PaginationComponent extends PaginationBase {
 
   private generatePagesDiapason(from: number, to: number): PageOrDelimiter[] {
     const pages: PageOrDelimiter[] = [];
+
     for (let i = from; i <= to; i++) {
       pages.push(this.generatePage(i));
     }
@@ -121,7 +127,7 @@ export class PaginationComponent extends PaginationBase {
   }
 
   private generatePage(i: number): PageOrDelimiter {
-    return {url: this.getLink(i), page: i};
+    return {url: this.getLink(i), page: i, queryParams: this.queryParams};
   }
 
   private generateDelimiter(): PageOrDelimiter {
