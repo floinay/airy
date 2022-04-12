@@ -72,7 +72,7 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
 
   @Input() value = 0;
 
-  viewValue = this.value;
+  viewValue!: number;
 
   get counterContext(): CounterContext {
     return {count: this.viewValue || 0};
@@ -90,6 +90,10 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
     return this.slider.nativeElement.getBoundingClientRect().width;
   }
 
+  get valueRange(): number {
+    return this.max - this.min;
+  }
+
 
   constructor(private elementRef: ElementRef,
               private cdr: ChangeDetectorRef,
@@ -101,6 +105,7 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
 
   sliderInit() {
     this.viewInit = true;
+    this.viewValue = this.value = this.min | 0;
     this.updatePosition();
     this.ngZone.runOutsideAngular(() => {
       this.valueChange.pipe(
@@ -160,15 +165,16 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
 
   private updatePosition(): void {
     if (this.viewInit) {
-      const oneStepMap = this.sliderSize / this.max;
-      const x = oneStepMap * this.value;
+      const oneStepMap = this.sliderSize / this.valueRange;
+      const x = oneStepMap * (this.value - this.min);
       this.updateBackgroundWidth(x);
       this.updateButtonPosition(this.direction.isRtl() ? x * -1 : x);
+      this.cdr.markForCheck();
     }
   }
 
   private getValueFromX(x: number): number {
-    return Math.abs(Math.ceil(x / this.sliderSize * this.max));
+    return Math.abs(Math.ceil(x / this.sliderSize * (this.valueRange) + this.min - 0.5));
   }
 
   private updateBackgroundWidth(width: number): void {

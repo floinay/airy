@@ -84,9 +84,10 @@
                   formControlName="opacity">
       </air-slider>
     </air-form-field>
-    <air-form-field airGridItem="2">
-      <label air-label>Max 10</label>
+    <air-form-field airGridItem="2" airMa>
+      <label air-label>Min 2, Max 10</label>
       <air-slider #slider="slider"
+                  [min]="2"
                   [max]="10"
                   formControlName="opacity">
       </air-slider>
