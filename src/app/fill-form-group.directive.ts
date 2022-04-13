@@ -22,7 +22,6 @@ export class FillFormGroupDirective implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.info('fill form changes:', changes);
     if (this.formGroup && this.fillValue && (this.needFill || this.fillableStrategy === 'always')) {
       this.formGroup.patchValue(this.fillValue, {emitEvent: false});
       this.needFill = false;
