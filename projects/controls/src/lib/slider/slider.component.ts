@@ -71,8 +71,9 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
   @Input() step = 1;
 
   @Input() value = 0;
+  @Input() currentValue!: number;
 
-  viewValue!: number;
+  viewValue = this.value;
 
   get counterContext(): CounterContext {
     return {count: this.viewValue || 0};
@@ -105,7 +106,8 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
 
   sliderInit() {
     this.viewInit = true;
-    this.viewValue = this.value = this.min | 0;
+    this.viewValue = this.value = this.value || this.currentValue || this.min || 0;
+
     this.updatePosition();
     this.ngZone.runOutsideAngular(() => {
       this.valueChange.pipe(
@@ -121,7 +123,7 @@ export class SliderComponent extends SliderBase implements AfterViewInit, Contro
 
   ngAfterViewInit(): void {
     if (!this.subscription) {
-      this.subscription = this.direction.getState().subscribe(newDir => {
+      this.subscription = this.direction.getState().subscribe(() => {
         this.sliderInit();
       });
     } else {

@@ -70,26 +70,26 @@
     </air-select>
     <a airMarginStart="auto" air-button>{{'admin_courses.create'}}</a>
   </form>
-  <form [formGroup]="sliderGroup">
+  <form [formGroup]="sliderGroup" [fill]="startValues">
     <air-form-field airGridItem="2">
       <label air-label>Opacity</label>
       <air-slider #slider="slider" [counter]="slider.templatePercent"
-                  formControlName="opacity">
+                  formControlName="opacity1">
       </air-slider>
     </air-form-field>
 
     <air-form-field airGridItem="2">
       <label air-label>Opacity</label>
       <air-slider #slider="slider"
-                  formControlName="opacity">
+                  formControlName="opacity2">
       </air-slider>
     </air-form-field>
-    <air-form-field airGridItem="2" airMa>
+    <air-form-field airGridItem="2">
       <label air-label>Min 2, Max 10</label>
       <air-slider #slider="slider"
                   [min]="2"
                   [max]="10"
-                  formControlName="opacity">
+                  formControlName="count">
       </air-slider>
     </air-form-field>
   </form>

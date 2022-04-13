@@ -47,6 +47,7 @@ import { AirTableLikeCellModule } from '../../projects/layout/src/lib/table-like
 import { AirRadioButtonsModule } from '../../projects/controls/src/lib/radio-buttons';
 import { ModalComponent } from './pages/modal/modal.component';
 import { AirModalModule } from '../../projects/modal/src/lib/air-modal.module';
+import { FillFormGroupDirective } from "./pages/controls/fill-form-group.directive";
 
 
 @NgModule({
@@ -69,6 +70,7 @@ import { AirModalModule } from '../../projects/modal/src/lib/air-modal.module';
     PaginationComponent,
     ListComponent,
     ModalComponent,
+    FillFormGroupDirective
   ],
   imports: [
     AirDirectionModule,
