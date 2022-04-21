@@ -4,7 +4,7 @@ import { PaginationComponent } from './pagination.component';
 import { PAGINATION_OPTIONS } from './pagination-options-token';
 import { RouterModule } from '@angular/router';
 import { AirIconModule } from '@airy-ui/icon';
-import { InlineSVGModule } from 'ng-inline-svg';
+import { InlineSVGModule } from 'ng-inline-svg-2';
 
 
 @NgModule({
