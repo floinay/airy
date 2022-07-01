@@ -1,10 +1,10 @@
 {
   "name": "@airy-ui/cdk",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "private": false,
   "peerDependencies": {
-    "@angular/common": "^12.2.2 || ^13.0.0",
-    "@angular/core": "^12.2.2 || ^13.0.0",
+    "@angular/common": "^12.2.2 || ^13.0.0 || ^14.0.0",
+    "@angular/core": "^12.2.2 || ^13.0.0 || ^14.0.0",
     "lodash-es": "^4.17.21",
     "@ng-web-apis/common": ">=1.9.0",
     "@ngneat/until-destroy": ">=8.1.3",
