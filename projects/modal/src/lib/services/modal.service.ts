@@ -13,6 +13,7 @@ interface OpenModalOptions {
   maxWidth?: string | number;
   maxHeight?: string | number;
   disposeOnNavigation?: boolean;
+  closeOnBackdropClick?: boolean;
 }
 
 @Injectable({providedIn: 'root'})
