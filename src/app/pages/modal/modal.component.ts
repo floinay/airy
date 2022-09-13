@@ -1,3 +1,4 @@
+import { ModalExampleService } from './modal-example.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: ModalExampleService) { }
 
   ngOnInit(): void {
+  }
+
+  openModalByService() {
+    this.modalService.open();
   }
 
 }

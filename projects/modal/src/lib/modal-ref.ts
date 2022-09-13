@@ -11,8 +11,12 @@ export class ModalRef<T = any> {
   private afterCloseSubject = new Subject<AfterClose<T>>();
   readonly afterClose = this.afterCloseSubject.asObservable();
 
-  constructor(public overlay: OverlayRef, public data: T) {
-    this.backdropClickSubscription = overlay.backdropClick().subscribe(() => this.close());
+  constructor(public overlay: OverlayRef, public data: T, closeOnBackdropClick= true) {
+    this.backdropClickSubscription = overlay.backdropClick().subscribe(() => {
+      if (closeOnBackdropClick) {
+        this.close();
+      }
+    });
   }
 
   close(): void {

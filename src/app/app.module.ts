@@ -48,6 +48,7 @@ import { AirRadioButtonsModule } from '../../projects/controls/src/lib/radio-but
 import { ModalComponent } from './pages/modal/modal.component';
 import { AirModalModule } from '../../projects/modal/src/lib/air-modal.module';
 import { FillFormGroupDirective } from "./fill-form-group.directive";
+import { ModalExampleComponent } from './pages/modal/components/modal-example.component/modal-example.component';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { FillFormGroupDirective } from "./fill-form-group.directive";
     PaginationComponent,
     ListComponent,
     ModalComponent,
-    FillFormGroupDirective
+    FillFormGroupDirective,
+    ModalExampleComponent
   ],
   imports: [
     AirDirectionModule,

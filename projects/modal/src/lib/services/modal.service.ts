@@ -27,15 +27,15 @@ export class ModalService {
   open<T>(options: OpenModalOptions, data?: T): ModalRef<T> {
     const overlayConfig = {...this.options, ...options};
     const overlay = this.overlay.create(overlayConfig);
-    const ref = this.createModalRef<T>(overlay, data);
+    const ref = this.createModalRef<T>(overlay, data, options.closeOnBackdropClick);
     const injector = this.createInjector(ref);
     const portal = new ComponentPortal(options.component, null, injector);
     overlay.attach(portal);
     return ref;
   }
 
-  private createModalRef<T>(overlay: OverlayRef, data: any): ModalRef<T> {
-    return new ModalRef(overlay, data);
+  private createModalRef<T>(overlay: OverlayRef, data: any, closeOnBackdropClick = true): ModalRef<T> {
+    return new ModalRef(overlay, data, closeOnBackdropClick);
   }
 
   private createInjector(ref: ModalRef): Injector {
