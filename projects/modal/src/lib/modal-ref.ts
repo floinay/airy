@@ -2,8 +2,9 @@ import {OverlayRef} from '@angular/cdk/overlay';
 import {Subject, Subscription} from 'rxjs';
 
 interface AfterClose<T> {
-  onBackdropClick?: true;
-  data: T;
+  onBackdropClick?: boolean;
+  isClosed?: boolean;
+  data?: T;
 }
 
 export class ModalRef<T = any> {
@@ -22,5 +23,6 @@ export class ModalRef<T = any> {
   close(): void {
     this.overlay.dispose();
     this.backdropClickSubscription?.unsubscribe();
+    this.afterCloseSubject.next({isClosed: true});
   }
 }

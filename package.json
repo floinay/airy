@@ -1,6 +1,6 @@
 {
   "name": "airy-ui",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "scripts": {
     "serve": "ng serve",
     "sprite": "svg2sprite ./src/assets/dynamic-icons ./src/assets/sprites/sprite.svg --stripAttrs width --stripAttrs height --stripAttrs fill --stripAttrs stroke --stripAttrs id",
