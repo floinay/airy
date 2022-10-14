@@ -4,6 +4,7 @@ import {Subject, Subscription} from 'rxjs';
 interface AfterClose<T> {
   onBackdropClick?: boolean;
   isClosed?: boolean;
+  isChecked?: boolean;
   data?: T;
 }
 
@@ -20,9 +21,9 @@ export class ModalRef<T = any> {
     });
   }
 
-  close(): void {
+  close(isChecked = false): void {
     this.overlay.dispose();
     this.backdropClickSubscription?.unsubscribe();
-    this.afterCloseSubject.next({isClosed: true});
+    this.afterCloseSubject.next({isClosed: true, isChecked: isChecked, data: this.data});
   }
 }

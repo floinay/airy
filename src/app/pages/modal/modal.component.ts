@@ -26,15 +26,21 @@ export class ModalComponent implements OnInit {
     // }).then(() => {
     //   console.info('second modal closed');
     // })
-    this.modalService.openPromise()
-    .then(() => {
-      console.info('first modal closed');
+    this.modalService.openPromise({message: 'test'})
+    .then((result) => {
+      console.info('first modal closed, result:', result);
       return this.modalService.openPromise();
     })
-    .then(() => {
-      console.info('second modal closed');
+    .then((result) => {
+      console.info('second modal closed, result:', result);
     })
-    // or you can use async await
+  }
+
+  async openModalsByServiceAwait(): Promise<void> {
+    const result = await this.modalService.openPromise({type: 'async-await'});
+    console.info('first modal closed, result:', result);
+    const result2 = await this.modalService.openPromise({type: 'async-await', attempt: '2'});
+    console.info('first modal closed, result:', result);
   }
 
 }

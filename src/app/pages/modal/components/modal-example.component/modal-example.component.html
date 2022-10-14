@@ -2,6 +2,8 @@
   <!-- <air-modal-close></air-modal-close> -->
   <ng-container>
     <p>modal-example.component works!</p>
+    <h2 *ngIf="ref.data?.message">{{ref.data.message}}</h2>
     <button (click)="ref.close()">Ok</button>
+    <button (click)="ref.close(true)">Close checked</button>
   </ng-container>
 </air-modal-wrapper>

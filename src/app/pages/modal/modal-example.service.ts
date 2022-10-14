@@ -20,8 +20,8 @@ export class ModalExampleService {
     return rez.afterClose;
   }
 
-  openPromise(): Promise<unknown> {
-    const rez = this.modalService.open({ component: ModalExampleComponent, closeOnBackdropClick: false});
+  openPromise(data?: unknown): Promise<unknown> {
+    const rez = this.modalService.open({ component: ModalExampleComponent, closeOnBackdropClick: false}, data);
     return firstValueFrom(rez.afterClose);
   }
 }
