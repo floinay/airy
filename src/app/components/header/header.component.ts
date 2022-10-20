@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {FormControl, UntypedFormControl} from '@angular/forms';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 import {DirectionService} from '../../../../projects/direction/src/lib';
 
@@ -11,7 +11,7 @@ import {DirectionService} from '../../../../projects/direction/src/lib';
 })
 @UntilDestroy()
 export class HeaderComponent {
-  direction = new FormControl(this.directionService.direction);
+  direction = new UntypedFormControl(this.directionService.direction);
 
   constructor(private directionService: DirectionService) {
     this.direction.valueChanges.pipe(untilDestroyed(this)).subscribe(v => this.directionService.set(v));
