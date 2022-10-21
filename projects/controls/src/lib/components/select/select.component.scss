@@ -80,7 +80,7 @@
 }
 
 ::ng-deep {
-  .cdk-overlay-pane, .air-select-panel {
+  .air-select-panel {
     @include element-prop(border, 2px solid var(--color-primary-light));
     // .air-options {
     //   display: flex;
