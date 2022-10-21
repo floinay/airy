@@ -46,7 +46,7 @@ const CONNECTED_POSITIONS: ConnectedPosition[] = [
 })
 @UntilDestroy()
 export class SelectComponent implements AfterContentInit, ControlValueAccessor {
-  @Input() selectPanelClass = '';
+  @Input() selectPanelClass = 'air-select-panel';
   @Output() readonly onChange = new EventEmitter<any>();
 
   @HostBinding('style.max-width')
