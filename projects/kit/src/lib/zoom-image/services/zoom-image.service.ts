@@ -3,7 +3,7 @@ import {Overlay, OverlayPositionBuilder, OverlayRef} from '@angular/cdk/overlay'
 import {ComponentPortal} from '@angular/cdk/portal';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
 import {DOCUMENT} from '@angular/common';
-import {ZoomImageComponent} from '@airy-ui/kit/zoom-image/component';
+import {ZoomImageComponent} from "../component";
 
 const OVERLAY_CONFIG = {
   hasBackdrop: true,

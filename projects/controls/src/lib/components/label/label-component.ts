@@ -1,4 +1,5 @@
-import {ChangeDetectionStrategy, Component, HostBinding, HostListener, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, HostBinding, HostListener, inject, Input} from '@angular/core';
+import {DOCUMENT} from "@angular/common";
 
 
 @Component({
@@ -10,6 +11,7 @@ import {ChangeDetectionStrategy, Component, HostBinding, HostListener, Input} fr
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LabelComponent {
+  readonly document = inject(DOCUMENT);
   @HostBinding('class.air-label') class = true;
 
   @HostBinding('class.required')
@@ -19,7 +21,7 @@ export class LabelComponent {
 
   get forElement(): HTMLElement | null {
     if (this.for) {
-      return document.getElementById(this.for);
+      return this.document.getElementById(this.for);
     }
 
     return null;
