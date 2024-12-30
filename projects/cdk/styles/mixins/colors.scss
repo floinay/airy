@@ -74,9 +74,6 @@
 @mixin air-background-colors($primary, $secondary) {
   --background-primary: #{$primary};
   --background-secondary: #{$secondary};
-  body {
-    background: var(--background-secondary);
-  }
 
   .background-secondary {
     background: var(--background-secondary);
